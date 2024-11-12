@@ -6,6 +6,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const md5 = require("js-md5");
 const DotenvWebpack = require("dotenv-webpack");
+const CopyWebpackPlugin = require('copy-webpack-plugin');    
 
 const isProduction = process.env.NODE_ENV == 'production';
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
@@ -41,7 +42,12 @@ const config = {
         new DotenvWebpack({
             path: isProduction ? "./.env.production" : "./.env.development",
             systemvars: true
-        })
+        }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'public', to: '' },
+            ],
+        }),
     ],
     module: {
         rules: [
