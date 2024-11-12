@@ -1,0 +1,41 @@
+@import "../../../font.scss";
+@import "../../../metrics.scss";
+
+$icon_font: map-get($font, "icon");
+$icon_fontsize: map-get($icon_font, "fontsize");
+$action_font: map-get($font, "action");
+$action_letter_spacing: map-get($action_font, "letter_spacing");
+$action_fontweight: map-get($action_font, "fontweight");
+$action_fontsize: map-get($action_font, "fontsize");
+
+$input_metrics: map-get($metrics, "input");
+$input_height: map-get($input_metrics, "height");
+$distance_metrics: map-get($metrics, "distance");
+$distance_x_large: map-get($distance_metrics, "x_large");
+$full_padding: map-get($distance_metrics, "full_small");
+
+.accordion.collapsed .accordionContent {
+    display: none;
+}
+
+.accordionHeader {
+    font-size: $action_fontsize;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: $distance_x_large;
+    align-items: center;
+    min-height: $input_height;
+    text-transform: uppercase;
+    font-weight: $action_fontweight;
+    letter-spacing: $action_letter_spacing;
+    cursor: pointer;
+
+    > .accordionIcon {
+        font-size: $icon_fontsize;
+    }
+}
+
+.accordionContent {
+    padding: $full_padding;
+}

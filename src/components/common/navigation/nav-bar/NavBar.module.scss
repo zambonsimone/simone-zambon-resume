@@ -1,0 +1,115 @@
+@import "../../../../common.scss";
+@import "../../../../font.scss";
+@import "../../../../mixins.scss";
+@import "../../../../metrics.scss";
+
+$action_font: map-get($font, "action");
+$action_fontweight: map-get($action_font, "fontweight");
+$action_letter_spacing: map-get($action_font, "letter_spacing");
+$icon_font: map-get($font, "icon");
+$icon_fontsize: map-get($icon_font, "fontsize");
+$icon_fontsize_small: map-get($icon_font, "fontsize_small");
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_normal: map-get($distance_metrics, "normal");
+$distance_large: map-get($distance_metrics, "large");
+$full_padding: map-get($distance_metrics, "full_small");
+
+.navbarContainer {
+    padding: $distance_normal 0;
+    margin-top: $distance_large;
+
+    &.collapsed {
+        * {
+            pointer-events: none;
+        }
+        >.navbar .mainNavLink .routeName  {
+            width: 100%;
+            overflow: hidden;
+        }
+    }
+
+    > .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        >.mainNavLinkWrapper {
+            border: 0.3rem solid transparent;
+            &:hover {
+                border-color: $niceOrange;
+            }
+            .mainNavLink {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
+                height: 5rem;
+                cursor: pointer;
+                font-size: 1.5rem;
+                font-weight: $action_fontweight;
+                letter-spacing: $action_letter_spacing;
+                padding: $full_padding;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $niceBlack;
+                @include fontsizeTransitionAnimation();
+
+                &.mainSubNavLink {
+                    font-size: 1.2rem;
+                    height: 3rem;
+
+                    &:last-child {
+                        margin-bottom: $distance_normal;
+                    }
+                }
+            
+                &:hover, &.mainNavLinkActive {
+                    font-size: 1.9rem;
+                    &.mainSubNavLink {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                &.mainNavLinkActive::after {
+                    background-color: $niceOrange;    
+                }
+            
+                &::after {
+                    display: block;
+                    position: relative;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                    content: "";
+                    height: 0.5rem;
+                    background-color: transparent;
+                    @include fontsizeTransitionAnimation();
+                }
+            
+                > a {
+                    text-decoration: none;
+                    color: $niceBlack;
+                }
+
+                .routeName {
+                    display: flex;
+                    align-items: center;
+                    > .icon {
+                        font-size: $icon_fontsize;
+                        margin-right: $distance_large;
+
+                        &.iconRouteCollapse {
+                            margin: 0 0 0 auto;
+                        }
+                    }
+
+                    &.subRouteName > .icon {
+                        font-size: $icon_fontsize_small;
+                        margin: 0 $distance_large 0 0;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@import "../../../common.scss";
+@import "../../../metrics.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_normal: map-get($distance_metrics, "normal");
+
+.sidebar {
+    padding: 0 $distance_normal;
+    box-shadow: 0 0 3rem -1rem $niceBlack;
+    background-color: $niceYellow;
+    z-index: 2;
+    min-width: 28rem;
+    min-height: 100%;
+    cursor: pointer;
+
+    @include device("tablet") {
+        position: absolute;
+    }
+
+    &.collapsed {
+        min-width: 7.5rem;
+        max-width: 7.5rem;
+    }
+}
+
+.sidebarCollapseBtn {
+    font-size: 2.8rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin: $distance_normal $distance_normal 0 auto;
+}
+
+.sidebarDialog {
+    margin: 0 auto 0 0;
+    border: none;
+
+    &::backdrop {
+        background-color: $niceBlack;
+        opacity: 0.3;
+    }
+}

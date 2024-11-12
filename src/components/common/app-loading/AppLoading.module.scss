@@ -1,0 +1,44 @@
+@import "../../../common.scss";
+@import "../../../font.scss";
+@import "../../../metrics.scss";
+
+$icon_font: map-get($font, "icon");
+$icon_fontsize: map-get($icon_font, "fontsize");
+$distance_metrics: map-get($metrics, "distance");
+$distance_small: map-get($distance_metrics, "small");
+$animationDelay: 150ms;
+
+.loadingContainer {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ellipsis {
+        height: $icon_fontsize;
+        width: $icon_fontsize;
+        border-radius: 100%;
+        border: 1.5rem solid $niceOrange;
+        margin: 0 $distance_small;
+
+        opacity: 0;
+        animation: visibility $animationDelay*6 infinite;
+
+        &:nth-child(1) {
+            animation-delay: $animationDelay*1;    
+        }
+        &:nth-child(2) {
+            animation-delay: $animationDelay*2;
+        }
+        &:nth-child(3) {
+            animation-delay: $animationDelay*3;
+        }
+    }
+}
+
+@keyframes visibility {
+    0% { opacity: 0 }
+    50% { opacity: 1 }
+    100% { opacity: 0 }
+}

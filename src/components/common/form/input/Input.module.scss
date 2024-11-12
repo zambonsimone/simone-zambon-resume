@@ -1,0 +1,22 @@
+@import "../../../../common.scss";
+@import "../../../../metrics.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_normal: map-get($distance_metrics, "normal");
+
+.inputWrapper {
+    position: relative;
+
+    > * {
+        min-height: 3.5rem;
+    }
+
+    > input {
+        width: 100%;
+        border: 0.1rem solid $niceYellow;
+        padding: 0 $distance_normal;
+        border-radius: 0.2rem;
+        font-family: "Roboto", sans-serif;
+        color: $niceBlack;
+    }
+}

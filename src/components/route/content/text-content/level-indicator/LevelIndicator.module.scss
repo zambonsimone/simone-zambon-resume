@@ -1,0 +1,33 @@
+@import "../../../../../common.scss";
+@import "../../../../../mixins.scss";
+
+.levelIndicatorContainer {
+    display: grid;
+    align-items: baseline;
+    grid-template-columns: 5em 3em 1fr;
+    gap: 0.3em;
+    font-weight: bold;
+
+    > :nth-child(1) {
+        letter-spacing: 0.15rem;
+        text-transform: uppercase;
+        font-size: 1em;
+    }
+
+    > :nth-child(2) {
+        font-size: 1.3em;
+    }
+
+    .indicator {
+        display: flex;
+        gap: 0.3em;
+        margin-left: 1em;
+
+        .point {
+            display: inline-block;
+            border-radius: 100%;
+            width: 1em;
+            height: 1em;
+        }
+    }
+}

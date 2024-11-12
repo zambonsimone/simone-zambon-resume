@@ -1,0 +1,52 @@
+@import "../../../../common.scss";
+@import "../../../../font.scss";
+@import "../../../../metrics.scss";
+
+$action_font: map-get($font, "action");
+$action_fontsize: map-get($action_font, "fontsize");
+$action_fontweight: map-get($action_font, "fontweight");
+$action_letter_spacing: map-get($action_font, "letter_spacing");
+
+$input_metrics: map-get($metrics, "input");
+$input_height: map-get($input_metrics, "height");
+$distance_metrics: map-get($metrics, "distance");
+$distance_normal: map-get($distance_metrics, "normal");
+
+.button {
+    border: 0.1rem solid transparent;
+    height: $input_height;
+    min-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.2rem;
+    background-color: $niceOrange;
+    cursor: pointer;
+    padding: 0 $distance_normal;
+
+    &:hover {
+        border-color: $niceWhite;
+
+        > span {
+            color: $niceWhite;
+        }
+    }
+
+    &:disabled {
+        pointer-events: none;
+        background-color: $transparentOrange;
+
+        &:hover {
+            border-color: transparent;
+        }
+    }
+    
+    > span {
+        font-weight: $action_fontweight;
+        font-size: $action_fontsize;
+        letter-spacing: $action_letter_spacing;
+        text-transform: uppercase;
+        font-family: "Roboto", sans-serif;
+        color: $niceWhite;
+    }
+}

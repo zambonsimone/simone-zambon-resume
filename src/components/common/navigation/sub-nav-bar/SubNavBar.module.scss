@@ -1,0 +1,75 @@
+@import "../../../../common.scss"; 
+@import "../../../../metrics.scss";
+@import "../../../../font.scss";
+
+$action_font: map-get($font, "action");
+$action_fontweight: map-get($action_font, "fontweight");
+$action_letter_spacing: map-get($action_font, "letter_spacing");
+$icon_font: map-get($font, "icon");
+$icon_fontsize_small: map-get($icon_font, "fontsize_small");
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_normal: map-get($distance_metrics, "normal");
+$distance_large: map-get($distance_metrics, "large");
+
+.subNavbarContainer {
+    margin: $distance_normal $distance_normal $distance_large $distance_normal;
+    min-width: 30rem;
+    
+    @include device("mobile") {
+        display: none;
+    }
+
+    .subNavbar {
+        display: flex;
+        height: 5rem;
+        justify-content: space-evenly;
+        place-items: center;
+        border: 0.5rem solid $niceYellow;
+        box-shadow: 0 0 2rem -1rem $niceBlack;
+
+        > .subNavLink {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            height: 50%;
+            font-size: 1.4rem;
+            font-weight: $action_fontweight;
+            text-transform: uppercase;
+            text-decoration: none;
+            text-align: center;
+            color: $niceBlack;
+            letter-spacing: $action_letter_spacing;
+
+            &:not(:last-child) {
+                border-right: 0.1rem solid $niceBlack;
+            }
+
+            &:hover, &.subNavLinkActive {
+                color: $niceOrange;
+            }
+
+            > .routeName {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                flex-grow: 1;
+            
+                > .routeNameIcon {
+                    font-size: $icon_fontsize_small;
+                    margin-right: $distance_normal;
+                }
+            }
+
+            @include device("tablet") {
+                font-size: calc(0.5rem + 1vw);
+                > .routeName > .routeNameIcon {
+                    display: none;
+                }
+            }
+        }
+
+        
+    }
+}
+

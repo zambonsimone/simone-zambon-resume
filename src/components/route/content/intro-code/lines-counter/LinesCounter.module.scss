@@ -1,0 +1,31 @@
+@import "../../../../../common.scss";
+@import "../../../../../metrics.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_small: map-get($distance_metrics, "small");
+$distance_normal: map-get($distance_metrics, "normal");
+
+
+.linesCounter {
+    border-right: 0.1rem solid $niceWhite;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: $distance_small;
+
+    > div {
+        text-align: center;
+        font-size: 1.3rem;
+        line-height: 2.2rem;
+        margin: 0 $distance_normal;
+
+        @include device("tablet") {
+            font-size: 1.2rem;
+        }
+
+        @include device("mobile") {
+            font-size: 1.1rem;
+        }
+    }
+}

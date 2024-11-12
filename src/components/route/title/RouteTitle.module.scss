@@ -1,0 +1,48 @@
+@import "../../../common.scss";
+@import "../../../metrics.scss";
+@import "../../../font.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_normal: map-get($distance_metrics, "normal");
+$distance_large: map-get($distance_metrics, "large");
+
+$paragraph_font: map-get($font, "paragraph");
+$paragraph_line_height: map-get($paragraph_font, "line_height");
+
+.routeTitle {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: $distance_large;
+
+    .title {
+        font-size: 6rem;
+        margin-top: 0;
+        margin-bottom: $distance_normal;
+    }
+    .subtitle {
+        font-size: 2rem;
+        line-height: $paragraph_line_height;
+        margin-top: $distance_large;
+    }
+
+    @include device("tablet") {
+        .title {
+            font-size: 5rem;
+        }
+        .subtitle {
+            font-size: 1.9rem;
+        }
+    }
+
+    @include device("mobile") {
+        .title {
+            font-size: 4rem;
+        }
+        .subtitle {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+
+

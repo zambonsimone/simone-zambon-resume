@@ -1,0 +1,1 @@
+export const INTRO_CODE_HEADER_TEXT = "Intro Code";

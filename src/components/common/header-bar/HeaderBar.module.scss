@@ -1,0 +1,84 @@
+@import "../../../common.scss";
+@import "../../../metrics.scss";
+@import "../../../font.scss";
+
+$icon_font: map-get($font, "icon");
+$icon_fontsize: map-get($icon_font, "fontsize");
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_small: map-get($distance_metrics, "small");
+$distance_normal: map-get($distance_metrics, "normal");
+$distance_large: map-get($distance_metrics, "large");
+$distance_x_large: map-get($distance_metrics, "x_large");
+
+.headerbar {
+    display: flex;
+    flex-direction: column;
+    gap: $distance_normal;
+    justify-content: space-between;
+    width: 100%;
+
+    .searchbarContainer {
+        padding-right: $distance_x_large;
+        height: 5rem;
+        background-color: $niceYellow;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 1.5rem -1rem $niceBlack;
+
+        > .headerSearchbar {
+            width: 45rem;
+            margin-left: auto;
+    
+            @include device("tablet") {
+                width: 35rem;
+            }
+        }
+    }
+
+    .enhancedHeaderbar {
+        display: flex;
+        justify-content: flex-start;
+        padding: 0 $distance_normal;
+        background-color: $niceYellow;
+        cursor: pointer;
+
+        &:focus-visible {
+            outline-offset: -1rem;
+        }
+
+        > :first-child {
+            margin-right: auto;
+        }
+    }
+
+    .icon {
+        font-size: $icon_fontsize;
+        width: $icon_fontsize;
+        height: $icon_fontsize;
+        margin: auto $distance_small;
+
+        &.closeHeaderbarDialogBtn {
+            margin: 0 0 0 auto;
+            position: relative;
+            left: $distance_normal;
+        }
+    }
+
+    .headerbarDialog {
+        position: absolute;
+        min-height: 100%;
+        min-width: 100%;
+        border: none;
+        padding: $distance_large;
+        background-color: $niceWhite;
+
+        .headerbarDialogContent {
+            margin-top: $distance_large;
+
+            .dialogSearchbar {
+                gap: $distance_normal;
+            }
+        }
+    }
+}

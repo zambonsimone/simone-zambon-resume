@@ -1,0 +1,73 @@
+@import "../../../common.scss";
+@import "../../../metrics.scss";
+@import "../../../mixins.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$full_padding_normal: map-get($distance_metrics, "full_normal");
+$full_padding_large: map-get($distance_metrics, "full_large");
+$distance_x_large: map-get($distance_metrics, "x_large");
+$distance_large: map-get($distance_metrics, "large");
+
+.contactMeForm {
+    padding: $full_padding_large;
+    background-color: white;
+    border-radius: 0.5rem;
+    @include shadow();
+    margin: $distance_x_large auto 0 auto;
+
+    @include device("mobile") {
+        padding: $full_padding_normal;
+        .phoneDataRow {
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: $distance_large;
+
+            > .fieldContainer:first-child {
+                max-width: 100%;
+            }
+        }
+    }
+    
+    .phoneDataRow {
+        display: flex;
+        justify-content: space-between;
+    
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    
+        > .fieldContainer  {
+            flex-grow: 1;
+            &:first-child {
+                max-width: 14rem;
+
+                input {
+                    width: 10rem;
+                }
+            }
+
+            .plus {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .messageFieldContainer {
+        .charsCounter {
+            margin-left: $distance_large;
+            
+            &.error {
+                color: red;
+                font-weight: 500;
+            }   
+        }
+        textarea {
+            width: 100%;
+            height: 30rem;
+            overflow: hidden;
+        }
+    }
+}
+

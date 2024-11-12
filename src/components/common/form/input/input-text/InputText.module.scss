@@ -1,0 +1,17 @@
+@import "../../../../../metrics.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_normal: map-get($distance_metrics, "normal");
+$distance_large: map-get($distance_metrics, "large");
+
+.beforeInputValue {
+    position: absolute;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    margin: 0 $distance_normal;
+
+    & + input {
+        padding-left: $distance_large;
+    }
+}

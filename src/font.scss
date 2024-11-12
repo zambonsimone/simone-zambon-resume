@@ -1,0 +1,32 @@
+@import "./common.scss";
+
+$font: (
+    html: (
+        font_color: $niceBlack,
+    ),
+    section_title: (
+        fontsize: 4rem,
+        fontsize_tablet: 3.5rem,
+        fontsize_mobile: 2.5rem,
+    ),
+    subsection_title: (
+        fontsize: 2.5rem,
+        fontsize_tablet: 2.3rem,
+        fontsize_mobile: 2rem,
+    ),
+    paragraph: (
+        fontsize: 1.6rem,
+        fontsize_tablet: 1.5rem,
+        fontsize_mobile: 1.4rem,
+        line_height: 2.4rem,
+    ),
+    action: (
+        fontsize: 1.2rem,
+        letter_spacing: 0.2rem, 
+        fontweight: 500,
+    ),
+    icon: (
+        fontsize: 2.4rem,
+        fontsize_small: 1.8rem,
+    )
+)

@@ -1,0 +1,132 @@
+@import "./common.scss";
+@import "./font.scss";
+@import "./mixins.scss";
+
+$html_font: map-get($font, "html");
+$html_font_color: map-get($html_font, "font_color");
+
+$paragraph: map-get($font, "paragraph");
+$paragraph_fontsize: map-get($paragraph, "fontsize");
+$paragraph_fontsize_tablet: map-get($paragraph, "fontsize_tablet");
+$paragraph_fontsize_mobile: map-get($paragraph, "fontsize_mobile");
+$paragraph_lineheight: map-get($paragraph, "line_height");
+
+$action_font: map-get($font, "action");
+$action_letter_spacing: map-get($action_font, "letter_spacing");
+$action_fontweight: map-get($action_font, "fontweight");
+
+$section_title_font: map-get($font, "section_title");
+$section_title_fontsize: map-get($section_title_font, "fontsize");
+$section_title_fontsize_tablet: map-get($section_title_font, "fontsize_tablet");
+$section_title_fontsize_mobile: map-get($section_title_font, "fontsize_mobile");
+$subsection_title_font: map-get($font, "subsection_title");
+$subsection_title_fontsize: map-get($subsection_title_font, "fontsize");
+$subsection_title_fontsize_tablet: map-get($subsection_title_font, "fontsize_tablet");
+$subsection_title_fontsize_mobile: map-get($subsection_title_font, "fontsize_mobile");
+
+
+html {
+    height: 100vh;
+    overflow: hidden;
+    font-size: 10px;
+    font-family: "Roboto", sans-serif;
+    background-color: $niceWhite;
+    color: $html_font_color;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    h2 {
+        font-size: $section_title_fontsize;
+    }
+
+    h3 {
+        font-size: $subsection_title_fontsize;
+    }
+
+    p, ul > li {
+        font-size: $paragraph_fontsize;
+        line-height: $paragraph_lineheight;
+    }
+
+    a {
+        text-transform: uppercase;
+        letter-spacing: $action_letter_spacing;
+        font-weight: $action_fontweight;
+        color: $niceOrange;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    input, a, textarea, button, div {
+        @include removeOutlineOnFocusables();
+    }
+
+    .appContainer {
+        display: flex;
+        height: 100vh;
+
+        .appContent {
+            flex-grow: 1;
+            min-height: 0;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+    
+            > .appSection {
+                flex: 1 1;
+                padding: 5rem;
+                height: 100%;
+                overflow-y: auto;
+                overflow-x: hidden;
+                        
+                @include hideScrollbar();
+            }
+        }
+    }
+
+    @include device("tablet") {
+        h2 {
+            font-size: $section_title_fontsize_tablet;
+        }
+        h3 {
+            font-size: $subsection_title_fontsize_tablet;
+        }
+        p, ul > li {    
+            font-size: $paragraph_fontsize_tablet;
+        }
+
+        .appContainer .appContent {
+            margin-left: 7.5rem;
+
+            >.appSection {
+                padding: 2rem 3rem 3rem 3rem;
+            }
+        }
+    }
+
+    @include device("mobile") {
+        h2 {
+            font-size: $section_title_fontsize_mobile;
+        }
+        h3 {
+            font-size: $subsection_title_fontsize_mobile;
+        }
+        p, ul > li {
+            font-size: $paragraph_fontsize_mobile;
+        }
+
+        .appContainer .appContent {
+            margin-left: 0;
+
+            >.appSection {
+                padding: 1rem 1.5rem 1.5rem 1.5rem
+            }
+        }
+    }
+}

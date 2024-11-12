@@ -1,0 +1,18 @@
+$distance_small: 0.6rem;
+
+$metrics: (
+    input: (
+        height: 3rem
+    ),
+    distance: ( 
+        x_small: calc($distance_small/2),
+        small: $distance_small,
+        normal: calc($distance_small*2),
+        large: calc($distance_small*4),
+        x_large: calc($distance_small*8),
+        xx_large: calc($distance_small*16),
+        full_small: $distance_small calc($distance_small*2),
+        full_normal: calc($distance_small*2) calc($distance_small*4),
+        full_large: calc($distance_small*4) calc($distance_small*8),
+    )
+)

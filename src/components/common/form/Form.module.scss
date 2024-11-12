@@ -1,0 +1,42 @@
+@import "../../../common.scss";
+@import "../../../metrics.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_small: map-get($distance_metrics, "small");
+$distance_large: map-get($distance_metrics, "large");
+
+.form {
+    display: flex;
+
+    .formFieldset {
+        min-width: 0;
+        width: 100%;
+        border: none;
+
+        .fieldContainer {
+            margin-bottom: $distance_large;
+            width: 100%;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        
+            .fieldError {
+                display: inline-block;
+                font-size: 1.2rem;
+                color: red;
+                margin-top: $distance_small;
+            }
+        
+            .field {
+                margin-top: $distance_small;
+            }
+        
+            .fieldLabel {
+                margin-left: $distance_small;
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@import "../../common.scss";
+@import "../../metrics.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$full_padding_small: map-get($distance_metrics, "full_small");
+$full_padding_normal: map-get($distance_metrics, "full_normal");
+
+.fileList {
+    border-radius: 0.5rem;
+    box-shadow: 0 0 2rem -1rem $niceBlack;
+    padding: $full_padding_normal;
+    background-color: white;
+
+    @include device("mobile") {
+        padding: $full_padding_small;
+    }
+}

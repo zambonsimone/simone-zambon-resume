@@ -1,0 +1,42 @@
+@import "../../../common.scss";
+@import "../../../metrics.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_small: map-get($distance_metrics, "small");
+$distance_normal: map-get($distance_metrics, "normal");
+$full_padding: map-get($distance_metrics, "full_normal");
+
+.levelLegendaContainer {
+    height: fit-content;
+    background-color: $niceYellow;
+    box-shadow: 0 0 1.5rem -1rem $niceBlack;
+    margin-top: $distance_normal;
+
+    .levelLegendaContent {
+        background-color: $niceWhite;
+        width: 100%;
+        border-bottom: 0.2rem solid $niceYellow;
+
+        > div > ul {
+            padding: 0;
+            > li {
+                list-style-type: none;
+                margin: $distance_small 0;
+                display: grid;
+                grid-template-columns: 3rem 1fr;
+                gap: $distance_normal;
+
+                > .level {
+                    display: inline-block;
+                    height: 2.4rem;
+                    width: 100%;
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                    text-align: center;
+                    border-radius: 0.2rem;
+                    margin-right: $distance_normal;
+                }
+            }
+        }
+    }
+}

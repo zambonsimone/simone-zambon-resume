@@ -1,0 +1,28 @@
+@mixin removeOutlineOnFocusables() {
+    outline: none;
+    &:focus {
+        outline: none
+    }
+    &:focus-visible {
+        outline: 0.3rem solid blue;
+        outline-offset: 0.2rem;
+    }
+}
+
+@mixin hideScrollbar() {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    scrollbar-width: none;
+}
+
+@mixin fontsizeTransitionAnimation() {
+    -webkit-transition: font-size .2s ease;
+    -moz-transition: font-size .2s ease;
+    -o-transition: font-size .2s ease;
+    transition: font-size .2s ease;
+}
+
+@mixin shadow() {
+    box-shadow: 0 0 2rem -1.5rem $niceBlack;
+}

@@ -1,0 +1,38 @@
+@import "../../../../common.scss";
+@import "../../../../font.scss";
+@import "../../../../metrics.scss";
+
+$icon_font: map-get($font, "icon");
+$icon_fontsize: map-get($icon_font, "fontsize");
+
+$input_metrics: map-get($metrics, "input");
+$input_height: map-get($input_metrics, "height");
+$distance_metrics: map-get($metrics, "distance");
+$distance_small: map-get($distance_metrics, "small");
+$distance_large: map-get($distance_metrics, "large");
+
+
+.searchbar {
+    display: flex;
+    gap: $distance_large;
+    align-items: center;
+    position: relative;
+
+    .iconSearch {
+        width: $icon_fontsize;
+        height: $icon_fontsize;
+        font-size: $icon_fontsize;
+        position: absolute;
+        opacity: 0.5;
+        left: $distance_small;
+    }
+
+    .searchbarInput {
+        flex-grow: 1;
+        height: $input_height;
+        border: none;
+        padding-left: $distance_large;
+        font-family: "Roboto", sans-serif;
+    }
+}
+

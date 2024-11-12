@@ -1,0 +1,12 @@
+{
+    "eslint.run": "onType",
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": "explicit",
+        "source.organizeImports": "explicit"
+    },
+    "editor.formatOnSave": true,
+    "eslint.validate": [
+        "typescript",
+        "typescriptreact"
+    ],
+}

@@ -1,0 +1,44 @@
+@import "../../../../common.scss";
+@import "../../../../metrics.scss";
+
+$distance_metrics: map-get($metrics, "distance");
+$distance_normal: map-get($distance_metrics, "normal");
+
+.introCode {
+    background-color: $niceBlack;
+    color: $niceWhite;
+    border-radius: 0.5rem;
+    margin-bottom: $distance_normal;
+
+    .content {
+        display: flex;
+
+        .code {
+            font-size: 1.4rem;
+            padding-left: $distance_normal;
+            overflow-x: auto;
+    
+            @include device("tablet") {
+                font-size: 1.3rem;
+            }
+    
+            @include device("mobile") {
+                font-size: 1.2rem;
+            }
+    
+            >*::-webkit-scrollbar {
+                height: 1rem;
+            }
+        
+            >*::-webkit-scrollbar-thumb {
+                background-color: rgb(255,255,255,0.1);
+                border-radius: 0.1rem;
+        
+                &:hover {
+                    background-color: rgb(255,255,255,0.3); 
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

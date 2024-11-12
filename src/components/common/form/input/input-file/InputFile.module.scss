@@ -1,0 +1,9 @@
+.inputFileWrapper {
+    position: relative;
+    > input {
+        cursor: pointer;
+        &.inputFile {
+            display: none;
+        }
+    }
+}
