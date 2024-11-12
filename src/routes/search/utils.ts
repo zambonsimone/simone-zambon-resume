@@ -33,8 +33,8 @@ export function findResults(searchTerm: string): ISearchResult[] {
     const results = [] as ISearchResult[];
     PAGES.forEach(page => {
         const searchTermRegex = new RegExp(searchTerm,"i");
-        const isIncludedInSubtitle = page.SUBTITLE.match(searchTermRegex);
-        const foundParagraph = page.PARAGRAPHS.find(parag => parag.match(searchTermRegex));
+        const isIncludedInSubtitle = searchTermRegex.test(page.SUBTITLE);
+        const foundParagraph = page.PARAGRAPHS.find(parag => searchTermRegex.test(parag));
         if (isIncludedInSubtitle || !!foundParagraph) {
             results.push({ 
                 title: page.TITLE, 
