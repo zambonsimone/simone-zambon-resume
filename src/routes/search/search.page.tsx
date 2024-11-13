@@ -24,7 +24,7 @@ const Search: React.FC = () => {
         setResults(found);
     },[searchTerm])
 
-    const showSearchSuggestion = results?.length === 0 && !searchTerm;
+    const showSearchSuggestion = !searchTerm;
     
     if (showSearchSuggestion) {
         return (
