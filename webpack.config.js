@@ -3,22 +3,9 @@
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const md5 = require("js-md5");
-const DotenvWebpack = require("dotenv-webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');    
-const webpack = require("webpack");
-
-const isProduction = process.env.NODE_ENV == 'production';
-const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
-
-function getModuleName(resourcePath) {
-    const fileWithExt = path.basename(resourcePath);
-    return fileWithExt.replace(".module.scss","");
-}
 
 const config = {
-    mode: isProduction ? "production" : "development",
     entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -41,60 +28,19 @@ const config = {
         new HtmlWebpackPlugin({
             template: 'index.html',
         }),
-        new DotenvWebpack({
-            path: isProduction ? "./.env.production" : "./.env.development",
-            systemvars: true
-        }),
         new CopyWebpackPlugin({
             patterns: [
                 { from: 'public', to: '' },
             ],
         }),
-    ].concat(isProduction ? [
-        new MiniCssExtractPlugin(),
-        new webpack.optimize.ModuleConcatenationPlugin(), 
-    ] : []),
+    ],
     module: {
         rules: [
             {
                 test: /\.(ts|tsx)$/i,
                 loader: 'ts-loader',
                 exclude: ['/node_modules/',"/server/","/netlify/functions/"],
-            },
-            {
-                test: /\.css$/i,
-                use: [stylesHandler,'css-loader'],
-            },
-           
-            {
-                oneOf: [
-                    {
-                        test: /\.module\.scss$/i,
-                        use: [
-                            stylesHandler, 
-                            {
-                                loader: 'css-loader',
-                                options: {
-                                    modules: {
-                                        getLocalIdent: (context, localIdentName, localName) => {
-                                            const camelCaseClass = localName.replace(/-./g, subs => subs[1].toUpperCase());
-                                            const moduleName = getModuleName(context.resourcePath);
-                                            const hash = md5.hex(context.resourcePath + localName).slice(0,6);
-                                            return `${moduleName}_${camelCaseClass}__${hash}`
-                                        },
-                                    }
-
-                                }
-                            },
-                            'sass-loader',
-                        ],
-                    },
-                    {
-                        test: /\.scss$/i,
-                        use: [stylesHandler, "css-loader", "sass-loader"]
-                    },
-                ]                
-            },
+            },   
             {
                 test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
                 type: 'asset',
@@ -104,7 +50,6 @@ const config = {
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...', ".scss"],
     },
-    devtool: isProduction ? false : "source-map",
 };
 
 module.exports = config;

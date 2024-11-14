@@ -2,7 +2,6 @@ import { Handler } from "@netlify/functions";
 import { sendMail } from "../../server/mail.mjs";
 
 const handler: Handler = async (request) => {
-    console.log("request")
     if (!request.body) {
         return {
             statusCode: 400,
