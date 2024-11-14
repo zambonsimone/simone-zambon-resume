@@ -1,7 +1,7 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { SubmitHandler } from "react-hook-form";
-import { sendMail } from "../../../api/endpoints";
 import { IAttachment } from "../../../api/models";
+import { useSendMail } from "../../../hooks/useSendMail";
 import { Form, FormModel } from "../../common/form/Form";
 import { GRecaptcha } from "../../common/form/input/g-recaptcha/GRecaptcha";
 import { Plus } from "../../symbols/Symbols";
@@ -26,6 +26,7 @@ export const ContactMeForm: React.FC = () => {
     const [messageCharsCount, setMessageCharsCount] = useState(0);
     const [attachment, setAttachment] = useState<IAttachment>();
     const [recaptchaVerified, setRecaptchaVerified] = useState(false);
+    const { sendMail, isLoading: isLoadingSendMail, confirmMessage } = useSendMail();
 
     const onChange = useCallback((value: string) => {
         setMessageCharsCount(value.length);
@@ -44,9 +45,9 @@ export const ContactMeForm: React.FC = () => {
     },[])
 
     const onSubmit: SubmitHandler<FormModel> = useCallback(async (formData: FormModel) => { 
-        const phoneNumber = formData?.phoneNumber ? `+${formData.phoneNumber}` : undefined   
+        const phoneNumber = formData?.phoneNumber ? `+${formData.phoneNumber}` : undefined;
         sendMail({ ...formData, phoneNumber, attachment });
-    },[attachment]);
+    },[attachment, sendMail]);
 
     return (
         <Form 
@@ -118,7 +119,8 @@ export const ContactMeForm: React.FC = () => {
                             onChange={onChange}
                         />
                         <GRecaptcha onVerify={(value) => setRecaptchaVerified(value)}/>
-                        <SubmitBtn label={SUBMIT.LABEL} disabled={!recaptchaVerified}/>
+                        <SubmitBtn label={SUBMIT.LABEL} loading={isLoadingSendMail} disabled={!recaptchaVerified}/>
+                        { confirmMessage && <span>{ confirmMessage }</span>}
                     </>
                 )
             }}

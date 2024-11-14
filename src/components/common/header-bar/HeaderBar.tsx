@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 import { CollapseButton } from "../button/collapse-button/CollapseButton";
 import { Icon } from "../icons/Icon";
 import { MatchResolution } from "../match-resolution/MatchResolution";

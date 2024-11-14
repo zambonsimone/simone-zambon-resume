@@ -1,4 +1,4 @@
-import React, { useCallback, useRef, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import inputStyle from "../Input.module.scss";
 import { IInputProps } from "../types";
 import inputFileStyle from "./InputFile.module.scss";

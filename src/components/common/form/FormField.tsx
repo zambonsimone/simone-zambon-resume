@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Asterisk } from "../../symbols/Symbols";
 import style from "./Form.module.scss";

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { Button } from "../../components/common/button/generic/Button";
 import { HtmlSanitizer } from "../../components/common/html-sanitizer/HtmlSanitizer";

@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./PersonalInfo.module.scss";
 import { PERSONAL_INFO_FULLNAME, PERSONAL_INFO_QUALIFICATION } from "./labels";
 

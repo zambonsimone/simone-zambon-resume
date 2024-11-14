@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import { IRoute } from "../../../../routes/routes";
 import { Icon } from "../../icons/Icon";

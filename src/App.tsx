@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import style from "./App.module.scss";
 import { AppLoading } from "./components/common/app-loading/AppLoading";

@@ -1,13 +1,38 @@
+import fs from "fs";
 import nodemailer from "nodemailer";
-import { EMAIL_PASSWORD, EMAIL_USERNAME, SEND_EMAIL_TO } from "./constants.mjs";
-import { logRequest } from "./logger.mjs";
+import { EMAIL_PASSWORD, SEND_EMAIL_TO } from "./constants.mjs";
+import { ErrorResponse, SuccessResponse } from "./responses.mjs";
+
+const MESSAGES = {
+    EMAIL_SENDING_FAILED: "Email sending failed, retry",
+    EMAIL_SENDING_SUCCESS: "Email sent successfully!"
+};
+
+export const buildMailDataLogMsg = (req) => {
+    return `
+    *****
+        DATE:
+        ${new Date().toISOString()}
+        BODY:
+        ${JSON.stringify(req)}\n
+        `;
+}
+
+const logger = (req) => {
+    const logMessage = buildMailDataLogMsg(req);
+    fs.appendFile('server/log.txt', logMessage, (err) => {
+        if (err) {
+            console.error('Error on log updating:', err);
+        }
+    });
+};
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 587,
     secure: false,
     auth: {
-      user: EMAIL_USERNAME,
+      user: "ee",//EMAIL_USERNAME,
       pass: EMAIL_PASSWORD
     }
 });
@@ -25,7 +50,7 @@ function buildMailHTML(formData) {
 }
 
 export async function sendMail(formData) {
-    logRequest(formData);
+    logger(formData);
     const html = buildMailHTML(formData);
     const subject = buildMailSubject(formData.fullname);
     const attachments = formData.attachment ? [{
@@ -44,9 +69,11 @@ export async function sendMail(formData) {
     };
     try {
         await transporter.sendMail(mailOptions);
-        return { isError: false, message: "Email sent!" }
+        return SuccessResponse({ message: MESSAGES.EMAIL_SENDING_SUCCESS });
     }
     catch (err) {
-        return { isError: true, message: `Failed to send email - Error: ${err.code}`}
+        console.log(err);
+        const { code, responseCode, message } = err;
+        return new ErrorResponse({ code, message, statusCode: responseCode  })
     }
 };

@@ -7,15 +7,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode=production",
-    "build:dev": "webpack --mode=development",
+    "build:prod": "cross-env NODE_ENV=production webpack --mode=production",
+    "build:dev": "cross-env NODE_ENV=development webpack --mode=development",
     "watch": "webpack --watch",
-    "serve": "webpack serve --mode=development",
-    "serve:prod": "webpack serve --mode=production"
+    "start": "cross-env NODE_ENV=development webpack serve --mode=development",
+    "start:prod": "cross-env NODE_ENV=production webpack serve --mode=production",
+    "server": "node server/server.mjs --mode=production",
+    "server:dev": "cross-env NODE_ENV=development node server/server.mjs --mode=development",
+    "server:prod": "cross-env NODE_ENV=production node server/server.mjs --mode=production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@netlify/functions": "^2.8.2",
     "@types/node-sass": "^4.11.4",
     "@types/react": "^18.2.21",
     "@types/react-dom": "^18.2.7",

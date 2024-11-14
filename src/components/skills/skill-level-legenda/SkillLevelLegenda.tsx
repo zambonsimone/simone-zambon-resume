@@ -1,4 +1,3 @@
-import React from "react";
 import { Accordion } from "../../common/accordion/Accordion";
 import { getLevelBgColor } from "../../route/content/text-content/level-indicator/utils";
 import style from "./SkillLevelLegenda.module.scss";

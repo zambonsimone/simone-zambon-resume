@@ -1,4 +1,3 @@
-import React from "react";
 import { FileDownload } from "../../components/files/file-download/FileDownload";
 import { IntroCode } from "../../components/route/content/intro-code/IntroCode";
 import { SectionTitle } from "../../components/route/title/RouteTitle";

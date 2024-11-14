@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 import style from "./Icon.module.scss";
 import { IconName, ICONS_PATHS } from "./icons-paths";
 

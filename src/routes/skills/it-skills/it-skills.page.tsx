@@ -1,4 +1,3 @@
-import React from "react";
 import { IntroCode } from "../../../components/route/content/intro-code/IntroCode";
 import { TextContent } from "../../../components/route/content/text-content/TextContent";
 import { SectionTitle } from "../../../components/route/title/RouteTitle";

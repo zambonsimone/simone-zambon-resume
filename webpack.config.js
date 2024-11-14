@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const md5 = require("js-md5");
 const DotenvWebpack = require("dotenv-webpack");
 const CopyWebpackPlugin = require('copy-webpack-plugin');    
+const webpack = require("webpack");
 
 const isProduction = process.env.NODE_ENV == 'production';
 const stylesHandler = isProduction ? MiniCssExtractPlugin.loader : 'style-loader';
@@ -17,6 +18,7 @@ function getModuleName(resourcePath) {
 }
 
 const config = {
+    mode: isProduction ? "production" : "development",
     entry: './src/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -48,13 +50,16 @@ const config = {
                 { from: 'public', to: '' },
             ],
         }),
-    ],
+    ].concat(isProduction ? [
+        new MiniCssExtractPlugin(),
+        new webpack.optimize.ModuleConcatenationPlugin(), 
+    ] : []),
     module: {
         rules: [
             {
                 test: /\.(ts|tsx)$/i,
                 loader: 'ts-loader',
-                exclude: ['/node_modules/'],
+                exclude: ['/node_modules/',"/server/","/netlify/functions/"],
             },
             {
                 test: /\.css$/i,
@@ -99,16 +104,7 @@ const config = {
     resolve: {
         extensions: ['.tsx', '.ts', '.jsx', '.js', '...', ".scss"],
     },
-    devtool: "source-map"
+    devtool: isProduction ? false : "source-map",
 };
 
-module.exports = () => {
-    if (isProduction) {
-        config.mode = 'production';
-        config.plugins.push(new MiniCssExtractPlugin());
-    } else {
-        config.mode = 'development';
-    }
-
-    return config;
-};
+module.exports = config;

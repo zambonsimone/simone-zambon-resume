@@ -1,4 +1,3 @@
-import React from "react";
 import { useResolution } from "../../../../hooks/useResolution";
 import { Accordion } from "../../../common/accordion/Accordion";
 import { getLinesCount, indentCode } from "../utils";

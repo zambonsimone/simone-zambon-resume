@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./LinesCounter.module.scss";
 
 export const LinesCounter: React.FC<{ count: number }> = ({ count }) => {

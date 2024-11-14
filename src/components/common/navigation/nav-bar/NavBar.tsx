@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { useResolution } from "../../../../hooks/useResolution";
 import { RoutePath } from "../../../../routes/paths";

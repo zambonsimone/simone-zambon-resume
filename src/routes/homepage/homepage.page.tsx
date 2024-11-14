@@ -1,4 +1,3 @@
-import React from "react";
 import { HtmlSanitizer } from "../../components/common/html-sanitizer/HtmlSanitizer";
 import { TextContent } from "../../components/route/content/text-content/TextContent";
 import { SectionTitle } from "../../components/route/title/RouteTitle";

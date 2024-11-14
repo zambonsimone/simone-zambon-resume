@@ -1,4 +1,3 @@
-import React from "react";
 import { Icon } from "../../icons/Icon";
 import style from "./CollapseButton.module.scss";
 
