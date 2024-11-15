@@ -30,7 +30,7 @@ export async function testRecaptcha(recaptcha: string) {
 export async function sendFormDataAsMail(formData: FormDataDto) {
     try {
         await sendMail(formData);
-        return new SuccessResponse({ message: EMAIL_MESSAGES.EMAIL_SENDING_FAILED })
+        return new SuccessResponse({ message: EMAIL_MESSAGES.EMAIL_SENDING_SUCCESS })
     }
     catch (err) {
         const { code, status: statusCode } = err as AxiosError;

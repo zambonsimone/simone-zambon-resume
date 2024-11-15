@@ -119,8 +119,16 @@ export const ContactMeForm: React.FC = () => {
                             onChange={onChange}
                         />
                         <GRecaptcha onVerify={(value) => setRecaptchaVerified(value)}/>
-                        <SubmitBtn label={SUBMIT.LABEL} loading={isLoadingSendMail} disabled={!recaptchaVerified}/>
-                        { confirmMessage && <span>{ confirmMessage }</span>}
+                        <div className={style.submitRow}>
+                            <SubmitBtn label={SUBMIT.LABEL} loading={isLoadingSendMail} disabled={!recaptchaVerified}/>
+                            { confirmMessage && (
+                                <span className={[style.confirmMessage, style[confirmMessage.status]].join(" ")}>
+                                    { confirmMessage.text }
+                                </span>
+                            )}
+                        </div>
+                        
+                        
                     </>
                 )
             }}

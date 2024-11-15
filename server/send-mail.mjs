@@ -18,7 +18,7 @@ export const buildMailDataLogMsg = (req) => {
         `;
 }
 
-const logger = (req) => {
+export const logger = (req) => {
     const logMessage = buildMailDataLogMsg(req);
     fs.appendFile('server/log.txt', logMessage, (err) => {
         if (err) {
@@ -50,7 +50,6 @@ function buildMailHTML(formData) {
 }
 
 export async function sendMail(formData) {
-    logger(formData);
     if (!formData) {
         return new ErrorResponse({
             statusCode: 400,

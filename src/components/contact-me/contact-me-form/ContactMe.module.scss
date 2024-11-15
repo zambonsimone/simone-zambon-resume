@@ -69,5 +69,22 @@ $distance_large: map-get($distance_metrics, "large");
             overflow: hidden;
         }
     }
+
+    .submitRow {
+        display: flex;
+        gap: $distance_large;
+
+        .confirmMessage {
+            font-size: 2rem;
+            font-weight: bold;
+
+            &.error {
+                background-color: red;
+            }
+            &.success {
+                background-color: $green;
+            }
+        }
+    }
 }
 

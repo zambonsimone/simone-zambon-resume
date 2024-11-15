@@ -24,6 +24,14 @@ const config = {
         new MiniCssExtractPlugin(),
         new webpack.optimize.ModuleConcatenationPlugin(),
     ],
+    devServer: {
+        proxy: {
+            '/api': {
+              target: 'http://localhost:3030', 
+              changeOrigin: true,
+            },
+        },
+    },
     module: {
         rules: [
             {

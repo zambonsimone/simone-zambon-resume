@@ -7,7 +7,8 @@ const app = express();
 app.use(cors());
 app.use(express.json({ limit: "100mb" }));
 
-app.post("/api/send", async (req,res) => {
+app.post("/api/send-mail", async (req,res) => {
+  logger(req.body);
   const resp = await sendMail(req.body);
   console.log(resp.message);
   return res.status(res.statusCode).send(resp);

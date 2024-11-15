@@ -17,12 +17,6 @@ const config = {
         open: true,
         host: 'localhost',
         historyApiFallback: true,
-        proxy: {
-            '/api': {
-              target: 'http://localhost:3030', 
-              changeOrigin: true,
-            },
-        },
     },
     plugins: [
         new HtmlWebpackPlugin({
