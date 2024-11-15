@@ -14,7 +14,6 @@ app.post("/api/send", async (req,res) => {
 });
 
 app.post("/api/verify-recaptcha", async (req,res) => {
-  console.log("received");
   const resp = await verifyRecaptcha(req.body.recaptcha);
   console.log(resp.message);
   return res.status(res.statusCode).send(resp);
