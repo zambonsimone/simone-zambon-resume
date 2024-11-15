@@ -11,7 +11,13 @@ const MESSAGES = {
 
 export async function verifyRecaptcha(recaptcha) {
     const url = `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${recaptcha}`;
-    console.log(RECAPTCHA_SECRET_KEY);
+    if (!recaptcha) {
+        return new ErrorResponse({
+            code: ERR_INVALID_RECAPTCHA,
+            message: MESSAGES.RECAPTCHA_VERIFICATION_FAILED,
+            statusCode: 400,
+        })
+    }
     try {
         const response = await axios.post(url);
         const isError = !response.data.success;

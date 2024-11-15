@@ -1,6 +1,6 @@
 import fs from "fs";
 import nodemailer from "nodemailer";
-import { EMAIL_PASSWORD, SEND_EMAIL_TO } from "./constants.mjs";
+import { EMAIL_PASSWORD, EMAIL_USERNAME, SEND_EMAIL_TO } from "./constants.mjs";
 import { ErrorResponse, SuccessResponse } from "./responses.mjs";
 
 const MESSAGES = {
@@ -32,7 +32,7 @@ const transporter = nodemailer.createTransport({
     port: 587,
     secure: false,
     auth: {
-      user: "ee",//EMAIL_USERNAME,
+      user: EMAIL_USERNAME,
       pass: EMAIL_PASSWORD
     }
 });
@@ -51,6 +51,13 @@ function buildMailHTML(formData) {
 
 export async function sendMail(formData) {
     logger(formData);
+    if (!formData) {
+        return new ErrorResponse({
+            statusCode: 400,
+            code: "ERR_BAD_REQUEST",
+            message: "Failed to send email: Error 400 Bad request"
+        })
+    }
     const html = buildMailHTML(formData);
     const subject = buildMailSubject(formData.fullname);
     const attachments = formData.attachment ? [{
@@ -69,7 +76,7 @@ export async function sendMail(formData) {
     };
     try {
         await transporter.sendMail(mailOptions);
-        return SuccessResponse({ message: MESSAGES.EMAIL_SENDING_SUCCESS });
+        return new SuccessResponse({ message: MESSAGES.EMAIL_SENDING_SUCCESS });
     }
     catch (err) {
         console.log(err);

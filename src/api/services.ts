@@ -12,7 +12,7 @@ export async function testRecaptcha(recaptcha: string) {
             return new ErrorResponse({ 
                 code: response.code, 
                 message: RECAPTCHA_MESSAGES.RECAPTCHA_VERIFICATION_FAILED, 
-                statusCode: 200 
+                statusCode: response.statusCode 
             })
         }
         return new SuccessResponse({ message: RECAPTCHA_MESSAGES.RECAPTCHA_VERIFICATION_SUCCESS })
