@@ -17,6 +17,8 @@ $distance_x_large: map-get($distance_metrics, "x_large");
     gap: $distance_normal;
     justify-content: space-between;
     width: 100%;
+    position: sticky;
+    top: 0;
 
     .searchbarContainer {
         padding-right: $distance_x_large;

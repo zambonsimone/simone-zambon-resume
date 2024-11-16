@@ -1,5 +1,6 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
+@import "../../../mixins.scss";
 
 $distance_metrics: map-get($metrics, "distance");
 $distance_normal: map-get($distance_metrics, "normal");
@@ -12,9 +13,12 @@ $distance_normal: map-get($distance_metrics, "normal");
     min-width: 28rem;
     min-height: 100%;
     cursor: pointer;
+    overflow-y: auto;
+    position: fixed;
+    @include hideScrollbar();
 
-    @include device("tablet") {
-        position: absolute;
+    @include device("desktop") {
+        position: initial;
     }
 
     &.collapsed {

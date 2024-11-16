@@ -50,6 +50,7 @@ const config = {
                                 options: {
                                     modules: {
                                         getLocalIdent: (context, localIdentName, localName) => {
+                                            if (localName === "root") return localName;
                                             const camelCaseClass = localName.replace(/-./g, subs => subs[1].toUpperCase());
                                             const moduleName = getModuleName(context.resourcePath);
                                             const hash = md5.hex(context.resourcePath + localName).slice(0,6);
