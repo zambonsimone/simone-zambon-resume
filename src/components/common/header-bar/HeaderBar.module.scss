@@ -1,6 +1,7 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
 @import "../../../font.scss";
+@import "../../../mixins.scss";
 
 $icon_font: map-get($font, "icon");
 $icon_fontsize: map-get($icon_font, "fontsize");

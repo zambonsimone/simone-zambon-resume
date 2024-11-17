@@ -24,19 +24,3 @@ $breakpoints: (
     tablet: 1024px,
     mobile: 480px
 );
-
-@mixin device($device) {
-    @if map-has-key($breakpoints, $device) {
-        $breakpoint: map-get($breakpoints, $device);
-        @media screen and (max-width: $breakpoint) {
-          @content;
-        }
-      }
-}
-
-@mixin animation($property) {
-    -webkit-transition: $property .2s ease;
-    -moz-transition: $property .2s ease;
-    -o-transition: $property .2s ease;
-    transition: $property .2s ease;
-}

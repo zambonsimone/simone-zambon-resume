@@ -1,6 +1,7 @@
 @import "../../../../common.scss";
 @import "../../../../font.scss";
 @import "../../../../metrics.scss";
+@import "../../../../mixins.scss";
 
 $section_title_font: map-get($font, "section_title");
 $section_title_fontsize: map-get($section_title_font, "fontsize");

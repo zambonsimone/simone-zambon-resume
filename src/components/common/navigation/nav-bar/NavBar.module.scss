@@ -53,7 +53,7 @@ $full_padding: map-get($distance_metrics, "full_small");
                 text-transform: uppercase;
                 text-decoration: none;
                 color: $niceBlack;
-                @include fontsizeTransitionAnimation();
+                @include animation(font-size);
 
                 &.mainSubNavLink {
                     font-size: 1.2rem;
@@ -84,7 +84,7 @@ $full_padding: map-get($distance_metrics, "full_small");
                     content: "";
                     height: 0.5rem;
                     background-color: transparent;
-                    @include fontsizeTransitionAnimation();
+                    @include animation(font-size);
                 }
             
                 > a {
