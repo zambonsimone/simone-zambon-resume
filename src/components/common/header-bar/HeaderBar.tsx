@@ -36,12 +36,14 @@ export const HeaderBar: React.FC = () => {
                         <Icon className={style.icon} icon="search" />
                     </div>
                     <dialog className={style.headerbarDialog} ref={headerRef}>
-                        <CollapseButton 
-                            collapsedTo="top"
-                            collapsed={false}
-                            className={[style.icon, style.closeHeaderbarDialogBtn].join(" ")}
-                            onClick={closeModal}
-                        />
+                        <div className={style.closeHeaderbarDialogBtnWrapper}>
+                            <CollapseButton 
+                                collapsedTo="top"
+                                collapsed={false}
+                                className={[style.icon, style.closeHeaderbarDialogBtn].join(" ")}
+                                onClick={closeModal}
+                            />
+                        </div>
                         <div className={style.headerbarDialogContent}>
                             <Searchbar onClickSearch={closeModal} className={style.dialogSearchbar}/>
                             <NavBar onLinkClick={closeModal}/>

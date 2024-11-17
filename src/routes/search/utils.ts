@@ -3,8 +3,8 @@ import { MAX_CHARS, PAGES } from "./constants";
 import { ISearchResult } from "./search.page";
 
 export function getShorterContent(content: string, searchTerms: string) {
-    const index = content.indexOf(searchTerms);
-    let [firstPart,lastPart] = content.split(searchTerms);
+    const formattedContent = content.toLocaleLowerCase().replace(/\n/g," ").replace(/ {2,}/g, " ");
+    let [firstPart,lastPart] = formattedContent.split(searchTerms.toLowerCase());
     const firstPartLength = firstPart?.length ?? 0;
     const lastPartLength = lastPart?.length ?? 0;
     const totalLength = firstPartLength + searchTerms.length + lastPartLength;
@@ -15,18 +15,25 @@ export function getShorterContent(content: string, searchTerms: string) {
     //calculating the chars amount that can be removed from the first part
     //if the chars amount to be removed is higher than the first part length, I will remove further chars from last part 
     const remainderFromFirstPart = Math.abs(Math.min(0, firstPartLength - maxCharsExcludingSearchTerms/2));
-    let charsToRemoveFromFirstPart = remainderFromFirstPart ? 0 : (firstPartLength - maxCharsExcludingSearchTerms/2);
+    //let charsToRemoveFromFirstPart = remainderFromFirstPart ? 0 : (firstPartLength - maxCharsExcludingSearchTerms/2);
+    let charsToConsiderFromFirstPart = remainderFromFirstPart ? firstPartLength : maxCharsExcludingSearchTerms/2;
 
     //calculating the max chars amount that can be removed from the last part
     //if the chars amount to be removed is higher than the last part length, I will remove further chars from first part 
     const remainderFromLastPart = Math.abs(Math.min(0, lastPartLength - maxCharsExcludingSearchTerms/2));
-    let charsToRemoveFromLastPart = remainderFromLastPart ? 0 : (lastPartLength - maxCharsExcludingSearchTerms/2);
-    
-    if (remainderFromLastPart) charsToRemoveFromFirstPart -= remainderFromLastPart; 
-    if (remainderFromFirstPart) charsToRemoveFromLastPart -= remainderFromFirstPart;
+    //let charsToRemoveFromLastPart = remainderFromLastPart ? 0 : (lastPartLength - maxCharsExcludingSearchTerms/2);
+    let charsToConsiderFromLastPart = remainderFromLastPart ? lastPartLength : maxCharsExcludingSearchTerms/2;
 
-    firstPart =  firstPart?.slice(charsToRemoveFromFirstPart, index) ?? "";
-    lastPart = lastPart?.slice(0, lastPart.length - charsToRemoveFromLastPart) ?? "";
+    /*if (remainderFromLastPart) charsToRemoveFromFirstPart -= remainderFromLastPart; 
+    if (remainderFromFirstPart) charsToRemoveFromLastPart -= remainderFromFirstPart;*/
+    if (remainderFromLastPart) charsToConsiderFromFirstPart += remainderFromLastPart; 
+    if (remainderFromFirstPart) charsToConsiderFromLastPart += remainderFromFirstPart;
+
+    /*firstPart =  firstPart?.slice(charsToRemoveFromFirstPart, index) ?? "";
+    lastPart = lastPart?.slice(0, lastPart.length - charsToRemoveFromLastPart) ?? "";*/
+    const indexOfFirstIncludedChar = Math.max(0, firstPartLength - charsToConsiderFromFirstPart - 1);
+    firstPart =  firstPart?.slice(indexOfFirstIncludedChar, firstPartLength - 1) ?? "";
+    lastPart = lastPart?.slice(0, charsToConsiderFromLastPart) ?? "";
 
     return [
         !remainderFromFirstPart ? `...${firstPart}` : firstPart,

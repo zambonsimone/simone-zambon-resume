@@ -56,7 +56,7 @@ const Search: React.FC = () => {
                         <p className={style.resultContent}>
                             {firstPart}
                             <span className={style.highlightedSearchTerms}>
-                                {content}
+                                &nbsp;{content}&nbsp;
                             </span>
                             {lastPart}
                         </p>                
