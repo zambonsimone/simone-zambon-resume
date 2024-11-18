@@ -1,9 +1,9 @@
 import { Suspense } from "react";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import style from "./App.module.scss";
-import { AppLoading } from "./components/common/app-loading/AppLoading";
 import { DocumentTitle } from "./components/common/document-title/DocumentTitle";
 import { HeaderBar } from "./components/common/header-bar/HeaderBar";
+import { Loading } from "./components/common/loading/Loading";
 import { SubNavBar } from "./components/common/navigation/sub-nav-bar/SubNavBar";
 import { ScrollToTop } from "./components/common/scroll-to-top/ScrollToTop";
 import { Sidebar } from "./components/common/sidebar/Sidebar";
@@ -20,7 +20,7 @@ export const App: React.FC = () => {
                 { !isMobile && <Sidebar/> }
                 <div className={style.appContent}>
                     <HeaderBar/>
-                    <Suspense fallback={<AppLoading/>}>  
+                    <Suspense fallback={<Loading className={style.appLoading}/>}>  
                         <Switch>
                             <Redirect exact from={"/"} to={PATHS.HOMEPAGE}/>
                             { ROUTES.map((route, index) => {

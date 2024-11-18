@@ -74,6 +74,12 @@ html {
         @include removeOutlineOnFocusables();
     }
 
+    .appLoading {
+        height: 100vh;
+        width: 100%;
+        font-size: 3rem;
+    }
+
     .appContainer {
         display: flex;
 

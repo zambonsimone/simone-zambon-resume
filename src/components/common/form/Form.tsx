@@ -2,8 +2,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useCallback, useMemo, useRef } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { ObjectSchema, SchemaDescription } from "yup";
-import { AppLoading } from "../app-loading/AppLoading";
 import { Button } from "../button/generic/Button";
+import { Loading } from "../loading/Loading";
 import style from "./Form.module.scss";
 import { FormField, IFormFieldProps } from "./FormField";
 
@@ -37,7 +37,11 @@ export const Form: React.FC<IFormProps> = ({
         return <FormField required={isRequired} name={name} {...others}/>
     }); 
     const SubmitBtn = useCallback<React.FC<ISubmitAsChildProps>>(({ label, disabled = false, loading = false }) => (
-        <Button text={loading ? <AppLoading /> : label} submit disabled={disabled}/>
+        <Button 
+            text={loading ? <Loading className={style.submitLoading}/> : label} 
+            submit 
+            disabled={loading || disabled}
+        />
     ),[]);
 
     return (

@@ -39,4 +39,10 @@ $distance_large: map-get($distance_metrics, "large");
             }
         }
     }
+
+    .submitLoading {
+        height: 100%;
+        width: 100%;
+        font-size: 1.2rem;
+    }
 }
