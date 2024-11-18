@@ -1,6 +1,6 @@
 import cors from "cors";
 import express from "express";
-import { sendMail } from "./mail.mjs";
+import { sendMail } from "./send-mail.mjs";
 import { verifyRecaptcha } from "./verify-recaptcha.mjs";
 
 const app = express();

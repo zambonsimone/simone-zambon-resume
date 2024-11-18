@@ -79,10 +79,10 @@ $distance_large: map-get($distance_metrics, "large");
             font-weight: bold;
 
             &.error {
-                background-color: red;
+                color: red;
             }
             &.success {
-                background-color: $green;
+                color: $green;
             }
         }
     }

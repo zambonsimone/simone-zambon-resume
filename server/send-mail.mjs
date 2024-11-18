@@ -45,7 +45,7 @@ function buildMailHTML(formData) {
     const { email, fullname, message } = formData;
     const htmlName = fullname ? `<p><b>Name:</b>&nbsp;${fullname}</p>` : "";
     const htmlEmail = `<p><b>Email:</b>&nbsp;${email}</p>`;
-    const htmlMessage =  `<br/><br/><p>${message}</p>`;
+    const htmlMessage =  message ? `<br/><br/><p>${message}</p>` : "";
     return htmlName + htmlEmail + htmlMessage
 }
 

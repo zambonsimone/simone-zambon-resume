@@ -1,13 +1,12 @@
 import axios from "axios";
 import { ErrorResponse, FormDataDto, SuccessResponse } from "./models";
 
-const basePath = process.env.REACT_APP_BASE_PATH;
 const options = { 
     headers: { 'Content-Type': 'application/json' }
 };
 
 export async function verifyRecaptcha(recaptcha: string): Promise<SuccessResponse | ErrorResponse> {
-    const response = await axios.post<SuccessResponse | ErrorResponse>(`${basePath}verify-recaptcha`, 
+    const response = await axios.post<SuccessResponse | ErrorResponse>(`/api/verify-recaptcha`, 
         { recaptcha },
         options
     )
@@ -15,7 +14,7 @@ export async function verifyRecaptcha(recaptcha: string): Promise<SuccessRespons
 }
 
 export async function sendMail(formData: FormDataDto): Promise<SuccessResponse | ErrorResponse> {
-    const response = await axios.post<SuccessResponse | ErrorResponse>(`${basePath}send-mail`, 
+    const response = await axios.post<SuccessResponse | ErrorResponse>(`/api/send-mail`, 
         formData,
         options
     );
