@@ -11,6 +11,7 @@ $icon_fontsize: map-get($icon_font, "fontsize");
 $icon_fontsize_small: map-get($icon_font, "fontsize_small");
 
 $distance_metrics: map-get($metrics, "distance");
+$distance_small: map-get($distance_metrics, "small");
 $distance_normal: map-get($distance_metrics, "normal");
 $distance_large: map-get($distance_metrics, "large");
 $full_padding: map-get($distance_metrics, "full_small");
@@ -58,6 +59,7 @@ $full_padding: map-get($distance_metrics, "full_small");
                 &.mainSubNavLink {
                     font-size: 1.2rem;
                     height: 3rem;
+                    margin-left: calc($distance_normal + $distance_small);
 
                     &:last-child {
                         margin-bottom: $distance_normal;
