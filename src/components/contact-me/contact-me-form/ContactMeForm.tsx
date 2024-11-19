@@ -3,7 +3,7 @@ import { SubmitHandler } from "react-hook-form";
 import { IAttachment } from "../../../api/models";
 import { useSendMail } from "../../../hooks/useSendMail";
 import { Form, FormModel } from "../../common/form/Form";
-import { GRecaptcha } from "../../common/form/input/g-recaptcha/GRecaptcha";
+import { Recaptcha } from "../../common/form/input/g-recaptcha/Recaptcha";
 import { Plus } from "../../symbols/Symbols";
 import { CharsCounter } from "./CharsCounter";
 import { MESSAGE_MAX_CHARS } from "./constants";
@@ -118,7 +118,7 @@ export const ContactMeForm: React.FC = () => {
                             className={style.messageFieldContainer}
                             onChange={onChange}
                         />
-                        <GRecaptcha onVerify={(value) => setRecaptchaVerified(value)}/>
+                        <Recaptcha onVerify={(value) => setRecaptchaVerified(value)}/>
                         <div className={style.submitRow}>
                             <SubmitBtn label={SUBMIT.LABEL} loading={isLoadingSendMail} disabled={!recaptchaVerified}/>
                             { confirmMessage && (

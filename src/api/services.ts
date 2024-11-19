@@ -3,7 +3,14 @@ import { sendMail, verifyRecaptcha } from "./endpoints";
 import { EMAIL_MESSAGES, ErrorCodes, ERRORS, RECAPTCHA_MESSAGES } from "./messages";
 import { ErrorResponse, FormDataDto, SuccessResponse } from "./models";
 
-export async function testRecaptcha(recaptcha: string) {
+export async function testRecaptcha(recaptcha: string | null) {
+    if (recaptcha === null) {
+        return new ErrorResponse({
+            code: ERRORS.ERR_RECAPTCHA_EXPIRED,
+            statusCode: 408,
+            message: RECAPTCHA_MESSAGES.RECAPTCHA_EXPIRED
+        })
+    }
     try {
         const response = await verifyRecaptcha(recaptcha);
         const { isError } = response;

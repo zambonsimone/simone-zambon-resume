@@ -1,13 +1,13 @@
 import { useCallback, useRef } from "react";
 import ReCaptcha from "react-google-recaptcha";
-import { useVerifyCaptcha } from "../../../../../hooks/useVerifyCaptcha";
+import { useVerifyCaptcha } from "../../../../../hooks/useVerifyRecaptcha/useVerifyCaptcha";
 import formStyle from "../../Form.module.scss";
 import recaptchaStyle from "./GRecaptcha.module.scss";
 
 interface IGRecaptchaProps {
     onVerify: (value: boolean) => void;
 }
-export const GRecaptcha: React.FC<IGRecaptchaProps> = ({ 
+export const Recaptcha: React.FC<IGRecaptchaProps> = ({ 
     onVerify
 }) => {
     const recaptchaRef = useRef<ReCaptcha>();
