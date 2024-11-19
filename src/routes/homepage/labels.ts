@@ -27,7 +27,7 @@ export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
             PARAGRAPHS: [
                 `Ho realizzato questo sito web con metodi e funzionalità comuni per una webapp sviluppata con React e Typescript.
                 Ho differenziato variabili, script e configurazioni per ogni ambiente in moduli dedicati.
-                Il deploy del sito viene fatto su una nota piattaforma di host che esegue una build dedicata per l'ambiente di produzione distribuito utilizzando direttamente
+                Il deploy del sito viene fatto su una nota piattaforma di host che esegue una build dedicata per l'ambiente di produzione utilizzando direttamente
                 il mio repository su GitHub.`,
                 
                 `Per le funzionalità di BackEnd, questo sito utilizza due approcci in base all'ambiente:

@@ -1,8 +1,8 @@
 import { IRouteContentOrganization } from "../../../types";
 
 export const IT_SKILLS_LABELS: IRouteContentOrganization = {
-    TITLE: "Information Technology Skills",
-    SUBTITLE: "Even if my training as a developer has been based on Java and SQL, I have a multi-year experience in FrontEnd, mainly coding in Typescript and React.",
+    TITLE: "Abilità e competenze IT",
+    SUBTITLE: "Anche se la mia formazione come developer si è basata su Java ed SQL, ho un'esperienza pluriennale in FrontEnd, scrivendo principalmente codice Typescript e React",
     INTRO_CODE: `const itSkills = new Skills({
   programmingLanguages: ["JS", "HTML", "CSS", "Java", "SQL", "Kotlin", "Swift"],
   superSets: ["Typescript", "SCSS"],
@@ -15,15 +15,16 @@ export const IT_SKILLS_LABELS: IRouteContentOrganization = {
     SECTIONS: [
       {
         PARAGRAPHS: [
-          `As a consultant I worked in various roles and projects, that gave me the possibility
-          to use many technologies and deal with different layers of an application. 
-          The main job experience as a developer is front-end developing for a private hospitals holding 
-          located in Milan, Italy.`,
+        `Come consulente ho lavorato in vari ruoli e progetti, che mi hanno dato la possibilità
+        di usare molte tecnologie e di occuparmi di diversi layer di una applicazione.
+        L'esperienza lavorativa principale come developer è lo sviluppo front-end per una holding di ospedali
+        privati situata in Milano, Italia.`,
 
-          `Since July 2021 my job is focused on developing new features, fixing bug and writing tests for the 
-          main applications of the holding which gives the customers various services related to the clinics,
-          like reservation of exams and management of their own medical documents/reports.
-          As one of the most expert team member I was also involved in new members onboarding and training.`
+        `Da luglio 2021 il mio lavoro è focalizzato sullo sviluppo di nuove funzionalità, risoluzione di bug e scrittura di tests
+        per l'applicazione principale della holding, che da ai clienti vari servizi relativi alle cliniche, come 
+        la prenotazione di esami e gestione dei propri referti e documenti medici.
+        Come uno dei più esperti membri del team sono stato anche coinvolto in attività di onboarding e formazione di nuovi membri.
+        `
         ]
       },
       {
@@ -32,10 +33,15 @@ export const IT_SKILLS_LABELS: IRouteContentOrganization = {
           LEVEL: 8
         },
         PARAGRAPHS: [
-          `Javascript, CSS and HTML are my daily bread and it has been that for every front-end project i worked on,
-          but even if there is a lot more for me to know and learn, I could utilize nearly all Javascript coding features and I could
-          reach a deep knowledge of how it works and why.`,
+            `Javascript, CSS e HTML sono il mio pane quotidiano ed è stato così per ogni progetto di front-end al quale ho lavorato.
+            Anche se c'è molto e molto altro da imparare e da conoscere, ho potuto utilizzare quasi la totalità delle caratteristiche principali di javascript,
+            e ho potuto acquisire una conoscenza profonda di come lavora e perchè`,
+          ,
 
+          `Con javascript ho lavorato molto spesso con chiamate REST ad API e programmazione asincrona, ho usato molti tipi di oggetti e dati, gestito eventi e manipolato il DOM.
+
+            
+          `,
           `Working on web applications I often modified REST calls logics and I implemented new ones. Because nearly
           all of them was aiming to a private final user, the importance of UX/UI aspects was very high:
           handling events of any type caused by user interactions is a very common activity, and the need of a complex style
