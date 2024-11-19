@@ -10,7 +10,7 @@ export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
     TITLE: "Il mio curriculum",
     SUBTITLE: `Quale miglior modo di dare una dimostrazione del mio livello nell'ambito dello sviluppo di siti e applicazioni web, se non
     creando un mio sito web? Contiene tutte le informazioni riportate nel mio curriculum raccontando qualche particolare in più e 
-    il suo codice sorgente è interamente consultabile <a href="http://github">qui</a>.`,
+    il suo codice sorgente è interamente consultabile <a href="https://github.com/zambonsimone/simone-zambon-resume" target="_blank">qui</a>.`,
     INSTRUCTIONS: {
         TITLE: "Istruzioni",
             LIST_ITEMS: [
@@ -25,58 +25,55 @@ export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
         {
             TITLE: "Implementazione",
             PARAGRAPHS: [
-                "Ho scelto Typescript come linguaggio e ReactJS come libreria principale, e ogni scelta su come realizzarlo ha un motivo preciso."
+                `Ho realizzato questo sito web con metodi e funzionalità comuni per una webapp sviluppata con React e Typescript.
+                Ho differenziato variabili, script e configurazioni per ogni ambiente in moduli dedicati.
+                Il deploy del sito viene fatto su una nota piattaforma di host che esegue una build dedicata per l'ambiente di produzione utilizzando direttamente
+                il mio repository su GitHub.`,
+                
+                `Per le funzionalità di BackEnd, questo sito utilizza due approcci in base all'ambiente:
+                il sito distribuito e raggiungibile pubblicamente utilizza funzioni serverless fornite dalla piattaforma di host,
+                mentre in locale chiama api esposte da un mio piccolo server eseguito con Node.
+                In locale si può scegliere se utilizzare la configurazione di produzione o di sviluppo, mentre in ambiente distribuito
+                viene utilizzata una configurazione custom che estende quella di produzione in locale.
+                `,
+
+                `Il mio intento è principalmente quello di dimostrare le mie competenze. Alcune funzionalità come l'invio di email
+                tramite form, il download di file e la costruzione di un server sono ovviamente superflue, ma volevo dare una dimostrazione
+                delle mie conoscenze e capacità di sviluppo anche lato BackEnd`
             ]
         },
         {
-            TITLE: "Design",
+            TITLE: "UX/UI",
             PARAGRAPHS: [
-                `sarà scontato, ma il design è stato scelto sulla base di una mia preferenza personale: il colore arancione è il mio preferito.
-                I colori di questo sito sono coerenti con quelli del mio curriculum in formato PDF.  
-                Ho scelto accuratamente un set di pantoni, basandomi su principi di design, che desse risalto all'arancione.`
+                `Ho scelto il design e il set di pantoni di questo sito seguendo i principi di UX/UI e di accessibilità, oltre ovviamente ai miei gusti personali.
+                Ho prestato particolare attenzione anche a ottimizzare le performance per fornire una UX fluida`
             ],
         },
         {
             TITLE: "Organizzazione del codice",
             PARAGRAPHS: [
                 `Ho creato e organizzato le cartelle che compongono il progetto del mio sito web seguendo le convenzioni 
-                più comunemente utilizzate nell'ambito di appartenenza di questo progetto. 
+                più comunemente utilizzate in piccole webapp. 
                 Per dare risalto alla mia esperienza acquisita totalmente in ambito di grandi progetti, ho deciso 
-                di organizzare il codice creando ogni modulo con un valore semantico e con una precisa funzione. 
-                Anche le costanti, dai testi allo stile, sono state isolate e centralizzate.
-                Questo permette una facile manutenibilità del codice.`
+                di organizzare il codice creando ogni modulo con un valore semantico e con una precisa funzione e centralizzando i vari dati
+                per permettere una facile manutenibilità del codice.`
             ],
         },
         {
             TITLE: "Linguaggio",
             PARAGRAPHS: [
-                `Ho scelto Typescript come linguaggio in quanto nella mia esperienza lavorativa più lunga e formante 
-                ho sempre utilizzato Typescript e lo ritengo un linguaggio con molti vantaggi in ambito di sviluppo FrontEnd
-                di applicazioni soprattutto se complesse.
-                Ho scelto ReactJS come libreria principale perchè ritengo di aver acquisito un'ottima conoscenza dei suoi principi, paradigmi e punti di forza.
-                Nel contesto di questo sito web l'ho scelto anche per la semplicità di sviluppo.`
+                `Ho scelto Typescript come linguaggio e ReactJS come libreria principale rispettivamente per la solidità e la semplicità di sviluppo.
+                Inoltre, sono il linguaggio e la libreria che ho utilizzato e approfondito maggiormente.`
             ],
         },
         {
             TITLE: "Strategia di sviluppo",
             PARAGRAPHS: [
-                `Il mio intento è principalmente quello di dimostrare le mie competenze.
-                Questo sito è stato svilppato in versioni utilizzando GIT. 
-                Ho tipizzato il codice utilizzando sia tipi di Typescript che tipi definiti da me.
-                Ho rispettato quasi sempre i paradigmi di React e gli strumenti forniti dalla libreria come gli hook e
-                i componenti di navigazione.
-                Ho cercato di creare componenti atomici e con responsabilità ben precise, facendoli reagire solo se necessario anche utilizzando scelte
-                consapevoli di memoizzazione.`,
-                
-                `Alcune tecniche di sviluppo potrebbero sembrare superflue o vittima di over-engineering. 
-                Sebbene io eviti di fare scelte complicate se non necessario, ho esasperato alcune implementazioni per 
-                mostrare comunque le mie capacità negli ambiti in cui ci fosse questa necessità.
-                Ho anche deciso di non ricorrere a nessuna libreria di helper e utility se non veramente vantaggiosa.
-                Se si da un'occhiata al codice di questo sito web su GitHub, in molti moduli ho scritto dei commenti per 
-                spiegare le ragioni di determinate implementazioni.
-                ho cercato di utilizzare i metodi principali che ho appreso e le librerie più utili che ho conosciuto in ambito di sviluppo FrontEnd.
-                Per lo sviluppo ho utilizzato un dev server e un bundler per velocizzare lo sviluppo, Sass ed eslint per scrivere codice più leggibile
-                e standardizzato. `
+                `Ho implementato eslint per un rigido controllo della sintassi.
+                Ho rispettato i paradigmi di React e Ho utilizzato gli strumenti forniti dalla libreria come gli hook e
+                i componenti di navigazione rispettando i loro scopi di utilizzo e, più in generale, i paradigmi di React.
+                Ho utilizzato webpack 5 per configurare un dev server e fornire configurazioni comode per il debug.
+                sempre a scopi dimostrativi ho scelto di non installare librerie di helper e utility se non veramente vantaggiose`,
             ],
         }
     ]

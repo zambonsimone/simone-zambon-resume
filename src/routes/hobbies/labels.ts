@@ -10,12 +10,10 @@ export const HOBBIES_LABELS: IRouteContentOrganization = {
         {
             TITLE: "Do It Yourself",
             PARAGRAPHS: [
-                `Possiamo dire che sia una passione di famiglia: sono cresciuto vedendo prima mio padre e poi mio fratello 
-                ingegnarsi e impegnarsi per autoprodursi molti beni di cui necessitavano, dai più piccoli e irrilevanti ai piu grandi e importanti.
+                `Sono cresciuto vedendo prima mio padre e poi mio fratello ingegnarsi per autoprodursi molti oggetti di cui necessitavano.
                 E così anche io, all'inizio un po' per gioco, ho iniziato a modificare, personalizzare e costruire oggetti.
                 Crescendo invece è diventata anche una mia filosofia di vita per poter contare di più sulle mie sole forze.
-                Le attività più importanti a cui mi sono dedicato sono la coltivazione di un piccolo orto, l'autoproduzione di materia prima
-                per la cucina, l'assemblaggio e la riparazione di computers, smartphone, sistemi audio domestici e per auto, barbecues.`
+                Le attività più importanti a cui mi sono dedicato spaziano dalla meccanica al giardinaggio fino all'assemblamento di hardware, alla realizzazione di sistemi audio e alla realizzazione di materie prime gastronomiche`
             ]
         },
         {

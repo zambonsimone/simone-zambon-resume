@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "../../common/icons/Icon";
 import style from "./FileDownload.module.scss";
 import { buildFileNameFromHref, getFileInfo } from "./utils";

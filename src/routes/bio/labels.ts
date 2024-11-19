@@ -42,16 +42,14 @@ export const BIO_LABELS: IRouteContentOrganization = {
         {
             TITLE: "Formazione professionale",
             PARAGRAPHS: [
-                `Scelsi un corso professionale intensivo per diventare "Bartender", che considero una professione in grado
+                `Intrapresi un corso professionale intensivo per diventare "Bartender", che considero una professione in grado
                 di unire scienza e logica.
                 Dopo aver conseguito un attestato di qualifica professionale al termine del corso, iniziai subito a lavorare 
                 in pub e discoteche fino a svolgere questa professione (che saltuariamente svolgo tutt'ora) anche come freelance ad eventi privati.`,
 
                 `Sebbene amassi questo lavoro nonostante i ritmi spesso stressanti e l'intensa mole di lavoro, 
-                mi continuò a stuzzicare l'idea di una professione dove avrei potuto ricorrere maggiormente alla logica e alla matematica.
-                Dopo essermi cimentato in qualche nuova professione anche per acquisire nuove competenze, 
-                ho trovato un corso intensivo di programmazione in Java a scopo assunzione, al quale potei accedere solo passando con successo un test attitudinale 
-                poichè non avevo competenze comprovate di IT.
+                trovai un corso intensivo di programmazione in Java a scopo assunzione e decisi di parteciparvi.
+                Potei accedere solo passando con successo un test attitudinale poichè non avevo competenze comprovate di IT.
                 Al termine del corso venni valutato e poi assunto come Junior Developer dall'azienda Dale Consulting a novembre del 2019 fino a gennaio 2025.`
             ],
         },

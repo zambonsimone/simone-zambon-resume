@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import inputStyle from "../Input.module.scss";
 import { IInputProps } from "../types";
 import "./TextArea.module.scss";

@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import { useCallback, useState } from "react";
 import { useHistory } from "react-router";
 import { PATHS } from "../../../../routes/paths";
 import { Button } from "../../button/generic/Button";

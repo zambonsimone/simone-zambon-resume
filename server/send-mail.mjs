@@ -1,6 +1,31 @@
+import fs from "fs";
 import nodemailer from "nodemailer";
 import { EMAIL_PASSWORD, EMAIL_USERNAME, SEND_EMAIL_TO } from "./constants.mjs";
-import { logRequest } from "./logger.mjs";
+import { ErrorResponse, SuccessResponse } from "./responses.mjs";
+
+const MESSAGES = {
+    EMAIL_SENDING_FAILED: "Email sending failed, retry",
+    EMAIL_SENDING_SUCCESS: "Email sent successfully!"
+};
+
+export const buildMailDataLogMsg = (req) => {
+    return `
+    *****
+        DATE:
+        ${new Date().toISOString()}
+        BODY:
+        ${JSON.stringify(req)}\n
+        `;
+}
+
+export const logger = (req) => {
+    const logMessage = buildMailDataLogMsg(req);
+    fs.appendFile('server/log.txt', logMessage, (err) => {
+        if (err) {
+            console.error('Error on log updating:', err);
+        }
+    });
+};
 
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
@@ -20,12 +45,18 @@ function buildMailHTML(formData) {
     const { email, fullname, message } = formData;
     const htmlName = fullname ? `<p><b>Name:</b>&nbsp;${fullname}</p>` : "";
     const htmlEmail = `<p><b>Email:</b>&nbsp;${email}</p>`;
-    const htmlMessage =  `<br/><br/><p>${message}</p>`;
+    const htmlMessage =  message ? `<br/><br/><p>${message}</p>` : "";
     return htmlName + htmlEmail + htmlMessage
 }
 
 export async function sendMail(formData) {
-    logRequest(formData);
+    if (!formData) {
+        return new ErrorResponse({
+            statusCode: 400,
+            code: "ERR_BAD_REQUEST",
+            message: "Failed to send email: Error 400 Bad request"
+        })
+    }
     const html = buildMailHTML(formData);
     const subject = buildMailSubject(formData.fullname);
     const attachments = formData.attachment ? [{
@@ -44,9 +75,11 @@ export async function sendMail(formData) {
     };
     try {
         await transporter.sendMail(mailOptions);
-        return { isError: false, message: "Email sent!" }
+        return new SuccessResponse({ message: MESSAGES.EMAIL_SENDING_SUCCESS });
     }
     catch (err) {
-        return { isError: true, message: `Failed to send email - Error: ${err.code}`}
+        console.log(err);
+        const { code, responseCode, message } = err;
+        return new ErrorResponse({ code, message, statusCode: responseCode  })
     }
 };

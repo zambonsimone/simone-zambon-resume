@@ -26,8 +26,8 @@ $subsection_title_fontsize_mobile: map-get($subsection_title_font, "fontsize_mob
 
 
 html {
-    height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     font-size: 10px;
     font-family: "Roboto", sans-serif;
     background-color: $niceWhite;
@@ -36,6 +36,13 @@ html {
     * {
         box-sizing: border-box;
     }
+
+    @include device("desktop") {
+        &, body, div#root, .appContainer  {
+            height: 100%;
+        }
+    }
+    
 
     body {
         margin: 0;
@@ -67,9 +74,14 @@ html {
         @include removeOutlineOnFocusables();
     }
 
+    .appLoading {
+        height: 100vh;
+        width: 100%;
+        font-size: 3rem;
+    }
+
     .appContainer {
         display: flex;
-        height: 100vh;
 
         .appContent {
             flex-grow: 1;
@@ -81,7 +93,6 @@ html {
             > .appSection {
                 flex: 1 1;
                 padding: 5rem;
-                height: 100%;
                 overflow-y: auto;
                 overflow-x: hidden;
                         
@@ -101,12 +112,13 @@ html {
             font-size: $paragraph_fontsize_tablet;
         }
 
-        .appContainer .appContent {
-            margin-left: 7.5rem;
-
-            >.appSection {
-                padding: 2rem 3rem 3rem 3rem;
-            }
+        .appContainer {
+            .appContent {
+                margin-left: 7.5rem;
+                .appSection {
+                    padding: 2rem 3rem 3rem 3rem;
+                }
+            } 
         }
     }
 
@@ -121,12 +133,13 @@ html {
             font-size: $paragraph_fontsize_mobile;
         }
 
-        .appContainer .appContent {
-            margin-left: 0;
-
-            >.appSection {
-                padding: 1rem 1.5rem 1.5rem 1.5rem
-            }
+        .appContainer {
+            .appContent {
+                margin-left: 0;
+                .appSection {
+                    padding: 1rem 1.5rem 1.5rem 1.5rem
+                }
+            }         
         }
     }
 }

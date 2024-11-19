@@ -1,4 +1,3 @@
-import React from "react";
 import { ContactMeForm } from "../../components/contact-me/contact-me-form/ContactMeForm";
 import { IntroCode } from "../../components/route/content/intro-code/IntroCode";
 import { SectionTitle } from "../../components/route/title/RouteTitle";

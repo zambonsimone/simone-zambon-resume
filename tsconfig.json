@@ -7,7 +7,6 @@
     "target": "es2018",
     "allowJs": true,
     "jsx": "react-jsx",
-    "sourceMap": true,
     "esModuleInterop": true
   },
   "files": ["src/index.tsx"],

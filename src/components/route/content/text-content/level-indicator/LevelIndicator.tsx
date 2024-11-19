@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { LEVEL_INDICATOR_LABEL } from "./labels";
 import style from "./LevelIndicator.module.scss";
 import { getLevelBgColor } from "./utils";

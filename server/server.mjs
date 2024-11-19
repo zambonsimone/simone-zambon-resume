@@ -1,13 +1,14 @@
 import cors from "cors";
 import express from "express";
-import { sendMail } from "./mail.mjs";
+import { sendMail } from "./send-mail.mjs";
 import { verifyRecaptcha } from "./verify-recaptcha.mjs";
 
 const app = express();
 app.use(cors());
 app.use(express.json({ limit: "100mb" }));
 
-app.post("/api/send", async (req,res) => {
+app.post("/api/send-mail", async (req,res) => {
+  logger(req.body);
   const resp = await sendMail(req.body);
   console.log(resp.message);
   return res.status(res.statusCode).send(resp);

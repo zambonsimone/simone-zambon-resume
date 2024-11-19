@@ -1,5 +1,3 @@
-import React from "react";
-
 const SYMBOLS_CODE = {
     PLUS: 43,
     ASTERISK: 42,

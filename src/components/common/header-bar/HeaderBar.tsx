@@ -1,4 +1,4 @@
-import React, { useCallback, useRef } from "react";
+import { useCallback, useRef } from "react";
 import { CollapseButton } from "../button/collapse-button/CollapseButton";
 import { Icon } from "../icons/Icon";
 import { MatchResolution } from "../match-resolution/MatchResolution";
@@ -36,12 +36,14 @@ export const HeaderBar: React.FC = () => {
                         <Icon className={style.icon} icon="search" />
                     </div>
                     <dialog className={style.headerbarDialog} ref={headerRef}>
-                        <CollapseButton 
-                            collapsedTo="top"
-                            collapsed={false}
-                            className={[style.icon, style.closeHeaderbarDialogBtn].join(" ")}
-                            onClick={closeModal}
-                        />
+                        <div className={style.closeHeaderbarDialogBtnWrapper}>
+                            <CollapseButton 
+                                collapsedTo="top"
+                                collapsed={false}
+                                className={[style.icon, style.closeHeaderbarDialogBtn].join(" ")}
+                                onClick={closeModal}
+                            />
+                        </div>
                         <div className={style.headerbarDialogContent}>
                             <Searchbar onClickSearch={closeModal} className={style.dialogSearchbar}/>
                             <NavBar onLinkClick={closeModal}/>

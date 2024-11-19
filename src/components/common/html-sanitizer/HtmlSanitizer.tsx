@@ -12,7 +12,7 @@ export const HtmlSanitizer: React.FC<IHtmlSanitizerProps> = ({
     const sanitizedHTML = sanitizeHtml(htmlString, {
         allowedTags: ["a","br"],
         allowedAttributes: { 
-            a: ["href"] 
+            a: ["href","target"] 
         }
     })
     return (

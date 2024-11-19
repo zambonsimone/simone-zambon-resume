@@ -1,6 +1,7 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
 @import "../../../font.scss";
+@import "../../../mixins.scss";
 
 $distance_metrics: map-get($metrics, "distance");
 $distance_small: map-get($distance_metrics, "small");

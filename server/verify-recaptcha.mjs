@@ -1,22 +1,36 @@
 import axios from "axios";
 import { RECAPTCHA_SECRET_KEY } from "./constants.mjs";
+import { ErrorResponse, SuccessResponse } from "./responses.mjs";
 
-const VERIFICATION_MSG = {
-    SUCCESS: "Recaptcha verified!",
-    ERROR: "Recaptcha verification failed, retry"
-}
+
+const ERR_INVALID_RECAPTCHA = "ERR_INVALID_RECAPTCHA_INPUT";
+const MESSAGES = {
+    RECAPTCHA_VERIFICATION_FAILED: "Recaptcha verification failed, retry",
+    RECAPTCHA_VERIFICATION_SUCCESS: "Recaptca verified successfully!"
+};
 
 export async function verifyRecaptcha(recaptcha) {
     const url = `https://www.google.com/recaptcha/api/siteverify?secret=${RECAPTCHA_SECRET_KEY}&response=${recaptcha}`;
+    if (!recaptcha) {
+        return new ErrorResponse({
+            code: ERR_INVALID_RECAPTCHA,
+            message: MESSAGES.RECAPTCHA_VERIFICATION_FAILED,
+            statusCode: 400,
+        })
+    }
     try {
         const response = await axios.post(url);
         const isError = !response.data.success;
-        return { 
-            isError, 
-            message: isError ? VERIFICATION_MSG.ERROR : VERIFICATION_MSG.SUCCESS
-        };
+        if (isError) {
+            return new ErrorResponse({ 
+                code: ERR_INVALID_RECAPTCHA, 
+                message: MESSAGES.RECAPTCHA_VERIFICATION_FAILED,
+                statusCode: 200  
+            })
+        }
+        return new SuccessResponse({ message: MESSAGES.RECAPTCHA_VERIFICATION_SUCCESS });
     } catch (err) {
-        console.log(err);
-        return { isError: true, message: `Error on recaptcha verification - Error: ${err.code}`};
+        const { message, code, status: statusCode } = err;
+        return new ErrorResponse({ message, code, statusCode })
     }
 }

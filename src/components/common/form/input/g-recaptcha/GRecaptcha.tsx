@@ -1,6 +1,6 @@
-import React, { useCallback, useRef, useState } from "react";
+import { useCallback, useRef } from "react";
 import ReCaptcha from "react-google-recaptcha";
-import { verifyRecaptcha } from "../../../../../api/endpoints";
+import { useVerifyCaptcha } from "../../../../../hooks/useVerifyCaptcha";
 import formStyle from "../../Form.module.scss";
 import recaptchaStyle from "./GRecaptcha.module.scss";
 
@@ -10,14 +10,12 @@ interface IGRecaptchaProps {
 export const GRecaptcha: React.FC<IGRecaptchaProps> = ({ 
     onVerify
 }) => {
-    const [errorMsg, setErrorMsg] = useState("");
     const recaptchaRef = useRef<ReCaptcha>();
+    const { onChange, errorMsg } = useVerifyCaptcha();
     const onRecaptchaChange = useCallback(async () => {
-        const recaptcha = recaptchaRef.current.getValue();
-        const { isError, message } = await verifyRecaptcha(recaptcha);
+        const { isError } = await onChange(recaptchaRef.current);
         onVerify(!isError);
-        if (isError) setErrorMsg(message);
-    },[onVerify])
+    },[onChange, onVerify])
 
     return (
         <div className={formStyle.fieldContainer}>

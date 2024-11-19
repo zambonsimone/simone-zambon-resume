@@ -1,14 +1,15 @@
 import { yupResolver } from "@hookform/resolvers/yup";
-import React, { useCallback, useMemo, useRef } from "react";
+import { useCallback, useMemo, useRef } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { ObjectSchema, SchemaDescription } from "yup";
 import { Button } from "../button/generic/Button";
+import { Loading } from "../loading/Loading";
 import style from "./Form.module.scss";
 import { FormField, IFormFieldProps } from "./FormField";
 
 export type FormModel = {[key: string]: string | FileList};
 type IFieldAsChildProps = Omit<IFormFieldProps, "errors" | "register" | "required" | "control">;
-type ISubmitAsChildProps = { label: string, disabled: boolean };
+type ISubmitAsChildProps = { label: string, disabled: boolean, loading: boolean };
 
 interface IFormProps {
     children: (
@@ -35,8 +36,12 @@ export const Form: React.FC<IFormProps> = ({
         const isRequired = (fields[name] as SchemaDescription).tests.some(test => test.name === "required");
         return <FormField required={isRequired} name={name} {...others}/>
     }); 
-    const SubmitBtn = useCallback<React.FC<ISubmitAsChildProps>>(({ label, disabled = false }) => (
-        <Button text={label} submit disabled={disabled}/>
+    const SubmitBtn = useCallback<React.FC<ISubmitAsChildProps>>(({ label, disabled = false, loading = false }) => (
+        <Button 
+            text={loading ? <Loading className={style.submitLoading}/> : label} 
+            submit 
+            disabled={loading || disabled}
+        />
     ),[]);
 
     return (
