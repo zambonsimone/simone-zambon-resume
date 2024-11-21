@@ -9,16 +9,16 @@ interface IInstructions {
 export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
     TITLE: "Il mio curriculum",
     SUBTITLE: `Quale miglior modo di dare una dimostrazione del mio livello nell'ambito dello sviluppo di siti e applicazioni web, se non
-    creando un mio sito web? Contiene tutte le informazioni riportate nel mio curriculum raccontando qualche particolare in più e 
-    il suo codice sorgente è interamente consultabile <a href="https://github.com/zambonsimone/simone-zambon-resume" target="_blank">qui</a>.`,
+    creando un mio personale sito web? Contiene tutte le informazioni riportate nel mio curriculum raccontando qualche particolare in più. 
+    Il codice sorgente è consultabile <a href="https://github.com/zambonsimone/simone-zambon-resume" target="_blank">qui</a>.`,
     INSTRUCTIONS: {
         TITLE: "Istruzioni",
             LIST_ITEMS: [
-                `Attraverso la barra di navigazione verticale sulla sinistra puoi accedere alle varie sezioni e sottosezioni del mio curriculum.`,
-                `Clickando sulla mia foto profilo in alto verrai redirezionato alla pagina <a href="/bio">Chi sono</a> con la mia presentazione personale.`,
-                `Attraverso la barra di ricerca in alto potrai filtrare comodamente le informazioni.`,
-                `Compilando il modulo di contatto alla pagina <a href="contacts">Contattami</a> e inviando i dati, mi arriverà una mail con il tuo messaggio,
-                altrimenti puoi utilizzare gli altri tipi di contatto.`, 
+                `Attraverso la barra di navigazione verticale sulla sinistra puoi accedere alle varie sezioni e sottosezioni del mio curriculum`,
+                `Clickando sulla mia foto profilo in alto verrai redirezionato alla pagina <a href="/bio">Bio</a> con la mia presentazione personale`,
+                `Attraverso la barra di ricerca in alto potrai filtrare comodamente le informazioni`,
+                `Compilando il modulo di contatto alla pagina <a href="/contacts">Contatti</a> e inviando i dati mi arriverà una mail con il tuo messaggio.
+                Altrimenti, puoi utilizzare gli altri tipi di contatto`, 
             ], 
     },
     SECTIONS: [
@@ -31,22 +31,21 @@ export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
                 il mio repository su GitHub.`,
                 
                 `Per le funzionalità di BackEnd, questo sito utilizza due approcci in base all'ambiente:
-                il sito distribuito e raggiungibile pubblicamente utilizza funzioni serverless fornite dalla piattaforma di host,
-                mentre in locale chiama api esposte da un mio piccolo server eseguito con Node.
-                In locale si può scegliere se utilizzare la configurazione di produzione o di sviluppo, mentre in ambiente distribuito
-                viene utilizzata una configurazione custom che estende quella di produzione in locale.
-                `,
+                il sito distribuito utilizza funzioni serverless fornite dalla piattaforma di host,
+                mentre in locale chiama api esposte da un mio piccolo server eseguito con Node.`,
 
                 `Il mio intento è principalmente quello di dimostrare le mie competenze. Alcune funzionalità come l'invio di email
                 tramite form, il download di file e la costruzione di un server sono ovviamente superflue, ma volevo dare una dimostrazione
-                delle mie conoscenze e capacità di sviluppo anche lato BackEnd`
+                delle mie conoscenze e capacità di sviluppo anche lato BackEnd.`
             ]
         },
         {
             TITLE: "UX/UI",
             PARAGRAPHS: [
-                `Ho scelto il design e il set di pantoni di questo sito seguendo i principi di UX/UI e di accessibilità, oltre ovviamente ai miei gusti personali.
-                Ho prestato particolare attenzione anche a ottimizzare le performance per fornire una UX fluida`
+                `Ho scelto il design e il set di pantoni di questo sito seguendo i principi di UX/UI.
+                Ho dato importanza all'accessibilità rendendo il sito facilmente navigabile da tastiera, con testi chiaramente leggibili anche da uno screen reader 
+                e colori sufficientemente contrastanti.    
+                Ho prestato particolare attenzione anche a ottimizzare le performance per fornire una UX fluida.`
             ],
         },
         {
@@ -69,11 +68,11 @@ export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
         {
             TITLE: "Strategia di sviluppo",
             PARAGRAPHS: [
-                `Ho implementato eslint per un rigido controllo della sintassi.
-                Ho rispettato i paradigmi di React e Ho utilizzato gli strumenti forniti dalla libreria come gli hook e
+                `Ho utilizzato molte funzionalità di Typescript per ottenere una solida tipizzazione del codice.
+                Ho rispettato i paradigmi di React e ho utilizzato gli strumenti forniti dalla libreria come gli hook e
                 i componenti di navigazione rispettando i loro scopi di utilizzo e, più in generale, i paradigmi di React.
-                Ho utilizzato webpack 5 per configurare un dev server e fornire configurazioni comode per il debug.
-                sempre a scopi dimostrativi ho scelto di non installare librerie di helper e utility se non veramente vantaggiose`,
+                Ho implementato Eslint per un rigido controllo della sintassi e ho utilizzato Webpack 5 per configurare un dev server e fornire configurazioni comode per il debug.
+                Sempre a scopo dimostrativo, ho scelto di non installare librerie per helper e utility se non veramente vantaggiose.`,
             ],
         }
     ]

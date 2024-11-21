@@ -13,6 +13,7 @@ export const Paragraphs: React.FC<IParagraphsProps> = ({
             className={style.sectionParagraph} 
             key={index} 
             htmlString={parag}
+            element={"p"}
         />   
     ))
 }

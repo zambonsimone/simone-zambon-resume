@@ -2,34 +2,34 @@ import { IRouteContentOrganization } from "../../../types";
 import { toDateString } from "../../../utils/date";
 
 export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
-    TITLE: "Esperienze professionali principali",
-    SUBTITLE: `Come consulente ho lavorato in diversi ruoli e parti di una applicazione, ma l'incarico più importante che mi è stato assegnato
+  TITLE: "Esperienze professionali principali",
+  SUBTITLE: `Come consulente ho lavorato in diversi ruoli e parti di una applicazione, ma l'incarico più importante che mi è stato assegnato
     è lo svilippo front-end per una grande holding di ospedali privati situata in Milano, Italia.`,
-    INTRO_CODE: `const mainProfessionalExps = new ProfessionalExperiences([
-    { 
-        what: "Front End Developer", 
-        where: "Gruppo San Donato, Milan (Italy)" 
-        when: { from: "2021-07-01", to: "current date" }
-    },
-    { 
-        what: "Front End Developer", 
-        where: "Syskoplan Reply Gmbh (Switzerland)",
-        when: { from: "2020-12-10", to: "2021-03-10" },
-    },
-    { 
-        what: "System Administrator", 
-        where: "Unicredit S.p.A. (Italy)",
-        when: { from: "2020-09-04", to: "2020-12-10" } 
-    },
-    { 
-        what: "Front End Developer", 
-        where: "Sisal Group S.p.A. (Italy)",
-        when: { from: "2019-12-02", to: "2020-08-01" },
-    }
+  INTRO_CODE: `const mainProfessionalExps = new ProfessionalExperiences([
+  { 
+      what: "Front End Developer", 
+      where: "Gruppo San Donato, Milan (Italy)" 
+      when: { from: "2021-07-01", to: "current date" }
+  },
+  { 
+      what: "Front End Developer", 
+      where: "Syskoplan Reply Gmbh (Switzerland)",
+      when: { from: "2020-12-10", to: "2021-03-10" },
+  },
+  { 
+      what: "System Administrator", 
+      where: "Unicredit S.p.A. (Italy)",
+      when: { from: "2020-09-04", to: "2020-12-10" } 
+  },
+  { 
+      what: "Front End Developer", 
+      where: "Sisal Group S.p.A. (Italy)",
+      when: { from: "2019-12-02", to: "2020-08-01" },
+  }
 ])`, 
     SECTIONS: [
         {
-            TITLE: `Front End Developer - Web & Mobile`,
+            TITLE: `FrontEnd Developer - Web & Mobile`,
             DETAILS: {
                 TEXT: `Typescript - React - Redux - ReactNative`,
                 WHERE: [
@@ -42,37 +42,33 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
             PARAGRAPHS: [
                 `Da luglio 2021 il mio lavoro è focalizzato sullo sviluppo di nuove funzionalità, sulla risoluzione di bug e sulla
                 scrittura di test per la software factory di Gruppo San Donato, una grande holding di ospedali privati situata in Milano
-                (Italia), che crea, mantiene e migliora applicazioni destinate ai propri clienti o ai propri dipendenti.`,
+                Italia, che crea, mantiene e migliora applicazioni destinate ai propri clienti o ai propri dipendenti.
+                Il team e lo sviluppo erano organizzati secondo la metodologia Agile, 
+                e le principali applicazioni su cui ho lavorato sono quelle destinate ai clienti, che danno loro vari servizi 
+                relativi alle cliniche del gruppo, come la prenotazione di esami e visite e la gestione dei propri documenti e referti medici.
+                Inizialmente, le applicazioni su cui sviluppavo usavano redux-store per la persistenza dei dati durante l'utilizzo e per le chiamate REST,
+                poi rimpiazzato con vari Context.`,
 
-                `Le principali applicazioni su cui ho lavorato sono quelle destinate ai clienti, che danno loro vari servizi 
-                relativi alla loro attività presso le cliniche del gruppo, come la prenotazione di esami e visite e la gestione 
-                dei propri documenti e referti medici.`,
+                `Le mie attività principali consistevano in risoluzione di bug e sviluppo di funzionalità core o meno importanti.
+                Al termine di ogni nuova implementazione, la fruibilità del codice e della UI veniva testata da <a href="/skills/it-skills">test unitari e di UI</a> scritti dal nostro team.
+                Oltre a queste attività, ho partecipato attivamente allo sviluppo del supporto al multilingua, all'accessibilità delle applicazioni
+                e alla configurazione degli strumenti di sviluppo e di CI.`,
 
-                `Anche se la risoluzione di bug era una attività quotidiana, ho sviluppato molte importanti funzionalità che hanno aggiunto
-                o modificato aspetti centrali.
-                Al termine di ogni nuova implementazione, la fruibilità del codice e della UI veniva testata da unit test 
-                e UI test scritti entrambi dal nostro team.
-                <a>Vai alla pagina ITSkills per leggere nel dettagli quali tecnologie ho utilzzato durante questo incarico</a>`,
+                `Abbiamo lavorato in cooperazione con un team specializzato di UX/UI che ha disegnato una UI
+                con i più recenti e alti standard sia qualitativi che di accessibilità per utenti con disabilità.
+                Agli sviluppatori FrontEnd venivano comunque assegnate piccole attività di design come la modifica di file .svg per generare icone come font`,
 
-                `Abbiamo lavorato in cooperazione con un team specializzato di UX/UI che per l'applicazione hanno disegnato una UI
-                che soddisfacesse sia i più recenti e alti standard qualitativi ma che fosse anche pienamente accessibile da utenti
-                con disabilità.`,
+                `Come uno dei membri più esperti del team ero anche incaricato di introdurre e formare i nuovi membri.
+                Veniva data molta importanza alla collaborazione: il codice di uno sviluppatore subiva un controllo da parte di altri membri
+                del team prima di essere applicato, si raccomandava il supporto ai colleghi in difficoltà e le nuove conoscenze venivano
+                condivise tra i membri tramite una riunione periodica`,
 
-                `Piccole attività di design però potevano essere assegnate a noi svilippatori front end, come ad esempio la modifica di file
-                di grafica vettoriale che usavamo per generare icone come font.`,
-
-                `Come uno dei membri più esperti del team ero anche incaricato di introdurre e formare i nuovi membri.`,
-
-                `L'impegno del team nello scrivere codice ben organizzato e ispirato dalle buone norme era molto grande, 
-                e ogni modifica al codice dei branch principali era attentamente controllata da altri membri del team.`,
-
-                `Questo è stato l'incarico più importante a cui sono stato assegnato, mi ha ufficialmente reso un developer 
-                dato che ho potuto svolgere tutte le attività principali su cui un developer front end è comunemente coinvolto,
-                con notevoli autonomia e potere decisionale.`
+                `Questo è stato l'incarico più importante a cui sono stato assegnato, dove ho potuto svolgere tutte le attività principali 
+                su cui un developer FrontEnd è comunemente coinvolto, con notevoli autonomia e potere decisionale.`
             ]
         },
         {
-            TITLE: `Front End Developer - Web`,
+            TITLE: `FrontEnd Developer - Web`,
             DETAILS: {
                 TEXT: "SAPUI5 - XML",
                 WHERE: [
@@ -87,20 +83,16 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 Durante la mia collaborazione col team Syskoplan eravamo assegnati ad attività di implementazione e manutenzione di funzionalità
                 per una applicazione ERP di "Saipem S.p.A", una compagnia italiana operante nel settore dell'energia e delle infrastrutture.`,
 
-                `E' stata la prima volta che ho lavorato ad una applicazione decisamente focalizzata sulle funzionalità e sull'accuratezza nella manipolazione dei dati
-                piuttosto che una grafica e una esperienza utente attraenti e user-friendly.  
-                L'applicazione era realizzata con SAPUI5, un framework comunemente utilizzato per costruire applicazioni ERP.
-                Era composta da molteplici piccole applicazioni fornite dal sistema di progettazione SAP Fiori, che garantisce anche un design e un workflow brillanti:
+                `L'applicazione era focalizzata sulle funzionalità e sull'accuratezza nella manipolazione dei dati
+                piuttosto che sugli aspetti UX/UI. 
+                Era realizzata con SAPUI5 e composta da molteplici piccole applicazioni seguendo il sistema di progettazione SAP Fiori:
                 ogni applicazione forniva una funzionalità differente per gestire e monitorare diverse attività relative alle piattaforme petrolifere della compagnia,
-                per esempio la logistica o la gestione delle risorse umane, ed era concepita per essere usata da utenti con un particolare ruolo e permessi.
-                Ogni applicazione condivideva i dati con un database, anch'essi implementati e posseduti da Syskoplan.`,
+                per esempio la logistica o la gestione delle risorse umane, ed era concepita per essere usata da utenti con un particolare ruolo e permessi.`,
 
-                `La mia attività principale era risolvere bug e implementare nuove applicazioni quando il cliente Saipem ci richiedeva nuove funzionalità.
-                Gli interventi riguardavano quasi sempre i form e i loro campi dato che l'applicazione si concentrava sullo scambio di dati.
+                `La mia attività principale era risolvere bug e implementare nuove applicazioni su richietsa del cliente.
+                Gli interventi riguardavano principalmente i form e il submit dei dati.
                 Javascript era essenzialmente l'unico linguaggio di programmazione utilizzato, in aggiunta a qualche basica view in XML per 
-                il design della UI delle applicazioni.
-                Come già menzionato, l'utilizzo di stili personalizzati era pressochè nullo, anche perchè la UI fornita da SAP Fiori 
-                è già ottimizzata e responsiva per ogni dispositivo e risoluzione.`
+                il design delle UI.`
             ]
         },
         {
@@ -116,24 +108,21 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
             },
             PARAGRAPHS: [
                 `UniCredit è un gruppo bancario internazionel nonché il più grande in Italia, dove conta più di 2000 filiali.
-                Ho lavorato qui in collaborazione con un team scelto, composto da sviluppatori di Dale Consulting, ed eravamo 
+                Ho lavorato in collaborazione con un team scelto di sviluppatori di Dale Consulting, ed eravamo 
                 incaricati di risolvere incidenti e bug sui database dell'ambiente di produzione, testare ETL, guidare il processo di migrazione
-                di tutti gli utenti UniCredit raggruppati per Paese da un vecchio applicativo PFM ad uno più recente, e gestire il processo di lancio del nuovo.`,
+                di tutti gli utenti UniCredit raggruppati per Paese da un vecchio applicativo PFM ad uno più recente, e gestire il processo di lancio del nuovo applicativo.`,
 
-                `Dato che il nostro compito consisteva nel gestire dati molto importanti e sensibili nei database di produzione per una compagnia
-                così grande, abbiamo dovuto affrontare varie situazioni con un livello di stress difficile da gestire.
-                Le operazioni dovevano spesso essere svolte durante la notte e ci venivano assegnate senza preavviso.
-                Qualsiasi errore portava a problemi da gravi a molto critici.
-                Dato che il tasso di abbandono del progetto da parte delle risorse allocate era notevole a causa delle condizioni stressanti
-                citate prima, ero anche incaricato di introdurre e formare i nuovi membri del team.`,
+                `Data l'importanza e la sensibilità dei dati per una compagnia così rilevante, 
+                abbiamo dovuto affrontare situazioni con un livello di stress difficile da gestire, spesso in orari notturni e senza preavviso.
+                Questo rendeva alto il tasso di abbandono del progetto da parte delle risorse allocate, perciò ero anche incaricato 
+                di introdurre e formare i nuovi membri del team.`,
 
                 `In questo progetto ho potuto praticare molto la scrittura di query per i Database, scritte in PL/SQL o T/SQL (in base a quale applicazione PFM facevano
-                riferimento i DB) con molti tipi di condizioni differenti, utilizzando anche Microsoft Excel per facilitarci la generazione
-                di migliaia di righe di codice di query.`,
+                riferimento i DB), utilizzando anche Microsoft Excel per facilitare la generazione di numerose query.`,
             ]
         },
         {
-            TITLE: `Front End Developer  - Web`,
+            TITLE: `FrontEnd Developer - Web`,
             DETAILS: {
                 TEXT: "AngularJS - HTML - SCSS",
                 WHERE: [
@@ -144,9 +133,32 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 ]
             },
             PARAGRAPHS: [
-                
+                `Sisal è una società italiana di scommesse che gestisce attività di gioco anche in altri paesi.
+                Come primissimo incarico come sviluppatore FrontEnd e consulente IT, le mie attività erano semplici e limitate.
+                Oltre allo sviluppo di un nuovo banner e delle sue logiche di visibilità,
+                ho lavorato su attività di fix di design di diversi tipi, ho risolto problemi su messaggi di errore 
+                e sull'interazione utente con elementi checkbox. Ho anche partecipato al supporto multilingua con angular-translate.`
             ]
-        }
+        },
+        {
+          TITLE: `FrontEnd Developer - Web & Mobile`,
+          DETAILS: {
+              TEXT: "Angular8 - NativeScript - AJAX",
+              WHERE: [
+                  {
+                      DATES: ["2019/11/29", "2020/01/13"],
+                      PLACE: `"Dale Consulting S.r.l." (Italy)`
+                  }
+              ]
+          },
+          PARAGRAPHS: [
+            `Durante le prime settimane dopo essere stato assunto come consulente, 
+            sono stato assegnato ad un progetto interno dell'azienda per lo sviluppo di un applicazione PFM (Personal Financial Management).
+            Era una applicazione multi-piattaforma in sviluppo con NativeScript e Angular8.
+            Ho lavorato prevalentemente allo sviluppo della parte design di alcune pagine 
+            e all'integrazione di servizi di BackEnd con AJAX.`
+          ]
+      }
     ]
 }
                 

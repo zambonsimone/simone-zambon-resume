@@ -1,27 +1,27 @@
 export const CONTACT_ME_FORM = {
     FULLNAME: {
-        PLACEHOLDER: "Enter your full name / company name",
-        LABEL: "Full name / Company name",
+        PLACEHOLDER: "Inserisci il tuo nome / ragione sociale",
+        LABEL: "Nome / ragione sociale",
     },
     EMAIL: {
-        PLACEHOLDER: "Enter your email address",
-        LABEL: "Email address",
+        PLACEHOLDER: "Inserisci il tuo indirizzo email",
+        LABEL: "Indirizzo email",
     },
     EMAIL_COPY: {
-        PLACEHOLDER: "Enter your email address",
-        LABEL: "Send email copy to"
+        PLACEHOLDER: "Inserisci il tuo indirizzo email",
+        LABEL: "Invia una copia della email a"
     },
     PHONE_PREFIX: {
         PLACEHOLDER: "99-9999",
-        LABEL: "Country",
+        LABEL: "Nazione",
     },
     PHONE_NUMBER: {
-        PLACEHOLDER: "Enter your telephone number",
-        LABEL: "Telephone number",
+        PLACEHOLDER: "Inserisci il tuo numero di telefono",
+        LABEL: "Numero di telefono",
     },
     ATTACHMENT: {
-        PLACEHOLDER: "Attach a file",
-        LABEL: "Attachment",
+        PLACEHOLDER: "Allega un file",
+        LABEL: "Allegato",
     },
     MESSAGE: {
         PLACEHOLDER: "Scrivi qui il tuo messaggio",
