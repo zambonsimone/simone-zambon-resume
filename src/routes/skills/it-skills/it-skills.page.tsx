@@ -1,6 +1,7 @@
+import { HtmlSanitizer } from "../../../components/common/html-sanitizer/HtmlSanitizer";
 import { IntroCode } from "../../../components/route/content/intro-code/IntroCode";
 import { TextContent } from "../../../components/route/content/text-content/TextContent";
-import { SectionTitle } from "../../../components/route/title/RouteTitle";
+import { RouteTitle } from "../../../components/route/title/RouteTitle";
 import { IT_SKILLS_LABELS } from "./labels.it";
 
 const { TITLE, SUBTITLE, INTRO_CODE, SECTIONS } = IT_SKILLS_LABELS;
@@ -8,7 +9,7 @@ const { TITLE, SUBTITLE, INTRO_CODE, SECTIONS } = IT_SKILLS_LABELS;
 const ITSkills: React.FC = () => {
     return (
         <>
-            <SectionTitle title={TITLE} subtitle={SUBTITLE}/>
+            <RouteTitle title={TITLE} subtitle={<HtmlSanitizer htmlString={SUBTITLE}/>}/>
             <IntroCode content={INTRO_CODE} />
             <TextContent sections={SECTIONS}/>
         </>

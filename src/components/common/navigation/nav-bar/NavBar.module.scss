@@ -44,7 +44,7 @@ $full_padding: map-get($distance_metrics, "full_small");
                 flex-direction: column;
                 justify-content: center;
                 width: 100%;
-                height: 5rem;
+                height: 6rem;
                 cursor: pointer;
                 font-size: 1.4rem;
                 font-weight: $action_fontweight;
@@ -98,9 +98,8 @@ $full_padding: map-get($distance_metrics, "full_small");
                     display: flex;
                     align-items: center;
                     > .icon {
-                        font-size: 1.8em;
+                        font-size: $icon_fontsize;
                         margin-right: $distance_large;
-                        @include animation(font-size,.1s);
 
                         &.iconRouteCollapse {
                             margin: 0 0 0 auto;

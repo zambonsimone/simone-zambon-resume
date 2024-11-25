@@ -34,6 +34,7 @@ $distance_x_large: map-get($distance_metrics, "x_large");
         border: none;
         padding-left: $distance_x_large;
         font-family: "Roboto", sans-serif;
+        min-width: 0;
     }
 }
 

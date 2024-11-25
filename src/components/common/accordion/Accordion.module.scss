@@ -1,5 +1,6 @@
 @import "../../../font.scss";
 @import "../../../metrics.scss";
+@import "../../../mixins.scss";
 
 $icon_font: map-get($font, "icon");
 $icon_fontsize: map-get($icon_font, "fontsize");
@@ -30,6 +31,10 @@ $full_padding: map-get($distance_metrics, "full_small");
     font-weight: $action_fontweight;
     letter-spacing: $action_letter_spacing;
     cursor: pointer;
+
+    @include device("mobile") {
+        gap: 0;
+    }
 
     > .accordionIcon {
         font-size: $icon_fontsize;

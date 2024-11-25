@@ -1,10 +1,10 @@
 import style from "./RouteTitle.module.scss";
 
-interface ISectionTitleProps {
+interface IRouteTitleProps {
     title: string;
     subtitle: string | JSX.Element
 }
-export const SectionTitle: React.FC<ISectionTitleProps> = ({
+export const RouteTitle: React.FC<IRouteTitleProps> = ({
     title,
     subtitle,
 }) => {
