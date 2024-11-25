@@ -1,6 +1,5 @@
 import { IRouteContentOrganization } from "../../../../types";
 import { Accordion } from "../../../common/accordion/Accordion";
-import { MatchResolution } from "../../../common/match-resolution/MatchResolution";
 import { DETAILS_ACCORDION_HEADER_TEXT, DETAILS_WHERE_DATE, DETAILS_WHERE_PLACE } from "./labels";
 import { LevelIndicator } from "./level-indicator/LevelIndicator";
 import style from "./TextContent.module.scss";
@@ -22,36 +21,36 @@ export const Details: React.FC<IDetailsProps> = ({
             className={style.details}
             header={DETAILS_ACCORDION_HEADER_TEXT}
             content={(
-                <>
+                <div role="rowgroup">
                     { details?.WHERE?.map((where, index) => (
-                        <div className={style.where} key={index}>
+                        <div 
+                            role="row" 
+                            className={style.where} 
+                            key={index}
+                            tabIndex={0}
+                            aria-label={`
+                                ${DETAILS_WHERE_PLACE} ${where.PLACE}, ${DETAILS_WHERE_DATE.FROM} ${where.DATES[0]} ${DETAILS_WHERE_DATE.TO} ${where.DATES[1]}
+                            `}
+                        >
                             <span className={style.wherePlace}>{DETAILS_WHERE_PLACE} <b>{where.PLACE}</b></span>
-                            <MatchResolution 
-                                desktop={(
-                                    <span className={style.whereDate}>
-                                        {where.DATES.join(" - ")}
-                                    </span>
-                                )}
-                                tablet={(
-                                    <div className={style.whereDate}>
-                                        <div><span>{DETAILS_WHERE_DATE.FROM} </span>{where.DATES[0]}</div>
-                                        <div><span>{DETAILS_WHERE_DATE.TO} </span>{where.DATES[1]}</div>
-                                    </div>
-                                )}
-                            />
+                            <div className={style.whereDate}>
+                                <div><span>{DETAILS_WHERE_DATE.FROM} </span>{where.DATES[0]}</div>
+                                <div><span>{DETAILS_WHERE_DATE.TO} </span>{where.DATES[1]}</div>
+                            </div>
                         </div> 
                     ))}
                     <LevelIndicator 
                         level={details?.LEVEL} 
                         levelName={details.LEVEL_NAME}
                         className={style.levelIndicator}
+
                     />
                     { details?.TEXT && (
                         <span className={style.sectionDetails}>
                             {details?.TEXT}
                         </span>
                     )}
-                </>
+                </div>
             )}
         />
     )

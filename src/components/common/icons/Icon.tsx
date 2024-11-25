@@ -1,8 +1,8 @@
-import { useCallback, useRef } from "react";
+import { AriaAttributes, useCallback, useRef } from "react";
 import style from "./Icon.module.scss";
 import { IconName, ICONS_PATHS } from "./icons-paths";
 
-interface IIconProps {
+interface IIconProps extends AriaAttributes {
     className?: string;
     icon: IconName;
     onClick?: () => void;
@@ -12,7 +12,8 @@ export const Icon: React.FC<IIconProps> = ({
     className = "",
     icon,
     onClick,
-    button
+    button,
+    ...ariaAttributes
 }) => {
     const iconRef = useRef<HTMLDivElement>(null)
     const triggerClick = useCallback((event: React.KeyboardEvent<HTMLDivElement>) => {
@@ -26,6 +27,7 @@ export const Icon: React.FC<IIconProps> = ({
             onKeyDown={triggerClick}
             ref={iconRef}
             role={button ? "button" : undefined}
+            {...ariaAttributes}
         >
             <svg 
                 xmlns="http://www.w3.org/2000/svg" 

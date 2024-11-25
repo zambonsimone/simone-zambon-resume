@@ -3,7 +3,7 @@
 @import "../../../mixins.scss";
 
 $distance_metrics: map-get($metrics, "distance");
-$full_padding_normal: map-get($distance_metrics, "full_normal");
+$full_padding_small: map-get($distance_metrics, "full_small");
 $full_padding_large: map-get($distance_metrics, "full_large");
 $distance_x_large: map-get($distance_metrics, "x_large");
 $distance_large: map-get($distance_metrics, "large");
@@ -16,7 +16,7 @@ $distance_large: map-get($distance_metrics, "large");
     margin: $distance_x_large auto 0 auto;
 
     @include device("mobile") {
-        padding: $full_padding_normal;
+        padding: $full_padding_small;
         .phoneDataRow {
             flex-direction: column;
             justify-content: center;

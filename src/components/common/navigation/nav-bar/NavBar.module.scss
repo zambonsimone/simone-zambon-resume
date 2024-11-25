@@ -11,7 +11,6 @@ $icon_fontsize: map-get($icon_font, "fontsize");
 $icon_fontsize_small: map-get($icon_font, "fontsize_small");
 
 $distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
 $distance_normal: map-get($distance_metrics, "normal");
 $distance_large: map-get($distance_metrics, "large");
 $full_padding: map-get($distance_metrics, "full_small");
@@ -47,19 +46,20 @@ $full_padding: map-get($distance_metrics, "full_small");
                 width: 100%;
                 height: 5rem;
                 cursor: pointer;
-                font-size: 1.5rem;
+                font-size: 1.4rem;
                 font-weight: $action_fontweight;
                 letter-spacing: $action_letter_spacing;
                 padding: $full_padding;
                 text-transform: uppercase;
                 text-decoration: none;
                 color: $niceBlack;
-                @include animation(font-size);
+                @include animation(font-size, .1s);
 
                 &.mainSubNavLink {
                     font-size: 1.2rem;
-                    height: 3rem;
-                    margin-left: calc($distance_normal + $distance_small);
+                    height: 5rem;
+                    max-width: 22rem;
+                    margin-left: $distance_normal;
 
                     &:last-child {
                         margin-bottom: $distance_normal;
@@ -67,9 +67,9 @@ $full_padding: map-get($distance_metrics, "full_small");
                 }
             
                 &:hover, &.mainNavLinkActive {
-                    font-size: 1.9rem;
+                    font-size: 1.7rem;
                     &.mainSubNavLink {
-                        font-size: 1.3rem;
+                        font-size: 1.4rem;
                     }
                 }
 
@@ -86,7 +86,7 @@ $full_padding: map-get($distance_metrics, "full_small");
                     content: "";
                     height: 0.5rem;
                     background-color: transparent;
-                    @include animation(font-size);
+                    @include animation(font-size, .1s);
                 }
             
                 > a {
@@ -98,8 +98,9 @@ $full_padding: map-get($distance_metrics, "full_small");
                     display: flex;
                     align-items: center;
                     > .icon {
-                        font-size: $icon_fontsize;
+                        font-size: 1.8em;
                         margin-right: $distance_large;
+                        @include animation(font-size,.1s);
 
                         &.iconRouteCollapse {
                             margin: 0 0 0 auto;

@@ -43,7 +43,7 @@ export const InputFile: React.FC<IInputFileProps> = ({
                 onChange={onFileAttached}
                 required={required}
                 ref={inputFileRef}
-                //TODO: aria-required
+                aria-required={required}
             />
             <input 
                 type="text" 

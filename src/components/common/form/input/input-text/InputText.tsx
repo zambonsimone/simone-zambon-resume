@@ -37,7 +37,7 @@ export const InputText: React.FC<IInputTextProps> = ({
                 required={required}
                 maxLength={maxLength}
                 value={value}
-                //TODO: aria-required
+                aria-required={required}
             />
         </div>
     )

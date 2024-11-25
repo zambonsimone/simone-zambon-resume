@@ -1,6 +1,7 @@
 import { IRouteContentOrganization } from "../../../../types";
 import { Details } from "./Details";
 import { Paragraphs } from "./Paragraphs";
+import { SubsectionTitle } from "./SubsectionTitle";
 import style from "./TextContent.module.scss";
 import { Title } from "./Title";
 
@@ -19,7 +20,7 @@ export const TextContent: React.FC<ITextContentProps> = ({ sections }) => {
             { section.SUB_SECTIONS?.map((subs, index) => (
                 <div key={index} className={style.subSectionContainer}>
                     <div className={style.header}>
-                        <Title title={subs.TITLE}/>
+                        <SubsectionTitle title={subs.TITLE}/>
                         <Details details={subs.DETAILS}/>
                     </div>
                     <Paragraphs paragraphs={subs.PARAGRAPHS}/>

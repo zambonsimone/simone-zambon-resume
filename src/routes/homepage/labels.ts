@@ -25,14 +25,14 @@ export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
         {
             TITLE: "Implementazione",
             PARAGRAPHS: [
-                `Ho realizzato questo sito web con metodi e funzionalità comuni per una webapp sviluppata con React e Typescript.
+                `Ho realizzato questo sito web con metodi e funzionalità comuni per una webapp sviluppata con <code>React</code> e <code>Typescript</code>.
                 Ho differenziato variabili, script e configurazioni per ogni ambiente in moduli dedicati.
                 Il deploy del sito viene fatto su una nota piattaforma di host che esegue una build dedicata per l'ambiente di produzione utilizzando direttamente
-                il mio repository su GitHub.`,
+                il mio repository su <code>GitHub</code>.`,
                 
                 `Per le funzionalità di BackEnd, questo sito utilizza due approcci in base all'ambiente:
                 il sito distribuito utilizza funzioni serverless fornite dalla piattaforma di host,
-                mentre in locale chiama api esposte da un mio piccolo server eseguito con Node.`,
+                mentre in locale chiama api esposte da un mio piccolo server eseguito con <code>Node</code>.`,
 
                 `Il mio intento è principalmente quello di dimostrare le mie competenze. Alcune funzionalità come l'invio di email
                 tramite form, il download di file e la costruzione di un server sono ovviamente superflue, ma volevo dare una dimostrazione
@@ -61,17 +61,17 @@ export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
         {
             TITLE: "Linguaggio",
             PARAGRAPHS: [
-                `Ho scelto Typescript come linguaggio e ReactJS come libreria principale rispettivamente per la solidità e la semplicità di sviluppo.
+                `Ho scelto <code>Typescript</code> come linguaggio e <code>ReactJS</code> come libreria principale rispettivamente per la solidità e la semplicità di sviluppo.
                 Inoltre, sono il linguaggio e la libreria che ho utilizzato e approfondito maggiormente.`
             ],
         },
         {
             TITLE: "Strategia di sviluppo",
             PARAGRAPHS: [
-                `Ho utilizzato molte funzionalità di Typescript per ottenere una solida tipizzazione del codice.
-                Ho rispettato i paradigmi di React e ho utilizzato gli strumenti forniti dalla libreria come gli hook e
-                i componenti di navigazione rispettando i loro scopi di utilizzo e, più in generale, i paradigmi di React.
-                Ho implementato Eslint per un rigido controllo della sintassi e ho utilizzato Webpack 5 per configurare un dev server e fornire configurazioni comode per il debug.
+                `Ho utilizzato molte funzionalità di <code>Typescript</code> per ottenere una solida tipizzazione del codice.
+                Ho rispettato i paradigmi di <code>React</code> e ho utilizzato gli strumenti forniti dalla libreria come gli hook e
+                i componenti di navigazione rispettando i loro scopi di utilizzo e, più in generale, i paradigmi di <code>React</code>.
+                Ho implementato <code>Eslint</code> per un rigido controllo della sintassi e ho utilizzato <code>Webpack</code> per configurare un dev server e fornire configurazioni comode per il debug.
                 Sempre a scopo dimostrativo, ho scelto di non installare librerie per helper e utility se non veramente vantaggiose.`,
             ],
         }

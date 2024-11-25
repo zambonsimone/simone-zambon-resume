@@ -1,6 +1,7 @@
 @import "./common.scss";
 @import "./font.scss";
 @import "./mixins.scss";
+@import "./metrics.scss";
 
 $html_font: map-get($font, "html");
 $html_font_color: map-get($html_font, "font_color");
@@ -24,6 +25,8 @@ $subsection_title_fontsize: map-get($subsection_title_font, "fontsize");
 $subsection_title_fontsize_tablet: map-get($subsection_title_font, "fontsize_tablet");
 $subsection_title_fontsize_mobile: map-get($subsection_title_font, "fontsize_mobile");
 
+$distance_metrics: map-get($metrics, "distance");
+$distance_small: map-get($distance_metrics, "small");
 
 html {
     overflow-x: hidden;
@@ -62,12 +65,15 @@ html {
     }
 
     a {
-        text-transform: uppercase;
-        letter-spacing: $action_letter_spacing;
         font-weight: $action_fontweight;
         color: $niceOrange;
         cursor: pointer;
         text-decoration: underline;
+    }
+
+    code {
+        background-color: white;
+        padding: 0 $distance_small;
     }
 
     input, a, textarea, button, div {

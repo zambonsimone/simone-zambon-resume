@@ -14,7 +14,11 @@ const SkillLevelLegenda: React.FC = () => {
                 <div>
                     <ul>
                         { Object.entries(LEVEL_LEGENDA_LABELS.LEVELS).map(([level, description], index) => (
-                            <li key={index}>
+                            <li 
+                                tabIndex={0} 
+                                key={index} 
+                                aria-label={`Livello ${level}: ${description}`}
+                            >
                                 <span className={style.level} style={{ backgroundColor: getLevelBgColor(+level) }}>
                                     {level}
                                 </span>

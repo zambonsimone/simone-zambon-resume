@@ -23,7 +23,7 @@ export const TextArea: React.FC<ITextAreaProps> = ({
                 placeholder={placeholder}
                 onChange={onTextareaChange}
                 required={required}
-                //TODO: aria-required
+                aria-required={required}
             />
         </div>
     )

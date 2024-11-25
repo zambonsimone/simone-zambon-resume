@@ -18,7 +18,7 @@ export const PersonalInfo: React.FC<IPersonalInfoProps> = ({
 
     return (
         <div className={style.personalInfo}>
-            <div className={style.picture} onClick={onClick}/>
+            <div tabIndex={0} role="button" aria-label={"Vai alla homepage"} className={style.picture} onClick={onClick}/>
             { !onlyImg && (
                 <div className={style.info}>
                     <div>{ PERSONAL_INFO_FULLNAME }</div>

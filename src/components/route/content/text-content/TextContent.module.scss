@@ -26,7 +26,7 @@ h2.sectionTitle {
     margin-bottom: $distance_small;
 }
 
-h3.sectionTitle {
+h3.subsectionTitle {
     font-size: $subsection_title_fontsize;
     margin-bottom: $distance_small;
 }
@@ -63,6 +63,12 @@ h3.sectionTitle {
         }
         .whereDate {
             font-weight: bold;
+            justify-self: right;
+
+            @include device("desktop") {
+                display: flex;
+                gap: $distance_normal;
+            }
     
             > div {
                 text-align: right;
@@ -117,7 +123,7 @@ h3.sectionTitle {
     h2.sectionTitle {
         font-size: $section_title_fontsize_tablet;
     }
-    h3.sectionTitle {
+    h3.subsectionTitle {
         font-size: $subsection_title_fontsize_tablet;
     }
     .sectionParagraph {
@@ -131,7 +137,7 @@ h3.sectionTitle {
     h2.sectionTitle {
         font-size: $section_title_fontsize_mobile;
     }
-    h3.sectionTitle {
+    h3.subsectionTitle {
         font-size: $subsection_title_fontsize_mobile;
     }
     .sectionParagraph {

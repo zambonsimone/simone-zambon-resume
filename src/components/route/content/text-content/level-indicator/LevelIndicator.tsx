@@ -26,7 +26,11 @@ export const LevelIndicator: React.FC<ILevelIndicatorProps> = ({
     
     if (!level) return;    
     return (
-        <div className={[style.levelIndicatorContainer, className].join(" ")}>
+        <div 
+            className={[style.levelIndicatorContainer, className].join(" ")}
+            tabIndex={0}
+            aria-label={`${LEVEL_INDICATOR_LABEL} ${levelName ?? level}`}
+        >
             <span>{ LEVEL_INDICATOR_LABEL}</span> 
             <span>{ levelName ?? level }</span>
             <div className={style.indicator}>{ indicator }</div>

@@ -27,7 +27,14 @@ export const CollapseButton: React.FC<ICollapseButtonProps> = ({
 }) => {
     const icon: CollapseIconNames = MAPPING_POSITION_ICONS[collapsedTo][collapsed ? "collapsed" : "expanded"]; 
     return (
-        <Icon className={[style.collapseBtn, className].join(" ")} icon={icon} onClick={onClick} button/>
+        <Icon 
+            aria-label={collapsed ? "Espandi" : "Comprimi"} 
+            aria-expanded={!collapsed}
+            className={[style.collapseBtn, className].join(" ")} 
+            icon={icon} 
+            onClick={onClick} 
+            button
+        />
     )
     
 }

@@ -3,8 +3,8 @@ import { toDateString } from "../../../utils/date";
 
 export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
   TITLE: "Esperienze professionali secondarie",
-  SUBTITLE: `La mia prima professione è stata Bartender/Bar manager e cameriere, mansioni che ho svolto diverse volte anche durante la mia
-  carriera come sviluppatore. Oltre a questo, ho svolto diverse altre professioni.`,
+  SUBTITLE: `Le mie prime professioni sono state Bartender/Bar manager e cameriere, che ho svolto in diverse occasioni anche durante la mia
+  carriera come sviluppatore. Oltre a queste, ho svolto diverse altre professioni.`,
   INTRO_CODE: `const sideProfessionalExps = new ProfessionalExperiences([
   { 
     what: "Bartender and bar manager", 
@@ -41,26 +41,26 @@ export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
             DETAILS: {
                 WHERE: [
                     {
-                        PLACE: `"Taverna del Bucaniere", Gallarate, Varese (Italy)`,
+                        PLACE: `"Taverna del Bucaniere", Gallarate, Varese (Italia)`,
                         DATES: ["2015/09/01", toDateString(new Date())],
                     },
                     {
-                        PLACE: `private parties and events (Switzerland - Italy)`,
+                        PLACE: `Feste ed eventi privati (Svizzera - Italia)`,
                         DATES: ["2017/01/10", toDateString(new Date())],
                     },
                     {
-                        PLACE: `"Blu Martini Club", Lugano (Switzerland)`,
+                        PLACE: `"Blu Martini Club", Lugano (Svizzera)`,
                         DATES: ["2019/06/01", "2019/10/12"],
                     },
                     {
-                        PLACE: `"Village Summer Disco", Varese (Italy)`,
+                        PLACE: `"Village Summer Disco", Varese (Italia)`,
                         DATES: ["2016/06/01", "2016/09/24"],
                     }
                 ]
             },
             PARAGRAPHS: [
               `Dopo aver conseguito un certificato di qualifica professionale come Bartender nel 2015 ho subito iniziato a lavorare in pub e piccoli eventi
-              privati. A settembre dello stesso anno sono stato assunto come barman e waiter nel pub "Taverna del Bucaniere" a Gallarate, Italia, dove ho acquisito sempre più esperienza ed autonomia fino
+              privati. A settembre dello stesso anno sono stato assunto come barman e cameriere nel pub "Taverna del Bucaniere" a Gallarate, Italia, dove ho acquisito sempre più esperienza ed autonomia fino
               a gestire autonomamente il pub, gli ordini dei prodotti serviti e gli eventi.
               Durante tutta la mia permanenza in questo pub ho continuato a lavorare come barman in locali, club e grandi eventi, sia in Italia che in Svizzera. Tutt'ora svolgo questa professione saltuariamente.`
             ]
@@ -96,7 +96,7 @@ export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         DATES: ["2017/03/08", "2017/05/02"],
-                        PLACE: `"Duchini & Sgarbozza", Caronno Varesino, Varese (Italy)`, 
+                        PLACE: `"Duchini & Sgarbozza", Caronno Varesino, Varese (Italia)`, 
                     }   
                 ]
             },

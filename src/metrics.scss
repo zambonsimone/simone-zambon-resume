@@ -11,8 +11,8 @@ $metrics: (
         large: calc($distance_small*4),
         x_large: calc($distance_small*8),
         xx_large: calc($distance_small*16),
-        full_small: $distance_small calc($distance_small*2),
-        full_normal: calc($distance_small*2) calc($distance_small*4),
-        full_large: calc($distance_small*4) calc($distance_small*8),
+        full_small: calc($distance_small*2) $distance_small,
+        full_normal: calc($distance_small*4) calc($distance_small*2),
+        full_large: calc($distance_small*8) calc($distance_small*4),
     )
 )

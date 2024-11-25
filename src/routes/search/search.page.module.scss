@@ -18,9 +18,17 @@ $distance_large: map-get($distance_metrics, "large");
     }
     .resultContent {
         font-size: 1.4rem;
+        pointer-events: none;
+        
         .highlightedSearchTerms {
             color: $niceOrange;
             font-weight: 500;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: initial;
+            color: initial;
         }
     }
 }

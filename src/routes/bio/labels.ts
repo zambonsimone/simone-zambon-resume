@@ -3,7 +3,7 @@ import { IRouteContentOrganization } from "../../types";
 export const BIO_LABELS: IRouteContentOrganization = {
     TITLE: "Presentazione personale",
     SUBTITLE: `Sono una persona multipotenziale che ha scoperto una grande passione per il coding e per lo sviluppo software.
-    Focalizzato sulla parte FrontEnd con competenze basiche di sviluppo BackEnd, la mia attività quotidiana consiste
+    Focalizzato sulla parte FrontEnd con competenze basilari di sviluppo BackEnd, la mia attività quotidiana consiste
     in scrivere codice testabile, manutenibile e funzionante. L' amore per le interazioni umane e proattive è la mia chiave per 
     una collaborazione efficace in team`,
     INTRO_CODE: `const simone = new PersonalData({

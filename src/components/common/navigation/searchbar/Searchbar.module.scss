@@ -10,6 +10,7 @@ $input_height: map-get($input_metrics, "height");
 $distance_metrics: map-get($metrics, "distance");
 $distance_small: map-get($distance_metrics, "small");
 $distance_large: map-get($distance_metrics, "large");
+$distance_x_large: map-get($distance_metrics, "x_large");
 
 
 .searchbar {
@@ -31,7 +32,7 @@ $distance_large: map-get($distance_metrics, "large");
         flex-grow: 1;
         height: $input_height;
         border: none;
-        padding-left: $distance_large;
+        padding-left: $distance_x_large;
         font-family: "Roboto", sans-serif;
     }
 }
