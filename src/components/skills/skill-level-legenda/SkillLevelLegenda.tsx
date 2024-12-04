@@ -12,10 +12,10 @@ const SkillLevelLegenda: React.FC = () => {
             contentClassName={style.levelLegendaContent}
             content={(
                 <div>
-                    <ul>
+                    <ul role="list">
                         { Object.entries(LEVEL_LEGENDA_LABELS.LEVELS).map(([level, description], index) => (
                             <li 
-                                tabIndex={0} 
+                                role="listitem"
                                 key={index} 
                                 aria-label={`Livello ${level}: ${description}`}
                             >

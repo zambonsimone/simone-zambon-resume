@@ -1,6 +1,6 @@
-import { useCallback } from "react";
 import { Controller, useFormContext } from "react-hook-form";
 import { Asterisk } from "../../symbols/Symbols";
+import { Icon } from "../icons/Icon";
 import style from "./Form.module.scss";
 import { InputFile } from "./input/input-file/InputFile";
 import { InputText } from "./input/input-text/InputText";
@@ -31,7 +31,7 @@ export const FormField: React.FC<IFormFieldProps> = (({
     name,
     label,
     placeholder,
-    onChange,
+    onChange: onChangeProp,
     required,
     className = "",
     appendBefore,
@@ -44,9 +44,6 @@ export const FormField: React.FC<IFormFieldProps> = (({
     } = useFormContext();
 
     const errorMsg = errors[name]?.message as string;
-    const internalOnChange = useCallback((value: string | FileList) => {
-        onChange?.(value);
-    },[onChange]);
 
     return (
         <div className={[style.fieldContainer, className].join(" ")}>
@@ -58,29 +55,32 @@ export const FormField: React.FC<IFormFieldProps> = (({
                     name={name}
                     control={control}
                     rules={{ required }}
-                    render={({ field: { onChange, value } }) => {
+                    render={({ field: { onChange, value, onBlur } }) => {
                         const Component = INPUT_MAPPING[type];
                         return (
                             <Component
                                 name={name}
                                 placeholder={placeholder} 
                                 onChange={(value: string | FileList) => {
-                                    internalOnChange(value)
+                                    onChangeProp?.(value)
                                     onChange(value);
                                 }}
+                                onBlur={onBlur}
                                 appendBefore={appendBefore} 
                                 required={required}
                                 type={type}
                                 inputMode={inputMode}
                                 maxLength={maxlength}
                                 value={value}
+                                aria-describedby={`${name}-field-error`}
+                                aria-invalid={!!errorMsg}
                             />
                         )
                     }}
                 />      
                 { !!errorMsg && (
-                    <span className={style.fieldError}>
-                        {errorMsg}
+                    <span id={`${name}-field-error`} className={style.fieldError}>
+                        <Icon className={style.errorIcon} icon={"alert"}/>{errorMsg}
                     </span>
                 )}
             </div>  

@@ -1,9 +1,12 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
+@import "../../../font.scss";
 
 $distance_metrics: map-get($metrics, "distance");
 $distance_small: map-get($distance_metrics, "small");
 $distance_large: map-get($distance_metrics, "large");
+$icon_font: map-get($font, "icon");
+$icon_fontsize: map-get($icon_font, "fontsize");
 
 .form {
     display: flex;
@@ -21,10 +24,16 @@ $distance_large: map-get($distance_metrics, "large");
             }
         
             .fieldError {
-                display: inline-block;
+                display: inline-flex;
                 font-size: 1.3rem;
                 color: red;
                 margin-top: $distance_small;
+                align-items: center;
+                gap: $distance_small;
+
+                .errorIcon {
+                    font-size: $icon_fontsize;
+                }
             }
         
             .field {

@@ -7,6 +7,7 @@ export interface IFileDownloadProps {
     href: HTMLAnchorElement["href"];
     title: HTMLAnchorElement["title"];
     withDate?: boolean;
+    preview?: string;
 }
 
 interface FileInfo { 
@@ -17,7 +18,8 @@ interface FileInfo {
 export const FileDownload: React.FC<IFileDownloadProps> = ({
     href,
     title,
-    withDate
+    withDate,
+    preview
 }) => {
     const [fileInfo, setFileInfo] = useState<FileInfo>();
     useEffect(() => {
@@ -38,10 +40,10 @@ export const FileDownload: React.FC<IFileDownloadProps> = ({
                 <div className={style.fileInfo}>
                     <p>{buildFileNameFromHref(href, withDate)}</p>
                     <p>{fileInfo?.size}</p>
-                    <p>{fileInfo?.type}</p>
+                    <p><code>{fileInfo?.type}</code></p>
                 </div>
                 <div className={style.filePreview}>
-                    <img src={href}/>
+                    <img src={preview}/>
                 </div>
                 <Icon className={style.downloadBtn} icon="download"/>
             </div>   

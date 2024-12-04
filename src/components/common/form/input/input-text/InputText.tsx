@@ -13,7 +13,9 @@ export const InputText: React.FC<IInputTextProps> = ({
     maxLength,
     value,
     inputMode,
-    type
+    type,
+    onBlur,
+    ...ariaAttributes
 }) => {
     const internalOnChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
         const text = event.target.value.slice(0,maxLength);
@@ -38,6 +40,8 @@ export const InputText: React.FC<IInputTextProps> = ({
                 maxLength={maxLength}
                 value={value}
                 aria-required={required}
+                aria-describedby={ariaAttributes["aria-describedby"]}
+                onBlur={onBlur}
             />
         </div>
     )

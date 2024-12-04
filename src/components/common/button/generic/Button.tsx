@@ -25,7 +25,7 @@ export const Button: React.FC<IButtonPropsWithOnClick | IButtonPropsWithSubmit> 
             type={submit ? "submit" : "button"} 
             className={style.button}
             disabled={disabled}
-            //aria-disabled
+            aria-disabled={disabled}
         >
             <span>{text}</span>
         </button>

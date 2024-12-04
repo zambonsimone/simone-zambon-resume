@@ -28,8 +28,9 @@ export const Form: React.FC<IFormProps> = ({
 }) => {
     const methods = useForm<FormModel>({ 
         resolver: yupResolver(validationSchema),
-        mode: "onChange",
+        mode: "onBlur",
     })
+    const formRef = useRef<HTMLFormElement>();
     const { fields } = useMemo(() => validationSchema.describe(),[validationSchema]);
 
     const Field = useRef<React.FC<IFieldAsChildProps>>(({ name, ...others }) => {
@@ -44,9 +45,15 @@ export const Form: React.FC<IFormProps> = ({
         />
     ),[]);
 
+    const onSubmitFailed = useCallback(() => {
+        const firstFieldError = formRef.current.querySelector("[id*='-field-error']");
+        const firstFieldWithError = firstFieldError?.parentElement?.parentElement;
+        firstFieldWithError.scrollIntoView();
+    },[])
+
     return (
         <FormProvider { ...methods }>
-            <form onSubmit={methods.handleSubmit(onSubmit)} className={[style.form, className].join(" ")}>
+            <form ref={formRef} onSubmit={methods.handleSubmit(onSubmit, onSubmitFailed)} className={[style.form, className].join(" ")}>
                 <fieldset className={style.formFieldset}>
                     { children( Field.current, SubmitBtn ) }
                 </fieldset>

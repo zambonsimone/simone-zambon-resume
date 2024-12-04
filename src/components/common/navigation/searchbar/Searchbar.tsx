@@ -4,8 +4,7 @@ import { PATHS } from "../../../../routes/paths";
 import { Button } from "../../button/generic/Button";
 import { Icon } from "../../icons/Icon";
 import style from "./Searchbar.module.scss";
-
-const SEARCH = "Cerca";
+import { SEARCH_BUTTON, SEARCH_INPUT_PLACEHOLDER } from "./labels";
 
 interface ISearchbarProps {
     className?: string;
@@ -36,8 +35,9 @@ export const Searchbar: React.FC<ISearchbarProps> = ({
                 className={style.searchbarInput}
                 value={searchTerm} 
                 onChange={onSearchTermChange}
+                placeholder={SEARCH_INPUT_PLACEHOLDER}
             />
-            <Button text={SEARCH} submit/>
+            <Button text={SEARCH_BUTTON} submit/>
         </form>
     )
 }

@@ -13,7 +13,7 @@ export const CONTACT_ME_FORM = {
     },
     PHONE_PREFIX: {
         PLACEHOLDER: "99-9999",
-        LABEL: "Prefisso nazionale",
+        LABEL: "Prefisso",
     },
     PHONE_NUMBER: {
         PLACEHOLDER: "Inserisci il tuo numero di telefono",

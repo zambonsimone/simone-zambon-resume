@@ -15,9 +15,9 @@ const Welcome: React.FC = () => {
         <>
             <RouteTitle title={TITLE} subtitle={<HtmlSanitizer htmlString={SUBTITLE}/>}/>
             <h2>{INSTRUCTIONS.TITLE}</h2>
-            <ul>
+            <ul role="list">
                 { INSTRUCTIONS.LIST_ITEMS.map((item, index) => (
-                    <li key={index}>
+                    <li key={index} role="listitem">
                         <HtmlSanitizer htmlString={item}/>
                     </li>
                 ))}
