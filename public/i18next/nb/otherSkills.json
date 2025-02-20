@@ -1,0 +1,12 @@
+{
+  "TITLE": "Andre programvare ferdigheter",
+  "SUBTITLE": "Jeg kan også bruke programvare som ikke er direkte relatert til utviklerrollen, men som har vært nyttig i min yrkeskarriere.",
+  "GRAPHIC": {
+    "TITLE": "InkScape - GIMP",
+    "DESCRIPTION": "Jeg har alltid hatt en stor lidenskap for tegning og maling, laget med forskjellige teknikker (kullstift, fargeblyant, akrylmaling, vannfarge), som med tiden har utvidet seg til grafisk manipulasjon og vektorbasert tegning. Jeg kan lage og endre bilder ved å bruke <code>Adobe Photoshop</code> og spesielt <code>GIMP</code>. Jeg kan tegne logoer og grafikk for vennene mine og for små firmaer med vektorgrafikk ved å bruke <code>Inkscape</code>, men jeg kan også fullføre små oppgaver om ikoner og fonter i prosjektene jeg har jobbet med."
+  },
+  "EXCEL": {
+    "TITLE": "Microsoft Excel",
+    "DESCRIPTION": "De siste årene har jeg kunnet bruke <code>MS Excel</code> ganske ofte. Jeg kan lage elektroniske regneark ved å bruke tabeller og regler for innsamling av sensitive data for det lille familie-firmaet til foreldrene mine, samt som hjelp for å generere spørringer for forskjellige <a href=\"/experiences/main-experiences\">operasjoner i databaser</a>."
+  }
+}

@@ -1,7 +1,7 @@
 import style from "./RouteTitle.module.scss";
 
 interface IRouteTitleProps {
-    title: string;
+    title: string | JSX.Element;
     subtitle: string | JSX.Element
 }
 export const RouteTitle: React.FC<IRouteTitleProps> = ({

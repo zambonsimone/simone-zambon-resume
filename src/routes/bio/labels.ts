@@ -16,7 +16,7 @@ export const BIO_LABELS: IRouteContentOrganization = {
 });`,
     SECTIONS: [
         {
-            TITLE: "Intro",
+            TITLE: "Introduzione",
             PARAGRAPHS: [
                 `Ciao! Sono Simone Zambon, sono italiano e ho sempre vissuto vicino alla città di Varese.
                 Ho 30 anni e da più di 5 anni lavoro come sviluppatore FrontEnd, ma possiedo anche conoscenze di sviluppo BackEnd e 

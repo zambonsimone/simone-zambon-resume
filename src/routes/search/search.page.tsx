@@ -56,7 +56,7 @@ const Search: React.FC = () => {
                         <p className={style.resultContent}>
                             <HtmlSanitizer htmlString={firstPart} element="span"/>
                             <span className={style.highlightedSearchTerms}>
-                                &nbsp;<HtmlSanitizer htmlString={content} element="span"/>&nbsp;
+                                <HtmlSanitizer htmlString={content} element="span"/>
                             </span>
                             <HtmlSanitizer htmlString={lastPart} element="span"/>
                         </p>                

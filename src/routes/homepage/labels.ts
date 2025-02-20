@@ -7,18 +7,18 @@ interface IInstructions {
     }
 }
 export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
-    TITLE: "Il mio curriculum",
-    SUBTITLE: `Quale miglior modo di dare una dimostrazione del mio livello nell'ambito dello sviluppo di siti e applicazioni web, se non
+    TITLE: "TITLE",//"Il mio curriculum",
+    SUBTITLE: "SUBTITLE",
+    /*SUBTITLE: `Quale miglior modo di dare una dimostrazione del mio livello nell'ambito dello sviluppo di siti e applicazioni web, se non
     creando un mio personale sito web? Contiene tutte le informazioni riportate nel mio curriculum raccontando qualche particolare in più. 
-    Il codice sorgente è consultabile <a href="https://github.com/zambonsimone/simone-zambon-resume" target="_blank">qui</a>.`,
+    Il codice sorgente è consultabile <a href="https://github.com/zambonsimone/simone-zambon-resume" target="_blank">qui</a>.`,*/
     INSTRUCTIONS: {
-        TITLE: "Istruzioni",
+        TITLE: "INSTRUCTIONS.TITLE",
             LIST_ITEMS: [
-                `Attraverso la barra di navigazione verticale sulla sinistra puoi accedere alle varie sezioni e sottosezioni del mio curriculum`,
-                `Clickando sulla mia foto profilo in alto verrai redirezionato alla pagina <a href="/bio">Bio</a> con la mia presentazione personale`,
-                `Attraverso la barra di ricerca in alto potrai filtrare comodamente le informazioni`,
-                `Compilando il modulo di contatto alla pagina <a href="/contacts">Contatti</a> e inviando i dati mi arriverà una mail con il tuo messaggio.
-                Altrimenti, puoi utilizzare gli altri tipi di contatto`, 
+                "INSTRUCTIONS.LIST_ITEMS.NAVBAR",
+                "INSTRUCTIONS.LIST_ITEMS.PROFILE_PICTURE",
+                "INSTRUCTIONS.LIST_ITEMS.SEARCHBAR",
+                "INSTRUCTIONS.LIST_ITEMS.CONTACT_FORM"
             ], 
     },
     SECTIONS: [

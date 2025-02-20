@@ -108,7 +108,7 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
             },
             PARAGRAPHS: [
                 `UniCredit è un gruppo bancario internazionel nonché il più grande in Italia, dove conta più di 2000 filiali.
-                Ho lavorato in collaborazione con un team scelto di sviluppatori di Dale Consulting, ed eravamo 
+                Ho lavorato in collaborazione con un team scelto di sviluppatori di Dale Consulting. Eravamo 
                 incaricati di risolvere incidenti e bug sui database dell'ambiente di produzione, testare <code>ETL</code>, guidare il processo di migrazione
                 di tutti gli utenti UniCredit raggruppati per Paese da un vecchio applicativo <code>PFM</code> ad uno più recente, e gestire il processo di lancio del nuovo applicativo.`,
 

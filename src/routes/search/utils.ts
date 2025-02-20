@@ -1,4 +1,5 @@
 import { IRouteContentOrganization } from "../../types";
+import { HTML_TAG_REGEX } from "../../utils/regexes";
 import { MAX_CHARS, ROUTES_DATA } from "./constants";
 import { ISearchResult } from "./search.page";
 
@@ -41,11 +42,13 @@ export function findResults(searchTerm: string): ISearchResult[] {
         const PARAGRAPHS = getParagraphsForSearch(SECTIONS);
         const searchTermRegex = new RegExp(searchTerm,"i");
         const isIncludedInSubtitle = searchTermRegex.test(SUBTITLE);
-        const foundParagraph = PARAGRAPHS.find(parag => searchTermRegex.test(parag));
+        const foundParagraph = PARAGRAPHS
+            .find(parag => searchTermRegex.test(parag))
+            ?.replace(HTML_TAG_REGEX,"");
         if (isIncludedInSubtitle || !!foundParagraph) {
             results.push({ 
                 title: TITLE, 
-                content: isIncludedInSubtitle ? SUBTITLE : foundParagraph,
+                content: isIncludedInSubtitle ? SUBTITLE.replace(HTML_TAG_REGEX,"") : foundParagraph,
                 path: PATH
             })
         }

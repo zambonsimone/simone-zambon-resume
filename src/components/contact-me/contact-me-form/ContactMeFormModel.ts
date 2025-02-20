@@ -1,7 +1,7 @@
 import { InferType, mixed as YupMixed, object as YupObject, string as YupString } from "yup";
+import { EMAIL_FORMAT_REGEX, PHONE_PREFIX_REGEX } from "../../../utils/regexes";
 import { MESSAGE_MAX_CHARS, PHONE_MAX_DIGITS, PHONE_MIN_DIGITS } from "./constants";
 import { CONTACT_ME_FORM } from "./labels";
-import { EMAIL_FORMAT_REGEX, PHONE_PREFIX_REGEX } from "./regexes";
 import { isValidFileType } from "./utils";
 
 const { ERRORS } = CONTACT_ME_FORM;
