@@ -3,8 +3,8 @@ import { BARTENDER_CLASS_CERTIFICATION_TITLE, JAVA_CLASS_CERTIFICATION_TITLE, RE
 
 const fileDate = today.match(/([0-9]+)/g)?.join("");
 export const FILES_LABELS = {
-  TITLE: "Files",
-  SUBTITLE: "In questa sezione è possibile scaricare documenti riguardanti la mia professione",
+  TITLE: "TITLE",
+  SUBTITLE: "SUBTITLE",
   INTRO_CODE: `const files = new Files([
   {
     title: "${RESUME_FILE_TITLE}",

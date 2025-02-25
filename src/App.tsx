@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import { useTranslation } from "react-i18next";
 import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 import style from "./App.module.scss";
 import { DocumentTitle } from "./components/common/document-title/DocumentTitle";
@@ -13,39 +14,41 @@ import { ROUTES } from "./routes/routes";
 
 export const App: React.FC = () => {
     const { isMobile } = useResolution();
+    const { t } = useTranslation("global");
     return (
         <div className={style.appContainer}>
             <BrowserRouter>
-                <ScrollToTop/>
-                { !isMobile && <Sidebar/> }
+                <ScrollToTop />
+                {!isMobile && <Sidebar />}
                 <div className={style.appContent}>
-                    <HeaderBar/>
-                    <Suspense fallback={<Loading className={style.appLoading}/>}>  
+                    <HeaderBar />
+                    <Suspense fallback={<Loading className={style.appLoading} />}>
                         <Switch>
-                            <Redirect exact from={"/"} to={PATHS.HOMEPAGE}/>
-                            { ROUTES.map((route, index) => {
+                            <Redirect exact from={"/"} to={PATHS.HOMEPAGE} />
+                            {ROUTES.map((route, index) => {
                                 const Component = route.component;
                                 const Header = route?.header;
                                 const showSubNavBar = !!route.subRoutes?.length;
-                                return (              
+                                return (
                                     <Route
                                         path={route.path}
                                         exact={!route.subRoutes}
                                         key={index}
-                                        render={(renderProps) => ( 
+                                        render={(renderProps) => (
                                             <>
                                                 {!!route.header && <Header />}
-                                                { showSubNavBar && <SubNavBar routes={route.subRoutes} /> }
-                                                <div className={style.appSection} key={index}> 
-                                                    <DocumentTitle title={route.displayedName} />
-                                                    <Component {...renderProps}/>
+                                                {showSubNavBar && <SubNavBar routes={route.subRoutes} />}
+                                                <div className={style.appSection} key={index}>
+                                                    <DocumentTitle title={t(route.displayedName)} />
+                                                    <Component {...renderProps} />
                                                 </div>
                                             </>
                                         )}
                                     />
-                                )})
+                                )
+                            })
                             }
-                        </Switch>                
+                        </Switch>
                     </Suspense>
                 </div>
             </BrowserRouter>

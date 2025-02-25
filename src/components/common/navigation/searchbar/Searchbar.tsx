@@ -1,4 +1,5 @@
 import { useCallback, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router";
 import { PATHS } from "../../../../routes/paths";
 import { Button } from "../../button/generic/Button";
@@ -14,8 +15,9 @@ export const Searchbar: React.FC<ISearchbarProps> = ({
     onClickSearch,
     className = ""
 }) => {
-    const [searchTerm, setSearchTerm] = useState(""); 
+    const [searchTerm, setSearchTerm] = useState("");
     const history = useHistory();
+    const { t } = useTranslation("global")
 
     const onSearch = useCallback((event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
@@ -23,21 +25,21 @@ export const Searchbar: React.FC<ISearchbarProps> = ({
         setSearchTerm("");
         onClickSearch?.();
         history.push(PATHS.SEARCH, searchTerm.toLowerCase());
-    },[history, onClickSearch, searchTerm])
+    }, [history, onClickSearch, searchTerm])
     const onSearchTermChange = useCallback((evt: React.ChangeEvent<HTMLInputElement>) => {
         setSearchTerm(evt.target.value);
-    },[])
+    }, [])
     return (
         <form onSubmit={onSearch} className={[style.searchbar, className].join(" ")}>
-            <Icon icon="search" className={style.iconSearch}/>
-            <input 
-                type="text" 
+            <Icon icon="search" className={style.iconSearch} />
+            <input
+                type="text"
                 className={style.searchbarInput}
-                value={searchTerm} 
+                value={searchTerm}
                 onChange={onSearchTermChange}
-                placeholder={SEARCH_INPUT_PLACEHOLDER}
+                placeholder={t(SEARCH_INPUT_PLACEHOLDER)}
             />
-            <Button text={SEARCH_BUTTON} submit/>
+            <Button text={t(SEARCH_BUTTON)} submit />
         </form>
     )
 }

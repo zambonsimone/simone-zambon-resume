@@ -1,1 +1,1 @@
-export const INTRO_CODE_HEADER_TEXT = "Codice Introduttivo";
+export const INTRO_CODE_HEADER_TEXT = "INTRO_CODE";

@@ -4,27 +4,27 @@ import { TextContent } from "../../components/route/content/text-content/TextCon
 import { RouteTitle } from "../../components/route/title/RouteTitle";
 import { HOMEPAGE_LABELS } from "./labels";
 
-const { 
-    TITLE, 
-    SUBTITLE, 
+const {
+    TITLE,
+    SUBTITLE,
     SECTIONS,
     INSTRUCTIONS
 } = HOMEPAGE_LABELS;
 
 const Welcome: React.FC = () => {
-    const {t} = useTranslation("homepage");
+    const { t } = useTranslation("homepage");
     return (
         <>
-            <RouteTitle title={t(TITLE)} subtitle={<HtmlSanitizer htmlString={t(SUBTITLE)}/>}/>
+            <RouteTitle title={t(TITLE)} subtitle={<HtmlSanitizer htmlString={t(SUBTITLE)} />} />
             <h2>{t(INSTRUCTIONS.TITLE)}</h2>
             <ul role="list">
-                { INSTRUCTIONS.LIST_ITEMS.map((item, index) => (
+                {INSTRUCTIONS.LIST_ITEMS.map((item, index) => (
                     <li key={index} role="listitem">
-                        <HtmlSanitizer htmlString={t(item)}/>
+                        <HtmlSanitizer htmlString={t(item)} />
                     </li>
                 ))}
             </ul>
-            <TextContent sections={SECTIONS}/>
+            <TextContent sections={SECTIONS} tFunction={t} />
         </>
     )
 }

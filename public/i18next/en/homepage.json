@@ -1,35 +1,35 @@
 {
-  "TITLE": "Il mio curriculum",
-  "SUBTITLE": "Quale miglior modo di dare una dimostrazione del mio livello nell'ambito dello sviluppo di siti e applicazioni web, se non creando un mio personale sito web? Contiene tutte le informazioni riportate nel mio curriculum raccontando qualche particolare in più. Il codice sorgente è consultabile <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" target=\"_blank\">qui</a>.",
+  "TITLE": "My resume",
+  "SUBTITLE": "I think the best way to demonstrate my skills in website and web application development is by creating a personal website. It contains all the informations from my resume along with additional details. The source code is available <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" target=\"_blank\">here</a>.",
   "INSTRUCTIONS": {
-    "TITLE": "Istruzioni",
+    "TITLE": "Instructions",
     "LIST_ITEMS": {
-      "NAVBAR": "Attraverso la barra di navigazione verticale sulla sinistra puoi accedere alle varie sezioni e sottosezioni del mio curriculum",
-      "PROFILE_PICTURE": "Clickando sulla mia foto profilo in alto verrai redirezionato alla pagina <a href=\"/bio\">Bio</a> con la mia presentazione personale",
-      "SEARCHBAR": "Attraverso la barra di ricerca in alto potrai filtrare comodamente le informazioni",
-      "CONTACT_FORM": "Compilando il modulo di contatto alla pagina <a href=\"/contacts\">Contatti</a> e inviando i dati mi arriverà una mail con il tuo messaggio. Altrimenti, puoi utilizzare gli altri tipi di contatto"
+      "NAVBAR": "Through the vertical navigation bar on the left You can navigate to the different sections and sub-sections of this website",
+      "PROFILE_PICTURE": "By cliking on my profile picture You will be redirected to the <a href=\"/bio\">Bio</a> page with my personal introduction",
+      "SEARCHBAR": "Through the search bar in the top You can easily filter the informations",
+      "CONTACT_FORM": "By filling out the contact form in the <a href=\"/contacts\">Contacts</a> page and by sending the data, I will receive an e-mail with containing Your message. Otherwise You can use the other contact options"
     }
   },
   "IMPLEMENTATION": {
-    "TITLE": "Implementazione",
-    "FRONTEND": "Ho realizzato questo sito web con metodi e funzionalità comuni per una webapp sviluppata con <code>React</code> e <code>Typescript</code>.\nHo differenziato variabili, script e configurazioni per ogni ambiente in moduli dedicati. Il deploy del sito viene fatto su una nota piattaforma di host che esegue una build dedicata per l'ambiente di produzione utilizzando direttamente il mio repository su <code>GitHub</code>.",
-    "BACKEND": "Per le funzionalità di BackEnd, questo sito utilizza due approcci in base all'ambiente: il sito distribuito utilizza funzioni serverless fornite dalla piattaforma di host, mentre in locale chiama api esposte da un mio piccolo server eseguito con <code>Node</code>.",
-    "PURPOSE": "Il mio intento è principalmente quello di dimostrare le mie competenze. Alcune funzionalità come l'invio di email tramite form, il download di file e la costruzione di un server sono ovviamente superflue, ma volevo dare una dimostrazione delle mie conoscenze e capacità di sviluppo anche lato BackEnd."
+    "TITLE": "Implementation",
+    "FRONTEND": "I create this website using common methods and functionalities for a webapp built with <code>React</code> and <code>Typescript</code>. I differentiated variables, scripts and configurations in dedicated modules for each environment. The deploy of the website is done on a known hosting platform that execute a dedicated build for the production environment, using my repository on <code>GitHub</code> directly.",
+    "BACKEND": "For backend functionalities this website uses two different approaches depending on the environment: the distributed website uses serverless functions provided by the hosting platform, while locally it calls APIs exposed by a small server executed with <code>Node</code> that I created.",
+    "PURPOSE": "My main goal is to demonstrate my skills. Some functionalities, such as sending an email through the form, file downloading, and using a server are obviously unnecessary, but I would like to showcase my knowledge and capabilities in backend development as well."
   },
   "UX_UI": {
     "TITLE": "UX/UI",
-    "DESCRIPTION": "Ho scelto il design e il set di pantoni di questo sito seguendo i principi di UX/UI. Ho dato importanza all'accessibilità rendendo il sito facilmente navigabile da tastiera, con testi chiaramente leggibili anche da uno screen reader e colori sufficientemente contrastanti. Ho prestato particolare attenzione anche a ottimizzare le performance per fornire una UX fluida."
+    "DESCRIPTION": "I chose the design and color palette for this website following UX/UI principles. I paid attention to accessibility, ensuring that the website is easily navigable via keyboard, with readable text for both human users and screen readers, and sufficiently contrasting colors. I also focused on performance to provide a smooth user experience."
   },
   "CODE_ORGANIZATION": {
-    "TITLE": "Organizzazione del codice",
-    "DESCRIPTION": "Ho creato e organizzato le cartelle che compongono il progetto del mio sito web seguendo le convenzioni più comunemente utilizzate in piccole webapp. Per dare risalto alla mia esperienza acquisita totalmente in ambito di grandi progetti, ho deciso di organizzare il codice creando ogni modulo con un valore semantico e con una precisa funzione e centralizzando i vari dati per permettere una facile manutenibilità del codice."
+    "TITLE": "Code organization",
+    "DESCRIPTION": "I created and organized the folders that make up my website project, following the most common conventions used in small web apps. To showcase my experience, gained entirely in the context of large projects, I decided to structure the code by creating each module with a clear semantic meaning and a specific responsibility, and by centralizing data to facilitate code maintenance."
   },
-  "DEVELOPING LANGUAGE": {
-    "TITLE": "Linguaggio di programmazione",
-    "DESCRIPTION": "Ho scelto <code>Typescript</code> come linguaggio e <code>ReactJS</code> come libreria principale rispettivamente per la solidità e la semplicità di sviluppo. Inoltre, sono il linguaggio e la libreria che ho utilizzato e approfondito maggiormente."
+  "DEVELOPING_LANGUAGE": {
+    "TITLE": "Developing language",
+    "DESCRIPTION": "I chose <code>TypeScript</code> as the language and <code>ReactJS</code> as the main library for the robustness and the simplicity of development, respectively. Additionally, they are the technologies I studied the most."
   },
-  "DEVELOPING STRATEGY": {
-    "TITLE": "Strategia di sviluppo",
-    "DESCRIPTION": "Ho utilizzato molte funzionalità di <code>Typescript</code> per ottenere una solida tipizzazione del codice. Ho rispettato i paradigmi di <code>React</code> e ho utilizzato gli strumenti forniti dalla libreria come gli hook e i componenti di navigazione rispettando i loro scopi di utilizzo e, più in generale, i paradigmi di <code>React</code>. Ho implementato <code>Eslint</code> per un rigido controllo della sintassi e ho utilizzato <code>Webpack</code> per configurare un dev server e fornire configurazioni comode per il debug. Sempre a scopo dimostrativo, ho scelto di non installare librerie per helper e utility se non veramente vantaggiose."
+  "DEVELOPING_STRATEGY": {
+    "TITLE": "Development strategy",
+    "DESCRIPTION": "I used many <code>TypeScript</code> features to achieve robust code typing. I adhered to the <code>React</code> paradigms and utilized the facilities provided by the library, such as <code>hook</code>s and navigation components, respecting their use cases. I implemented <code>ESLint</code> for strict syntax checking and used <code>Webpack</code> to configure a development server and set up a convenient debugging environment. Still for demonstration purposes, I decided not to install libraries for helpers and utilities unless they were really necessary."
   }
 }

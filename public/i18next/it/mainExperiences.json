@@ -1,6 +1,6 @@
 {
   "TITLE": "Esperienze professionali principali",
-  "SUBTITLE": "Come consulente ho lavorato in diversi ruoli e parti di una applicazione, ma l'incarico più importante che mi è stato assegnato è lo svilippo FrontEnd per una grande holding di ospedali privati situata in Milano, Italia",
+  "SUBTITLE": "Come consulente ho lavorato in diversi ruoli e parti di una applicazione, ma l'incarico più importante che mi è stato assegnato è lo sviluppo FrontEnd per una grande holding di ospedali privati situata in Milano, Italia",
   "GSD": {
     "TITLE": "FrontEnd Developer - Web & Mobile",
     "TEXT": "Typescript - React - Redux - ReactNative",
@@ -33,7 +33,7 @@
   "DALE": {
     "TITLE": "FrontEnd Developer - Web & Mobile",
     "TEXT": "Angular8 - NativeScript - AJAX",
-    "INTRO": "Durante le prime settimane dopo essere stato assunto come consulente, sono stato assegnato ad un progetto interno dell'azienda per lo sviluppo di un applicazione PFM (Personal Financial Management). Era una applicazione multi-piattaforma in sviluppo con <code>NativeScript</code> e <code>Angular8</code>",
-    "MAIN_TASK": "Ho lavorato prevalentemente allo sviluppo della parte design di alcune pagine e all'integrazione di servizi di BackEnd con <code>AJAX</code>."
+    "INTRO": "Durante le prime settimane dopo essere stato assunto come consulente, sono stato assegnato ad un progetto interno di Dale Consulting per lo sviluppo di un applicazione PFM (Personal Financial Management). Era una applicazione multi-piattaforma in sviluppo con <code>NativeScript</code> e <code>Angular8</code>",
+    "MAIN_TASK": "Ho lavorato prevalentemente allo sviluppo della UI di alcune pagine e all'integrazione di servizi di BackEnd con <code>AJAX</code>."
   }
 }

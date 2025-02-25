@@ -1,12 +1,12 @@
 {
-  "TITLE": "Altre abilità e competenze software",
-  "SUBTITLE": "So utilizzare anche software non direttamente correlati al mio ruolo di developer, ma che mi sono tornati utili nella mia carriera lavorativa",
+  "TITLE": "Other software skills",
+  "SUBTITLE": "I'm also familiar with softwares which are not directly related to my developer role, but that have been proved to be useful in my professional career",
   "GRAPHIC": {
     "TITLE": "InkScape - GIMP",
-    "DESCRIPTION": "Ho sempre avuto una grande passione per il disegno e la pittura, eseguiti con diverse tecniche (carboncino, pastelli, acrilico, acquerello), che negli anni si è espansa fino al mondo della manipolazione grafica e del disegno vettoriale. So creare e modificare immagini utilizzando Adobe Photoshop ma soprattutto <code>GIMP</code>. So realizzare loghi e grafiche per amici e piccole attività commerciali in grafica vettoriale utilizzando <code>InkScape</code>, ma anche portare a termine piccoli task inerenti ad icone e font nei progetti a cui ho partecipato."
+    "DESCRIPTION": "I have always had a strong passion for drawing and painting, made with different techniques (charcoal pencil, crayons, acrylics, watercolors), but then it extended to the field of graphic manipulation and the vector drawing. I know how to modify images using Adobe Photoshop and GIMP most of all. I can draw logos and designs for friends and small businesses with vector drawing using <code>InkScape</code>, but also perform simple tasks regarding icons and fonts in the projects I have worked on."
   },
   "EXCEL": {
     "TITLE": "Microsoft Excel",
-    "DESCRIPTION": "Negli ultimi anni ho avuto modo di utilizzare <code>MS Excel</code> abbastanza frequentemente. So creare fogli di calcolo utilizzando tabelle, regole e formule per la compilazione di dati importanti che ho utilizzato sia per la piccola impresa familiare dei miei genitori, sia come supporto per la generazione di query per effettuare diverse <a href=\"/experiences/main-experiences\">operazioni sui database</a>."
+    "DESCRIPTION": "In the last years I had the possibility to utilise <code>MS Excel</code> pretty frequently. I can create spreadsheets with tables, rules and formulas that I used to collect data for my parent's family business and as a help to generate queries to perform some <a href=\"/experiences/main-experiences\">operations on databases</a>."
   }
 }

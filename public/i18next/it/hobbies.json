@@ -1,0 +1,28 @@
+{
+    "TITLE": "Hobby",
+    "SUBTITLE": "",
+    "DIY": {
+        "TITLE": "Fai da te",
+        "DESCRIPTION": "Sono cresciuto vedendo prima mio padre e poi mio fratello ingegnarsi per autoprodursi molti oggetti. E così anche io, all'inizio un po' per gioco, ho iniziato a modificare, personalizzare e costruire oggetti. Crescendo invece è diventata anche una mia filosofia di vita per poter contare di più sulle mie sole forze. Le attività più importanti a cui mi sono dedicato spaziano dalla meccanica al giardinaggio fino all'assemblaggio di hardware, alla realizzazione di sistemi audio e alla realizzazione di materie prime gastronomiche."
+    },
+    "DANCE": {
+        "TITLE": "Balli caraibici",
+        "DESCRIPTION": "La passione per il ballo è una recente scoperta: dal 2020 prendo lezioni, frequento club e partecipo a gare di Salsa: un insieme di vari generi di musica e balli soprattutto cubani che ho scoperto di amare da ancora prima di conoscerne il contesto culturale e geografico. Oltre a Salsa, Bachata e Merengue, frequento lezioni di altri stili caraibici e non."
+    },
+    "TRAVELS": {
+        "TITLE": "Viaggiare",
+        "DESCRIPTION": "Più una località sembra avere un aspetto ed una cultura diversa da quella a cui sono piu abituato, più mi attrae e mi gratifica. Ciò mi ha spinto a compiere molti viaggi di diversa importanza, alcuni dei quali in solitario, che mi hanno portato in Africa settentrionale e centrale, Asia e Caraibi. In quest'ultima area geografica <a href=\"/experiences/side-experiences\">ho viaggiato per circa 6 mesi</a>. Il bello di viaggiare è anche che ti insegna ad apprezzare di più ciò che davi per scontato."
+    },
+    "TKD": {
+        "TITLE": "TaeKwonDo e Fitness",
+        "DESCRIPTION": "Non so tutt'ora spiegare cosa mi affascina del TaeKwonDo, arte marziale coreana che si focalizza sulla parte inferiore del corpo per combattere l'avversario, ma l'agilità e la forza con cui i professionisti riescono ad utilizzare le loro gambe mi ha sempre ammaliato. Purtroppo dovetti interrompere gli allenamenti agonistici per concentrare il mio tempo sui miei esami scolastici ma ho continuato ad allenarmi sporadicamente. Sono attento al fitness per il mio benessere personale e il mio aspetto, per questo mi alleno regolarmente sia in palestra che a casa."
+    },
+    "COOKING": {
+        "TITLE": "Cucina e Pasticceria",
+        "DESCRIPTION": "Questa mia passione è nata dalla voglia di impastare quelle strane masse salate o dolci che vedevo mia mamma preparare. La mia golosità mi ha sicuramente incentivato a realizzare dolci, ma il mio interesse si è esteso successivamente anche alla normale cucina quotidiana, che arricchisco leggendo ricette, imparando da mia madre e rubando qualche segreto ad alcuni amici chef. Tendo a essere abbastanza severo con me stesso quando si tratta di cucinare."
+    },
+    "ARTS": {
+        "TITLE": "Disegno e Arte",
+        "DESCRIPTION": "Ho sempre avuto la passione del disegno fin da quando ero bambino, ma verso l'adolescenza ho iniziato a focalizzarmi su soggetti umani/umanoidi, automobili e sulla street art, fino a scegliere un <a href=\"/bio\">percorso di studi sulle belle arti</a>. Realizzo disegni e dipinti su varie superfici e con diverse tecniche: matita e carboncino, acrilici su tela, acquerelli e spray su pareti."
+    }
+}

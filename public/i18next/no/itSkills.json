@@ -1,0 +1,43 @@
+{
+  "TITLE": "IT ferdigheter",
+  "SUBTITLE": "Selv om mitt utdanning som utvikler var basert på <code>Java</code> og <code>SQL</code>, jag har flere års erfaring på front-end utvikling, ved å bruke spesielt <code>Typescript</code> og <code>React</code>",
+  "JS_HTML_CSS": {
+    "TITLE": "Javascript ES13 - SCSS/CSS3 - HTML5",
+    "INTRO": "Jeg bruker <code>Javascript</code>, <code>CSS</code> og <code>HTML</code> hver hverdag, det har vaært også på hvert prosjekt jeg har vaert med i som frontend utvikler.",
+    "JS": "Selv om jeg har mye mer å vite, jeg har kunnet bruke nær aller funksjonalitetene av <code>Javascript</code> og har jeg kunnet dypt førsta hvordan det fungeres. Jeg har ofte arbeidet med REST anrop til API-er og med asynkron programmering, jeg har opprettet og har håndtert Javascript-hendelser, <code>DOM</code>, mange arter av objekter og av dataer og jeg vet forskjellen mellom konseptene av verdi og referanse. Jeg er kjent med dataskopering, jeg vet <code>Lexical Environment</code> og vet hvordan dette er beslektet med <code>Closure</code> konseptet. Jeg kan førsta og bruke referansen <code>this</code> rekt",
+    "HTML": "Med <code>HTML</code> har jeg laget <code>DOM</code> med et trær av semantisk korrekte elementer, ved å bruke mange attributter og funksjonaliteter av innebygde elementer.",
+    "CSS": "Med <code>CSS</code> har lagt på komplekser stiler og regler med animasjoner, media queries, variabler, pseudo-elementer og nyligest <code>CSS</code>-layoutene. Jeg kan bruke korrekt <code>SCSS</code>-syntaks med hekking, <code>mixins</code> og kalkulering. Jeg kan konfigurere en <code>CSS</code>-loader for å bruke <code>SCSS</code>-moduler som javascripts-objekter."
+  },
+  "REACT_REDUX": {
+    "TITLE": "React - Redux",
+    "DESCRIPTION": "Jeg liker <code>React</code> fra jeg ble kjent med det, dis er en av grunnene til at jeg har valgt å bruke det for å utvikle dis nettstedet. Jeg har dyp kunnskap av fuknjsonene og prinsipene av <code>React</code>: jeg kan opprette både klassekomponenter og funkjsonkomponenter, komplekser men med høy ytelse, ved å bruke innebygde og tilpassede hook-er for å adskille renderingslogikker; jeg kan håndtere stør datasstruktur med <code>Context</code> eller ved a bruke <code>redux-store</code> og asynkroner aksjoner. Jeg er kjent med håndtering av effekter, hendelser, re-renderering/re-montering og kan jeg optimere ytelser ved a bruke <code>lazy loading</code> og memoisering."
+  },
+  "TYPESCRIPT": {
+    "TITLE": "Typescript",
+    "DESCRIPTION": "Jeg har utviklet spesielt med <code>Typescript</code> derfor jeg kan bruke mange innebygde, tilpassede og komplekser typer for en strikt typisering og typeguarding."
+  },
+  "JEST_CYPRESS": {
+    "TITLE": "Jest - Cypress",
+    "DESCRIPTION": "Jeg jobber i kontekster av store applikasjoner og har opprettet mange enhetstester og integrasjonstester. Med <code>Jest</code> kan jeg teste komponenter, hook-er og utilities ved også å bruke <code>React</code>-biblioteket for testing, ved å emulere og håndtere hendelser fra brukeren og endringer i tilstandene til komponentene. Jeg kan sette opp et nødvendig og tilstrekkelig miljø for det jeg vil teste ved å bruke mock og <code>spyOn</code>. Med <code>Cypress</code> kan jeg teste en full flo, ved å bruke <code>fixture</code> og <code>interceptor</code>. Jeg bruker med godt resultat nesten alle innebygde kommander av <code>Cypress</code> og kan opprette nye tilpassede kommander."
+  },
+  "MOBILE": {
+    "TITLE": "ReactNative - Android Studio",
+    "DESCRIPTION": "Jeg hadde muligheten til å gjore en del elkener feilrettinger og forbedringer i mobilapplikasjoner ved a bruke <code>ReactNative</code> og <code>Android Studio</code>. I tillegg til kunnskapen om prinsippene i <code>ReactNative</code> som jeg har fått ved a bruke <code>React</code>, jeg kan bruke innebygde komponenter og API-er, kan sette opp en virkelig enhet og configurere en fysisk enhet med <code>Android Studio</code> og kan bruke feilsøkingsverktøy. Jeg har også litt kjennskap om <code>Swift</code> og <code>Kotlin</code> utviklingsspråk og om utvikling av layout med <code>Android Studio</code> IDE."
+  },
+  "DEV_OPS": {
+    "TITLE": "GIT - GitLab - DevOps",
+    "DESCRIPTION": "Jeg kan versjonere et prosjekt ved å bruke <code>GIT</code> med GUI eller med kommandolinjen. Jeg er kjent med semantiske betydningen av hovedgreiner, jeg kan bruke alle de viktigste kommandoene av <code>GIT</code>, kan etikettere GIT-commit med GIT-tag, kan lege og håndtere GIT-<code>submodule</code>. Jeg er kjent med automatiserte prosesser for å bygge, å distribuere og å teste, som jeg kan konfigurere for <code>GitLab</code> plattformen."
+  },
+  "NODE": {
+    "TITLE": "NodeJS",
+    "DESCRIPTION": "Jeg er kjent med <code>NodeJS</code> fordi det har vaert et viktig verktøy i alle prosjektene jeg har jobbet med: med <code>Webpack</code> har jeg installert og håndtert biblioteker som avhengigheter, har opprettet skripter og konfigurasjonsfiler for linter og bundler. Jeg kan konfigurere en <code>Webpack</code> servere og kan sette opp en server lokalt med Express, kan håndtere miljøvariabler og kan lesere og endre filsystemet."
+  },
+  "DATABASE": {
+    "TITLE": "PL/SQL - T/SQL",
+    "DESCRIPTION": "Jeg kan skrive spørringer for de mest vanlige CRUD-operasjonene på relasjonelle databaser ved å bruke betingelser, variabler, gruppering og sortering. Jeg er kjent med grunnleggende prinsippene i relasjonelle databaser og med måtene å knytte postene i forskjellige tabeller ved å bruke fremmednøkler og unioner."
+  },
+  "JAVA": {
+    "TITLE": "Java",
+    "DESCRIPTION": "Jeg har aldri jobbet med prosjekter som backend-utvikler, men under min <code>Java</code>-utdanning har jeg studert og brukt hovedfunksjonalitetene i <code>Java EE</code>. Jeg kjenner til <code>Maven</code>, <code>Spring</code> med <code>Spring Boot</code> for å opprette applikasjoner med enkle konfigurasjoner. Jeg er kjent med MVC-designmønsteret og med måtene å adskille forskjellige lag av ansvar i koden. Jeg har brukt <code>Hibernate</code> for å abstrahere relasjoner med databaser ved å bruke DAO-mønsteret. Jeg har lært å bygge og installere JAR-pakker på servere som <code>Tomcat</code> og å opprette tester med <code>JUnit</code>."
+  }
+}

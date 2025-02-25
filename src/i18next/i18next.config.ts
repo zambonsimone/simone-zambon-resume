@@ -2,7 +2,20 @@ import i18next from "i18next";
 import I18NextHttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 
-const NAMESPACES = ["test","homepage","bio","itSkills","softSkills","otherSkills","mainExperiences","sideExperiences"];
+const NAMESPACES = [
+  "test",
+  "homepage",
+  "bio",
+  "itSkills",
+  "softSkills",
+  "otherSkills",
+  "mainExperiences",
+  "sideExperiences",
+  "hobbies",
+  "contacts",
+  "files",
+  "global"
+];
 
 export async function initI18next() {
   await i18next
@@ -11,9 +24,9 @@ export async function initI18next() {
     .init({
       ns: NAMESPACES,
       fallbackLng: "en",
-      supportedLngs: ["it","en","nb"],
+      supportedLngs: ["it", "en", "no"],
       debug: process.env.NODE_ENV === "development",
-      backend:{
+      backend: {
         loadPath: `${location.origin}/i18next/{{lng}}/{{ns}}.json`,
       },
       interpolation: {

@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 import { SubmitHandler } from "react-hook-form";
+import { useTranslation } from "react-i18next";
 import { IAttachment } from "../../../api/models";
 import { useSendMail } from "../../../hooks/useSendMail";
 import { Form, FormModel } from "../../common/form/Form";
@@ -27,10 +28,11 @@ export const ContactMeForm: React.FC = () => {
     const [attachment, setAttachment] = useState<IAttachment>();
     const [recaptchaVerified, setRecaptchaVerified] = useState(false);
     const { sendMail, isLoading: isLoadingSendMail, confirmMessage } = useSendMail();
+    const { t } = useTranslation("contacts");
 
     const onChange = useCallback((value: string) => {
         setMessageCharsCount(value.length);
-    },[])
+    }, [])
 
     const onFileChange = useCallback((value: FileList) => {
         const file = value[0];
@@ -42,17 +44,17 @@ export const ContactMeForm: React.FC = () => {
             });
         });
         reader.readAsDataURL(file);
-    },[])
+    }, [])
 
-    const onSubmit: SubmitHandler<FormModel> = useCallback(async (formData: FormModel) => { 
+    const onSubmit: SubmitHandler<FormModel> = useCallback(async (formData: FormModel) => {
         const phoneNumber = formData?.phoneNumber ? `+${formData.phoneNumber}` : undefined;
         sendMail({ ...formData, phoneNumber, attachment });
-    },[attachment, sendMail]);
+    }, [attachment, sendMail]);
 
     return (
-        <Form 
-            validationSchema={schema} 
-            className={style.contactMeForm} 
+        <Form
+            validationSchema={schema}
+            className={style.contactMeForm}
             onSubmit={onSubmit}
         >
             {(Field, SubmitBtn) => {
@@ -60,75 +62,75 @@ export const ContactMeForm: React.FC = () => {
                     <>
                         <Field
                             name="fullname"
-                            placeholder={FULLNAME.PLACEHOLDER}
-                            label={FULLNAME.LABEL}
+                            placeholder={t(FULLNAME.PLACEHOLDER)}
+                            label={t(FULLNAME.LABEL)}
                             type="text"
                         />
                         <Field
                             name="email"
                             inputMode="email"
-                            placeholder={EMAIL.PLACEHOLDER}
-                            label={EMAIL.LABEL}
+                            placeholder={t(EMAIL.PLACEHOLDER)}
+                            label={t(EMAIL.LABEL)}
                             type="text"
                         />
-                        <Field 
+                        <Field
                             name="emailCopy"
                             inputMode="email"
-                            placeholder={EMAIL_COPY.PLACEHOLDER}
-                            label={EMAIL_COPY.LABEL}
+                            placeholder={t(EMAIL_COPY.PLACEHOLDER)}
+                            label={t(EMAIL_COPY.LABEL)}
                             type="text"
                         />
                         <div className={style.phoneDataRow}>
                             <Field
                                 name="phonePrefix"
-                                placeholder={PHONE_PREFIX.PLACEHOLDER}
+                                placeholder={t(PHONE_PREFIX.PLACEHOLDER)}
                                 maxlength={7}
-                                label={PHONE_PREFIX.LABEL}
+                                label={t(PHONE_PREFIX.LABEL)}
                                 type="text"
                                 inputMode="numeric"
                                 className={style.fieldContainer}
-                                appendBefore={<Plus className={style.plus}/>}
+                                appendBefore={<Plus className={style.plus} />}
                             />
                             <Field
                                 name="phoneNumber"
                                 inputMode="tel"
-                                placeholder={PHONE_NUMBER.PLACEHOLDER}
-                                label={PHONE_NUMBER.LABEL}
-                                type="number"   
-                                className={style.fieldContainer}                      
+                                placeholder={t(PHONE_NUMBER.PLACEHOLDER)}
+                                label={t(PHONE_NUMBER.LABEL)}
+                                type="number"
+                                className={style.fieldContainer}
                             />
                         </div>
                         <Field
                             name="attachment"
-                            placeholder={ATTACHMENT.PLACEHOLDER}
-                            label={ATTACHMENT.LABEL}
+                            placeholder={t(ATTACHMENT.PLACEHOLDER)}
+                            label={t(ATTACHMENT.LABEL)}
                             type="file"
                             onChange={onFileChange}
                         />
                         <Field
                             name="message"
-                            placeholder={MESSAGE.PLACEHOLDER}
+                            placeholder={t(MESSAGE.PLACEHOLDER)}
                             label={(
                                 <>
-                                    {MESSAGE.LABEL}
-                                    <CharsCounter charsCount={messageCharsCount} maxCharsCount={MESSAGE_MAX_CHARS}/>
+                                    {t(MESSAGE.LABEL)}
+                                    <CharsCounter charsCount={messageCharsCount} maxCharsCount={MESSAGE_MAX_CHARS} />
                                 </>
                             )}
                             type="textarea"
                             className={style.messageFieldContainer}
                             onChange={onChange}
                         />
-                        <Recaptcha onVerify={(value) => setRecaptchaVerified(value)}/>
+                        <Recaptcha onVerify={(value) => setRecaptchaVerified(value)} />
                         <div className={style.submitRow}>
-                            <SubmitBtn label={SUBMIT.LABEL} loading={isLoadingSendMail} disabled={!recaptchaVerified}/>
-                            { confirmMessage && (
+                            <SubmitBtn label={t(SUBMIT.LABEL)} loading={isLoadingSendMail} disabled={!recaptchaVerified} />
+                            {confirmMessage && (
                                 <span className={[style.confirmMessage, style[confirmMessage.status]].join(" ")}>
-                                    { confirmMessage.text }
+                                    {confirmMessage.text}
                                 </span>
                             )}
                         </div>
-                        
-                        
+
+
                     </>
                 )
             }}

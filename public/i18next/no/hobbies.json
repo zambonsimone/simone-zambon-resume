@@ -1,0 +1,28 @@
+{
+    "TITLE": "Hobbyer",
+    "SUBTITLE": "",
+    "DIY": {
+        "TITLE": "Gjør-det-selv",
+        "DESCRIPTION": "Siden jeg var liten, har jeg sett min far og min bror lage ting selv. Derfor begynte jeg også, bare for moro skyld i begynnelsen, å fikse, tilpasse og lage ting. Når jeg voskte opp ble dette også min ideologi for å kunne regne med meg selv. De viktigste aktivitetene jeg har jobbet med spenner fra hagearbeid til mekanikk, oppsett av maskinvare og av lydsystemer til produksjon av gastronomiske råmaterialer."
+    },
+    "DANCE": {
+        "TITLE": "Karabiske danser",
+        "DESCRIPTION": "Min kjærlighet for dansen er ny: siden 2020 har jeg gått på kurs, klubber og konkurranser i Salsa, som er en samling av forskjellige typer musikk og danser, først og fremst kubanske, som jeg begynte å elske enda før jeg kjente dens kulturelle og geografiske kontekst. I tillegg til Salsa, Bachata og Merengue, går jeg på kurs i andre karibiske og ikke-karibiske danser."
+    },
+    "TRAVELS": {
+        "TITLE": "Reising",
+        "DESCRIPTION": "Jo mer et sted har en ulikt aspekt og kultur enn den jeg er vant til, jo mer det drar meg og metter meg. Det førte meg til å gjøre mange store reiser og mindre store reiser, noen av dem alene, som førte meg til Nord-Afrika og Sentral-Afrika, Asia og Karibia. Jeg har reist til Karibia <a href=\"/experiences/side-experiences\">i omtrent 6 måneder</a>. Den gode tingen med reising er at det underviser deg til å vurdere mer det du tar for gitt."
+    },
+    "TKD": {
+        "TITLE": "TaeKwonDo og Trening",
+        "DESCRIPTION": "Jeg vet ikke hva som drar meg til TaeKwonDo, som er en koreansk kampsport som er fokusert på den nedre delen av kroppen for å kjempe mot rivalene, men måten eksperte kjemper kan kjempe ved å bruke beina med smidighet og kraft har alltid fascinert meg. Dessverre måtte jeg stoppe med de profesjonelle treningene for å fokusere tiden min på eksamenene mine, men jeg har fortsatt å trene sporadisk. Jeg tar vare på helsen min, derfor trener jeg regelmessig både hjemme og på gymmet."
+    },
+    "COOKING": {
+        "TITLE": "Matlaging og Baking",
+        "DESCRIPTION": "Min kjærlighet for matlaging og baking er født takket være min vilje til å kna de fremmede salte eller søte deigene som min mor lagde. Min fråtseri førte meg til baking, men senere begynte jeg å bli interessert i daglig matlaging. Jeg elsker matlaging, derfor forbedrer jeg ferdighetene mine ved å lese oppskrifter, lære fra moren min og 'stjele' noen hemmeligheter fra vennene mine som er kokker. Jeg er veldig streng med meg selv når det gjelder matlaging."
+    },
+    "ARTS": {
+        "TITLE": "Tegning og Kunst",
+        "DESCRIPTION": "Jeg har alltid elsket tegning siden jeg var liten, men i ungdommen begynte jeg å bli fokusert på humanoide figurer, automobiler og gatekunst, inntil jeg valgte en kunstnerisk utdanning. Jeg kan lage tegninger og malerier på forskjellige overflater og med forskjellige teknikker: fargeblyant, kullstift, akrylmaling, vannfarge og spray på vegger."
+    }
+}

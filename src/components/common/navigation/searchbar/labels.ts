@@ -1,2 +1,2 @@
-export const SEARCH_BUTTON = "Cerca";
-export const SEARCH_INPUT_PLACEHOLDER = "Inserisci un testo"
+export const SEARCH_BUTTON = "SEARCHBAR.SEARCH_BTN";
+export const SEARCH_INPUT_PLACEHOLDER = "SEARCHBAR.PLACEHOLDER"

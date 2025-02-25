@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { FileDownload } from "../../components/files/file-download/FileDownload";
 import { IntroCode } from "../../components/route/content/intro-code/IntroCode";
 import { RouteTitle } from "../../components/route/title/RouteTitle";
@@ -7,16 +8,17 @@ import { FILES_LABELS } from "./labels";
 
 const { TITLE, SUBTITLE, INTRO_CODE } = FILES_LABELS;
 
-const Files: React.FC = () => { 
+const Files: React.FC = () => {
+    const { t } = useTranslation("files");
     return (
         <>
-            <RouteTitle title={TITLE} subtitle={SUBTITLE}/>
-            <IntroCode content={INTRO_CODE}/>
+            <RouteTitle title={t(TITLE)} subtitle={t(SUBTITLE)} />
+            <IntroCode content={INTRO_CODE} />
             <div className={style.fileList}>
-                { FILES_DATA.map((file, index) => (
-                    <FileDownload {...file} key={index}/> 
+                {FILES_DATA.map((file, index) => (
+                    <FileDownload {...file} key={index} />
                 ))}
-            </div>     
+            </div>
         </>
     )
 }

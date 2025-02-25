@@ -1,3 +1,5 @@
+import { TFunction } from "i18next";
+import { useTranslation } from "react-i18next";
 import { IRouteContentOrganization } from "../../../../types";
 import { Accordion } from "../../../common/accordion/Accordion";
 import { DETAILS_ACCORDION_HEADER_TEXT, DETAILS_WHERE_DATE, DETAILS_WHERE_PLACE } from "./labels";
@@ -12,42 +14,45 @@ function hasDetails(details: IRouteContentOrganization["SECTIONS"][number]["DETA
 
 interface IDetailsProps {
     details: IRouteContentOrganization["SECTIONS"][number]["DETAILS"] | undefined;
+    tFunction: TFunction
 }
 export const Details: React.FC<IDetailsProps> = ({
-    details
+    details,
+    tFunction: extTFunction
 }) => {
+    const { t } = useTranslation("global");
     return hasDetails(details) && (
         <Accordion
             className={style.details}
-            header={DETAILS_ACCORDION_HEADER_TEXT}
+            header={t(DETAILS_ACCORDION_HEADER_TEXT)}
             content={(
                 <div role="rowgroup">
-                    { details?.WHERE?.map((where, index) => (
-                        <div 
-                            role="row" 
-                            className={style.where} 
+                    {details?.WHERE?.map((where, index) => (
+                        <div
+                            role="row"
+                            className={style.where}
                             key={index}
                             tabIndex={0}
                             aria-label={`
-                                ${DETAILS_WHERE_PLACE} ${where.PLACE}, ${DETAILS_WHERE_DATE.FROM} ${where.DATES[0]} ${DETAILS_WHERE_DATE.TO} ${where.DATES[1]}
+                                ${t(DETAILS_WHERE_PLACE)} ${where.PLACE}, ${t(DETAILS_WHERE_DATE.FROM)} ${where.DATES[0]} ${t(DETAILS_WHERE_DATE.TO)} ${where.DATES[1]}
                             `}
                         >
-                            <span className={style.wherePlace}>{DETAILS_WHERE_PLACE} <b>{where.PLACE}</b></span>
+                            <span className={style.wherePlace}>{t(DETAILS_WHERE_PLACE)} <b>{where.PLACE}</b></span>
                             <div className={style.whereDate}>
-                                <div><span>{DETAILS_WHERE_DATE.FROM} </span>{where.DATES[0]}</div>
-                                <div><span>{DETAILS_WHERE_DATE.TO} </span>{where.DATES[1]}</div>
+                                <div><span>{t(DETAILS_WHERE_DATE.FROM)} </span>{where.DATES[0]}</div>
+                                <div><span>{t(DETAILS_WHERE_DATE.TO)} </span>{where.DATES[1]}</div>
                             </div>
-                        </div> 
+                        </div>
                     ))}
-                    <LevelIndicator 
-                        level={details?.LEVEL} 
+                    <LevelIndicator
+                        level={details?.LEVEL}
                         levelName={details.LEVEL_NAME}
                         className={style.levelIndicator}
 
                     />
-                    { details?.TEXT && (
+                    {details?.TEXT && (
                         <span className={style.sectionDetails}>
-                            {details?.TEXT}
+                            {extTFunction(details?.TEXT)}
                         </span>
                     )}
                 </div>

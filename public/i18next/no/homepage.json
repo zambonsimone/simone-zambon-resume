@@ -1,10 +1,10 @@
 {
-  "TITLE": "Il mio curriculum",
-  "SUBTITLE": "Quale miglior modo di dare una dimostrazione del mio livello nell'ambito dello sviluppo di siti e applicazioni web, se non creando un mio personale sito web? Contiene tutte le informazioni riportate nel mio curriculum raccontando qualche particolare in più. Il codice sorgente è consultabile <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" target=\"_blank\">qui</a>.",
+  "TITLE": "Mitt curriculum vitaet",
+  "SUBTITLE": "Jeg antar at lagingen av et nettsted er den beste måten for å demonstrere mitt nivå i frontend-utvikling. Nettstedet inneholder all informasjonen som er gitt i min CV, i tillegg til mer detaljer. Du kan se kildekoden <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" target=\"_blank\">her</a>.",
   "INSTRUCTIONS": {
-    "TITLE": "Istruzioni",
+    "TITLE": "Bruksanvisninger",
     "LIST_ITEMS": {
-      "NAVBAR": "Attraverso la barra di navigazione verticale sulla sinistra puoi accedere alle varie sezioni e sottosezioni del mio curriculum",
+      "NAVBAR": "ed å bruke den vertikal navigasjonbaren som ligger på venstre side, kan du gå til forskjellige nettsidene av min nettstedet",
       "PROFILE_PICTURE": "Ved å klikke på profilbildet mitt øverst, vil du bli omdirigert til siden <a href=\"/bio\">Bio</a> med min personlige presentasjon",
       "SEARCHBAR": "Ved å bruke søkebaren øverst kan du enkelt finne informasjon",
       "CONTACT_FORM": "Ved å fylle ut kontaktskjemaet på siden <a href=\"/contacts\">Kontakt</a> og sende inn dataene, vil jeg motta en e-post med meldingen din. Ellers kan du bruke de andre kontaktmetodene"
@@ -24,11 +24,11 @@
     "TITLE": "Organisering av koden",
     "DESCRIPTION": "Jeg har laget og innordnet mappene som utgjør prosjektet for dette nettstedet ved å følge de konvensjonene som vanligvis brukes i små webapp. For å fremheve erfaringen mitt som jeg har opparbeidet totalt gjennom store prosjekter, jeg har valgt å innordne koden ved å lage hvert modul med en klar betydning og en spesifikt formål samt ved å sentralisere alle data for å gjøre koden lett vedlikeholdbar."
   },
-  "DEVELOPING LANGUAGE": {
+  "DEVELOPING_LANGUAGE": {
     "TITLE": "Utviklingspråk",
     "DESCRIPTION": "Jeg har valgt <code>Typescript</code> som utviklingsspråk og <code>ReactJS</code> som hovedutviklingsbibliotek for soliditet og letthet i utviklingen. I tillegg, de er utviklingsspråket og utviklingsbiblioteket som jeg har brukt og fordypet meg i."
   },
-  "DEVELOPING STRATEGY": {
+  "DEVELOPING_STRATEGY": {
     "TITLE": "Utviklingsstrategi",
     "DESCRIPTION": "Jeg har brukt mange funkjoner i <code>Typescript</code> for å oppnå en solid typekontroll av koden. Jag her fulgt prinsippene i <code>React</code> og har brukt verktøyene som levert av utviklingsbiblioteket som hook-ene og navigasjonskomponenter ved a følge bruksformal. Jeg har implemetert <code>Eslint</code> for en strikt kontroll av syntaks og har brukt <code>Webpack</code> for å reise en utviklingsserver og gi lagelig konfigurasjoner for feilsøking. I tillegg, jeg har valgt å ikke installere utviklingsbiblioteker for helpers og utilities bortsett fra de som virkelig er fordelaktige."
   }
