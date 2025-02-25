@@ -1,0 +1,67 @@
+@import "../../../mixins.scss";
+@import "../../../common.scss";
+
+.currentLanguageContainer,
+.languageListItem>.itemContent {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &,
+    >* {
+        cursor: pointer;
+    }
+
+    >label {
+        text-transform: uppercase;
+        font-size: 1.6rem;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.currentLanguageContainer {
+    margin: 0 auto 0 5rem;
+
+    @include device("tablet") {
+        margin-left: 3rem;
+    }
+}
+
+.languageListItem {
+    margin: 1rem 0;
+    padding: 1rem;
+    border: 0.3rem solid transparent;
+    flex-direction: column;
+
+    &:hover {
+        border-color: $niceOrange;
+    }
+
+    &.active::after {
+        background-color: $niceOrange;
+    }
+
+    &::after {
+        display: block;
+        position: relative;
+        right: 0;
+        left: 0;
+        width: 100%;
+        content: "";
+        height: 0.5rem;
+        background-color: transparent;
+    }
+}
+
+.popoverContainer {
+    background-color: white;
+    @include shadow();
+}
+
+.languageList {
+    list-style: none;
+}
+
+.popoverLanguageList {
+    padding: 1rem 2rem;
+}
