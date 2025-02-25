@@ -1,4 +1,6 @@
 import { useCallback, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import { LANGUAGES } from "../../../i18next/i18next.contants";
 import { CollapseButton } from "../button/collapse-button/CollapseButton";
 import { Icon } from "../icons/Icon";
 import { LanguageList, LanguageSelector } from "../language-selector/LanguageSelector";
@@ -9,6 +11,7 @@ import { PersonalInfo } from "../sidebar/personal-info/PersonalInfo";
 import style from "./HeaderBar.module.scss";
 
 export const HeaderBar: React.FC = () => {
+    const { i18n } = useTranslation();
     const headerRef = useRef<HTMLDialogElement>(null);
     const showModal = useCallback(() => {
         headerRef.current?.showModal();
@@ -28,6 +31,10 @@ export const HeaderBar: React.FC = () => {
                 mobile={<>
                     <div className={style.enhancedHeaderbar} onClick={showModal}>
                         <PersonalInfo />
+                        <img
+                            className={style.headerLanguageFlag}
+                            src={LANGUAGES.find(({ lang }) => i18n.resolvedLanguage === lang).icon}
+                        />
                         <CollapseButton
                             collapsedTo="top"
                             collapsed

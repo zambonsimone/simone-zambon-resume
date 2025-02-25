@@ -22,6 +22,7 @@ export const Recaptcha: React.FC<IGRecaptchaProps> = ({
     return (
         <div className={formStyle.fieldContainer}>
             <ReCaptcha
+                key={`grecaptcha-${i18n.resolvedLanguage}`}
                 sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
                 ref={recaptchaRef}
                 onChange={onRecaptchaChange}

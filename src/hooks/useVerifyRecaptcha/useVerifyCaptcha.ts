@@ -13,7 +13,7 @@ export function useVerifyCaptcha() {
             recaptcha.reset();
         }
         return { isError }
-    },[])
+    }, [])
 
     return {
         errorMsg,

@@ -54,6 +54,11 @@ $distance_x_large: map-get($distance_metrics, "x_large");
         > :first-child {
             margin-right: auto;
         }
+
+        .headerLanguageFlag {
+            width: 2.4rem;
+            margin-right: 1rem;
+        }
     }
 
     .icon {
