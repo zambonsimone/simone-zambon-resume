@@ -13,16 +13,19 @@ $distance_large: map-get($distance_metrics, "large");
     &:hover {
         border-color: $niceOrange;
     }
+
     .resultTitle {
         font-weight: 500;
     }
+
     .resultContent {
         font-size: 1.4rem;
         pointer-events: none;
-        
+
         .highlightedSearchTerms {
             color: $niceOrange;
             font-weight: 500;
+            margin: 0 0.5rem;
         }
 
         a {
@@ -42,12 +45,12 @@ $distance_large: map-get($distance_metrics, "large");
     height: 100%;
     gap: 2.4rem;
 
-    > .noResultsIcon {
+    >.noResultsIcon {
         font-size: 15rem;
         color: $niceYellow;
     }
 
-    > .noResultsText {
+    >.noResultsText {
         font-size: 3rem;
         text-align: center;
 

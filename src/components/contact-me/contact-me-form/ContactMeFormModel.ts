@@ -1,4 +1,4 @@
-import { InferType, mixed as YupMixed, object as YupObject, string as YupString } from "yup";
+import { InferType, boolean as YupBoolean, mixed as YupMixed, object as YupObject, string as YupString } from "yup";
 import { EMAIL_FORMAT_REGEX, PHONE_PREFIX_REGEX } from "../../../utils/regexes";
 import { MESSAGE_MAX_CHARS, PHONE_MAX_DIGITS, PHONE_MIN_DIGITS } from "./constants";
 import { CONTACT_ME_FORM } from "./labels";
@@ -28,13 +28,17 @@ export const schema = YupObject({
             is: (phoneNumber: string) => !phoneNumber,
             then: schema => schema.notRequired(),
             otherwise: schema => schema
-                .min(PHONE_MIN_DIGITS, ERRORS.PHONE_NUMBER_TOO_SHORT) 
+                .min(PHONE_MIN_DIGITS, ERRORS.PHONE_NUMBER_TOO_SHORT)
                 .max(PHONE_MAX_DIGITS, ERRORS.PHONE_NUMBER_TOO_LONG),
         }),
     message: YupString()
         .max(MESSAGE_MAX_CHARS, ERRORS.MESSAGE_TOO_LONG),
     attachment: YupMixed<FileList>()
         .nullable()
-        .test("isValidFile", ERRORS.FILE_TYPE_ERROR_MSG, isValidFileType)
+        .test("isValidFile", ERRORS.FILE_TYPE_ERROR_MSG, isValidFileType),
+    privacy: YupBoolean()
+        .required(ERRORS.REQUIRED_ERROR_MSG)
+        .oneOf([true])
+
 });
 export type IContactFormModel = InferType<typeof schema>;

@@ -19,10 +19,11 @@ $icon_fontsize: map-get($icon_font, "fontsize");
         .fieldContainer {
             margin-bottom: $distance_large;
             width: 100%;
+
             &:last-child {
                 margin-bottom: 0;
             }
-        
+
             .fieldError {
                 display: inline-flex;
                 font-size: 1.3rem;
@@ -35,16 +36,38 @@ $icon_fontsize: map-get($icon_font, "fontsize");
                     font-size: $icon_fontsize;
                 }
             }
-        
+
             .field {
                 margin-top: $distance_small;
             }
-        
+
             .fieldLabel {
                 margin-left: $distance_small;
                 font-size: 1.2rem;
                 text-transform: uppercase;
                 letter-spacing: 0.2rem;
+            }
+
+            .error:not(.checkboxWrapper)>.field {
+                border-bottom: 0.3rem solid red;
+            }
+        }
+
+        .checkboxWrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: flex-start;
+
+            .field {
+                margin-top: 0;
+            }
+
+            .fieldLabel {
+                text-transform: unset;
+                letter-spacing: unset;
+                word-break: break-word;
+                margin-top: 0.6rem;
             }
         }
     }

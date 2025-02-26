@@ -11,7 +11,7 @@ export const NAMESPACES = [
     "contacts",
     "files",
     "global"
-];
+] as const;
 
 export type LanguageItem = { lang: string, icon: string, label: string };
 export const LANGUAGES = [

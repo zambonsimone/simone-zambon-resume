@@ -1,14 +1,13 @@
-import { today } from "../../utils/date";
 import { BARTENDER_CLASS_CERTIFICATION_TITLE, JAVA_CLASS_CERTIFICATION_TITLE, RESUME_FILE_TITLE } from "./constants";
 
-const fileDate = today.match(/([0-9]+)/g)?.join("");
+const today = new Date().toLocaleDateString().match(/([0-9]+)/g)?.join("");
 export const FILES_LABELS = {
   TITLE: "TITLE",
   SUBTITLE: "SUBTITLE",
   INTRO_CODE: `const files = new Files([
   {
     title: "${RESUME_FILE_TITLE}",
-    fileName: "Simone_Zambon_resume-${fileDate}.pdf"
+    fileName: "Simone_Zambon_resume-${today}.pdf"
   },
   {
     title: "${JAVA_CLASS_CERTIFICATION_TITLE}",

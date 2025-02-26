@@ -7,11 +7,16 @@ $distance_normal: map-get($distance_metrics, "normal");
 .inputWrapper {
     position: relative;
 
-    > * {
+    >* {
         min-height: 3.5rem;
     }
 
-    > input {
+    >input[type="checkbox"] {
+        min-height: 2rem;
+        width: 2rem;
+    }
+
+    >input {
         width: 100%;
         border: 0.1rem solid $niceYellow;
         padding: 0 $distance_normal;

@@ -48,12 +48,12 @@ h3.subsectionTitle {
         align-items: center;
         letter-spacing: 0.1rem;
         font-size: 0.9em;
-        
+
         &:not(:last-child) {
             border-bottom: 0.1rem solid $transparentBlack;
         }
 
-        > * {
+        >* {
             padding: $distance_small 0;
         }
 
@@ -61,6 +61,7 @@ h3.subsectionTitle {
             grid-column: 1;
             letter-spacing: 0.1rem;
         }
+
         .whereDate {
             font-weight: bold;
             justify-self: right;
@@ -69,19 +70,20 @@ h3.subsectionTitle {
                 display: flex;
                 gap: $distance_normal;
             }
-    
-            > div {
-                text-align: right;
 
-                > span {
+            >div {
+                text-align: left;
+                min-width: 11rem;
+
+                >span {
                     font-size: 0.8em;
                     font-weight: 400;
                 }
             }
-            
+
         }
     }
-    
+
     .sectionDetails {
         display: inline-block;
         font-weight: 500;
@@ -94,8 +96,9 @@ h3.subsectionTitle {
 
 .sectionContainer {
     .header {
-        margin: 4rem 0 3rem 0; 
+        margin: 4rem 0 3rem 0;
     }
+
     .details {
         margin: $distance_small 0;
         font-size: 1.4rem;
@@ -108,8 +111,9 @@ h3.subsectionTitle {
 
 .subSectionContainer {
     .header {
-        margin: 3rem 0 2.3rem 0; 
+        margin: 3rem 0 2.3rem 0;
     }
+
     .details {
         margin: $distance_small 0;
         font-size: 1.2rem;
@@ -120,28 +124,34 @@ h3.subsectionTitle {
     .sectionContainer .header {
         margin: 3rem 0 2.3rem 0;
     }
+
     h2.sectionTitle {
         font-size: $section_title_fontsize_tablet;
     }
+
     h3.subsectionTitle {
         font-size: $subsection_title_fontsize_tablet;
     }
+
     .sectionParagraph {
         font-size: $paragraph_fontsize_tablet;
     }
 }
+
 @include device("mobile") {
     .sectionContainer .header {
         margin: 2rem 0 1.5rem 0;
     }
+
     h2.sectionTitle {
         font-size: $section_title_fontsize_mobile;
     }
+
     h3.subsectionTitle {
         font-size: $subsection_title_fontsize_mobile;
     }
+
     .sectionParagraph {
         font-size: $paragraph_fontsize_mobile
     }
 }
-

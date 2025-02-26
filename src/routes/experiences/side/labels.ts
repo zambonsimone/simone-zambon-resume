@@ -1,5 +1,4 @@
 import { IRouteContentOrganization } from "../../../types";
-import { toDateString } from "../../../utils/date";
 
 export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
     TITLE: "TITLE",
@@ -41,11 +40,11 @@ export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         PLACE: `"Taverna del Bucaniere", Gallarate, Varese (Italia)`,
-                        DATES: ["2015/09/01", toDateString(new Date())],
+                        DATES: ["2015/09/01", "2025/02/28"],
                     },
                     {
                         PLACE: `Feste ed eventi privati (Svizzera - Italia)`,
-                        DATES: ["2017/01/10", toDateString(new Date())],
+                        DATES: ["2017/01/10", "2025/02/28"],
                     },
                     {
                         PLACE: `"Blu Martini Club", Lugano (Svizzera)`,

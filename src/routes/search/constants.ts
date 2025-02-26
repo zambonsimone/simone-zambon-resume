@@ -1,3 +1,4 @@
+import { NAMESPACES } from "../../i18next/i18next.contants";
 import { IRouteContentOrganization } from "../../types";
 import { BIO_LABELS } from "../bio/labels";
 import { MAIN_EXPERIENCES_LABELS } from "../experiences/main/labels";
@@ -12,17 +13,18 @@ import { SOFT_SKILLS_LABELS } from "../skills/soft-skills/labels";
 export const MAX_CHARS = 500;
 
 interface IRouteData {
-    PATH: RoutePath,
-    LABELS: IRouteContentOrganization
+    path: RoutePath,
+    labels: IRouteContentOrganization,
+    namespace: typeof NAMESPACES[number];
 }
 
 export const ROUTES_DATA: IRouteData[] = [
-    { PATH: PATHS.HOMEPAGE, LABELS: HOMEPAGE_LABELS },
-    { PATH: PATHS.BIO, LABELS: BIO_LABELS },
-    { PATH: PATHS.MAIN_EXPERIENCES, LABELS: MAIN_EXPERIENCES_LABELS },
-    { PATH: PATHS.SIDE_EXPERIENCES, LABELS: SIDE_EXPERIENCES_LABELS },
-    { PATH: PATHS.IT_SKILLS, LABELS: IT_SKILLS_LABELS },
-    { PATH: PATHS.SOFT_SKILLS, LABELS: SOFT_SKILLS_LABELS },
-    { PATH: PATHS.OTHER_SOFTWARE_SKILLS, LABELS: OTHER_SOFTWARE_SKILLS_LABELS },
-    { PATH: PATHS.HOBBIES, LABELS: HOBBIES_LABELS }
+    { path: PATHS.HOMEPAGE, labels: HOMEPAGE_LABELS, namespace: "homepage" },
+    { path: PATHS.BIO, labels: BIO_LABELS, namespace: "bio" },
+    { path: PATHS.MAIN_EXPERIENCES, labels: MAIN_EXPERIENCES_LABELS, namespace: "mainExperiences" },
+    { path: PATHS.SIDE_EXPERIENCES, labels: SIDE_EXPERIENCES_LABELS, namespace: "sideExperiences" },
+    { path: PATHS.IT_SKILLS, labels: IT_SKILLS_LABELS, namespace: "itSkills" },
+    { path: PATHS.SOFT_SKILLS, labels: SOFT_SKILLS_LABELS, namespace: "softSkills" },
+    { path: PATHS.OTHER_SOFTWARE_SKILLS, labels: OTHER_SOFTWARE_SKILLS_LABELS, namespace: "otherSkills" },
+    { path: PATHS.HOBBIES, labels: HOBBIES_LABELS, namespace: "hobbies" }
 ];

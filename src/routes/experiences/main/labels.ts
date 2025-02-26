@@ -1,5 +1,4 @@
 import { IRouteContentOrganization } from "../../../types";
-import { toDateString } from "../../../utils/date";
 
 export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
     TITLE: "TITLE",
@@ -33,7 +32,7 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 TEXT: `GSD.TEXT`,
                 WHERE: [
                     {
-                        DATES: ["2021/07/01", toDateString(new Date())],
+                        DATES: ["2021/07/01", "2025/02/01"],
                         PLACE: `"Gruppo San Donato", Milano (Italia)`
                     }
                 ]

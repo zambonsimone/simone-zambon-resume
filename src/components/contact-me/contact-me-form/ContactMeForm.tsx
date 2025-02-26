@@ -30,7 +30,7 @@ export const ContactMeForm: React.FC = () => {
     const { sendMail, isLoading: isLoadingSendMail, confirmMessage } = useSendMail();
     const { t } = useTranslation("contacts");
 
-    const onChange = useCallback((value: string) => {
+    const onMessageChange = useCallback((value: string) => {
         setMessageCharsCount(value.length);
     }, [])
 
@@ -118,7 +118,12 @@ export const ContactMeForm: React.FC = () => {
                             )}
                             type="textarea"
                             className={style.messageFieldContainer}
-                            onChange={onChange}
+                            onChange={onMessageChange}
+                        />
+                        <Field
+                            name="privacy"
+                            label={"label"}
+                            type="checkbox"
                         />
                         <Recaptcha onVerify={(value) => setRecaptchaVerified(value)} />
                         <div className={style.submitRow}>
