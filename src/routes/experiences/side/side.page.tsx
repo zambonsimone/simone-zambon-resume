@@ -9,11 +9,11 @@ const { TITLE, SUBTITLE, INTRO_CODE, SECTIONS } = SIDE_EXPERIENCES_LABELS;
 const SideExperiences: React.FC = () => {
     const { t } = useTranslation("sideExperiences");
     return (
-        <>
+        <main>
             <RouteTitle title={t(TITLE)} subtitle={t(SUBTITLE)} />
             <IntroCode content={INTRO_CODE} />
             <TextContent sections={SECTIONS} tFunction={t} />
-        </>
+        </main>
     )
 }
 

@@ -14,18 +14,18 @@ const {
 const Welcome: React.FC = () => {
     const { t } = useTranslation("homepage");
     return (
-        <>
+        <main>
             <RouteTitle title={t(TITLE)} subtitle={<HtmlSanitizer htmlString={t(SUBTITLE)} />} />
             <h2>{t(INSTRUCTIONS.TITLE)}</h2>
-            <ul role="list">
+            <ul>
                 {INSTRUCTIONS.LIST_ITEMS.map((item, index) => (
-                    <li key={index} role="listitem">
+                    <li key={index}>
                         <HtmlSanitizer htmlString={t(item)} />
                     </li>
                 ))}
             </ul>
             <TextContent sections={SECTIONS} tFunction={t} />
-        </>
+        </main>
     )
 }
 export default Welcome;

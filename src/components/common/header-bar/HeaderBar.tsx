@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { LANGUAGES } from "../../../i18next/i18next.contants";
 import { CollapseButton } from "../button/collapse-button/CollapseButton";
 import { Icon } from "../icons/Icon";
-import { LanguageList, LanguageSelector } from "../language-selector/LanguageSelector";
+import { LanguageSelector } from "../language-selector/LanguageSelector";
 import { MatchResolution } from "../match-resolution/MatchResolution";
 import { NavBar } from "../navigation/nav-bar/NavBar";
 import { Searchbar } from "../navigation/searchbar/Searchbar";
@@ -11,7 +11,7 @@ import { PersonalInfo } from "../sidebar/personal-info/PersonalInfo";
 import style from "./HeaderBar.module.scss";
 
 export const HeaderBar: React.FC = () => {
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation("global");
     const headerRef = useRef<HTMLDialogElement>(null);
     const showModal = useCallback(() => {
         headerRef.current?.showModal();
@@ -19,21 +19,24 @@ export const HeaderBar: React.FC = () => {
     const closeModal = useCallback(() => {
         headerRef.current?.close();
     }, []);
+    const currentLang = LANGUAGES.find(({ lang }) => i18n.resolvedLanguage === lang);
     return (
         <header className={style.headerbar}>
             <MatchResolution
                 desktop={<>
-                    <div className={style.searchbarContainer}>
-                        <LanguageSelector />
+                    <div className={style.searchbarContainer} role="presentation">
+                        <LanguageSelector popover />
                         <Searchbar className={style.headerSearchbar} />
                     </div>
                 </>}
                 mobile={<>
-                    <div className={style.enhancedHeaderbar} onClick={showModal}>
+                    <div className={style.enhancedHeaderbar} onClick={showModal} role="presentation">
                         <PersonalInfo />
                         <img
                             className={style.headerLanguageFlag}
-                            src={LANGUAGES.find(({ lang }) => i18n.resolvedLanguage === lang).icon}
+                            src={currentLang.icon}
+                            aria-label={`${t("LANGUAGE_SELECTOR.CURRENT_LANG")}: ${currentLang.label}`}
+                            tabIndex={0}
                         />
                         <CollapseButton
                             collapsedTo="top"
@@ -45,8 +48,8 @@ export const HeaderBar: React.FC = () => {
                         <Icon className={style.icon} icon="search" />
                     </div>
                     <dialog className={style.headerbarDialog} ref={headerRef}>
-                        <div className={style.closeHeaderbarDialogBtnWrapper}>
-                            <LanguageList className={style.headerLanguageList} />
+                        <div className={style.closeHeaderbarDialogBtnWrapper} role="presentation">
+                            <LanguageSelector className={style.headerLanguageSelector} />
                             <CollapseButton
                                 collapsedTo="top"
                                 collapsed={false}

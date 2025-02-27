@@ -62,6 +62,8 @@ export const NavBar: React.FC<INavBarProps> = ({
                             isActive={(match) => isMainNavLinkActive(pathname, route.path, match)}
                             to={route.path}
                             tabIndex={collapsed ? -1 : 0}
+                            aria-label={t(route.displayedName)}
+                            aria-current={pathname.includes(route.path) ? "page" : undefined}
                         >
                             <div className={style.routeName}>
                                 <Icon className={style.icon} icon={route.icon} />
@@ -80,6 +82,7 @@ export const NavBar: React.FC<INavBarProps> = ({
                                 to={subr.path}
                                 onClick={() => handleOnRouteClick(subr)}
                                 className={[style.mainNavLink, style.mainSubNavLink].join(" ")}
+                                aria-label={t(subr.displayedName)}
                             >
                                 <div className={[style.routeName, style.subRouteName].join(" ")}>
                                     <Icon className={style.icon} icon={subr.icon} />{t(subr.displayedName)}

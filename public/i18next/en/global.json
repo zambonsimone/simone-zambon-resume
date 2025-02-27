@@ -1,4 +1,10 @@
 {
+    "LANGUAGE_SELECTOR": {
+        "CURRENT_LANG": "Current language",
+        "CHOOSE_LANGUAGE": "Select a language"
+    },
+    "EXPAND": "Expand",
+    "COLLAPSE": "Collapse",
     "NAVBAR": {
         "HOMEPAGE": "Welcome",
         "BIO": "Bio",
@@ -15,12 +21,13 @@
         "SEARCH": "Search"
     },
     "SEARCHBAR": {
-        "PLACEHOLDER": "Enter text",
+        "PLACEHOLDER": "Enter a search term",
         "SEARCH_BTN": "Search"
     },
     "ACCORDION": {
         "SHOW": "Show",
-        "HIDE": "Hide"
+        "HIDE": "Hide",
+        "CONTENT": "Content"
     },
     "INTRO_CODE": "introduction code",
     "LEVEL_LEGEND": {
@@ -43,5 +50,7 @@
     "DETAILS": "details",
     "AT": "at",
     "FROM": "from",
-    "TO": "to"
+    "TO": "to",
+    "RECAPTCHA_LABEL": "Verify you are not a robot",
+    "DOWNLOAD_FILE": "Download {{title}} file"
 }

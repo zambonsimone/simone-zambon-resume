@@ -1,4 +1,10 @@
 {
+    "LANGUAGE_SELECTOR": {
+        "CURRENT_LANG": "Aktuell språk",
+        "CHOOSE_LANGUAGE": "Velg en språk"
+    },
+    "EXPAND": "Utvid",
+    "COLLAPSE": "Skjul",
     "NAVBAR": {
         "HOMEPAGE": "Velkommen",
         "BIO": "Bio",
@@ -15,12 +21,13 @@
         "SEARCH": "Søk"
     },
     "SEARCHBAR": {
-        "PLACEHOLDER": "Skriv inn en tekst",
+        "PLACEHOLDER": "Skriv inn en søketerm",
         "SEARCH_BTN": "Søk"
     },
     "ACCORDION": {
         "SHOW": "Vis",
-        "HIDE": "Skjule"
+        "HIDE": "Skjul",
+        "CONTENT": "Innhold"
     },
     "INTRO_CODE": "introduksjonkoden",
     "LEVEL_LEGEND": {
@@ -43,5 +50,7 @@
     "DETAILS": "detaljene",
     "AT": "hos",
     "FROM": "fra",
-    "TO": "til"
+    "TO": "til",
+    "RECAPTCHA_LABEL": "Bekreft at du ikke er en robot",
+    "DOWNLOAD_FILE": "Laste ned {{title}} filen"
 }

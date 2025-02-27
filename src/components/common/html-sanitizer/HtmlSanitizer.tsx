@@ -7,26 +7,26 @@ interface IHtmlSanitizerProps {
     element?: keyof HTMLElementTagNameMap;
 }
 
-export const HtmlSanitizer: React.FC<IHtmlSanitizerProps> = ({ 
+export const HtmlSanitizer: React.FC<IHtmlSanitizerProps> = ({
     htmlString,
     className,
     element
 }) => {
     const sanitizedHTML = sanitizeHtml(htmlString, {
-        allowedTags: ["a","br","code"],
-        allowedAttributes: { 
-            a: ["href","target"] 
+        allowedTags: ["a", "br", "code", "strong"],
+        allowedAttributes: {
+            a: ["href", "target"]
         }
     })
-    
+
     const props: HTMLAttributes<HTMLElement> = useMemo(() => ({
-        className, 
+        className,
         dangerouslySetInnerHTML: { __html: sanitizedHTML }
-    }),[className, sanitizedHTML]);
-    
+    }), [className, sanitizedHTML]);
+
     switch (element) {
-        case "p": return <p {...props}/>
-        case "span": return <span {...props}/>
-        default: return <div {...props}/>
+        case "p": return <p {...props} />
+        case "span": return <span {...props} />
+        default: return <div {...props} />
     }
 }

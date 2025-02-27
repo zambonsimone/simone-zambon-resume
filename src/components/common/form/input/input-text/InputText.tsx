@@ -18,23 +18,23 @@ export const InputText: React.FC<IInputTextProps> = ({
     ...ariaAttributes
 }) => {
     const internalOnChange = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
-        const text = event.target.value.slice(0,maxLength);
+        const text = event.target.value.slice(0, maxLength);
         onChange(text);
-    },[maxLength, onChange])
+    }, [maxLength, onChange])
 
     return (
-        <div className={inputStyle.inputWrapper}>
-            { appendBefore && (
+        <div className={inputStyle.inputWrapper} role="presentation">
+            {appendBefore && (
                 <div className={inputTextStyle.beforeInputValue}>
-                    { appendBefore }
+                    {appendBefore}
                 </div>
             )}
-            <input 
-                id={name} 
+            <input
+                id={name}
                 name={name}
                 type={type}
-                inputMode={inputMode} 
-                placeholder={placeholder} 
+                inputMode={inputMode}
+                placeholder={placeholder}
                 onChange={internalOnChange}
                 required={required}
                 maxLength={maxLength}

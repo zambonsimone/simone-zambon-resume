@@ -1,56 +1,35 @@
-import { i18n } from "i18next";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Popover } from "react-tiny-popover";
 import { useResolution } from "../../../hooks/useResolution";
-import { LanguageItem, LANGUAGES, SUPPORTED_LNGS } from "../../../i18next/i18next.contants";
+import { LanguageItem, LANGUAGES } from "../../../i18next/i18next.contants";
+import { LanguageList } from "./LanguageList";
 import style from "./LanguageSelector.module.scss";
 
-function isActive(i18nInstance: i18n, lng: typeof SUPPORTED_LNGS[number]) {
-    return i18nInstance.resolvedLanguage === lng;
+interface ILanguageSelectorProps {
+    popover?: boolean;
+    className?: string;
 }
 
-interface ILanguageListProps {
-    onClickLanguage?: () => void;
-    className?: string
-}
-export const LanguageList: React.FC<ILanguageListProps> = ({
-    onClickLanguage,
+export const LanguageSelector: React.FC<ILanguageSelectorProps> = ({
+    popover,
     className
 }) => {
-    const { isDesktop } = useResolution();
-    const { i18n } = useTranslation();
-    const onSelectLanguage = useCallback((newLang: typeof SUPPORTED_LNGS[number]) => {
-        i18n.changeLanguage(newLang)
-        onClickLanguage?.();
-    }, [onClickLanguage, i18n])
-
-    return (
-        <ul className={[style.languageList, className].join(" ")}>
-            {LANGUAGES.map(lng => (
-                <li
-                    className={[style.languageListItem, isActive(i18n, lng.lang) ? style.active : ""].join(" ")}
-                    key={lng.lang}
-                    onClick={() => onSelectLanguage(lng.lang)}
-                >
-                    <div className={style.itemContent}>
-                        <img src={lng.icon} id={`languageListItem-${lng.lang}`} />
-                        <label htmlFor={`languageListItem-${lng.lang}`}>
-                            {!isDesktop ? lng.lang : lng.label}
-                        </label>
-                    </div>
-                </li>
-            ))}
-        </ul>
-    )
-}
-
-export const LanguageSelector: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const { i18n } = useTranslation();
+    const { i18n, t } = useTranslation("global");
     const currentLang: LanguageItem = LANGUAGES.find(({ lang }) => lang === i18n.resolvedLanguage);
     const { isDesktop } = useResolution();
-    return (
+    const listRef = useRef<HTMLUListElement>();
+    const triggerClick = useCallback((event: React.KeyboardEvent<HTMLDivElement>) => {
+        if (event.key === "Enter") setIsOpen(true);
+    }, [])
+
+    useEffect(() => {
+        if (!isOpen || !listRef.current) return;
+        listRef.current.focus();
+    }, [isOpen])
+
+    return popover ? (
         <Popover
             isOpen={isOpen}
             onClickOutside={() => setIsOpen(false)}
@@ -59,14 +38,27 @@ export const LanguageSelector: React.FC = () => {
                 <LanguageList
                     className={style.popoverLanguageList}
                     onClickLanguage={() => setIsOpen(false)}
+                    ref={listRef}
                 />
             )}
-            containerClassName={style.popoverContainer}
+            containerClassName={[style.popoverContainer, className].join(" ")}
         >
-            <div className={style.currentLanguageContainer} onClick={() => setIsOpen(true)}>
-                <img src={currentLang.icon} id="currentLanguage" />
-                <label htmlFor={"currentLanguage"}>{!isDesktop ? currentLang.lang : currentLang.label}</label>
+            <div
+                className={style.currentLanguageContainer}
+                onClick={() => setIsOpen(true)}
+                role="button"
+                aria-label={`${t("LANGUAGE_SELECTOR.CURRENT_LANG")}: ${currentLang.label}`}
+                tabIndex={0}
+                onKeyDown={triggerClick}
+            >
+                <img src={currentLang.icon} aria-hidden />
+                <label aria-hidden>{!isDesktop ? currentLang.lang : currentLang.label}</label>
             </div>
         </Popover>
+    ) : (
+        <LanguageList
+            className={className}
+            onClickLanguage={() => setIsOpen(false)}
+        />
     )
 }

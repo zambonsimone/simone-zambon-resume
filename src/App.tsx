@@ -16,11 +16,11 @@ export const App: React.FC = () => {
     const { isMobile } = useResolution();
     const { t } = useTranslation("global");
     return (
-        <div className={style.appContainer}>
+        <div className={style.appContainer} role="presentation">
             <BrowserRouter>
                 <ScrollToTop />
                 {!isMobile && <Sidebar />}
-                <div className={style.appContent}>
+                <div className={style.appContent} role="presentation">
                     <HeaderBar />
                     <Suspense fallback={<Loading className={style.appLoading} />}>
                         <Switch>
@@ -38,7 +38,7 @@ export const App: React.FC = () => {
                                             <>
                                                 {!!route.header && <Header />}
                                                 {showSubNavBar && <SubNavBar routes={route.subRoutes} />}
-                                                <div className={style.appSection} key={index}>
+                                                <div className={style.appSection} key={index} role="presentation">
                                                     <DocumentTitle title={t(route.displayedName)} />
                                                     <Component {...renderProps} />
                                                 </div>

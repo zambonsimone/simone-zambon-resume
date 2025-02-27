@@ -49,11 +49,6 @@ export const FormField: React.FC<IFormFieldProps> = (({
 
     const errorMsg = errors[name]?.message as string;
     const isCheckbox = type === "checkbox";
-    const labelElement = (
-        <label className={style.fieldLabel} htmlFor={name}>
-            {label}{required ? <Asterisk /> : ""}
-        </label>
-    )
 
     return (
         <div className={[style.fieldContainer, className].join(" ")}>
@@ -62,8 +57,10 @@ export const FormField: React.FC<IFormFieldProps> = (({
                 isCheckbox ? style.checkboxWrapper : "",
                 !!errorMsg ? style.error : ""
             ].join(" ")}>
-                {labelElement}
-                <div className={style.field}>
+                <label className={style.fieldLabel} htmlFor={name}>
+                    {label}{required ? <Asterisk /> : ""}
+                </label>
+                <div className={style.field} role="presentation">
                     <Controller
                         name={name}
                         control={control}
@@ -95,7 +92,7 @@ export const FormField: React.FC<IFormFieldProps> = (({
                 </div>
             </div>
             {!!errorMsg && (
-                <span id={`${name}-field-error`} className={style.fieldError}>
+                <span id={`${name}-field-error`} className={style.fieldError} role="alert" aria-live="assertive">
                     <Icon className={style.errorIcon} icon={"alert"} />{t(errorMsg)}
                 </span>
             )}

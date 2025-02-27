@@ -16,17 +16,17 @@ $full_padding: map-get($distance_metrics, "full_normal");
         background-color: $niceWhite;
         width: 100%;
         border-bottom: 0.2rem solid $niceYellow;
+        padding-left: 1.2rem;
 
-        > div > ul {
-            padding: 0;
-            > li {
+        >div>dl {
+            >div {
                 list-style-type: none;
                 margin: $distance_small 0;
                 display: grid;
                 grid-template-columns: 3rem 1fr;
                 gap: $distance_normal;
 
-                > .level {
+                >.level {
                     display: inline-block;
                     height: 2.4rem;
                     width: 100%;

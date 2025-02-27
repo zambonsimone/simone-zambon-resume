@@ -19,12 +19,14 @@ interface IFormProps {
     validationSchema: ObjectSchema<FormModel>;
     onSubmit: SubmitHandler<FormModel>;
     className?: string;
+    title?: string;
 }
 export const Form: React.FC<IFormProps> = ({
     children,
     validationSchema,
     className,
     onSubmit,
+    title
 }) => {
     const methods = useForm<FormModel>({
         resolver: yupResolver(validationSchema),
@@ -48,7 +50,10 @@ export const Form: React.FC<IFormProps> = ({
     useEffect(() => {
         const errorEntries = Object.entries(methods.formState.errors);
         if (!errorEntries.length) return;
+        const [field] = errorEntries[0];
+        const fieldWithError = formRef.current.querySelector(`[name='${field}']`) as HTMLElement;
         formRef.current.scrollIntoView({ behavior: "smooth" });
+        fieldWithError.focus()
     }, [methods.formState.errors])
 
     return (
@@ -58,10 +63,12 @@ export const Form: React.FC<IFormProps> = ({
                 onSubmit={methods.handleSubmit(onSubmit)}
                 className={[style.form, className].join(" ")}
                 noValidate
+                aria-labelledby="form-title"
             >
-                <fieldset className={style.formFieldset}>
+                {title && <h2 style={{ display: "none" }} id="form-title">{title}</h2>}
+                <div className={style.formFieldset} role="presentation">
                     {children(Field.current, SubmitBtn)}
-                </fieldset>
+                </div>
             </form>
         </FormProvider>
     )

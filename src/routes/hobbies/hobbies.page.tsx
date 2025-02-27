@@ -9,11 +9,11 @@ const { TITLE, SUBTITLE, INTRO_CODE, SECTIONS } = HOBBIES_LABELS;
 const Hobbies: React.FC = () => {
     const { t } = useTranslation("hobbies");
     return (
-        <>
+        <main>
             <RouteTitle title={t(TITLE)} subtitle={t(SUBTITLE)} />
             <IntroCode content={INTRO_CODE} />
             <TextContent sections={SECTIONS} tFunction={t} />
-        </>
+        </main>
     )
 }
 export default Hobbies;

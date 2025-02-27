@@ -9,11 +9,11 @@ const { TITLE, SUBTITLE, INTRO_CODE, SECTIONS } = OTHER_SOFTWARE_SKILLS_LABELS;
 const OtherSoftwareSkills: React.FC = () => {
     const { t } = useTranslation("otherSkills");
     return (
-        <>
+        <main>
             <RouteTitle title={t(TITLE)} subtitle={t(SUBTITLE)} />
             <IntroCode content={INTRO_CODE} />
             <TextContent sections={SECTIONS} tFunction={t} />
-        </>
+        </main>
 
     )
 }

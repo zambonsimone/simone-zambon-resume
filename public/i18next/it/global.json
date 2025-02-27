@@ -1,4 +1,10 @@
 {
+    "LANGUAGE_SELECTOR": {
+        "CURRENT_LANG": "Lingua corrente",
+        "CHOOSE_LANGUAGE": "Seleziona una lingua"
+    },
+    "EXPAND": "Espandi",
+    "COLLAPSE": "Comprimi",
     "NAVBAR": {
         "HOMEPAGE": "Benvenuto",
         "BIO": "Bio",
@@ -15,12 +21,13 @@
         "SEARCH": "Cerca"
     },
     "SEARCHBAR": {
-        "PLACEHOLDER": "Inserisci un testo",
+        "PLACEHOLDER": "Inserisci un testo da ricercare",
         "SEARCH_BTN": "Cerca"
     },
     "ACCORDION": {
         "SHOW": "Mostra",
-        "HIDE": "Nascondi"
+        "HIDE": "Nascondi",
+        "CONTENT": "Contenuto"
     },
     "INTRO_CODE": "codice introduttivo",
     "LEVEL_LEGEND": {
@@ -43,5 +50,7 @@
     "DETAILS": "dettagli",
     "AT": "presso",
     "FROM": "dal",
-    "TO": "al"
+    "TO": "al",
+    "RECAPTCHA_LABEL": "Conferma di non essere un robot",
+    "DOWNLOAD_FILE": "Scarica il file {{title}}"
 }

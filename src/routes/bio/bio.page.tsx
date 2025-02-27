@@ -10,11 +10,11 @@ const { TITLE, SUBTITLE, INTRO_CODE, SECTIONS } = BIO_LABELS;
 const Bio: React.FC = () => {
     const { t } = useTranslation("bio");
     return (
-        <div>
+        <main>
             <RouteTitle title={t(TITLE)} subtitle={t(SUBTITLE)} />
             <IntroCode content={INTRO_CODE} />
             <TextContent sections={SECTIONS} tFunction={t} />
-        </div>
+        </main>
     )
 }
 

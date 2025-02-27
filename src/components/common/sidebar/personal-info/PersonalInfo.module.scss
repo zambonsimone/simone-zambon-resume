@@ -11,26 +11,33 @@ $distance_xx_large: map-get($distance_metrics, "xx_large");
     display: flex;
     padding: $distance_normal 0;
     height: $distance_xx_large;
+    color: $niceBlack;
+    text-decoration: none;
 
-    > .info {
+    &:focus-visible {
+        outline-offset: -0.2rem;
+    }
+
+    >.info {
         display: flex;
         flex-direction: column;
         gap: $distance_small;
         justify-content: center;
         margin-left: $distance_normal;
-    
+
         :first-child {
             font-weight: 500;
             letter-spacing: 0.1rem;
             font-size: 1.4rem;
         }
+
         :last-child {
             text-transform: uppercase;
             letter-spacing: 0.2rem;
             font-size: 1rem;
         }
     }
-    
+
     .picture {
         height: 7rem;
         width: 7rem;
@@ -49,15 +56,17 @@ $distance_xx_large: map-get($distance_metrics, "xx_large");
 
     @include device("mobile") {
         height: 6rem;
+
         .picture {
             width: 3.6rem;
             height: 3.6rem;
         }
 
-        > .info {
+        >.info {
             > :first-child {
                 font-size: 1.2rem;
             }
+
             > :last-child {
                 font-size: 0.9rem;
             }

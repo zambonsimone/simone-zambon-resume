@@ -30,7 +30,11 @@ export const Searchbar: React.FC<ISearchbarProps> = ({
         setSearchTerm(evt.target.value);
     }, [])
     return (
-        <form onSubmit={onSearch} className={[style.searchbar, className].join(" ")}>
+        <form
+            onSubmit={onSearch}
+            className={[style.searchbar, className].join(" ")}
+            role="search"
+        >
             <Icon icon="search" className={style.iconSearch} />
             <input
                 type="text"

@@ -1,6 +1,14 @@
 {
     "TITLE": "Kontakter",
-    "SUBTITLE": "Du kan bruke en av kontaktmetodene som er angitt i snippet nedenfor, eller du kan fylle ut skjemaet med forespørselen din og eventuelt kontaktinformasjon for å bli kontaktet igjen. Ved å klikke på 'Send' vil jeg motta en e-post med meldingen din.",
+    "SUBTITLE": "Du kan bruke en av kontaktmetodene som er angitt i listen nedenfor, eller du kan fylle ut skjemaet med forespørselen din og eventuelt kontaktinformasjon for å bli kontaktet igjen. Ved å klikke på 'Send' vil jeg motta en e-post med meldingen din.",
+    "CONTACT_OPTIONS": {
+        "TITLE": "Kontaktmetoder",
+        "PHONE": "Telefon",
+        "EMAIL": "E-postadresse",
+        "SKYPE": "Skype",
+        "LINKEDIN": "LinkedIn"
+    },
+    "FORM_TITLE": "Kontaktskjema",
     "FORM_FIELD": {
         "NAME": {
             "LABEL": "Navn / Firmanavn",

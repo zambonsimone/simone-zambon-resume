@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Accordion } from "../../common/accordion/Accordion";
+import { LEVEL_INDICATOR_LABEL } from "../../route/content/text-content/level-indicator/labels";
 import { getLevelBgColor } from "../../route/content/text-content/level-indicator/utils";
 import style from "./SkillLevelLegenda.module.scss";
 import { LEVEL_LEGENDA_LABELS } from "./labels";
@@ -14,20 +15,20 @@ const SkillLevelLegenda: React.FC = () => {
             contentClassName={style.levelLegendaContent}
             content={(
                 <div>
-                    <ul role="list">
+                    <dl role="list">
                         {Object.entries(LEVEL_LEGENDA_LABELS.LEVELS).map(([level, description], index) => (
-                            <li
+                            <div
                                 role="listitem"
                                 key={index}
-                                aria-label={`Livello ${level}: ${description}`}
+                                aria-label={`${t(LEVEL_INDICATOR_LABEL)} ${level}: ${t(description)}`}
                             >
-                                <span className={style.level} style={{ backgroundColor: getLevelBgColor(+level) }}>
+                                <dt className={style.level} style={{ backgroundColor: getLevelBgColor(+level) }}>
                                     {level}
-                                </span>
-                                <span className={style.description}>{t(description)}</span>
-                            </li>
+                                </dt>
+                                <dd className={style.description}>{t(description)}</dd>
+                            </div>
                         ))}
-                    </ul>
+                    </dl>
                 </div>
             )}
         />

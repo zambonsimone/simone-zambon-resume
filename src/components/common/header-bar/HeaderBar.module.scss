@@ -22,6 +22,7 @@ $distance_x_large: map-get($distance_metrics, "x_large");
     top: 0;
     z-index: 2;
 
+
     .searchbarContainer {
         padding-right: $distance_x_large;
         height: 5rem;
@@ -46,10 +47,6 @@ $distance_x_large: map-get($distance_metrics, "x_large");
         padding: 0 $distance_normal;
         background-color: $niceYellow;
         cursor: pointer;
-
-        &:focus-visible {
-            outline-offset: -1rem;
-        }
 
         > :first-child {
             margin-right: auto;
@@ -91,7 +88,7 @@ $distance_x_large: map-get($distance_metrics, "x_large");
             z-index: 3;
             border-bottom: 0.1rem solid $transparentBlack;
 
-            >.headerLanguageList {
+            >.headerLanguageSelector {
                 display: flex;
                 padding-left: 0;
 

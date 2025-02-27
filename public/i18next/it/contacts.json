@@ -1,6 +1,14 @@
 {
     "TITLE": "Contatti",
-    "SUBTITLE": "Utilizza uno dei metodi di contatto indicati nello snippet qui sotto, oppure compila il form con la tua richiesta ed eventualmente i tuoi dati per essere ricontattato: al submit, riceverò una mail con il contenuto del tuo messaggio",
+    "SUBTITLE": "Utilizza uno dei metodi di contatto indicati nella lista qui sotto, oppure compila il form con la tua richiesta ed eventualmente i tuoi dati per essere ricontattato: al submit, riceverò una mail con il contenuto del tuo messaggio",
+    "CONTACT_OPTIONS": {
+        "TITLE": "Metodi di contatto",
+        "PHONE": "Telefono",
+        "EMAIL": "E-mail",
+        "SKYPE": "Skype",
+        "LINKEDIN": "LinkedIn"
+    },
+    "FORM_TITLE": "Modulo di contatto",
     "FORM_FIELD": {
         "NAME": {
             "LABEL": "Nome / Ragione sociale",

@@ -18,23 +18,25 @@ export const Icon: React.FC<IIconProps> = ({
     const iconRef = useRef<HTMLDivElement>(null)
     const triggerClick = useCallback((event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key === "Enter") iconRef.current.click();
-    },[])
+    }, [])
     return (
         <div
-            className={[style.icon, className].join(" ")} 
-            onClick={onClick} 
+            className={[style.icon, className].join(" ")}
+            onClick={onClick}
             tabIndex={onClick ? 0 : -1}
             onKeyDown={triggerClick}
             ref={iconRef}
             role={button ? "button" : undefined}
+            aria-hidden={!button}
             {...ariaAttributes}
         >
-            <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width={"1em"} 
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={"1em"}
                 height={"1em"}
-                viewBox="0 0 24 24" 
+                viewBox="0 0 24 24"
                 fill="currentColor"
+                aria-hidden
             >
                 {ICONS_PATHS[icon]}
             </svg>

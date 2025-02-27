@@ -12,7 +12,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
     ...other
 }) => {
     return (
-        <div className={inputStyle.inputWrapper}>
+        <div className={inputStyle.inputWrapper} role="presentation">
             <input
                 id={name}
                 name={name}

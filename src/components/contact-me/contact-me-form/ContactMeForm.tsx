@@ -56,6 +56,7 @@ export const ContactMeForm: React.FC = () => {
             validationSchema={schema}
             className={style.contactMeForm}
             onSubmit={onSubmit}
+            title={t("FORM_TITLE")}
         >
             {(Field, SubmitBtn) => {
                 return (

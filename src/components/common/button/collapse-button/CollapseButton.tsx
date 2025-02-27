@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Icon } from "../../icons/Icon";
 import style from "./CollapseButton.module.scss";
 
@@ -5,7 +6,7 @@ type CollapseIconNames = `chevronCircle${"Up" | "Down" | "Left" | "Right"}`;
 type CollapseIconObject = Record<"collapsed" | "expanded", CollapseIconNames>;
 type MappingPositionIconObject = Record<ICollapseButtonProps["collapsedTo"], CollapseIconObject>;
 
-const MAPPING_POSITION_ICONS: MappingPositionIconObject  = {
+const MAPPING_POSITION_ICONS: MappingPositionIconObject = {
     top: { collapsed: "chevronCircleDown", expanded: "chevronCircleUp" },
     bottom: { collapsed: "chevronCircleUp", expanded: "chevronCircleDown" },
     right: { collapsed: "chevronCircleLeft", expanded: "chevronCircleRight" },
@@ -25,16 +26,17 @@ export const CollapseButton: React.FC<ICollapseButtonProps> = ({
     onClick,
     className
 }) => {
-    const icon: CollapseIconNames = MAPPING_POSITION_ICONS[collapsedTo][collapsed ? "collapsed" : "expanded"]; 
+    const { t } = useTranslation("global");
+    const icon: CollapseIconNames = MAPPING_POSITION_ICONS[collapsedTo][collapsed ? "collapsed" : "expanded"];
     return (
-        <Icon 
-            aria-label={collapsed ? "Espandi" : "Comprimi"} 
+        <Icon
+            aria-label={collapsed ? t("EXPAND") : t("COLLAPSE")}
             aria-expanded={!collapsed}
-            className={[style.collapseBtn, className].join(" ")} 
-            icon={icon} 
-            onClick={onClick} 
+            className={[style.collapseBtn, className].join(" ")}
+            icon={icon}
+            onClick={onClick}
             button
         />
     )
-    
+
 }

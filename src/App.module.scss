@@ -41,11 +41,15 @@ html {
     }
 
     @include device("desktop") {
-        &, body, div#root, .appContainer  {
+
+        &,
+        body,
+        div#root,
+        .appContainer {
             height: 100%;
         }
     }
-    
+
 
     body {
         margin: 0;
@@ -59,9 +63,15 @@ html {
         font-size: $subsection_title_fontsize;
     }
 
-    p, ul > li {
+    p,
+    dl>div,
+    ul>li {
         font-size: $paragraph_fontsize;
         line-height: $paragraph_lineheight;
+    }
+
+    dl>div>dd {
+        margin-left: 0;
     }
 
     a {
@@ -76,7 +86,14 @@ html {
         padding: 0 $distance_small;
     }
 
-    input, a, textarea, button, div {
+    input,
+    a,
+    textarea,
+    button,
+    div,
+    ul,
+    li,
+    img {
         @include removeOutlineOnFocusables();
     }
 
@@ -95,13 +112,13 @@ html {
             min-width: 0;
             display: flex;
             flex-direction: column;
-    
-            > .appSection {
+
+            >.appSection {
                 flex: 1 1;
                 padding: 5rem;
                 overflow-y: auto;
                 overflow-x: hidden;
-                        
+
                 @include hideScrollbar();
             }
         }
@@ -111,20 +128,24 @@ html {
         h2 {
             font-size: $section_title_fontsize_tablet;
         }
+
         h3 {
             font-size: $subsection_title_fontsize_tablet;
         }
-        p, ul > li {    
+
+        p,
+        ul>li {
             font-size: $paragraph_fontsize_tablet;
         }
 
         .appContainer {
             .appContent {
                 margin-left: 7.5rem;
+
                 .appSection {
                     padding: 2rem 3rem 3rem 3rem;
                 }
-            } 
+            }
         }
     }
 
@@ -132,20 +153,24 @@ html {
         h2 {
             font-size: $section_title_fontsize_mobile;
         }
+
         h3 {
             font-size: $subsection_title_fontsize_mobile;
         }
-        p, ul > li {
+
+        p,
+        ul>li {
             font-size: $paragraph_fontsize_mobile;
         }
 
         .appContainer {
             .appContent {
                 margin-left: 0;
+
                 .appSection {
                     padding: 1rem 1.5rem 1.5rem 1.5rem
                 }
-            }         
+            }
         }
     }
 }

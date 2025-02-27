@@ -18,7 +18,7 @@
   },
   "JEST_CYPRESS": {
     "TITLE": "Jest - Cypress",
-    "DESCRIPTION": "Lavorando in contesti di grandi applicazioni ho scritto molti test unitari e di UI. Con <code>Jest</code> so testare componenti, hook e utility utilizzando anche librerie di test fornite da <code>React</code>, simulando e gestendo correttamente eventi utente e cambi di stato. So definire un ambiente necessario e sufficiente per ciò che voglio testare ricorrendo a mock e <code>spyOn</code>. Con <code>Cypress</code> so testare interi flussi, utilizzando <code>fixture</code> e <code>interceptor</code>. Utilizzo efficacemente quasi tutti gli attuali comandi di default di <code>Cypress</code> e so definirne di nuovi custom."
+    "DESCRIPTION": "Lavorando in contesti di grandi applicazioni ho scritto molti test unitari e di integrazione. Con <code>Jest</code> so testare componenti, hook e utility utilizzando anche librerie di test fornite da <code>React</code>, simulando e gestendo correttamente eventi utente e cambi di stato. So definire un ambiente necessario e sufficiente per ciò che voglio testare ricorrendo a mock e <code>spyOn</code>. Con <code>Cypress</code> so testare interi flussi, utilizzando <code>fixture</code> e <code>interceptor</code>. Utilizzo efficacemente quasi tutti gli attuali comandi di default di <code>Cypress</code> e so definirne di nuovi custom."
   },
   "MOBILE": {
     "TITLE": "ReactNative - Android Studio",

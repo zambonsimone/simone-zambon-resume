@@ -59,7 +59,7 @@ export const Accordion: React.FC<IAccordionProps> = ({
                 id={"accordion-content"}
                 className={[style.accordionContent, contentClassName].join(" ")}
                 tabIndex={0}
-                aria-label={`Contenuto ${header}`}
+                aria-label={`${t("ACCORDION.CONTENT")} ${header}`}
                 onKeyDown={onKeyDown}
             >
                 {content}

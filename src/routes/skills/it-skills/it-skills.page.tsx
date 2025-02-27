@@ -10,11 +10,11 @@ const { TITLE, SUBTITLE, INTRO_CODE, SECTIONS } = IT_SKILLS_LABELS;
 const ITSkills: React.FC = () => {
     const { t } = useTranslation("itSkills");
     return (
-        <>
+        <main>
             <RouteTitle title={t(TITLE)} subtitle={<HtmlSanitizer htmlString={t(SUBTITLE)} />} />
             <IntroCode content={INTRO_CODE} />
             <TextContent sections={SECTIONS} tFunction={t} />
-        </>
+        </main>
     )
 }
 

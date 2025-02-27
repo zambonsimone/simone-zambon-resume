@@ -1,6 +1,14 @@
 {
     "TITLE": "Contacts",
-    "SUBTITLE": "You can use one of the contact options shown in the snippet below or You can fill out the form with Your request and, if necessary, Your contact details to be reached again: on submit I will receive and e-mail with Your message",
+    "SUBTITLE": "You can use one of the contact options shown in the list below or You can fill out the form with Your request and, if necessary, Your contact details to be reached again: on submit I will receive and e-mail with Your message",
+    "CONTACT_OPTIONS": {
+        "TITLE": "Contact options",
+        "PHONE": "Phone",
+        "EMAIL": "E-mail address",
+        "SKYPE": "Skype",
+        "LINKEDIN": "LinkedIn"
+    },
+    "FORM_TITLE": "Contact form",
     "FORM_FIELD": {
         "NAME": {
             "LABEL": "Name / Company name",

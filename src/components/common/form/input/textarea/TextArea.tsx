@@ -13,12 +13,12 @@ export const TextArea: React.FC<ITextAreaProps> = ({
 
     const onTextareaChange = useCallback((event: React.ChangeEvent<HTMLTextAreaElement>) => {
         onChange(event.target.value);
-    },[onChange])
+    }, [onChange])
 
     return (
-        <div className={inputStyle.inputWrapper}>
-            <textarea   
-                id={name} 
+        <div className={inputStyle.inputWrapper} role="presentation">
+            <textarea
+                id={name}
                 name={name}
                 placeholder={placeholder}
                 onChange={onTextareaChange}

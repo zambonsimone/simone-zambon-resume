@@ -15,6 +15,7 @@ $icon_fontsize: map-get($icon_font, "fontsize");
         min-width: 0;
         width: 100%;
         border: none;
+        padding: 0.6rem 1.2rem;
 
         .fieldContainer {
             margin-bottom: $distance_large;

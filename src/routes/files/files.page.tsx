@@ -11,7 +11,7 @@ const { TITLE, SUBTITLE, INTRO_CODE } = FILES_LABELS;
 const Files: React.FC = () => {
     const { t } = useTranslation("files");
     return (
-        <>
+        <main>
             <RouteTitle title={t(TITLE)} subtitle={t(SUBTITLE)} />
             <IntroCode content={INTRO_CODE} />
             <div className={style.fileList}>
@@ -19,7 +19,7 @@ const Files: React.FC = () => {
                     <FileDownload {...file} key={index} />
                 ))}
             </div>
-        </>
+        </main>
     )
 }
 
