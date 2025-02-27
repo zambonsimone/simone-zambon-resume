@@ -15,7 +15,12 @@ const Welcome: React.FC = () => {
     const { t } = useTranslation("homepage");
     return (
         <main>
-            <RouteTitle title={t(TITLE)} subtitle={<HtmlSanitizer htmlString={t(SUBTITLE)} />} />
+            <RouteTitle
+                title={t(TITLE)}
+                subtitle={
+                    <HtmlSanitizer htmlString={t(SUBTITLE)} role="presentation" />
+                }
+            />
             <h2>{t(INSTRUCTIONS.TITLE)}</h2>
             <ul>
                 {INSTRUCTIONS.LIST_ITEMS.map((item, index) => (

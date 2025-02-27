@@ -3,9 +3,12 @@
 @import "../../../../mixins.scss";
 @import "../../../../metrics.scss";
 
-$action_font: map-get($font, "action");
-$action_fontweight: map-get($action_font, "fontweight");
-$action_letter_spacing: map-get($action_font, "letter_spacing");
+$navlink_font: map-get($font, "navlink");
+$navlink_fontsize: map-get($navlink_font, "fontsize");
+$navlink_fontsize_tablet: map-get($navlink_font, "fontsize_tablet");
+$navlink_fontweight: map-get($navlink_font, "fontweight");
+$navlink_letterspacing: map-get($navlink_font, "letter_spacing");
+
 $icon_font: map-get($font, "icon");
 $icon_fontsize: map-get($icon_font, "fontsize");
 $icon_fontsize_small: map-get($icon_font, "fontsize_small");
@@ -35,10 +38,6 @@ $full_padding: map-get($distance_metrics, "full_small");
         justify-content: flex-start;
 
         >.mainNavLinkWrapper {
-            border: 0.3rem solid transparent;
-            &:hover {
-                border-color: $niceOrange;
-            }
             .mainNavLink {
                 display: flex;
                 flex-direction: column;
@@ -46,17 +45,19 @@ $full_padding: map-get($distance_metrics, "full_small");
                 width: 100%;
                 height: 6rem;
                 cursor: pointer;
-                font-size: 1.4rem;
-                font-weight: $action_fontweight;
-                letter-spacing: $action_letter_spacing;
+                font-size: $navlink_fontsize;
+                font-weight: $navlink_fontweight;
+                letter-spacing: $navlink_letterspacing;
                 padding: $full_padding;
                 text-transform: uppercase;
                 text-decoration: none;
                 color: $niceBlack;
-                @include animation(font-size, .1s);
+                
+                @include device("tablet") {
+                    font-size: $navlink_fontsize_tablet;
+                }
 
                 &.mainSubNavLink {
-                    font-size: 1.2rem;
                     height: 5rem;
                     max-width: 22rem;
                     margin-left: $distance_normal;
@@ -66,11 +67,8 @@ $full_padding: map-get($distance_metrics, "full_small");
                     }
                 }
             
-                &:hover, &.mainNavLinkActive {
-                    font-size: 1.7rem;
-                    &.mainSubNavLink {
-                        font-size: 1.4rem;
-                    }
+                &:hover::after {
+                    background-color: $niceBlack;    
                 }
 
                 &.mainNavLinkActive::after {
@@ -84,7 +82,7 @@ $full_padding: map-get($distance_metrics, "full_small");
                     left: 0;
                     width: 100%;
                     content: "";
-                    height: 0.5rem;
+                    height: 0.1rem;
                     background-color: transparent;
                     @include animation(font-size, .1s);
                 }

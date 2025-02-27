@@ -1,6 +1,6 @@
 {
   "TITLE": "Il mio curriculum",
-  "SUBTITLE": "Quale miglior modo di dare una dimostrazione del mio livello nell'ambito dello sviluppo di siti e applicazioni web, se non creando un mio personale sito web? Contiene tutte le informazioni riportate nel mio curriculum raccontando qualche particolare in più. Il codice sorgente è consultabile <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" target=\"_blank\">qui</a>.",
+  "SUBTITLE": "Quale miglior modo di dare una dimostrazione del mio livello nell'ambito dello sviluppo di siti e applicazioni web, se non creando un mio personale sito web? Contiene tutte le informazioni riportate nel mio curriculum raccontando qualche particolare in più. Il codice sorgente è consultabile <a aria-label=\"Qui: link a GitHub\" href=\"https://github.com/zambonsimone/simone-zambon-resume\" target=\"_blank\">qui</a>.",
   "INSTRUCTIONS": {
     "TITLE": "Istruzioni",
     "LIST_ITEMS": {

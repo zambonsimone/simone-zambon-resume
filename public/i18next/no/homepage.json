@@ -1,6 +1,6 @@
 {
   "TITLE": "Mitt curriculum vitaet",
-  "SUBTITLE": "Jeg antar at lagingen av et nettsted er den beste måten for å demonstrere mitt nivå i frontend-utvikling. Nettstedet inneholder all informasjonen som er gitt i min CV, i tillegg til mer detaljer. Du kan se kildekoden <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" target=\"_blank\">her</a>.",
+  "SUBTITLE": "Jeg antar at lagingen av et nettsted er den beste måten for å demonstrere mitt nivå i frontend-utvikling. Nettstedet inneholder all informasjonen som er gitt i min CV, i tillegg til mer detaljer. Du kan se kildekoden <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" aria-label=\"Her: lenke til GitHub\" target=\"_blank\">her</a>.",
   "INSTRUCTIONS": {
     "TITLE": "Bruksanvisninger",
     "LIST_ITEMS": {

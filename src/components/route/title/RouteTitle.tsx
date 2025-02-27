@@ -10,8 +10,8 @@ export const RouteTitle: React.FC<IRouteTitleProps> = ({
 }) => {
     return (
         <header className={style.routeTitle}>
-            <h1 className={style.title}>{ title }</h1>
-            <p className={style.subtitle}>{ subtitle }</p>
+            <h1 className={style.title}>{title}</h1>
+            <p className={style.subtitle}>{subtitle}</p>
         </header>
     )
 }

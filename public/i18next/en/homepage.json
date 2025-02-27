@@ -1,6 +1,6 @@
 {
   "TITLE": "My resume",
-  "SUBTITLE": "I think the best way to demonstrate my skills in website and web application development is by creating a personal website. It contains all the informations from my resume along with additional details. The source code is available <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" target=\"_blank\">here</a>.",
+  "SUBTITLE": "I think the best way to demonstrate my skills in website and web application development is by creating a personal website. It contains all the informations from my resume along with additional details. The source code is available <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" aria-label=\"Here: link to GitHub\" target=\"_blank\">here</a>.",
   "INSTRUCTIONS": {
     "TITLE": "Instructions",
     "LIST_ITEMS": {

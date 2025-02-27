@@ -4,10 +4,19 @@ $font: (
     html: (
         font_color: $niceBlack,
     ),
+    route_title: (
+        fontsize: 3rem,
+        fontsize_tablet: 2.8rem
+    ),
+    route_subtitle: (
+        fontsize: 1.2rem,
+        fontsize_tablet: 1rem,
+        line_height: 1.75rem,
+    ),
     section_title: (
-        fontsize: 4rem,
-        fontsize_tablet: 3.5rem,
-        fontsize_mobile: 2.5rem,
+        fontsize: 2rem,
+        fontsize_tablet: 1.8rem,
+        line_height_mobile: 2.4rem,
     ),
     subsection_title: (
         fontsize: 2.5rem,
@@ -15,18 +24,23 @@ $font: (
         fontsize_mobile: 2rem,
     ),
     paragraph: (
-        fontsize: 1.6rem,
-        fontsize_tablet: 1.5rem,
-        fontsize_mobile: 1.4rem,
-        line_height: 2.4rem,
+        fontsize: 1rem,
+        fontsize_tablet: 0.9rem,
+        line_height: 1.5rem,
     ),
     action: (
-        fontsize: 1.2rem,
-        letter_spacing: 0.1rem, 
+        fontsize: 1rem,
+        fontsize_tablet: 0.9rem,
+        line_height: 1.5rem,
+        fontweight: 500,
+    ),
+    navlink: (
+        fontsize: 0.8rem,
+        letter_spacing: 0.1rem,
+        fontsize_tablet: 0.75rem,
         fontweight: 500,
     ),
     icon: (
         fontsize: 2.4rem,
         fontsize_small: 1.8rem,
-    )
-)
+    ))

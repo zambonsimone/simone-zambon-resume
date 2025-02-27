@@ -27,7 +27,7 @@ $distance_normal: map-get($distance_metrics, "normal");
     &:hover {
         border-color: $niceWhite;
 
-        > span {
+        >span {
             color: $niceWhite;
         }
     }
@@ -40,8 +40,8 @@ $distance_normal: map-get($distance_metrics, "normal");
             border-color: transparent;
         }
     }
-    
-    > span {
+
+    >span {
         font-weight: $action_fontweight;
         font-size: $action_fontsize;
         letter-spacing: $action_letter_spacing;
