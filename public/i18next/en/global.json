@@ -5,6 +5,7 @@
     },
     "EXPAND": "Expand",
     "COLLAPSE": "Collapse",
+    "CLOSE_MENU": "Close menu",
     "NAVBAR": {
         "HOMEPAGE": "Welcome",
         "BIO": "Bio",

@@ -1,7 +1,6 @@
 import { useCallback, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { NavLink, useLocation } from "react-router-dom";
-import { useResolution } from "../../../../hooks/useResolution";
 import { RoutePath } from "../../../../routes/paths";
 import { IRoute, ROUTES } from "../../../../routes/routes";
 import { Icon } from "../../icons/Icon";
@@ -24,7 +23,6 @@ export const NavBar: React.FC<INavBarProps> = ({
 }) => {
     const location = useLocation();
     const pathname = location.pathname as RoutePath;
-    const { isMobile } = useResolution();
     const { t } = useTranslation("global");
     const [openedSubRoutesLists, setOpenedSubRoutesLists] = useState<SubRoutesVisibilityState>(SUBROUTES_INITIAL_VISIBILITY_STATE)
 
@@ -44,7 +42,7 @@ export const NavBar: React.FC<INavBarProps> = ({
         onLinkClick?.();
     }, [onLinkClick]);
 
-    const showSubRoutes = (route: IRoute) => openedSubRoutesLists[route.name] || isMobile;
+    const showSubRoutes = (route: IRoute) => openedSubRoutesLists[route.name];
     const navBarClassnames = [
         style.navbarContainer,
         collapsed ? style.collapsed : "",
@@ -67,8 +65,8 @@ export const NavBar: React.FC<INavBarProps> = ({
                         >
                             <div className={style.routeName}>
                                 <Icon className={style.icon} icon={route.icon} />
-                                {t(route.displayedName)}
-                                {!!route.subRoutes && (
+                                {!collapsed && t(route.displayedName)}
+                                {!collapsed && !!route.subRoutes && (
                                     <Icon
                                         className={[style.icon, style.iconRouteCollapse].join(" ")}
                                         icon={showSubRoutes(route) ? "chevronUp" : "chevronDown"}
@@ -76,7 +74,7 @@ export const NavBar: React.FC<INavBarProps> = ({
                                 )}
                             </div>
                         </NavLink>
-                        {(openedSubRoutesLists[route.name] || isMobile) && route.subRoutes?.map(subr => (
+                        {openedSubRoutesLists[route.name] && route.subRoutes?.map(subr => (
                             <NavLink
                                 key={subr.name}
                                 to={subr.path}

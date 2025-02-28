@@ -46,7 +46,7 @@ export const LanguageListComponent = ({
                     onKeyDown={(evt: React.KeyboardEvent<HTMLLIElement>) => triggerClick(evt, lng.lang)}
                 >
                     <div className={style.itemContent} >
-                        <img src={lng.icon} aria-hidden />
+                        <img src={lng.icon} className={style.langImg} aria-hidden />
                         <label aria-hidden>
                             {!isDesktop ? lng.lang : lng.label}
                         </label>

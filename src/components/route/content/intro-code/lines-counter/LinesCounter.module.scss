@@ -17,16 +17,8 @@ $distance_normal: map-get($distance_metrics, "normal");
 
     > div {
         text-align: center;
-        font-size: 1.3rem;
-        line-height: 2.2rem;
-        margin: 0 $distance_normal;
-
-        @include device("tablet") {
-            font-size: 1.2rem;
-        }
-
-        @include device("mobile") {
-            font-size: 1.1rem;
-        }
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+        margin: 0 0.6rem;
     }
 }

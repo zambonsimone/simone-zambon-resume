@@ -25,6 +25,7 @@ export const HeaderBar: React.FC = () => {
             <MatchResolution
                 desktop={<>
                     <div className={style.searchbarContainer} role="presentation">
+                        <PersonalInfo />
                         <LanguageSelector popover />
                         <Searchbar className={style.headerSearchbar} />
                     </div>
@@ -38,14 +39,7 @@ export const HeaderBar: React.FC = () => {
                             aria-label={`${t("LANGUAGE_SELECTOR.CURRENT_LANG")}: ${currentLang.label}`}
                             tabIndex={0}
                         />
-                        <CollapseButton
-                            collapsedTo="top"
-                            collapsed
-                            className={style.icon}
-                            onClick={showModal}
-                        />
-                        <Icon className={style.icon} icon={"routes"} />
-                        <Icon className={style.icon} icon="search" />
+                        <Icon className={style.icon} icon={"menu"}/>
                     </div>
                     <dialog className={style.headerbarDialog} ref={headerRef}>
                         <div className={style.closeHeaderbarDialogBtnWrapper} role="presentation">

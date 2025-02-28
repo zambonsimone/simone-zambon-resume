@@ -15,17 +15,9 @@ $distance_normal: map-get($distance_metrics, "normal");
         display: flex;
 
         .code {
-            font-size: 1.4rem;
+            font-size: 0.8rem;
             padding-left: $distance_normal;
             overflow-x: auto;
-    
-            @include device("tablet") {
-                font-size: 1.3rem;
-            }
-    
-            @include device("mobile") {
-                font-size: 1.2rem;
-            }
     
             >*::-webkit-scrollbar {
                 height: 1rem;

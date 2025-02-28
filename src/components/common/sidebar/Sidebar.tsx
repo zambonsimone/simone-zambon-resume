@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useResolution } from "../../../hooks/useResolution";
 import { CollapseButton } from "../button/collapse-button/CollapseButton";
 import { MatchResolution } from "../match-resolution/MatchResolution";
@@ -9,6 +10,7 @@ import style from "./Sidebar.module.scss";
 export const Sidebar: React.FC = () => {
     const modalRef = useRef<HTMLDialogElement>(null);
     const [collapsed, setCollapsed] = useState(true);
+    const {t} = useTranslation("global");
     const { isTablet } = useResolution();
     const expandSidebar = useCallback(() => {
         modalRef.current?.showModal();
@@ -19,14 +21,13 @@ export const Sidebar: React.FC = () => {
         setCollapsed(true);
     }, []);
     useEffect(() => {
-        if (!isTablet) setCollapsed(true);
-    }, [isTablet])
+        if (!isTablet) collapseSidebar();
+    }, [collapseSidebar, isTablet])
 
     return (
         <MatchResolution
             desktop={
                 <aside className={style.sidebar}>
-                    <PersonalInfo />
                     <NavBar />
                 </aside>
             }
@@ -36,7 +37,6 @@ export const Sidebar: React.FC = () => {
                         className={[style.sidebar, style.collapsed].join(" ")}
                         onClick={expandSidebar}
                     >
-                        <PersonalInfo onlyImg />
                         <CollapseButton
                             collapsedTo="left"
                             collapsed
@@ -48,12 +48,14 @@ export const Sidebar: React.FC = () => {
                 )}
                 <dialog className={[style.sidebar, style.sidebarDialog].join(" ")} id={"sidebar-dialog"} ref={modalRef}>
                     <PersonalInfo />
-                    <CollapseButton
-                        collapsedTo="left"
-                        collapsed={false}
-                        className={style.sidebarCollapseBtn}
-                        onClick={collapseSidebar}
-                    />
+                    <div className={style.collapseSidebar} onClick={collapseSidebar}>
+                        <CollapseButton
+                            collapsedTo="left"
+                            collapsed={false}
+                            className={style.sidebarCollapseBtn}
+                        />
+                        <span>{t("CLOSE_MENU")}</span>
+                    </div>
                     <NavBar onLinkClick={collapseSidebar} />
                 </dialog>
             </>}

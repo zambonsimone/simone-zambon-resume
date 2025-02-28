@@ -34,6 +34,11 @@ $font: (
         line_height: 1.5rem,
         fontweight: 500,
     ),
+    button: (
+        fontsize: 0.8rem,
+        letter_spacing: 0.1rem,
+        fontweight: 500,
+    ),
     navlink: (
         fontsize: 0.8rem,
         letter_spacing: 0.1rem,
@@ -41,6 +46,6 @@ $font: (
         fontweight: 500,
     ),
     icon: (
-        fontsize: 2.4rem,
-        fontsize_small: 1.8rem,
+        fontsize: 1.5rem,
+        fontsize_small: 1.1rem,
     ))

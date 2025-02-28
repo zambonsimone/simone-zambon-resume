@@ -108,19 +108,30 @@ html {
 
     .appContainer {
         display: flex;
-
+        flex-direction: column;
+        
         .appContent {
             flex-grow: 1;
             min-height: 0;
             min-width: 0;
             display: flex;
-            flex-direction: column;
+            padding: 1.5rem 0;
+            max-height: calc(100vh - 4.6rem);
 
-            >.appSection {
+            .route {
+                display: flex;
+                flex-direction: column;
+                padding: 0 3rem;
+                min-width: 0;
+            }
+
+            .appSection {
                 flex: 1 1;
-                padding: 5rem;
+                margin-top: 2rem;
+                padding-bottom: 2rem;
                 overflow-y: auto;
                 overflow-x: hidden;
+                height: calc(100vh - 15rem);
 
                 @include hideScrollbar();
             }
@@ -141,13 +152,12 @@ html {
             font-size: $paragraph_fontsize_tablet;
         }
 
-        .appContainer {
-            .appContent {
-                margin-left: 7.5rem;
-
-                .appSection {
-                    padding: 2rem 3rem 3rem 3rem;
-                }
+        .appContainer .appContent .route {
+            margin-left: 7.5rem;
+            padding: 0 2rem;
+            .appSection {
+                padding-top: 0.5rem;
+                margin-top: 0;
             }
         }
 
@@ -166,14 +176,14 @@ html {
             font-size: $paragraph_fontsize_mobile;
         }
 
-        .appContainer {
-            .appContent {
-                margin-left: 0;
-
-                .appSection {
-                    padding: 1rem 1.5rem 1.5rem 1.5rem
-                }
+        .appContainer .appContent .route {
+            margin-left: 0;
+            padding: 0rem 1rem;
+            .appSection {
+                height: calc(100vh - 12rem);
+                margin-top: 0;
             }
+            
         }
     }
 }

@@ -1,22 +1,26 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
+@import "../../../font.scss";
 @import "../../../mixins.scss";
 
 $distance_metrics: map-get($metrics, "distance");
 $distance_normal: map-get($distance_metrics, "normal");
 
+$navlink_font: map-get($font, "navlink");
+$navlink_fontsize: map-get($navlink_font, "fontsize");
+$navlink_fontsize_tablet: map-get($navlink_font, "fontsize_tablet");
+$navlink_fontweight: map-get($navlink_font, "fontweight");
+$navlink_letterspacing: map-get($navlink_font, "letter_spacing");
+
 .sidebar {
-    padding: 0 $distance_normal;
-    box-shadow: 0 0 3rem -1rem $niceBlack;
-    background-color: $niceYellow;
-    z-index: 3;
-    min-width: 28rem;
+    background-color: $niceWhite;
+    border-right: 0.1rem solid $transparentBlack;
+    min-width: 28vw;
     min-height: 100%;
     max-height: 100%;
     cursor: pointer;
-    overflow-y: auto;
+    overflow-y: hidden;
     position: fixed;
-    @include hideScrollbar();
 
     @include device("desktop") {
         position: initial;
@@ -25,22 +29,54 @@ $distance_normal: map-get($distance_metrics, "normal");
     &.collapsed {
         min-width: 7.5rem;
         max-width: 7.5rem;
+        .sidebarCollapseBtn {
+            margin-top: 1.5rem;
+        }
+    }
+}
+
+.collapseSidebar {
+    display: flex;
+    font-size: $navlink_fontsize;
+    text-transform: uppercase;
+    letter-spacing: $navlink_letterspacing;
+    font-weight: $navlink_fontweight;
+    margin: 3rem 2.5rem 0 2.45rem;
+    align-items: center;
+
+    @include device("tablet") {
+        font-size: $navlink_fontsize_tablet;
+        height: 4.5rem;
+        margin-top: 1.5rem;
     }
 }
 
 .sidebarCollapseBtn {
-    font-size: 2.8rem;
-    width: 2.8rem;
-    height: 2.8rem;
-    margin: $distance_normal $distance_normal 0 auto;
+    font-size: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
 }
+
 
 .sidebarDialog {
     margin: 0 auto 0 0;
     border: none;
+    width: 18.5rem;
+    padding: 0;
 
     &::backdrop {
         background-color: $niceBlack;
         opacity: 0.3;
+    }
+}
+
+.sidebar:not(.sidebarDialog) {
+    display: flex;
+    justify-content: flex-start;
+
+    @include device("tablet") {
+        flex-direction: column;
+        align-items: center;
     }
 }

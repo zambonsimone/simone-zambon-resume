@@ -23,7 +23,7 @@ export const PersonalInfo: React.FC<IPersonalInfoProps> = ({
             href={PATHS.HOMEPAGE}
             onClick={onClick}
         >
-            <div className={style.picture} />
+            <img src="/profile_pic.png" className={style.picture} />
             {!onlyImg && (
                 <div className={style.info}>
                     <div>{PERSONAL_INFO_FULLNAME}</div>

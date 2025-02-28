@@ -1,40 +1,45 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
+@import "../../../font.scss";
 
 $distance_metrics: map-get($metrics, "distance");
 $distance_small: map-get($distance_metrics, "small");
 $distance_normal: map-get($distance_metrics, "normal");
 $full_padding: map-get($distance_metrics, "full_normal");
 
+$button_font: map-get($font, "button");
+$button_fontsize: map-get($button_font, "fontsize");
+$button_fontweight: map-get($button_font, "fontweight");
+
 .levelLegendaContainer {
     height: fit-content;
-    background-color: $niceYellow;
+    background-color: $niceOrange;
     box-shadow: 0 0 1.5rem -1rem $niceBlack;
-    margin-top: $distance_normal;
+    color: $niceWhite;
 
     .levelLegendaContent {
         background-color: $niceWhite;
         width: 100%;
-        border-bottom: 0.2rem solid $niceYellow;
+        border-bottom: 0.2rem solid $niceOrange;
         padding-left: 1.2rem;
+        color: $niceBlack;
 
         >div>dl {
             >div {
                 list-style-type: none;
                 margin: $distance_small 0;
                 display: grid;
-                grid-template-columns: 3rem 1fr;
+                grid-template-columns: 2rem 1fr;
                 gap: $distance_normal;
 
                 >.level {
                     display: inline-block;
-                    height: 2.4rem;
-                    width: 100%;
-                    font-size: 1.3rem;
-                    font-weight: 500;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    font-size: $button_fontsize;
+                    font-weight: $button_fontweight;
                     text-align: center;
-                    border-radius: 0.2rem;
-                    margin-right: $distance_normal;
+                    border-radius: 100%;
                 }
             }
         }

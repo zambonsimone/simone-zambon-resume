@@ -5,7 +5,7 @@ const codeStyle: React.CSSProperties = {
     background: "none",
     padding: "0",
     margin: "0",
-    lineHeight: "2.2rem" 
+    lineHeight: "1.5rem" 
 }
 
 interface ICodeSnippetProps {

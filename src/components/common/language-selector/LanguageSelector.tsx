@@ -51,7 +51,7 @@ export const LanguageSelector: React.FC<ILanguageSelectorProps> = ({
                 tabIndex={0}
                 onKeyDown={triggerClick}
             >
-                <img src={currentLang.icon} aria-hidden />
+                <img src={currentLang.icon} className={style.langImg} aria-hidden />
                 <label aria-hidden>{!isDesktop ? currentLang.lang : currentLang.label}</label>
             </div>
         </Popover>

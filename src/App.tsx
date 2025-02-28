@@ -19,9 +19,9 @@ export const App: React.FC = () => {
         <div className={style.appContainer} role="presentation">
             <BrowserRouter>
                 <ScrollToTop />
-                {!isMobile && <Sidebar />}
-                <div className={style.appContent} role="presentation">
-                    <HeaderBar />
+                <HeaderBar />
+                <div className={style.appContent} role="presentation"> 
+                    {!isMobile && <Sidebar />}
                     <Suspense fallback={<Loading className={style.appLoading} />}>
                         <Switch>
                             <Redirect exact from={"/"} to={PATHS.HOMEPAGE} />
@@ -35,14 +35,14 @@ export const App: React.FC = () => {
                                         exact={!route.subRoutes}
                                         key={index}
                                         render={(renderProps) => (
-                                            <>
+                                            <div className={style.route}>
                                                 {!!route.header && <Header />}
                                                 {showSubNavBar && <SubNavBar routes={route.subRoutes} />}
                                                 <div className={style.appSection} key={index} role="presentation">
                                                     <DocumentTitle title={t(route.displayedName)} />
                                                     <Component {...renderProps} />
                                                 </div>
-                                            </>
+                                            </div>
                                         )}
                                     />
                                 )

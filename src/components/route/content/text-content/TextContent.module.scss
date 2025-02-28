@@ -40,7 +40,8 @@ h3.subsectionTitle {
 .details {
     color: $niceBlack;
     background-color: white;
-    border-bottom: 0.2rem solid $niceYellow;
+    border-bottom: 0.2rem solid $niceOrange;
+    font-size: 0.9rem;
 
     .where {
         display: grid;
@@ -73,7 +74,7 @@ h3.subsectionTitle {
 
             >div {
                 text-align: left;
-                min-width: 11rem;
+                min-width: 6.5rem;
 
                 >span {
                     font-size: 0.8em;
@@ -94,35 +95,30 @@ h3.subsectionTitle {
     }
 }
 
-.sectionContainer {
-    .header {
-        margin: 4rem 0 3rem 0;
-    }
+.header {
+    margin: 2rem 0 1.5rem 0;
+}
 
+.sectionContainer {
     .details {
         margin: $distance_small 0;
-        font-size: 1.4rem;
 
         @include device("mobile") {
-            font-size: 1.2rem;
+            font-size: 0.8rem;
         }
     }
 }
 
 .subSectionContainer {
-    .header {
-        margin: 3rem 0 2.3rem 0;
-    }
-
     .details {
         margin: $distance_small 0;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
     }
 }
 
 @include device("tablet") {
     .sectionContainer .header {
-        margin: 3rem 0 2.3rem 0;
+        margin: 1.5rem 0 1.2rem 0;
     }
 
     h2.sectionTitle {
