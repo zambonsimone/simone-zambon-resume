@@ -52,6 +52,9 @@
     "AT": "hos",
     "FROM": "fra",
     "TO": "til",
-    "RECAPTCHA_LABEL": "Bekreft at du ikke er en robot",
+    "CAPTCHA": {
+        "TITLE": "Skriv inn koden som vises",
+        "VERIFY": "Verifiser"
+    },
     "DOWNLOAD_FILE": "Laste ned {{title}} filen"
 }

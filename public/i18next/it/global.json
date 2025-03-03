@@ -52,6 +52,9 @@
     "AT": "presso",
     "FROM": "dal",
     "TO": "al",
-    "RECAPTCHA_LABEL": "Conferma di non essere un robot",
+    "CAPTCHA": {
+        "TITLE": "Inserisci il codice mostrato",
+        "VERIFY": "Verifica"
+    },
     "DOWNLOAD_FILE": "Scarica il file {{title}}"
 }

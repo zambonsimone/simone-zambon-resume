@@ -39,3 +39,13 @@ export class SuccessResponse<T = unknown> extends Response {
         this.isError = false;
     }
 }
+
+export interface ICaptchaUserAnswer {
+    uid: string;
+    answer: string;
+}
+
+export interface ICaptchaChallenge {
+    uid: string;
+    data: string;
+}

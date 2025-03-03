@@ -14,9 +14,11 @@ export const HtmlSanitizer: React.FC<IHtmlSanitizerProps> = ({
     ...elementAttributes
 }) => {
     const sanitizedHTML = sanitizeHtml(htmlString, {
-        allowedTags: ["a", "br", "code", "strong"],
+        allowedTags: ["a", "br", "code", "strong", "svg", "path"],
         allowedAttributes: {
-            a: ["href", "target", "aria-label"]
+            a: ["href", "target", "aria-label"],
+            svg: ["xmlns","width","height","viewBox"],
+            path: ["d","stroke","fill"]
         }
     })
 

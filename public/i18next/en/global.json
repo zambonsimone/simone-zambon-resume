@@ -52,6 +52,9 @@
     "AT": "at",
     "FROM": "from",
     "TO": "to",
-    "RECAPTCHA_LABEL": "Verify you are not a robot",
+    "CAPTCHA": {
+        "TITLE": "Type the code shown",
+        "VERIFY": "Verify"
+    },
     "DOWNLOAD_FILE": "Download {{title}} file"
 }

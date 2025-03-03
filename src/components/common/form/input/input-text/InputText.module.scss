@@ -9,7 +9,8 @@ $distance_large: map-get($distance_metrics, "large");
     z-index: 1;
     display: inline-flex;
     align-items: center;
-    margin: 0 $distance_normal;
+    margin: 0 0.8rem;
+    font-size: 1rem;
 
     & + input {
         padding-left: $distance_large;

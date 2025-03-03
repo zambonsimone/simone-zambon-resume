@@ -8,20 +8,21 @@ $distance_normal: map-get($distance_metrics, "normal");
     position: relative;
 
     >* {
-        min-height: 3.5rem;
-    }
-
-    >input[type="checkbox"] {
-        min-height: 2rem;
-        width: 2rem;
+        min-height: 2.7rem;
     }
 
     >input {
         width: 100%;
         border: 0.1rem solid $niceYellow;
-        padding: 0 $distance_normal;
+        padding: 0 0.8rem;
         border-radius: 0.2rem;
         font-family: "Roboto", sans-serif;
         color: $niceBlack;
+        font-size: 0.9rem;
+
+        &.checkbox {
+            min-height: 1.8rem;
+            width: 1.8rem;
+        }
     }
 }

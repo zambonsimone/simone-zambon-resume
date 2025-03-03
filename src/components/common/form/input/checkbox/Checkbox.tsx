@@ -23,6 +23,7 @@ export const Checkbox: React.FC<ICheckboxProps> = ({
                 aria-describedby={other["aria-describedby"]}
                 onBlur={onBlur}
                 onChange={(evt: React.ChangeEvent<HTMLInputElement>) => onChange(evt.target.checked)}
+                className={inputStyle.checkbox}
             />
         </div>
     )

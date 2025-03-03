@@ -9,16 +9,13 @@ $icon_font: map-get($font, "icon");
 $icon_fontsize: map-get($icon_font, "fontsize");
 
 .form {
-    display: flex;
-
     .formFieldset {
-        min-width: 0;
         width: 100%;
         border: none;
-        padding: 0.6rem 1.2rem;
+        padding: 0 0.6rem;
 
         .fieldContainer {
-            margin-bottom: $distance_large;
+            margin-bottom: 1.2rem;
             width: 100%;
 
             &:last-child {
@@ -27,8 +24,8 @@ $icon_fontsize: map-get($icon_font, "fontsize");
 
             .fieldError {
                 display: inline-flex;
-                font-size: 1.3rem;
-                color: red;
+                font-size: 0.9rem;
+                color: $error;
                 margin-top: $distance_small;
                 align-items: center;
                 gap: $distance_small;
@@ -44,13 +41,13 @@ $icon_fontsize: map-get($icon_font, "fontsize");
 
             .fieldLabel {
                 margin-left: $distance_small;
-                font-size: 1.2rem;
+                font-size: 0.8rem;
                 text-transform: uppercase;
-                letter-spacing: 0.2rem;
+                letter-spacing: 0.1rem;
             }
 
             .error:not(.checkboxWrapper)>.field {
-                border-bottom: 0.3rem solid red;
+                border-bottom: 0.2rem solid red;
             }
         }
 
@@ -69,6 +66,7 @@ $icon_fontsize: map-get($icon_font, "fontsize");
                 letter-spacing: unset;
                 word-break: break-word;
                 margin-top: 0.6rem;
+                font-size: 0.9rem;
             }
         }
     }
@@ -76,6 +74,6 @@ $icon_fontsize: map-get($icon_font, "fontsize");
     .submitLoading {
         height: 100%;
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }

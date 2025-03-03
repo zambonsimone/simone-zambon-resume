@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { IAttachment } from "../../../api/models";
 import { useSendMail } from "../../../hooks/useSendMail";
 import { Form, FormModel } from "../../common/form/Form";
-import { Recaptcha } from "../../common/form/input/g-recaptcha/Recaptcha";
+import { Captcha } from "../../common/form/input/captcha/Captcha";
 import { Plus } from "../../symbols/Symbols";
 import { CharsCounter } from "./CharsCounter";
 import { MESSAGE_MAX_CHARS } from "./constants";
@@ -26,7 +26,7 @@ const {
 export const ContactMeForm: React.FC = () => {
     const [messageCharsCount, setMessageCharsCount] = useState(0);
     const [attachment, setAttachment] = useState<IAttachment>();
-    const [recaptchaVerified, setRecaptchaVerified] = useState(false);
+    const [captchaVerified, setCaptchaVerified] = useState(false);
     const { sendMail, isLoading: isLoadingSendMail, confirmMessage } = useSendMail();
     const { t } = useTranslation("contacts");
 
@@ -90,7 +90,7 @@ export const ContactMeForm: React.FC = () => {
                                 type="text"
                                 inputMode="numeric"
                                 className={style.fieldContainer}
-                                appendBefore={<Plus className={style.plus} />}
+                                appendBefore={<Plus />}
                             />
                             <Field
                                 name="phoneNumber"
@@ -126,9 +126,10 @@ export const ContactMeForm: React.FC = () => {
                             label={"label"}
                             type="checkbox"
                         />
-                        <Recaptcha onVerify={(value) => setRecaptchaVerified(value)} />
+                        {/*<Recaptcha onVerify={(value) => setRecaptchaVerified(value)} />*/}
+                        <Captcha onVerify={(value) => setCaptchaVerified(value)}/>
                         <div className={style.submitRow}>
-                            <SubmitBtn label={t(SUBMIT.LABEL)} loading={isLoadingSendMail} disabled={!recaptchaVerified} />
+                            <SubmitBtn label={t(SUBMIT.LABEL)} loading={isLoadingSendMail} disabled={!captchaVerified} />
                             {confirmMessage && (
                                 <span className={[style.confirmMessage, style[confirmMessage.status]].join(" ")}>
                                     {confirmMessage.text}

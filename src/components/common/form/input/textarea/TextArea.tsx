@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import inputStyle from "../Input.module.scss";
 import { IInputProps } from "../types";
-import "./TextArea.module.scss";
+import style from "./TextArea.module.scss";
 
 type ITextAreaProps = IInputProps & Partial<HTMLTextAreaElement>;
 export const TextArea: React.FC<ITextAreaProps> = ({
@@ -24,6 +24,7 @@ export const TextArea: React.FC<ITextAreaProps> = ({
                 onChange={onTextareaChange}
                 required={required}
                 aria-required={required}
+                className={style.textarea}
             />
         </div>
     )

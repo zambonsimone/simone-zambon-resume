@@ -58,7 +58,7 @@ export const FormField: React.FC<IFormFieldProps> = (({
                 !!errorMsg ? style.error : ""
             ].join(" ")}>
                 <label className={style.fieldLabel} htmlFor={name}>
-                    {label}{required ? <Asterisk /> : ""}
+                    {label} {required ? <Asterisk /> : ""}
                 </label>
                 <div className={style.field} role="presentation">
                     <Controller
