@@ -31,7 +31,7 @@ $padding_x_small: map-get($paddings, "x_small");
     //gap: $distance_normal;
     //justify-content: space-between;
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 3;
     height: $header_full_height_desktop;

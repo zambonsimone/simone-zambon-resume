@@ -27,7 +27,6 @@ $sidebar_width: map-get($sidebar_metrics, "width");
 $sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
 
 .subNavbarContainer {
-    padding-bottom: 1rem;
     background-color: $niceWhite;
     //margin-left: $sidebar_width;
     //position: sticky;

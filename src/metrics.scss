@@ -1,6 +1,6 @@
 $distance_small: 0.6rem;
 
-$padding_x_small: 1.5rem;
+$padding_x_small: 1rem;
 $padding_small: 2rem;
 $padding_normal: 3rem;
 
@@ -19,9 +19,9 @@ $metrics: (
         width_tablet: 7.5rem
     ),
     paddings: (
-        x_small: 1.5rem,
-        small: 2rem,
-        normal: 3rem
+        x_small: $padding_x_small,
+        small: $padding_small,
+        normal: $padding_normal,
     ),
     distance: ( 
         small: $distance_small,

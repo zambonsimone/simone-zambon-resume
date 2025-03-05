@@ -27,9 +27,6 @@ $subsection_title_fontsize: map-get($subsection_title_font, "fontsize");
 $subsection_title_fontsize_tablet: map-get($subsection_title_font, "fontsize_tablet");
 $subsection_title_fontsize_mobile: map-get($subsection_title_font, "fontsize_mobile");
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
-
 $sidebar_metrics: map-get($metrics, "sidebar");
 $sidebar_width: map-get($sidebar_metrics, "width");
 $sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
@@ -57,23 +54,22 @@ html {
         box-sizing: border-box;
     }
 
-    &, body, div#root, .appContainer {
+    &, body {
         height: 100%;
         overflow-y: auto;
         overflow-x: hidden;
+        @include device("desktop") {
+            @include hideScrollbar();
+        }
     }
 
+    div#root {
+        height: 100%;
+        padding-bottom: $padding_x_small;
+    }
 
     body {
         margin: 0;
-        padding-bottom: $padding_normal;
-
-        @include device("tablet") {
-            padding-bottom: $padding_small;
-        }
-        @include device("mobile") {
-            padding-bottom: $padding_x_small;
-        }
     }
 
     h2 {
@@ -103,7 +99,7 @@ html {
 
     code {
         background-color: white;
-        padding: 0 $distance_small;
+        padding: 0 0.6rem;
     }
 
     input, a, textarea, button, div, ul, li, img {
@@ -111,16 +107,17 @@ html {
     }
 
     .appContent {
-        margin-left: $sidebar_width;
+        margin: $header_full_height_desktop 0 0 $sidebar_width;
         padding: 0 $padding_normal;
 
         .contentHeader {
             position: sticky;
             top: $header_full_height_desktop;
+            padding-bottom: 1rem;
         }
 
         @include device("tablet") {
-            margin-left: $sidebar_width_tablet;
+            margin: $header_full_height_tablet 0 0 $sidebar_width_tablet;
             padding: 0 $padding_small;
 
             .contentHeader {
@@ -130,7 +127,7 @@ html {
         }
 
         @include device("mobile") {
-            margin-left: 0;
+            margin: $header_full_height_mobile 0 0 0;
             padding: 0 $padding_x_small;
 
             .contentHeader {
