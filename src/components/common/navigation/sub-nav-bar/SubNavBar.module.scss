@@ -15,8 +15,23 @@ $distance_metrics: map-get($metrics, "distance");
 $distance_normal: map-get($distance_metrics, "normal");
 $distance_large: map-get($distance_metrics, "large");
 
+$paddings: map-get($metrics, "paddings");
+$padding_normal: map-get($paddings, "normal");
+$padding_small: map-get($paddings, "small");
+
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height"); 
+
+$sidebar_metrics: map-get($metrics, "sidebar");
+$sidebar_width: map-get($sidebar_metrics, "width");
+$sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
+
 .subNavbarContainer {
-    margin: 1rem 0;
+    padding-bottom: 1rem;
+    background-color: $niceWhite;
+    //margin-left: $sidebar_width;
+    //position: sticky;
+    //top: calc($header_height + $padding_normal);
     
     @include device("mobile") {
         display: none;

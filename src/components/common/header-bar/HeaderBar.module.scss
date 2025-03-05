@@ -12,16 +12,38 @@ $distance_normal: map-get($distance_metrics, "normal");
 $distance_large: map-get($distance_metrics, "large");
 $distance_x_large: map-get($distance_metrics, "x_large");
 
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
+
+
+$paddings: map-get($metrics, "paddings");
+$padding_normal: map-get($paddings, "normal");
+$padding_small: map-get($paddings, "small");
+$padding_x_small: map-get($paddings, "x_small");
+
+
 .headerbar {
-    display: flex;
-    flex-direction: column;
-    gap: $distance_normal;
-    justify-content: space-between;
+    //display: flex;
+    //flex-direction: column;
+    //gap: $distance_normal;
+    //justify-content: space-between;
     width: 100%;
     position: sticky;
     top: 0;
-    z-index: 2;
-    height: 4.6rem;
+    z-index: 3;
+    height: $header_full_height_desktop;
+    background-color: $niceWhite;
+
+    @include device("tablet") {
+        height: $header_full_height_tablet;
+    }
+    @include device("mobile") {
+        height: calc($header_height + $padding_x_small);
+    }
+
 
     .searchbarContainer {
         padding-right: 2rem;
@@ -29,6 +51,7 @@ $distance_x_large: map-get($distance_metrics, "x_large");
         display: flex;
         align-items: center;
         box-shadow: 0 0 1.5rem -1rem $niceBlack;
+        max-height: $header_height;
 
         >.headerSearchbar {
             width: 29rem;

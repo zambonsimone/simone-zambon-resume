@@ -22,6 +22,7 @@ export const HeaderBar: React.FC = () => {
     const currentLang = LANGUAGES.find(({ lang }) => i18n.resolvedLanguage === lang);
     return (
         <header className={style.headerbar}>
+            <div className={style.headerbarContent}>
             <MatchResolution
                 desktop={<>
                     <div className={style.searchbarContainer} role="presentation">
@@ -58,6 +59,7 @@ export const HeaderBar: React.FC = () => {
                     </dialog>
                 </>}
             />
+            </div>
         </header>
     )
 }

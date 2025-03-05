@@ -12,26 +12,38 @@ $navlink_fontsize_tablet: map-get($navlink_font, "fontsize_tablet");
 $navlink_fontweight: map-get($navlink_font, "fontweight");
 $navlink_letterspacing: map-get($navlink_font, "letter_spacing");
 
+$paddings: map-get($metrics, "paddings");
+$padding_normal: map-get($paddings, "normal");
+$padding_small: map-get($paddings, "small");
+
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
+
+$sidebar_metrics: map-get($metrics, "sidebar");
+$sidebar_width: map-get($sidebar_metrics, "width");
+$sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
+
 .sidebar {
     background-color: $niceWhite;
     border-right: 0.1rem solid $transparentBlack;
-    min-width: 28vw;
-    min-height: 100%;
-    max-height: 100%;
+    width: $sidebar_width;
+    height: calc(100% - $header_full_height_desktop - $padding_normal);
     cursor: pointer;
-    overflow-y: hidden;
+    overflow: hidden;
     position: fixed;
+    z-index: 2;
+    top: $header_full_height_desktop; 
 
-    @include device("desktop") {
-        position: initial;
+    @include device("tablet") {
+        top: $header_full_height_tablet;
+        height: calc(100% - $header_full_height_tablet - $padding_small);
     }
 
     &.collapsed {
-        min-width: 7.5rem;
-        max-width: 7.5rem;
-        .sidebarCollapseBtn {
-            margin-top: 1.5rem;
-        }
+        width: $sidebar_width_tablet;
     }
 }
 
@@ -46,8 +58,7 @@ $navlink_letterspacing: map-get($navlink_font, "letter_spacing");
 
     @include device("tablet") {
         font-size: $navlink_fontsize_tablet;
-        height: 4.5rem;
-        margin-top: 1.5rem;
+        margin-top: $padding_small;
     }
 }
 
@@ -64,6 +75,14 @@ $navlink_letterspacing: map-get($navlink_font, "letter_spacing");
     border: none;
     width: 18.5rem;
     padding: 0;
+    min-height: 100%;
+    top: 0;
+
+    &[open] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     &::backdrop {
         background-color: $niceBlack;

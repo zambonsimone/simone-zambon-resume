@@ -18,20 +18,25 @@ $distance_normal: map-get($distance_metrics, "normal");
 $distance_large: map-get($distance_metrics, "large");
 $full_padding: map-get($distance_metrics, "full_small");
 
+$paddings: map-get($metrics, "paddings");
+$padding_normal: map-get($paddings, "normal");
+$padding_x_small: map-get($paddings, "x_small");
+
+
 .navbarContainer {
     min-width: 15rem;
     flex-grow:1;
-    padding: 3rem 3rem 0 4rem;
-    max-height: calc(100vh - 8rem);
+    padding: $padding_x_small 3rem $padding_x_small 6vw;
     overflow-y: auto;
-    @include hideScrollbar();
+    overflow-x: hidden;
 
     &.collapsed {
-        padding: 2.5rem 2.5rem 2.5rem 2.45rem;
+        margin: 5vh 0 0 0;
+        padding: 0 2.5rem;
         min-width: 0;
         max-width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: center;    
 
         * {
             pointer-events: none;
@@ -43,7 +48,8 @@ $full_padding: map-get($distance_metrics, "full_small");
     }
 
     @include device("tablet") {
-        padding: 1rem 1.5rem 1.5rem 2.45rem;
+        padding: 0 2.5rem 2.5rem 2.45rem;
+        margin: 5vh 0 0 0;
         min-width: 0;
         max-width: 100%;
     }
@@ -56,12 +62,12 @@ $full_padding: map-get($distance_metrics, "full_small");
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        gap: 1.4rem;
+        gap: 1rem;
 
         >.mainNavLinkWrapper {
             display: flex;
             flex-direction: column;
-            gap: 1.4rem;
+            gap: 1rem;
             .mainNavLink {
                 display: flex;
                 flex-direction: column;

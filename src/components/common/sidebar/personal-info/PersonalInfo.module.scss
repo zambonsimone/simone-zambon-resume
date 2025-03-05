@@ -7,6 +7,9 @@ $distance_small: map-get($distance_metrics, "small");
 $distance_normal: map-get($distance_metrics, "normal");
 $distance_xx_large: map-get($distance_metrics, "xx_large");
 
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+
 .personalInfo {
     display: flex;
     padding: 0 3rem 0 4.3rem; 
@@ -14,7 +17,7 @@ $distance_xx_large: map-get($distance_metrics, "xx_large");
     width: 22.5rem;
     color: $niceBlack;
     text-decoration: none;
-    height: 4.6rem;
+    min-height: $header_height;
 
     &:focus-visible {
         outline-offset: -0.2rem;

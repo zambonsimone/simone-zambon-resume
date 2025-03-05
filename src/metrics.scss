@@ -1,11 +1,29 @@
 $distance_small: 0.6rem;
 
+$padding_x_small: 1.5rem;
+$padding_small: 2rem;
+$padding_normal: 3rem;
+
 $metrics: (
     input: (
         height: 1.9rem
     ),
+    header: (
+        height: 4.6rem,
+        full_height_desktop: calc(4.6rem + $padding_normal),
+        full_height_tablet: calc(4.6rem + $padding_small),
+        full_height_mobile: calc(4.6rem + $padding_x_small) 
+    ),
+    sidebar: (
+        width: 28vw,
+        width_tablet: 7.5rem
+    ),
+    paddings: (
+        x_small: 1.5rem,
+        small: 2rem,
+        normal: 3rem
+    ),
     distance: ( 
-        x_small: calc($distance_small/2),
         small: $distance_small,
         normal: calc($distance_small*2),
         large: calc($distance_small*4),

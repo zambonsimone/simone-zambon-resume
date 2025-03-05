@@ -30,6 +30,21 @@ $subsection_title_fontsize_mobile: map-get($subsection_title_font, "fontsize_mob
 $distance_metrics: map-get($metrics, "distance");
 $distance_small: map-get($distance_metrics, "small");
 
+$sidebar_metrics: map-get($metrics, "sidebar");
+$sidebar_width: map-get($sidebar_metrics, "width");
+$sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
+
+$paddings: map-get($metrics, "paddings");
+$padding_normal: map-get($paddings, "normal");
+$padding_small: map-get($paddings, "small");
+$padding_x_small: map-get($paddings, "x_small");
+
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
+
 html {
     overflow-x: hidden;
     overflow-y: auto;
@@ -42,15 +57,23 @@ html {
         box-sizing: border-box;
     }
 
-    @include device("desktop") {
-        &, body, div#root, .appContainer {
-            height: 100%;
-        }
+    &, body, div#root, .appContainer {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
     }
 
 
     body {
         margin: 0;
+        padding-bottom: $padding_normal;
+
+        @include device("tablet") {
+            padding-bottom: $padding_small;
+        }
+        @include device("mobile") {
+            padding-bottom: $padding_x_small;
+        }
     }
 
     h2 {
@@ -87,13 +110,43 @@ html {
         @include removeOutlineOnFocusables();
     }
 
+    .appContent {
+        margin-left: $sidebar_width;
+        padding: 0 $padding_normal;
+
+        .contentHeader {
+            position: sticky;
+            top: $header_full_height_desktop;
+        }
+
+        @include device("tablet") {
+            margin-left: $sidebar_width_tablet;
+            padding: 0 $padding_small;
+
+            .contentHeader {
+                position: sticky;
+                top: $header_full_height_tablet;
+            }
+        }
+
+        @include device("mobile") {
+            margin-left: 0;
+            padding: 0 $padding_x_small;
+
+            .contentHeader {
+                position: sticky;
+                top: $header_full_height_mobile;
+            }
+        }
+    }
+
     .appLoading {
         height: 100vh;
         width: 100%;
         font-size: 1rem;
     }
 
-    .appContainer {
+    /*.appContainer {
         display: flex;
         flex-direction: column;
         max-height: 100vh;
@@ -118,7 +171,7 @@ html {
                 }
             }
         }
-    }
+    }*/
 
     @include device("tablet") {
         h2 {
@@ -134,14 +187,14 @@ html {
             font-size: $paragraph_fontsize_tablet;
         }
 
-        .appContainer .appContent .route {
+        /*.appContainer .appContent .route {
             margin-left: 7.5rem;
             padding: 0 2rem;
             .appSection {
                 padding-top: 0.5rem;
                 margin-top: 0;
             }
-        }
+        }*/
 
         a {
             font-size: $action_fontsize_tablet
@@ -158,9 +211,9 @@ html {
             font-size: $paragraph_fontsize_mobile;
         }
 
-        .appContainer .appContent .route {
+        /*.appContainer .appContent .route {
             margin-left: 0;
             padding: 0rem 1rem;
-        }
+        }*/
     }
 }

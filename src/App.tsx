@@ -16,11 +16,11 @@ export const App: React.FC = () => {
     const { isMobile } = useResolution();
     const { t } = useTranslation("global");
     return (
-        <div className={style.appContainer} role="presentation">
+        <>
             <BrowserRouter>
                 <ScrollToTop />
                 <HeaderBar />
-                <div className={style.appContent} role="presentation"> 
+                
                     {!isMobile && <Sidebar />}
                     <Suspense fallback={<Loading className={style.appLoading} />}>
                         <Switch>
@@ -35,13 +35,14 @@ export const App: React.FC = () => {
                                         exact={!route.subRoutes}
                                         key={index}
                                         render={(renderProps) => (
-                                            <div className={style.route}>
-                                                {!!route.header && <Header />}
-                                                {showSubNavBar && <SubNavBar routes={route.subRoutes} />}
-                                                <div className={style.appSection} key={index} role="presentation">
-                                                    <DocumentTitle title={t(route.displayedName)} />
-                                                    <Component {...renderProps} />
+                                            <div className={style.appContent} role="presentation">
+                                                <div className={style.contentHeader}>
+                                                    {!!route.header && <Header />}
+                                                    {showSubNavBar && <SubNavBar routes={route.subRoutes} />}
                                                 </div>
+                                                <DocumentTitle title={t(route.displayedName)} />
+                                                <Component {...renderProps} />
+                                                
                                             </div>
                                         )}
                                     />
@@ -50,8 +51,8 @@ export const App: React.FC = () => {
                             }
                         </Switch>
                     </Suspense>
-                </div>
+                
             </BrowserRouter>
-        </div>
+        </>
     )
 }

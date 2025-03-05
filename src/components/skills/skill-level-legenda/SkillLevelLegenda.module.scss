@@ -1,6 +1,7 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
 @import "../../../font.scss";
+@import "../../../mixins.scss";
 
 $distance_metrics: map-get($metrics, "distance");
 $distance_small: map-get($distance_metrics, "small");
@@ -11,11 +12,38 @@ $button_font: map-get($font, "button");
 $button_fontsize: map-get($button_font, "fontsize");
 $button_fontweight: map-get($button_font, "fontweight");
 
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+
+$metrics_sidebar: map-get($metrics, "sidebar");
+$sidebar_width: map-get($metrics_sidebar, "width");
+$sidebar_width_tablet: map-get($metrics_sidebar, "width_tablet");
+
+$paddings: map-get($metrics, "paddings");
+$padding_normal: map-get($paddings, "normal");
+$padding_small: map-get($paddings, "small");
+$padding_x_small: map-get($paddings, "x_small");
+
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
+
 .levelLegendaContainer {
     height: fit-content;
     background-color: $niceOrange;
     box-shadow: 0 0 1.5rem -1rem $niceBlack;
     color: $niceWhite;
+    position: sticky;
+    top: $header_full_height_desktop;
+
+    @include device("tablet") {
+        top: $header_full_height_tablet;
+    }
+    @include device("mobile") {
+        top: $header_full_height_mobile;
+    }
 
     .levelLegendaContent {
         background-color: $niceWhite;
