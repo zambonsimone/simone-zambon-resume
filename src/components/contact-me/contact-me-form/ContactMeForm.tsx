@@ -5,6 +5,7 @@ import { IAttachment } from "../../../api/models";
 import { useSendMail } from "../../../hooks/useSendMail";
 import { Form, FormModel } from "../../common/form/Form";
 import { Captcha } from "../../common/form/input/captcha/Captcha";
+import { HtmlSanitizer } from "../../common/html-sanitizer/HtmlSanitizer";
 import { Plus } from "../../symbols/Symbols";
 import { CharsCounter } from "./CharsCounter";
 import { MESSAGE_MAX_CHARS } from "./constants";
@@ -20,7 +21,8 @@ const {
     MESSAGE,
     PHONE_NUMBER,
     PHONE_PREFIX,
-    SUBMIT
+    PRIVACY,
+    SUBMIT,
 } = CONTACT_ME_FORM;
 
 export const ContactMeForm: React.FC = () => {
@@ -123,7 +125,7 @@ export const ContactMeForm: React.FC = () => {
                         />
                         <Field
                             name="privacy"
-                            label={"label"}
+                            label={<HtmlSanitizer htmlString={t(PRIVACY.LABEL)}/>}
                             type="checkbox"
                         />
                         {/*<Recaptcha onVerify={(value) => setRecaptchaVerified(value)} />*/}

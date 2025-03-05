@@ -40,6 +40,7 @@ $icon_fontsize: map-get($icon_font, "fontsize");
             }
 
             .fieldLabel {
+                display: flex;
                 margin-left: $distance_small;
                 font-size: 0.8rem;
                 text-transform: uppercase;

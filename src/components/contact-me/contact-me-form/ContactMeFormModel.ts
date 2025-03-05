@@ -37,8 +37,7 @@ export const schema = YupObject({
         .nullable()
         .test("isValidFile", ERRORS.FILE_TYPE_ERROR_MSG, isValidFileType),
     privacy: YupBoolean()
-        .required(ERRORS.REQUIRED_ERROR_MSG)
-        .oneOf([true])
+        .oneOf([true], ERRORS.REQUIRED_ERROR_MSG)
 
 });
 export type IContactFormModel = InferType<typeof schema>;

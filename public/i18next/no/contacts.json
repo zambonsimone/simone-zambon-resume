@@ -38,6 +38,9 @@
             "LABEL": "Forespørsel",
             "PLACEHOLDER": "Skriv inn din forespørselen her"
         },
+        "PRIVACY": {
+            "LABEL": "Jeg samtykker til <a href=\"/privacy-policy/privacy-policy_no.pdf\" target=\"_blank\">Personvernerklæringen</a>."
+        },
         "SEND": "Send"
     },
     "FORM_ERRORS": {

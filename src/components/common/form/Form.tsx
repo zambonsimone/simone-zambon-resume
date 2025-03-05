@@ -36,8 +36,10 @@ export const Form: React.FC<IFormProps> = ({
     const { fields } = useMemo(() => validationSchema.describe(), [validationSchema]);
 
     const Field = useRef<React.FC<IFieldAsChildProps>>(({ name, ...others }) => {
-        const isRequired = (fields[name] as SchemaDescription).tests.some(test => test.name === "required");
-        return <FormField required={isRequired} name={name} {...others} />
+        const fieldObj = fields[name] as SchemaDescription;
+        const hasRequiredTest = fieldObj.tests.some(test => test.name === "required");
+        const hasBooleanRequiredTest = fieldObj.type === "boolean" && fieldObj.oneOf.length === 1;
+        return <FormField required={hasRequiredTest || hasBooleanRequiredTest} name={name} {...others} />
     });
     const SubmitBtn = useCallback<React.FC<ISubmitAsChildProps>>(({ label, disabled = false, loading = false }) => (
         <Button

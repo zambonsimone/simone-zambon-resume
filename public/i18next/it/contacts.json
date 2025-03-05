@@ -38,6 +38,9 @@
             "LABEL": "Messaggio",
             "PLACEHOLDER": "Scrivi qui il tuo messaggio"
         },
+        "PRIVACY": {
+            "LABEL": "Acconsento al trattamento dei miei dati personali secondo l'<a href=\"/privacy-policy/privacy-policy_it.pdf\" target=\"_blank\">Informativa sulla Privacy</a>."
+        },
         "SEND": "Invia"
     },
     "FORM_ERRORS": {

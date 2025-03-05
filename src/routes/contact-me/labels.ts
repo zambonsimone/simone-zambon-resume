@@ -1,3 +1,6 @@
+const obfuscatedMail = "&#122;&#097;&#109;&#098;&#111;&#110;&#046;&#115;&#105;&#109;&#111;&#110;&#101;&#064;&#121;&#097;&#104;&#111;&#111;&#046;&#105;&#116;";
+const obfuscatedPhone = "&#43;&#51;&#57; &#51;&#52;&#48;&#49;&#49;&#55;&#54;&#57;&#48;&#56;";
+
 export const CONTACT_ME_LABELS = {
   TITLE: "TITLE",
   SUBTITLE: "SUBTITLE",
@@ -5,10 +8,10 @@ export const CONTACT_ME_LABELS = {
     TITLE: "CONTACT_OPTIONS.TITLE",
     LIST_ITEMS: [
       {
-        TITLE: "CONTACT_OPTIONS.PHONE", VALUE: "+39 3401176908"
+        TITLE: "CONTACT_OPTIONS.PHONE", VALUE: obfuscatedPhone
       },
       {
-        TITLE: "CONTACT_OPTIONS.EMAIL", VALUE: "zambon.simone@yahoo.it", LINK: "<a href='mailto:zambon-simone@yahoo.it' target='_blank'>zambon.simone@yahoo.it</a>"
+        TITLE: "CONTACT_OPTIONS.EMAIL", VALUE: obfuscatedMail, LINK: `<a href='mailto:${obfuscatedMail}' target='_blank'>${obfuscatedMail}</a>`
       },
       {
         TITLE: "CONTACT_OPTIONS.SKYPE", VALUE: "zambon.simone95"

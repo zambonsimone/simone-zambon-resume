@@ -38,6 +38,9 @@
             "LABEL": "Message",
             "PLACEHOLDER": "Enter Your message here"
         },
+        "PRIVACY": {
+            "LABEL": "I confirm that I have read and agree to the <a download=\"Privacy Policy\" href=\"/privacy-policy/privacy-policy_en.pdf\" target=\"_blank\">Privacy Policy</a>."
+        },
         "SEND": "Send"
     },
     "FORM_ERRORS": {

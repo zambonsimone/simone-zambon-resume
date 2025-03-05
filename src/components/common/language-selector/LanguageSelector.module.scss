@@ -41,8 +41,9 @@ $action_fontweight: map-get($action_font, "fontweight");
     border: 0.1rem solid transparent;
     display: flex;
     flex-direction: column;
+    margin: 1rem;
     
-    @include device("tablet") {
+    @include device("mobile") {
         text-transform: uppercase;
         margin-right: 1rem;
     }
