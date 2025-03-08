@@ -1,18 +1,21 @@
-import { today } from "../../utils/date";
-import { CERTIFICATE_JAVA_CLASS_TITLE, RESUME_FILE_TITLE } from "./constants";
+import { BARTENDER_CLASS_CERTIFICATION_TITLE, JAVA_CLASS_CERTIFICATION_TITLE, RESUME_FILE_TITLE } from "./constants";
 
-const fileDate = today.match(/([0-9]+)/g)?.join("");
+const today = new Date().toLocaleDateString().match(/([0-9]+)/g)?.join("");
 export const FILES_LABELS = {
-    TITLE: "Files",
-    SUBTITLE: "",
-    INTRO_CODE: `const files = new Files([
-    {
-        title: "${RESUME_FILE_TITLE}",
-        fileName: "Simone_Zambon_resume-${fileDate}.png"
-    },
-    {
-        title: "${CERTIFICATE_JAVA_CLASS_TITLE}",
-        fileName: "Attendance_Certification_Java_Programming_Class.pdf"
-    }    
+  TITLE: "TITLE",
+  SUBTITLE: "SUBTITLE",
+  INTRO_CODE: `const files = new Files([
+  {
+    title: "${RESUME_FILE_TITLE}",
+    fileName: "Simone_Zambon_resume-${today}.pdf"
+  },
+  {
+    title: "${JAVA_CLASS_CERTIFICATION_TITLE}",
+    fileName: "Java_Class_Certification.pdf"
+  },
+  {
+    title: "${BARTENDER_CLASS_CERTIFICATION_TITLE}",
+    fileName: "Bartender_Class_Certification.pdf"
+  }   
 ])`,
 }

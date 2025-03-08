@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router";
 import { Button } from "../../components/common/button/generic/Button";
 import { HtmlSanitizer } from "../../components/common/html-sanitizer/HtmlSanitizer";
@@ -17,15 +18,16 @@ export interface ISearchResult {
 const Search: React.FC = () => {
     const history = useHistory();
     const [results, setResults] = useState<ISearchResult[]>(null);
+    const { t } = useTranslation();
     const searchTerm = history.location.state as string;
 
     useEffect(() => {
-        const found = findResults(searchTerm);
+        const found = findResults(searchTerm, t);
         setResults(found);
-    },[searchTerm])
+    }, [searchTerm, t])
 
-    const showSearchSuggestion = results?.length === 0 && !searchTerm;
-    
+    const showSearchSuggestion = !searchTerm;
+
     if (showSearchSuggestion) {
         return (
             <div>{SEARCH_SUGGESTION}</div>
@@ -34,32 +36,32 @@ const Search: React.FC = () => {
     if (results?.length === 0) {
         return (
             <div className={style.noResults}>
-                <Icon icon="noResults" className={style.noResultsIcon}/>
-                <HtmlSanitizer className={style.noResultsText} htmlString={NO_RESULTS_FOUND}/>
-                <Button onClick={() => history.push(PATHS.HOMEPAGE)} text={BACK_TO_HOMEPAGE}/>
+                <Icon icon="noResults" className={style.noResultsIcon} />
+                <HtmlSanitizer className={style.noResultsText} htmlString={NO_RESULTS_FOUND} />
+                <Button onClick={() => history.push(PATHS.HOMEPAGE)} text={BACK_TO_HOMEPAGE} />
             </div>
         )
     }
     return (
         <>
-            { results?.map(result => {
-                const [firstPart,content,lastPart] = getShorterContent(result.content, searchTerm);
+            {results?.map(result => {
+                const [firstPart, content, lastPart] = getShorterContent(result.content, searchTerm);
                 return (
-                    <div 
-                        role="button" 
-                        tabIndex={0} 
-                        className={style.resultContainer} 
+                    <div
+                        role="button"
+                        tabIndex={0}
+                        className={style.resultContainer}
                         onClick={() => history.push(result.path)}
                         key={result.path}
                     >
-                        <h2 className={style.resultTitle}>{ result.title }</h2>
+                        <h2 className={style.resultTitle}>{result.title}</h2>
                         <p className={style.resultContent}>
-                            {firstPart}
+                            <HtmlSanitizer htmlString={firstPart} element="span" />
                             <span className={style.highlightedSearchTerms}>
-                                {content}
+                                <HtmlSanitizer htmlString={content} element="span" />
                             </span>
-                            {lastPart}
-                        </p>                
+                            <HtmlSanitizer htmlString={lastPart} element="span" />
+                        </p>
                     </div>
                 )
             })}

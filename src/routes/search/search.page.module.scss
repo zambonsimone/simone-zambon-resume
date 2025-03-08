@@ -1,25 +1,38 @@
 @import "../../common.scss";
 @import "../../metrics.scss";
+@import "../../mixins.scss";
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_large: map-get($distance_metrics, "large");
+$paddings: map-get($metrics, "paddings");
+$padding_large: map-get($paddings, "large");
+$padding_x_small: map-get($paddings, "x_small");
 
 .resultContainer {
     cursor: pointer;
-    padding: $distance_large;
+    padding: $padding_large;
     border: 0.3rem solid transparent;
 
     &:hover {
-        border-color: $niceOrange;
+        border-color: $accent;
     }
+
     .resultTitle {
         font-weight: 500;
     }
+
     .resultContent {
         font-size: 1.4rem;
+        pointer-events: none;
+
         .highlightedSearchTerms {
-            color: $niceOrange;
+            color: $accent;
             font-weight: 500;
+            padding: 0 $padding_x_small;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: initial;
+            color: initial;
         }
     }
 }
@@ -33,12 +46,12 @@ $distance_large: map-get($distance_metrics, "large");
     height: 100%;
     gap: 2.4rem;
 
-    > .noResultsIcon {
+    >.noResultsIcon {
         font-size: 15rem;
-        color: $niceYellow;
+        color: $primary;
     }
 
-    > .noResultsText {
+    >.noResultsText {
         font-size: 3rem;
         text-align: center;
 
