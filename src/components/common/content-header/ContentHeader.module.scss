@@ -1,0 +1,25 @@
+@import "../../../metrics.scss";
+@import "../../../mixins.scss";
+
+$header_metrics: map-get($metrics, "header");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
+
+.contentHeader {
+    position: sticky;
+    top: $header_full_height_desktop;
+    padding-bottom: 1rem;
+
+    &:last-child {
+        margin-bottom: 1
+    }
+
+    @include device("tablet") {
+        top: $header_full_height_tablet;    
+    }
+
+    @include device("mobile") {
+        top: $header_full_height_mobile;
+    }
+}
