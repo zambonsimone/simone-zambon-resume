@@ -1,6 +1,7 @@
 @import "./common.scss";
 @import "./font.scss";
 @import "./mixins.scss";
+@import "./metrics.scss";
 
 $html_font: map-get($font, "html");
 $html_font_color: map-get($html_font, "font_color");
@@ -11,30 +12,57 @@ $paragraph_fontsize_tablet: map-get($paragraph, "fontsize_tablet");
 $paragraph_fontsize_mobile: map-get($paragraph, "fontsize_mobile");
 $paragraph_lineheight: map-get($paragraph, "line_height");
 
-$action_font: map-get($font, "action");
-$action_letter_spacing: map-get($action_font, "letter_spacing");
-$action_fontweight: map-get($action_font, "fontweight");
-
 $section_title_font: map-get($font, "section_title");
 $section_title_fontsize: map-get($section_title_font, "fontsize");
 $section_title_fontsize_tablet: map-get($section_title_font, "fontsize_tablet");
-$section_title_fontsize_mobile: map-get($section_title_font, "fontsize_mobile");
+$section_title_line_height_tablet: map-get($section_title_font, "line_height_tablet");
+
 $subsection_title_font: map-get($font, "subsection_title");
 $subsection_title_fontsize: map-get($subsection_title_font, "fontsize");
 $subsection_title_fontsize_tablet: map-get($subsection_title_font, "fontsize_tablet");
 $subsection_title_fontsize_mobile: map-get($subsection_title_font, "fontsize_mobile");
 
+$sidebar_metrics: map-get($metrics, "sidebar");
+$sidebar_width: map-get($sidebar_metrics, "width");
+$sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
+
+$paddings: map-get($metrics, "paddings");
+$padding_large: map-get($paddings, "large");
+$padding_normal: map-get($paddings, "normal");
+$padding_small: map-get($paddings, "small");
+$padding_x_small: map-get($paddings, "x_small");
+
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
 
 html {
-    height: 100vh;
-    overflow: hidden;
-    font-size: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-size: 16px;
     font-family: "Roboto", sans-serif;
-    background-color: $niceWhite;
+    background-color: $light;
     color: $html_font_color;
 
     * {
         box-sizing: border-box;
+    }
+
+    &,
+    body {
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        @include device("desktop") {
+            @include hideScrollbar();
+        }
+    }
+
+    div#root {
+        height: 100%;
     }
 
     body {
@@ -49,84 +77,98 @@ html {
         font-size: $subsection_title_fontsize;
     }
 
-    p, ul > li {
+    p,
+    dl>div,
+    ul>li {
         font-size: $paragraph_fontsize;
         line-height: $paragraph_lineheight;
     }
 
+    dl>div>dd {
+        margin-left: 0;
+    }
+
     a {
-        text-transform: uppercase;
-        letter-spacing: $action_letter_spacing;
-        font-weight: $action_fontweight;
-        color: $niceOrange;
+        font-size: 1em;
+        font-weight: 500;
+        color: $accent;
         cursor: pointer;
         text-decoration: underline;
     }
 
-    input, a, textarea, button, div {
+    code {
+        background-color: white;
+        padding: 0 0.6rem;
+    }
+
+    input,
+    a,
+    textarea,
+    button,
+    div,
+    ul,
+    li,
+    img {
         @include removeOutlineOnFocusables();
     }
 
-    .appContainer {
-        display: flex;
-        height: 100vh;
+    .appContent {
+        margin: $header_full_height_desktop 0 0 $sidebar_width;
+        padding: 0 $padding_large;
 
-        .appContent {
-            flex-grow: 1;
-            min-height: 0;
-            min-width: 0;
-            display: flex;
-            flex-direction: column;
-    
-            > .appSection {
-                flex: 1 1;
-                padding: 5rem;
-                height: 100%;
-                overflow-y: auto;
-                overflow-x: hidden;
-                        
-                @include hideScrollbar();
+        main {
+            padding-bottom: $padding_large;
+        }
+
+        @include device("tablet") {
+            margin: $header_full_height_tablet 0 0 $sidebar_width_tablet;
+            padding: 0 $padding_normal;
+
+            main {
+                padding-bottom: $padding_normal;
             }
+        }
+
+        @include device("mobile") {
+            margin: $header_full_height_mobile 0 0 0;
+            padding: 0 $padding_small;
+
+            main {
+                padding-bottom: $padding_small;
+            }
+        }
+    }
+
+    .appLoading {
+        height: 100dvh;
+        font-size: 1.5rem;
+        margin-left: $sidebar_width;
+        margin-top: $header_full_height_desktop;
+
+        @include device("tablet") {
+            margin-left: $sidebar_width_tablet;
+            margin-top: $header_full_height_tablet;
+        }
+
+        @include device("mobile") {
+            margin-left: 0;
+            margin-top: $header_full_height_mobile;
         }
     }
 
     @include device("tablet") {
         h2 {
             font-size: $section_title_fontsize_tablet;
+            line-height: $section_title_line_height_tablet;
         }
+
         h3 {
             font-size: $subsection_title_fontsize_tablet;
         }
-        p, ul > li {    
+
+        p,
+        ul>li {
             font-size: $paragraph_fontsize_tablet;
-        }
-
-        .appContainer .appContent {
-            margin-left: 7.5rem;
-
-            >.appSection {
-                padding: 2rem 3rem 3rem 3rem;
-            }
-        }
-    }
-
-    @include device("mobile") {
-        h2 {
-            font-size: $section_title_fontsize_mobile;
-        }
-        h3 {
-            font-size: $subsection_title_fontsize_mobile;
-        }
-        p, ul > li {
-            font-size: $paragraph_fontsize_mobile;
-        }
-
-        .appContainer .appContent {
-            margin-left: 0;
-
-            >.appSection {
-                padding: 1rem 1.5rem 1.5rem 1.5rem
-            }
         }
     }
 }
