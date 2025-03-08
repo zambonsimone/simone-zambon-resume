@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react";
-import { useEnterToClick } from "../../../../../hooks/useEnterToClick";
+import { useEnterToClick } from "../../../../../hooks/useEnterToClick/useEnterToClick";
 import inputStyle from "../Input.module.scss";
 import { IInputProps } from "../types";
 import inputFileStyle from "./InputFile.module.scss";

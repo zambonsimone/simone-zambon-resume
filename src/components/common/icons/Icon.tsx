@@ -1,5 +1,5 @@
 import { AriaAttributes } from "react";
-import { useEnterToClick } from "../../../hooks/useEnterToClick";
+import { useEnterToClick } from "../../../hooks/useEnterToClick/useEnterToClick";
 import style from "./Icon.module.scss";
 import { IconName, ICONS_PATHS } from "./icons-paths";
 

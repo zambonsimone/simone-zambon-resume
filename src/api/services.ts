@@ -7,17 +7,17 @@ export async function testCaptcha(solution: ICaptchaUserAnswer) {
     try {
         const result = await verifyCaptcha(solution);
         if (result.isError === true) return new ErrorResponse(result);
-        return new SuccessResponse<boolean>({ 
-            message: result.message, 
-            response: result.response 
+        return new SuccessResponse<boolean>({
+            message: result.message,
+            response: result.response
         })
     }
     catch (err) {
         const { code, status: statusCode, message } = err as AxiosError;
-        return new ErrorResponse({ 
-            code: code as ErrorCodes, 
-            statusCode, 
-            message 
+        return new ErrorResponse({
+            code: code as ErrorCodes,
+            statusCode,
+            message
         })
     }
 }
@@ -26,16 +26,16 @@ export async function getCaptchaChallenge() {
     try {
         const result = await getCaptchaQuestion();
         if (result.isError === true) return new ErrorResponse(result);
-        return new SuccessResponse<ICaptchaChallenge>({ 
-            message: result.message, 
-            response: result.response 
+        return new SuccessResponse<ICaptchaChallenge>({
+            message: result.message,
+            response: result.response
         })
     }
     catch (err) {
         const { code, status: statusCode, message } = err as AxiosError;
-        return new ErrorResponse({ 
-            code: code as ErrorCodes, 
-            statusCode, 
+        return new ErrorResponse({
+            code: code as ErrorCodes,
+            statusCode,
             message
         })
     }
@@ -49,9 +49,9 @@ export async function sendFormDataAsMail(formData: FormDataDto) {
     }
     catch (err) {
         const { code, status: statusCode, message } = err as AxiosError;
-        return new ErrorResponse({ 
-            code: code as ErrorCodes, 
-            statusCode, 
+        return new ErrorResponse({
+            code: code as ErrorCodes,
+            statusCode,
             message
         })
     }
