@@ -1,18 +1,26 @@
-$distance_small: 0.6rem;
+$padding_x_small: 0.6rem;
+$padding_small: 1rem;
+$padding_normal: 2rem;
+$padding_large: 3rem;
 
 $metrics: (
     input: (
-        height: 3rem
+        height: 1.9rem
     ),
-    distance: ( 
-        x_small: calc($distance_small/2),
-        small: $distance_small,
-        normal: calc($distance_small*2),
-        large: calc($distance_small*4),
-        x_large: calc($distance_small*8),
-        xx_large: calc($distance_small*16),
-        full_small: $distance_small calc($distance_small*2),
-        full_normal: calc($distance_small*2) calc($distance_small*4),
-        full_large: calc($distance_small*4) calc($distance_small*8),
-    )
+    header: (
+        height: 4.6rem,
+        full_height_desktop: calc(4.6rem + $padding_large),
+        full_height_tablet: calc(4.6rem + $padding_normal),
+        full_height_mobile: calc(4.6rem + $padding_small) 
+    ),
+    sidebar: (
+        width: 28vw,
+        width_tablet: 7.5rem
+    ),
+    paddings: (
+        x_small: $padding_x_small,
+        small: $padding_small,
+        normal: $padding_normal,
+        large: $padding_large,
+    ),
 )
