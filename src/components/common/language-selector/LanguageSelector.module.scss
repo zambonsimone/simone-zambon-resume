@@ -1,0 +1,90 @@
+@import "../../../mixins.scss";
+@import "../../../common.scss";
+
+.itemContent {
+    padding-bottom: 0.3rem;
+}
+
+.currentLanguageContainer,
+.languageListItem>.itemContent {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    &,
+    >* {
+        cursor: pointer;
+    }
+
+    >label {
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 0.1rem;
+    }
+}
+
+.langImg {
+    width: 1.7rem;
+    height: 1.7rem;
+    border: 0.1rem solid white;
+    border-radius: 100%;
+}
+
+.currentLanguageContainer {
+    margin: 0 2rem 0 auto;
+    text-transform: uppercase;
+
+    @include device("desktop") {
+        text-transform: none;
+    }
+}
+
+.languageListItem {
+    border: 0.1rem solid transparent;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    text-transform: uppercase;
+
+    @include device("desktop") {
+        text-transform: none;
+    }
+
+    @include device("mobile") {
+        margin: 0;
+    }
+
+    &:hover {
+        border-color: $accent;
+    }
+
+    &.active::after {
+        background-color: $accent;
+    }
+
+    &::after {
+        display: block;
+        position: relative;
+        right: 0;
+        left: 0;
+        width: 100%;
+        content: "";
+        height: 0.1rem;
+        background-color: transparent;
+    }
+}
+
+.popoverContainer {
+    background-color: white;
+    z-index: 5;
+    @include shadow();
+}
+
+.languageList {
+    list-style: none;
+
+    &.popoverLanguageList {
+        margin: 0;
+        padding: 1rem;
+    }
+}
