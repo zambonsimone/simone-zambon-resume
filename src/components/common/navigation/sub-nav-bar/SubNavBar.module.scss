@@ -1,75 +1,75 @@
-@import "../../../../common.scss"; 
+@import "../../../../common.scss";
 @import "../../../../metrics.scss";
 @import "../../../../font.scss";
+@import "../../../../mixins.scss";
 
-$action_font: map-get($font, "action");
-$action_fontweight: map-get($action_font, "fontweight");
-$action_letter_spacing: map-get($action_font, "letter_spacing");
+$navlink_font: map-get($font, "navlink");
+$navlink_fontsize: map-get($navlink_font, "fontsize");
+$navlink_fontweight: map-get($navlink_font, "fontweight");
+$navlink_letterspacing: map-get($navlink_font, "letter_spacing");
+
 $icon_font: map-get($font, "icon");
 $icon_fontsize_small: map-get($icon_font, "fontsize_small");
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_normal: map-get($distance_metrics, "normal");
-$distance_large: map-get($distance_metrics, "large");
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+
+$sidebar_metrics: map-get($metrics, "sidebar");
+$sidebar_width: map-get($sidebar_metrics, "width");
+$sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
 
 .subNavbarContainer {
-    margin: $distance_normal $distance_normal $distance_large $distance_normal;
-    min-width: 30rem;
-    
+    background-color: $light;
+
     @include device("mobile") {
         display: none;
     }
 
     .subNavbar {
         display: flex;
-        height: 5rem;
         justify-content: space-evenly;
         place-items: center;
-        border: 0.5rem solid $niceYellow;
-        box-shadow: 0 0 2rem -1rem $niceBlack;
 
-        > .subNavLink {
+        >.subNavLink {
             display: flex;
             align-items: center;
             flex-grow: 1;
             height: 50%;
-            font-size: 1.4rem;
-            font-weight: $action_fontweight;
+            font-size: $navlink_fontsize;
+            font-weight: $navlink_fontweight;
             text-transform: uppercase;
             text-decoration: none;
             text-align: center;
-            color: $niceBlack;
-            letter-spacing: $action_letter_spacing;
+            color: $dark;
+            letter-spacing: $navlink_letterspacing;
+            height: 3rem;
+            border-bottom: 0.1rem solid $dark;
 
-            &:not(:last-child) {
-                border-right: 0.1rem solid $niceBlack;
+            &:hover,
+            &.subNavLinkActive {
+                color: $accent;
+                border-bottom-color: $accent;
             }
 
-            &:hover, &.subNavLinkActive {
-                color: $niceOrange;
-            }
-
-            > .routeName {
+            >.routeName {
                 display: inline-flex;
                 align-items: center;
                 justify-content: center;
                 flex-grow: 1;
-            
-                > .routeNameIcon {
+
+                >.routeNameIcon {
                     font-size: $icon_fontsize_small;
-                    margin-right: $distance_normal;
+                    margin-right: 1rem;
                 }
             }
 
             @include device("tablet") {
-                font-size: calc(0.5rem + 1vw);
-                > .routeName > .routeNameIcon {
+                >.routeName>.routeNameIcon {
                     display: none;
                 }
             }
         }
 
-        
+
     }
 }
-

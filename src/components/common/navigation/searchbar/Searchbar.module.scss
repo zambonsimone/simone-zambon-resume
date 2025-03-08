@@ -7,14 +7,10 @@ $icon_fontsize: map-get($icon_font, "fontsize");
 
 $input_metrics: map-get($metrics, "input");
 $input_height: map-get($input_metrics, "height");
-$distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
-$distance_large: map-get($distance_metrics, "large");
-
 
 .searchbar {
     display: flex;
-    gap: $distance_large;
+    gap: 1rem;
     align-items: center;
     position: relative;
 
@@ -24,15 +20,15 @@ $distance_large: map-get($distance_metrics, "large");
         font-size: $icon_fontsize;
         position: absolute;
         opacity: 0.5;
-        left: $distance_small;
+        left: 0.6rem;
     }
 
     .searchbarInput {
         flex-grow: 1;
         height: $input_height;
         border: none;
-        padding-left: $distance_large;
+        padding-left: 2.4rem;
         font-family: "Roboto", sans-serif;
+        min-width: 0;
     }
 }
-
