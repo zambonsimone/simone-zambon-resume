@@ -1,0 +1,57 @@
+{
+    "TITLE": "Contacts",
+    "SUBTITLE": "You can use one of the contact options shown in the list below or You can fill out the form with Your request and, if necessary, Your contact details to be reached again: on submit I will receive and e-mail with Your message",
+    "CONTACT_OPTIONS": {
+        "TITLE": "Contact options",
+        "PHONE": "Phone",
+        "EMAIL": "E-mail address",
+        "SKYPE": "Skype",
+        "LINKEDIN": "LinkedIn"
+    },
+    "FORM_TITLE": "Contact form",
+    "FORM_FIELD": {
+        "NAME": {
+            "LABEL": "Name / Company name",
+            "PLACEHOLDER": "Enter Your name / company name"
+        },
+        "EMAIL": {
+            "LABEL": "E-mail address",
+            "PLACEHOLDER": "Enter Your e-mail address"
+        },
+        "COPY": {
+            "LABEL": "Send a copy of the email to",
+            "PLACEHOLDER": "Enter an e-mail address"
+        },
+        "PREFIX": {
+            "LABEL": "Country code",
+            "PLACEHOLDER": "99-9999"
+        },
+        "PHONE": {
+            "LABEL": "Phone number",
+            "PLACEHOLDER": "Enter Your phone number"
+        },
+        "ATTACHMENT": {
+            "LABEL": "Attachment",
+            "PLACEHOLDER": "Attach a file"
+        },
+        "MESSAGE": {
+            "LABEL": "Message",
+            "PLACEHOLDER": "Enter Your message here"
+        },
+        "PRIVACY": {
+            "LABEL": "I confirm that I have read and agree to the <a download=\"Privacy Policy\" href=\"/privacy-policy/privacy-policy_en.pdf\" target=\"_blank\">Privacy Policy</a>."
+        },
+        "SEND": "Send"
+    },
+    "FORM_ERRORS": {
+        "REQUIRED": "The field is required",
+        "FILE_TYPE": "The attachment format is not valid",
+        "EMAIL_FORMAT": "Enter a valid e-mail address",
+        "PHONE_NUMBER_TOO_LONG": "The phone number must have a maximum of 10 digits",
+        "PHONE_NUMBER_TOO_SHORT": "The phone number must have a minimum of 6 digits",
+        "PHONE_NUMBER_FORMAT": "Enter a valid phone number",
+        "PHONE_PREFIX_FORMAT": "Enter a valid country code",
+        "MESSAGE_TOO_LONG": "The message is too long"
+    },
+    "SHOW_DATA": "show data"
+}

@@ -1,0 +1,27 @@
+{
+    "TITLE": "Hobbies",
+    "DIY": {
+        "TITLE": "Do-it-yourself",
+        "DESCRIPTION": "I grew up seeing my father and my brother making do to make many things themselves. Therefore me too, for fun at the beginning, I started to modify, customize and build objects. Once I get older, it has also become my ideology to count more on myself. The most important activities I dedicated myself to range from mechanics to gardening, hardware and audio-system assembly and the preparation of culinary raw materials."
+    },
+    "DANCE": {
+        "TITLE": "Caribbean dances",
+        "DESCRIPTION": "The love for dancing is a recent discover: since 2020 I attend classes, I frequent clubs and I partecipate in competitions of Salsa, which is a set of types of Cuban musics and dances I have realized to love even before I knew his cultural and geographical context. In addition of Salsa, Bachata and Merengue, I attend classes of other Caribbean and non-Caribbean dancing styles."
+    },
+    "TRAVELS": {
+        "TITLE": "Traveling",
+        "DESCRIPTION": "The more the culture and the look of a location differs from the one I am used to, the more it attracts me and it satisfies me. That pushed me to do many trips of different importance, some of them alone, that brought me to Northern Africa and Central Africa, Asia and Caribbean. In the Caribbean a href=\"/experiences/side-experiences\">I traveled for about 6 months</a>. The good thing about traveling is that it teaches you to appreciate more what you take for granted."
+    },
+    "TKD": {
+        "TITLE": "TaeKwonDo and Fitness",
+        "DESCRIPTION": "I still can't explain what affascinates me about TaeKwonDo, a Korean martial art that focused on the lower part of the body to fight the rival, but the agility and the strength with which the pros can use their legs have always bewitched me. Unfortunately I had to stop my agonistic traning to pay more attention to my school exams but I have kept training occasionally. I am focused on fitness for my wellness, that's why I train regularly both at the gym and at home."
+    },
+    "COOKING": {
+        "TITLE": "Cooking and Pastry-making",
+        "DESCRIPTION": "This passion grew from my want to knead those strange savory or sweet doughs that my mother used to knead. My gluttony surely encouraged me to pastry-making, but later my interest started to include the daily cooking and I enrich it by reading recipes, by learning from my mother and by \"stealing\" some secret from friends who are chefs. I tend to be pretty strict with myself when it comes to cooking."
+    },
+    "ARTS": {
+        "TITLE": "Drawing and Arts",
+        "DESCRIPTION": "I have always loved to draw since I was a kid, but in the teenage years I started to focus on human/humanoid subjects, cars and on street art and I finally chose an <a href=\"/bio\">academic education in fine arts</a>. I make drawings and paintings on different surfaces with different techniques: crayons and charcoal pencil, acrylic on canvas, watercolors and spray on walls."
+    }
+}

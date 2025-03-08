@@ -1,0 +1,35 @@
+{
+  "TITLE": "My resume",
+  "SUBTITLE": "I think the best way to demonstrate my skills in website and web application development is by creating a personal website. It contains all the informations from my resume along with additional details. The source code is available <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" aria-label=\"Here: link to GitHub\" target=\"_blank\">here</a>.",
+  "INSTRUCTIONS": {
+    "TITLE": "Instructions",
+    "LIST_ITEMS": {
+      "NAVBAR": "Through the vertical navigation bar on the left You can navigate to the different sections and sub-sections of this website",
+      "PROFILE_PICTURE": "By cliking on my profile picture You will be redirected to the <a href=\"/bio\">Bio</a> page with my personal introduction",
+      "SEARCHBAR": "Through the search bar in the top You can easily filter the informations",
+      "CONTACT_FORM": "By filling out the contact form in the <a href=\"/contacts\">Contacts</a> page and by sending the data, I will receive an e-mail with containing Your message. Otherwise You can use the other contact options"
+    }
+  },
+  "IMPLEMENTATION": {
+    "TITLE": "Implementation",
+    "FRONTEND": "I create this website using common methods and functionalities for a webapp built with <code>React</code> and <code>Typescript</code>. I differentiated variables, scripts and configurations in dedicated modules for each environment. The deploy of the website is done on a known hosting platform that execute a dedicated build for the production environment, using my repository on <code>GitHub</code> directly.",
+    "BACKEND": "For backend functionalities this website uses two different approaches depending on the environment: the distributed website uses serverless functions provided by the hosting platform, while locally it calls APIs exposed by a small server executed with <code>Node</code> that I created.",
+    "PURPOSE": "My main goal is to demonstrate my skills. Some functionalities, such as sending an email through the form, file downloading, and using a server are obviously unnecessary, but I would like to showcase my knowledge and capabilities in backend development as well."
+  },
+  "UX_UI": {
+    "TITLE": "UX/UI",
+    "DESCRIPTION": "I chose the design and color palette for this website following UX/UI principles. I paid attention to accessibility, ensuring that the website is easily navigable via keyboard, with readable text for both human users and screen readers, and sufficiently contrasting colors. I also focused on performance to provide a smooth user experience."
+  },
+  "CODE_ORGANIZATION": {
+    "TITLE": "Code organization",
+    "DESCRIPTION": "I created and organized the folders that make up my website project, following the most common conventions used in small web apps. To showcase my experience, gained entirely in the context of large projects, I decided to structure the code by creating each module with a clear semantic meaning and a specific responsibility, and by centralizing data to facilitate code maintenance."
+  },
+  "DEVELOPING_LANGUAGE": {
+    "TITLE": "Developing language",
+    "DESCRIPTION": "I chose <code>TypeScript</code> as the language and <code>ReactJS</code> as the main library for the robustness and the simplicity of development, respectively. Additionally, they are the technologies I studied the most."
+  },
+  "DEVELOPING_STRATEGY": {
+    "TITLE": "Development strategy",
+    "DESCRIPTION": "I used many <code>TypeScript</code> features to achieve robust code typing. I adhered to the <code>React</code> paradigms and utilized the facilities provided by the library, such as <code>hook</code>s and navigation components, respecting their use cases. I implemented <code>ESLint</code> for strict syntax checking and used <code>Webpack</code> to configure a development server and set up a convenient debugging environment. Still for demonstration purposes, I decided not to install libraries for helpers and utilities unless they were really necessary."
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "TITLE": "Side professional experiences",
+  "SUBTITLE": "My first jobs were bartender/bar manager and waiter, jobs that I carried out in different occasions also during my career as developer. Along with these professions, I carried out other different ones",
+  "BARTENDER": {
+    "TITLE": "Bartender - Bar manager - Waiter",
+    "DESCRIPTION": "After I have obtained a qualification certificate for bartender profession in 2015, I have immediately started to work in pubs and small private events. In Semptember of the same year I was hired as bartender and waiter in the pub \"Taverna del Bucaniere\" in Gallarate, Italy, where I gained increasing experience and autonomy until I was able to manage independently the pub, the orders of food and beverage and the events. During the whole time I worked in this pub, I continued to work as bartender in other pubs, clubs and big events, both in Italy and in Switzerland. I still work as barman and waiter occasionally."
+  },
+  "RECEPTION": {
+    "TITLE": "Receptionist - Tour guide - Cleaner",
+    "MAIN_TASK": "In October 2018 I started a 6 months travel around Caribbean, from Costa Rica to Panama, Colombia and Cuba. To support myself I worked for 1 month as receptionist, cleaner and promoter at \"Bikini Hostel\" in Puerto Viejo de Talamanca, Costa Rica: I handled guest check-ins and check-outs and I cleaned and prepared rooms, common areas and cloakrooms. I performed the same tasks in \"InboXChange Hostel\" in Medellin, Colombia as well.",
+    "GUIDE": "Thanks to my sociability I improved my Spanish and English languages skills, while my curiosity led me to know the city of Medellin and its history deeply. Due to this, I was also appointed to work as an amatorial tour guide for the new guests of the hostel."
+  },
+  "CNC": {
+    "TITLE": "CNC machines Programmer and Operator",
+    "DESCRIPTION": "In autumn 2016 I worked as programmer and operator of CNC lathes and milling machines for a small steelworking business in Caronno Varesino, Italy. I was not easy to learn the necessary understandings: due to the dangerous nature, fragility and economic value of the tools we used to work with, the amount of informations and behaviours that we had to adhere to in order to work safely was very significant. I gained considerable knowledgealthough the activity lasted just 3 months."
+  },
+  "VOLUNTEER": {
+    "TITLE": "Volunteer in a day center for people with Alzheimer's desease",
+    "INTRO": "Inspired by friends and classmates and encouraged by the school, I decided to take on a volunteering program in a day center for people with Alzheimer's desease. The day center hosted nearly all elderly persons for recreational and playful activities during afternoon.",
+    "MAIN_TASK": "Flanked by a Pet Therapy operator and other volunteers, we entertained the guests through games and conversations, both to brighten their days and to slow down the progression of the disease. There were laughters and touching moments with the guests: my empathy led me to become very emotionally involved but the joy of having fun with them alowed us to become close easily and share many smiles."
+  }
+}

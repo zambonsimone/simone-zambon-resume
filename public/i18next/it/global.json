@@ -1,0 +1,60 @@
+{
+    "LANGUAGE_SELECTOR": {
+        "CURRENT_LANG": "Lingua corrente",
+        "CHOOSE_LANGUAGE": "Seleziona una lingua"
+    },
+    "EXPAND": "Espandi",
+    "COLLAPSE": "Comprimi",
+    "CLOSE_MENU": "Chiudi menù",
+    "NAVBAR": {
+        "HOMEPAGE": "Benvenuto",
+        "BIO": "Bio",
+        "SKILLS": "Competenze",
+        "IT_SKILLS": "Competenze IT",
+        "SOFT_SKILLS": "Competenze personali",
+        "OTHER_SOFTWARE_SKILLS": "Altre competenze software",
+        "EXPERIENCES": "Esperienze",
+        "MAIN_EXPERIENCES": "Esperienze principali",
+        "SIDE_EXPERIENCES": "Esperienze secondarie",
+        "HOBBIES": "Hobby",
+        "CONTACTS": "Contatti",
+        "FILES": "File",
+        "SEARCH": "Cerca"
+    },
+    "SEARCHBAR": {
+        "PLACEHOLDER": "Inserisci un testo da ricercare",
+        "SEARCH_BTN": "Cerca"
+    },
+    "ACCORDION": {
+        "SHOW": "Mostra",
+        "HIDE": "Nascondi",
+        "CONTENT": "Contenuto"
+    },
+    "INTRO_CODE": "codice introduttivo",
+    "LEVEL_LEGEND": {
+        "TITLE": "legenda livelli",
+        "LEVELS": {
+            "0": "Nessun tipo di conoscenza",
+            "1": "Conoscenza quasi nulla",
+            "2": "Scarsa conoscenza",
+            "3": "Nozioni teoriche",
+            "4": "Sufficienti conoscenze teoriche o pratiche",
+            "5": "Sufficienti conoscenze teoriche e pratiche",
+            "6": "Intermedie conoscenze teoriche e pratiche",
+            "7": "Familiarità",
+            "8": "Notevole conoscenza e familiarità",
+            "9": "Ottima conoscenza e padronanza",
+            "10": "Eccellente conoscenza e padronanza"
+        }
+    },
+    "LEVEL_INDICATOR": "Livello",
+    "DETAILS": "dettagli",
+    "AT": "presso",
+    "FROM": "dal",
+    "TO": "al",
+    "CAPTCHA": {
+        "TITLE": "Inserisci il codice mostrato",
+        "VERIFY": "Verifica"
+    },
+    "DOWNLOAD_FILE": "Scarica il file {{title}}"
+}

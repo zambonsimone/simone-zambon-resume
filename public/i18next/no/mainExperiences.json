@@ -1,0 +1,39 @@
+{
+  "TITLE": "Hovedarbeidserfaringer",
+  "SUBTITLE": "Som konsulent jeg har jobbet med forskjellige roller og aspekter av en applikasjon, men den viktigste jobbet jeg ble tildelt til er frontend-utvikling for en stor holdingselskap av private sykehus plassert i Milano, Italia",
+  "GSD": {
+    "TITLE": "Frontendutvikler - Web & Mobile",
+    "TEXT": "Typescript - React - Redux - ReactNative",
+    "INTRO": "Siden juli 2021 til februar 2025 har mitt arbeid vært fokusert på utvikling av ny funksjonaliteter, på feilretting og på skriving av tester for programvarefabrikken til \"Gruppo San Donato\", en stor holdingselskap av sykehus plassert i Milano, Italia, som lager, vedlikeholder og forbedrer applikasjoner ment for kunder eller ansatte. Teamet og utviklingen var organisert etter Agile-metodene. Den viktigste applikasjonene jeg har jobbet med var ment for kunder og gav dem forskjellige tjenester knyttet til holdingselskapssykehus som booking av inspeksjoner og håndtering av medisinske rapporter og dokumenter. I begynnelsen, utviklet jeg applikasjoner som brukte <code>redux-store</code> for datapersistens under bruken av applikasjonen og for REST anrop, som senere ble erstattet med flere <code>React Context</code>.",
+    "MAIN_TASK": "Mine viktigste aktiviteter bestod av feilretting og utvikling av kjernefunksjonalitet. I avslutningen av alle nye implementeringer var funksjonen til koden og applikasjonen testet med enhetstester og integrasjonstester, skrevet av teamet vårt. I tillegg til disse aktivitetene har jeg jobbet med flerspråklig funksjonalitet, med tilgjengelighet og med konfigurasjonen av utviklingsverktøyene og verktøyene for kontinuerlig integrering.",
+    "DESIGN": "Vi har jobbet i samarbeid med et team spesialisert i UX/UI, som har tegnet en UI med det høyeste og nyeste nivået av kvalitet og tilgjengelighet for kunder med handicap. Små tegneaktiviteter, som endring av .svg-filer for å generere ikoner og fonter, var også tildelt frontendutviklerne.",
+    "COOPERATION": "Som ett av medlemmene med mest ekspertise i teamet, har jeg også ansvaret for onboarding og opplæring av nye medlemmer. Dette samarbeidet var virkelig viktig: utviklingskoden ble kontrollert av andre medlemmer før den ble implementert, og man anbefalte å gi hjelp til kollegaene i nød, og ny kunnskap ble delt mellom medlemmene gjennom periodiske møter.",
+    "CONCLUSION": "Dette har vært det viktigste prosjektet som har vært tildelt meg, hvor jeg har kunnet gjøre alle hovedaktivitetene en frontendutvikler vanligvis er involvert i, med betydelig selvstendighet og beslutningsmyndighet."
+  },
+  "SYSKOPLAN": {
+    "TITLE": "Frontendutvikle - Web",
+    "TEXT": "SAPUI5 - XML",
+    "INTRO": "Syskoplan er en gren av Reply, et multinasjonalt holdingselskap plassert i Sveits, leder i markedet for IT. Under mitt samarbeid med teamet til Syskoplan, ble vi tildelt aktiviteter med implementering og vedlikehold av en ERP-applikasjon for ‘Saipem S.p.A.’, et italiensk selskap som opererer innen energisektoren og infrastruktur. Den applikasjonen var mer fokusert på funksjonaliteten og på presisjonen av manipuleringen av data enn på aspektene UX/UI. Den var laget med SAPUI5 og bestod av mange små applikasjoner i følge SAP Fiori designprinsippene: hver applikasjon leverte forskjellig funksjonalitet for å håndtere og kontrollere forskjellige aktiviteter knyttet til oljeplattformene til selskapet, som logistikk eller håndtering av menneskelige ressurser, og den var ment for å bli brukt av brukere med spesifikke roller og autorisasjoner",
+    "MAIN_TASK": "Min hovedaktivitet var feilretting og implementering av nye applikasjoner på forespørsel fra kunden. Inngrepene var først og fremst knyttet til skjemaer og innsending av data. <code>Javascript</code> var egentlig det eneste utviklingsspråket brukt, i tillegg til en del grunnleggende visning i <code>XML</code> for designet av UI."
+  },
+  "UNICREDIT": {
+    "TITLE": "Systemadministrator",
+    "TEXT": "PL/SQL - T/SQL",
+    "INTRO": "Unicredit er en multinasjonalt bankgruppe og den størst i Italia, hvor det har mer enn 2000 datterselskaper. Jeg har jobbet i samarbeid med en valgt team av utvikler fra Dale Consulting.",
+    "MAIN_TASK": "Vi har fått en oppgave å rette feiler og problemer i databaser til produksjonmiljøet, teste ETL-er, lede migrasjonen av alle kunder til UniCredit, gruppert etter nasjon, fra en eldre PFM-applikasjon til en nyere, og håndtere debuten av ny applikasjonen.",
+    "ONBOARDING": "For dataene var veldig viktige og sensitive, og selskapet er veldig stort, har vi måtte møte situasjoner med en høyt nivå av stress som var vanskelig å håndtere, vi jobbet ofte mye, om natten og uten varsling. Dette hadde ført til et høyt fraværsrate blant de tildelte menneskellige ressursene, derfor ble jeg også tildelt til onboarding og opplæring av de nye medlemmene til teamet.",
+    "CONCLUSION": "I dette prosjektet har jeg kunnet praktisere mye i skrivingen av spørringer for databasene, skrevet med <code>PL/SQL</code> eller <code>T/SQL</code> (alt etter hvilken PFM-applikasjon databasene var knyttet til), ved å bruke også <code>Microsoft Excel</code> for å gjøre genereringen av spørringene lettere."
+  },
+  "SISAL": {
+    "TITLE": "Frontendutvikler - Web",
+    "TEXT": "AngularJS - HTML - SCSS",
+    "INTRO": "Sisal er en italiensk tippingselskap som håndterer aktiviteter innen tipping også i andre nasjoner. Jeg har uvitklet spesiellt med <code>AngularJS</code>: det har vaert første autentisk oppgaven som frontendutvikler og IT-konsulent derfor var aktivitetene mine lette og ikke mange.",
+    "MAIN_TASK": "I tillegg til utviklingen av ny banner og dets reglene for synlighet, har jeg jobbet i forskjellige aktiviteter for feilretting av UX/UI i feilmeddelelsene og i interaksjon mellom brukene og <code>checkbox</code>-elementene. Jeg har også stilt opp i utvikling av flerspråklig funksjonalitet med <code>angular-translate</code>."
+  },
+  "DALE": {
+    "TITLE": "Frontendutvikler - Web & Mobile",
+    "TEXT": "Angular8 - NativeScript - AJAX",
+    "INTRO": "Etter at jeg har blitt ansatt som konsulent, under de første ukene har jeg blitt tildelt et internt prosjekt i selskapet for utviklingen av en PFM-applikasjon (Personal Financial Management). Det var en flerplattformapplikasjon under utvikling med <code>NativeScript</code> og <code>Angular8</code>.",
+    "MAIN_TASK": "Jeg har jobbet spesielt med UI-utviklingen av noen nettsider og med integrasjonen av backend-tjenester ved å bruke <code>AJAX</code>."
+  }
+}

@@ -1,0 +1,60 @@
+{
+    "LANGUAGE_SELECTOR": {
+        "CURRENT_LANG": "Current language",
+        "CHOOSE_LANGUAGE": "Select a language"
+    },
+    "EXPAND": "Expand",
+    "COLLAPSE": "Collapse",
+    "CLOSE_MENU": "Close menu",
+    "NAVBAR": {
+        "HOMEPAGE": "Welcome",
+        "BIO": "Bio",
+        "SKILLS": "Skills",
+        "IT_SKILLS": "IT skills",
+        "SOFT_SKILLS": "Soft skills",
+        "OTHER_SOFTWARE_SKILLS": "Other software skills",
+        "EXPERIENCES": "Experiences",
+        "MAIN_EXPERIENCES": "Main experiences",
+        "SIDE_EXPERIENCES": "Side experiences",
+        "HOBBIES": "Hobbies",
+        "CONTACTS": "Contacts",
+        "FILES": "Files",
+        "SEARCH": "Search"
+    },
+    "SEARCHBAR": {
+        "PLACEHOLDER": "Enter a search term",
+        "SEARCH_BTN": "Search"
+    },
+    "ACCORDION": {
+        "SHOW": "Show",
+        "HIDE": "Hide",
+        "CONTENT": "Content"
+    },
+    "INTRO_CODE": "introduction code",
+    "LEVEL_LEGEND": {
+        "TITLE": "level legend",
+        "LEVELS": {
+            "0": "No knowledge of any kind",
+            "1": "Almost no knowledge",
+            "2": "Poor knowledge",
+            "3": "Theoretical knowledge",
+            "4": "Sufficient practical or theoretical knowledge",
+            "5": "Sufficient practical and theoretical knowledge",
+            "6": "Intermediate practical and theoretical knowledge",
+            "7": "Familiarity",
+            "8": "Noteworthy knowledge and familiarity",
+            "9": "Really good knowledge and confidence",
+            "10": "Excellent knowledge and confidence"
+        }
+    },
+    "LEVEL_INDICATOR": "Level",
+    "DETAILS": "details",
+    "AT": "at",
+    "FROM": "from",
+    "TO": "to",
+    "CAPTCHA": {
+        "TITLE": "Type the code shown",
+        "VERIFY": "Verify"
+    },
+    "DOWNLOAD_FILE": "Download {{title}} file"
+}

@@ -1,0 +1,49 @@
+{
+  "TITLE": "Personlige ferdigheter",
+  "LANGUAGE": {
+    "TITLE": "Språk",
+    "ITALIAN": {
+      "TITLE": "Italiensk",
+      "DESCRIPTION": "Italiensk språk er definitivt mitt morsmål. Jeg har en sterk grammatisk og leksikalsk kunnskap som jeg forbedrer ved å lese mange fortellinger og artikler av forskjellige slag."
+    },
+    "ENGLISH": {
+      "TITLE": "Engelsk",
+      "DESCRIPTION": "Jeg har et godt nivå av engelsk språk kunnskap: det er fremmedspråket jeg kjenner best fordi jeg har studert det siden jeg gikk på grunnskolen, men først og fremst fordi jeg øver mye ved å lytte til og lese engelske tekster i filmer, artikler og videospill, samt ved å bruke det i mange land jeg har besøkt."
+    },
+    "SPANISH": {
+      "TITLE": "Spansk",
+      "DESCRIPTION": "Jeg har aldri studert spansk under virkelige utdanningsprogrammer, men jeg har studert det i min fritid ved å bruke applikasjoner og tekster på nettet. Jeg har forbedret mye av bruken, spesielt språket som snakkes, under en <a href=\"/experiences/secondary-experiences\">reise på 6 måneder i Sentral-Amerika</a>."
+    },
+    "NORWEGIAN": {
+      "TITLE": "Norsk Bokmål",
+      "DESCRIPTION": "Jeg begynte å studere norsk bokmål selv da jeg tok beslutningen om å flytte til Norge. Siden jeg ikke har tatt noen faktiske kurs, har jeg et veldig elementært nivå i norsk, men jeg prøver mitt beste for å lære det så fort som mulig ved å bruke applikasjoner og ordbøker samt ved å oversette dette nettstedet. Jeg spør jevnlig mine norske venner om å lære meg noe eller å hjelpe meg med å revidere min kunnskapen."
+    },
+    "FRENCH": {
+      "TITLE": "Fransk",
+      "DESCRIPTION": "Jeg har studert fransk i de første tre årene av gymnaset, men jeg har brukt det bare under en kort reise til Mbour, Senegal, og med formål å snakke med mine franske venner."
+    }
+  },
+  "STRENGTHS": {
+    "TITLE": "Styrker",
+    "DETERMINATION": {
+      "TITLE": "Besluttsomhet",
+      "DESCRIPTION": "Jeg er stolt av min besluttsomhet: hvis jeg vil gjøre noe, gjør jeg alt for å lykkes, og jeg er sikker på at, før eller senere, vil mitt anstrengelse la meg nå mitt mål. Utfordringene er en sterk motivasjon, og jeg gir ikke opp lett. Dette har gjort meg til utvikler uten å ha reell kunnskap om IT-feltet, og det presser meg til å fullføre innviklete oppgaver."
+    },
+    "CURIOSITY": {
+      "TITLE": "Kuriositet",
+      "DESCRIPTION": "Jeg er veldig nysgjerrig. Min kuriositet får meg til å stille meg selv mange spørsmål, og jeg har kunnet lære mange ting og analysere mange situasjoner i dybden ved å søke svarene."
+    },
+    "RELIABILITY": {
+      "TITLE": "Pålitelighet og Presisjon",
+      "DESCRIPTION": "Å fullføre oppgavene er veldig viktig for meg. Jeg jobber hardt for å være pålitelig og for å gjøre arbeidet mitt pålitelig og presist, ved å organisere oppgavene mine for ikke å ignorere noe og ved alltid å ha klare prioriteringer og frister."
+    },
+    "EMPATHY": {
+      "TITLE": "Empati og Kommunikasjon",
+      "DESCRIPTION": "Jeg har fordypet meg i emnet proaktiv kommunikasjon ved bedriftskurs. Jeg har kunnet observere hvordan det gjør folk mer disponert for dialog. Derfor prøver jeg alltid å formulere begrepene klart og effektivt. Jeg er også empatisk, og dette gjør at jeg forstår andres perspektiv. Derfor mine kolleger og direktører er glade for å interagere med meg; dette gjør samarbeidet bedre. Jeg blir fortrolig med folk lett, men jeg respekterer andres personlige rom."
+    },
+    "ECLECTICISM": {
+      "TITLE": "Eklektisisme",
+      "DESCRIPTION": "Jeg er heldig som er entusiastisk om mange aktiviteter. Dette gjør det lettere å kjenne mine styrker, å være mer eklektisk og å tilpasse meg selv til nye miljøer og arbeider."
+    }
+  }
+}

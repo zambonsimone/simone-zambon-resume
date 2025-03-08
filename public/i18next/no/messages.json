@@ -1,0 +1,7 @@
+{
+    "CAPTCHA_VALID": "Captcha ble verifisert!",
+    "CAPTCHA_NOT_VALID": "Feil ved Captcha-verifisering",
+    "EMAIL_SENT": "E-post ble sendt!",
+    "ERR_BAD_REQUEST": "Feil: ugyldige data",
+    "ERR_INTERNAL_SERVER": "Feil: noen gikk galt, prøv igjen senere"
+}

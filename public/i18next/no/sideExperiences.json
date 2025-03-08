@@ -1,0 +1,22 @@
+{
+  "TITLE": "Sekundære arbeidserfaringer",
+  "SUBTITLE": "Den første yrkene i karriere min har vært Bartender / leder-bar og kelner, som har jeg jobbet med mange tider også I løpet av mine karriere som utvikler. I tillegg til dette arbeidene, jeg har jobbet med forskjellige andre yrker",
+  "BARTENDER": {
+    "TITLE": "Bartender - Leder-bar - Kelner",
+    "DESCRIPTION": "Etter at jeg fikk et yrkeskompetansebevis som bartender i 2015, begynte jeg straks å jobbe på puber og små private arrangementer. I september samme år ble jeg ansatt som bartender og kelner på puben 'Taverna del Bucaniere' i Gallarate, Italia, hvor jeg tilegnet meg stadig mer erfaring og fikk ansvar for å lede selvstendisk puben, bestillingene av mat og drikke samt arrangementene. Under mitt arbeid på denne puben fortsatte jeg å jobbe som bartender i andre puber, klubber og store arrangementer, både i Italia og Sveits. Jeg gjør fortsatt dette arbeidet sporadisk."
+  },
+  "RECEPTION": {
+    "TITLE": "Resepsjonist - Amatørguide - Rengjører",
+    "MAIN_TASK": "I oktober 2018 jeg begynte en reise i 6 måneder gjennom Sentral-Amerika, fra Costa Rica til Panama, Colombia og Kuba. For å hjelpe meg selv økonomisk jobbet jeg i 1 måned som resepsjonist, i rengjøringstjeneste og som promoter på vandrerhjem “Bikini Hostel” i Puerto Viejo de Talamanca, Costa Rica: jeg gjorde aktivitetene av innsjekking og utsjekking av gjestene og aktivitetene av rengjøring og klargjøring av romene, fellesområdene, toaletter og baderomene. Jeg gjorde de samme aktivitetene også på vandrerhjem “InboXChange Hostel” i Medellin, Colombia.",
+    "GUIDE": "Takket være også min sosiale ferigheter jeg forbedret snar mine kunnskaper i spansk og engelsk språker, mens mine kuriositetten føret meg til å bli kjent med Medellin byet og dets krønike, derfor jeg fikk den rolle av dilettant omviser for nye gjestene av herberge."
+  },
+  "CNC": {
+    "TITLE": "Programmerer og Operatør av CNC-maskiner",
+    "DESCRIPTION": "I høst 2016 jobbet jeg som programmerer og operatør av dreiemaskiner og fresemaskiner for en liten bedrift innen metallbearbeiding i Varese, Italia. Det var ikke lett å lære de nødvendige kunnskapene: på grunn av farligheten, finheten og de økonomiske anslagene for verktøyene som ble brukt, var informasjonen og tiltakene som måtte følges for å jobbe sikkert mange. Jeg lærte mye selv om aktiviteten varte i bare 3 måneder."
+  },
+  "VOLUNTEER": {
+    "TITLE": "Frivillig på en dagsenter for personer med Alzheimers sykdom",
+    "INTRO": "Skolen Oppmuntret meg til å kaste meg ut i en frivillig aktivitet på et dagsenter for personer med Alzheimers sykdom. Dagsentret hadde spesielt eldre personer for å gjøre lekaktiviteter med dem.",
+    "MAIN_TASK": "Jeg var side om side med en operatør av Pet Therapy og med andre frivillige og underholdt og gledet gjestene med leker og samtaler. Dette gjørde tiden deres mer lykkelig, men hjalp også til å bremse sykdomen. Vi lo mye og ble berørt mye: min empati førte meg til å være mye involvert følelsesmessig men gleden av å tilbringe tid med dem lot meg bli kjent med dem åpent og å dele en lykkelig tid."
+  }
+}

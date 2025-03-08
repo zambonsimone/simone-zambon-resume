@@ -1,0 +1,49 @@
+{
+  "TITLE": "Abilità e competenze personali",
+  "LANGUAGE": {
+    "TITLE": "Lingue",
+    "ITALIAN": {
+      "TITLE": "Italiano",
+      "DESCRIPTION": "La lingua italiana è ovviamente la mia lingua madre, con una solida preparazione grammaticale e lessicale che si arricchisce con la lettura di molti racconti e articoli di ogni tipo."
+    },
+    "ENGLISH": {
+      "TITLE": "Inglese",
+      "DESCRIPTION": "Ho un discreto livello di conoscenza della lingua inglese: è la lingua straniera che conosco meglio poichè materia di studio fin dalle prime classi scolastiche ma soprattutto perchè ho potuto praticarla molto sia attraverso l'ascolto e la lettura di testi inglesi in film, articoli e videogiochi, sia attraverso il suo utilizzo nei tanti paesi che ho visitato, anche con persone con cui sono tutt'ora in contatto."
+    },
+    "SPANISH": {
+      "TITLE": "Spagnolo",
+      "DESCRIPTION": "Non ho mai studiato la lingua spagnola in veri e propri percorsi di formazione ma l'ho imparata nel mio tempo libero usando applicazioni e testi online, perfezionandone molto l'utilizzo (specialmente la lingua parlata) durante una <a href=\"/experiences/secondary-experiences\">esperienza di 6 mesi in Centro America</a>."
+    },
+    "NORWEGIAN": {
+      "TITLE": "Norvegese Bokmål",
+      "DESCRIPTION": "Ho iniziato a studiare norvegese autonomamente quando ho preso definitivamente la decisione di trasferirmi in Norvegia. Dato che non ho mai frequentato dei veri corsi ho un livello base di norvegese ma sto dando il meglio di me per imparare il più velocemente possibile utilizzando applicazioni e dizionari e traducendo questo sito web. Chiedo spesso ai miei amici norvegesi di insegnarmi o di correggere le mie conoscenze attuali."
+    },
+    "FRENCH": {
+      "TITLE": "Francese",
+      "DESCRIPTION": "Ho studiato la lingua francese nei 3 anni di scuola secondaria di primo grado, ma non avendola utilizzata molto se non per una esperienza di breve durata a Mbour, Senegal, ho potuto solo migliorarla in autonomia con amici francesi."
+    }
+  },
+  "STRENGTHS": {
+    "TITLE": "Punti di forza",
+    "DETERMINATION": {
+      "TITLE": "Determinazione",
+      "DESCRIPTION": "Vado fiero della mia determinazione: se decido di voler fare od ottenere qualcosa faccio di tutto per avere successo e so che il mio impegno e dedizione, presto o tardi, mi faranno conseguire il mio obbiettivo. Le sfide sono un grande incentivo e non mi arrendo facilmente: ciò mi ha permesso di diventare developer senza delle vere conoscenze in campo IT e mi sprona a portare a termine compiti anche di livelli superiori al mio."
+    },
+    "CURIOSITY": {
+      "TITLE": "Curiosità",
+      "DESCRIPTION": "Sono molto curioso, non c'è dubbio. La curiosità mi porta a farmi molte domande e, cercando e trovando risposte le risposte, ho potuto imparare moltissime nozioni e analizzare situazioni e concetti in maniera profonda. Sebbene io sia molto curioso, so anche farmi gli affari miei."
+    },
+    "RELIABILITY": {
+      "TITLE": "Affidabilità e Precisione",
+      "DESCRIPTION": "Per me è importante portare a termine correttamente i compiti che mi vengono assegnati. Mi impegno molto a essere affidabile e svolgere il mio lavoro in maniera precisa e accurata, organizzando le mie attività per non tralasciarne nessuna e avendo sempre chiare priorità e scadenze."
+    },
+    "EMPATHY": {
+      "TITLE": "Empatia e Comunicazione",
+      "DESCRIPTION": "Ho approfondito il tema della comunicazione proattiva con corsi aziendali sulla comunicazione. Ho prova ogni giorno di come renda le persone più aperte al dialogo, per questo cerco sempre di esprimere concetti in maniera chiara ed efficace. Sono anche empatico e questo mi porta a immedesimarmi molto negli altri. Per questi motivi, colleghi e manager hanno piacere a comunicare con me favorendo così una buona collaborazione. Tendo a entrare velocemente in confidenza con le persone ma sono anche rispettoso degli spazi personali altrui."
+    },
+    "ECLECTICISM": {
+      "TITLE": "Eclettismo",
+      "DESCRIPTION": "Ho la fortuna di appassionarmi e volermi dedicare a diverse attività e in diversi ruoli. Ciò mi rende più facile conoscere i miei punti di forza, avere approcci più eclettici e adattarmi facilmente a nuovi ambienti o mansioni."
+    }
+  }
+}

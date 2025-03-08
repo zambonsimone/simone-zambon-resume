@@ -1,0 +1,57 @@
+{
+    "TITLE": "Contatti",
+    "SUBTITLE": "Utilizza uno dei metodi di contatto indicati nella lista qui sotto, oppure compila il form con la tua richiesta ed eventualmente i tuoi dati per essere ricontattato: al submit, riceverò una mail con il contenuto del tuo messaggio",
+    "CONTACT_OPTIONS": {
+        "TITLE": "Metodi di contatto",
+        "PHONE": "Telefono",
+        "EMAIL": "E-mail",
+        "SKYPE": "Skype",
+        "LINKEDIN": "LinkedIn"
+    },
+    "FORM_TITLE": "Modulo di contatto",
+    "FORM_FIELD": {
+        "NAME": {
+            "LABEL": "Nome / Ragione sociale",
+            "PLACEHOLDER": "Inserisci il tuo nome / ragione sociale"
+        },
+        "EMAIL": {
+            "LABEL": "Indirizzo email",
+            "PLACEHOLDER": "Inserisci il tuo indirizzo email"
+        },
+        "COPY": {
+            "LABEL": "Invia una copia della email a",
+            "PLACEHOLDER": "Inserisci un indirizzo email"
+        },
+        "PREFIX": {
+            "LABEL": "Nazione",
+            "PLACEHOLDER": "99-9999"
+        },
+        "PHONE": {
+            "LABEL": "Numero di telefono",
+            "PLACEHOLDER": "Inserisci il tuo numero di telefono"
+        },
+        "ATTACHMENT": {
+            "LABEL": "Allegato",
+            "PLACEHOLDER": "Allega un file"
+        },
+        "MESSAGE": {
+            "LABEL": "Messaggio",
+            "PLACEHOLDER": "Scrivi qui il tuo messaggio"
+        },
+        "PRIVACY": {
+            "LABEL": "Acconsento al trattamento dei miei dati personali secondo l'<a href=\"/privacy-policy/privacy-policy_it.pdf\" target=\"_blank\">Informativa sulla Privacy</a>."
+        },
+        "SEND": "Invia"
+    },
+    "FORM_ERRORS": {
+        "REQUIRED": "Il campo è obbligatorio",
+        "FILE_TYPE": "Il formato dell'allegato non è valido",
+        "EMAIL_FORMAT": "Inserisci un indirizzo email valido",
+        "PHONE_NUMBER_TOO_LONG": "Il numero di telefono deve contenere massimo 10 cifre",
+        "PHONE_NUMBER_TOO_SHORT": "Il numero di telefono deve contenere minimo 6 cifre",
+        "PHONE_NUMBER_FORMAT": "Inserisci un numero di telefono valido",
+        "PHONE_PREFIX_FORMAT": "Inserisci un prefisso valido",
+        "MESSAGE_TOO_LONG": "Il messaggio è troppo lungo"
+    },
+    "SHOW_DATA": "mostra dato"
+}
