@@ -1,0 +1,7 @@
+{
+    "CAPTCHA_VALID": "Captcha verificato con successo!",
+    "CAPTCHA_NOT_VALID": "Verifica del captcha fallita",
+    "EMAIL_SENT": "Email inviata con successo!",
+    "ERR_BAD_REQUEST": "Errore: dati non validi",
+    "ERR_INTERNAL_SERVER": "Errore: qualcosa è andato storto, per favore riprova più tardi"
+}

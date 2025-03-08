@@ -1,0 +1,49 @@
+{
+  "TITLE": "Personal skills",
+  "LANGUAGE": {
+    "TITLE": "Languages",
+    "ITALIAN": {
+      "TITLE": "Italian",
+      "DESCRIPTION": "The Italian language is obviously my mother tongue. I have a strong grammatical and lexical knowledge that is getting richer through the reading of many stories and articles of any types."
+    },
+    "ENGLISH": {
+      "TITLE": "English",
+      "DESCRIPTION": "I have a good knowledge of English language: it's the foreign language I know the most as I studied it since the very first years of school, but mostly because I could practice it very much through the listening and the reading of english text in movies, articles and videogames, and through the use of it in the several countries I visited and with people I am still in contact with."
+    },
+    "SPANISH": {
+      "TITLE": "Spanish",
+      "DESCRIPTION": "I have never taken any formal courses in Spanish but I learned it in my free time by using application and by reading online content. I refined my use of Spanish (especially the speaking skills) during an <a href=\"/experiences/secondary-experiences\">experience of 6 months in the Caribbean</a>."
+    },
+    "NORWEGIAN": {
+      "TITLE": "Norwegian Bokmål",
+      "DESCRIPTION": "I started to study Norwegian Bokmål myself when I definitely made the decision to move to Norway. As I did not take any actual classes I have a very basic level of Norwegian, but I am trying my best to learn it as quickly as possible by using applications and dictionaries and by translating this website. I regularly ask my Norwegian friends to teach me or to revise my current knowledge."
+    },
+    "FRENCH": {
+      "TITLE": "French",
+      "DESCRIPTION": "I studied French for 3 years during the lower secondary school, but I have never utilised it very much if we don't consider a short-duration trip to Mbour, Senegal, therefore I could have improved it independently just with my French friends."
+    }
+  },
+  "STRENGTHS": {
+    "TITLE": "Strengths",
+    "DETERMINATION": {
+      "TITLE": "Determination",
+      "DESCRIPTION": "I am very proud of my determination: if I decide that I want to do or achieve something, I will do my very best to succeed and I know that my efforts and dedication, sooner or later, will allow me to achieve my goal. Challenges are a strong motivator and I don't give up easily: that has allowed me to become a developer even though I did not have a background in IT, and pushes me to complete my tasks even if they are intended for people with a skill level higher than mine."
+    },
+    "CURIOSITY": {
+      "TITLE": "Curiosity",
+      "DESCRIPTION": "I am undoubtedly very curious. My curiosity leads me to interrogate myself constantly and by searching for the answer to my questions I could have acquired an ample understanding and analised situations and concepts deeply."
+    },
+    "RELIABILITY": {
+      "TITLE": "Reliability and Accuracy",
+      "DESCRIPTION": "For me it's important to complete the tasks I am assigned to correctly. I put much effort into being reliable and doing my job accurately by organising my tasks to ensure none are neglected and by having always a clear sense of my priorities and deadlines."
+    },
+    "EMPATHY": {
+      "TITLE": "Empathy and Communication",
+      "DESCRIPTION": "I have deepened the topic of proactive communication through courses in the communication field, promoted by Dale Consulting. I experience daily how proactive communication makes the people more open-minded, which is why I always try to convey concepts clearly and efficiently. I am also empathetic and that leads me to put myself in someone else's shoes. For these reasons, coworkers and managers enjoy interacting with me and this facilitates a good cooperation. I tend to become close with others but I am also respectful of their personal space."
+    },
+    "ECLECTICISM": {
+      "TITLE": "Eclecticism",
+      "DESCRIPTION": "I am lucky to be enthusiastic and to want to dedicate myself to various activities in different roles. This helps me understand my strengths, take more eclectic approaches, and adapt to new environments or jobs."
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+    "TITLE": "Kontakter",
+    "SUBTITLE": "Du kan bruke en av kontaktmetodene som er angitt i listen nedenfor, eller du kan fylle ut skjemaet med forespørselen din og eventuelt kontaktinformasjon for å bli kontaktet igjen. Ved å klikke på 'Send' vil jeg motta en e-post med meldingen din.",
+    "CONTACT_OPTIONS": {
+        "TITLE": "Kontaktmetoder",
+        "PHONE": "Telefon",
+        "EMAIL": "E-postadresse",
+        "SKYPE": "Skype",
+        "LINKEDIN": "LinkedIn"
+    },
+    "FORM_TITLE": "Kontaktskjema",
+    "FORM_FIELD": {
+        "NAME": {
+            "LABEL": "Navn / Firmanavn",
+            "PLACEHOLDER": "Skriv inn ditt navnet / firmanavnet"
+        },
+        "EMAIL": {
+            "LABEL": "E-postadresse",
+            "PLACEHOLDER": "Skriv inn din e-postadressen"
+        },
+        "COPY": {
+            "LABEL": "Send en kopi av e-posten til",
+            "PLACEHOLDER": "Skriv inn en e-postadresse"
+        },
+        "PREFIX": {
+            "LABEL": "Landsnummer",
+            "PLACEHOLDER": "99-9999"
+        },
+        "PHONE": {
+            "LABEL": "Telefonnummer",
+            "PLACEHOLDER": "Skriv inn ditt telefonnummeret"
+        },
+        "ATTACHMENT": {
+            "LABEL": "Vedlegg",
+            "PLACEHOLDER": "Vedlegg en file"
+        },
+        "MESSAGE": {
+            "LABEL": "Forespørsel",
+            "PLACEHOLDER": "Skriv inn din forespørselen her"
+        },
+        "PRIVACY": {
+            "LABEL": "Jeg samtykker til <a href=\"/privacy-policy/privacy-policy_no.pdf\" target=\"_blank\">Personvernerklæringen</a>."
+        },
+        "SEND": "Send"
+    },
+    "FORM_ERRORS": {
+        "REQUIRED": "Feltet er obligatorisk",
+        "FILE_TYPE": "Formatet av vedlegget er ikke gyldig",
+        "EMAIL_FORMAT": "Skriv en gyldig e-postadresse",
+        "PHONE_NUMBER_TOO_LONG": "Telefonnummeret må ha maksimalt 10 sifre",
+        "PHONE_NUMBER_TOO_SHORT": "Telefonnummeret må ha minst 6 sifre",
+        "PHONE_NUMBER_FORMAT": "Skriv en gyldig telefonnummer",
+        "PHONE_PREFIX_FORMAT": "Skriv en gyldig landsnummer",
+        "MESSAGE_TOO_LONG": "Forespørselen er for lang"
+    },
+    "SHOW_DATA": "si dataen"
+
+}

@@ -1,0 +1,39 @@
+{
+  "TITLE": "Main professional experiences",
+  "SUBTITLE": "As a consultant I worked in different roles and sides of an application, but the most important task I have been assigned to has been the frontend development for an important holding of private hospitals located in Milan, Italy",
+  "GSD": {
+    "TITLE": "FrontEnd Developer - Web & Mobile",
+    "TEXT": "Typescript - React - Redux - ReactNative",
+    "INTRO": "Since July 2021 my job is focused on developing new features, fixing bugs and writing tests for the software factory of Gruppo San Donato, an important holding of private clinics located in Milan, Italy. The software factory creates, maintains and improves applications used by GSD's customers or employees. The team and the development were organized adhering the <code>Agile</code> methodology, and the primary applications I have worked on were addressed to the customers and they supply them different services related to the holding's clinics such as the booking of medical exams and the management of medical documents and reports. At the beginning, the application were using <code>redux-store</code> for data persistence and for REST calls, then replaced with several <code>React Context</code>s.",
+    "MAIN_TASK": "My main tasks consisted of fixing bugs and implementing very important or less important features. At the end of each new implementation, the usability of the application was tested through <a href=\"/skills/it-skills\">unit and integration tests</a> written by our team. Along with these tasks, I contributed to the implementation of the multilingual support, accessibility and to the configuration of continuous integration and developing tools actively.",
+    "DESIGN": "We worked in cooperation with a specialised UX/UI team that has designed a UI following the most recent and highest standards in terms of quality and of accessibility for users with disabilities. Anyway, some simple tasks in the design field were also assigned to frontend developers, such as the manipulation of <code>.svg</code> files used to generate icons as fonts.",
+    "COOPERATION": "As one of the most senior team members I was also appointed to onboard and train new members. The cooperation were very important: the developer's code were verified by other team members before being applied, it was recommended to support coworkers in need and to share new knowledge between team members through a periodic meeting.",
+    "CONCLUSION": "This has been the most significant assignment I am assigned to, where I could perform all the primary activities a frontend developer is commonly involved in, with considerable autonomy and decision making power."
+  },
+  "SYSKOPLAN": {
+    "TITLE": "FrontEnd Developer - Web",
+    "TEXT": "SAPUI5 - XML",
+    "INTRO": "Syskoplan is a unit of Reply, a multinational holding located in Switzerland and leader in the IT field. During my collaboration with Syskoplan's team we were appointed to tasks such as the implementation and maintenance of an <code>ERP</code> application of \"Saipem S.p.A.\", an Italian company operating in the field of energy and infrastructures. The application was focused on functionalities and accuracy during data manipulation rather than UX/UI aspects. It was developed using <code>SAPUI5</code> and composed by multiple small applications, adhering the SAP Fiori design system: each application provided a functionality to manage and monitor different activities related to the oil platforms of the company, for example the logistic or the management of human resources, and it was ment to be used by users with certain roles and permissions.",
+    "MAIN_TASK": "My main task consisted of fixing bugs and building new applications on customer's request. The interventions were mainly related to forms and data submitting. <code>Javascript</code> was basically the only developing language utilised, in addition to some elementary view in <code>XML</code> for designing the UIs."
+  },
+  "UNICREDIT": {
+    "TITLE": "System Administrator",
+    "TEXT": "PL/SQL - T/SQL",
+    "INTRO": "UniCredit is a international bank group and the biggest in Italy as well, where it has more than 2000 branches. I worked in cooperation with a chosen team of developers from Dale Consulting.",
+    "MAIN_TASK": "We were appointed to resolve incidents and fix bugs on production databases, test <code>ETL</code>s and lead the migration process of all UniCredit users, grouped by country, from an old PFM (Personal Financial Management) application to a more recent one and to handle the rollout of the new PFM application.",
+    "ONBOARDING": "Because of the importance and the sensitivity of the data of such a relevant company, we had to face situations with a high stress level that was hard to handle: we have often worked during nightshifts and without being noticed. This increased the project abandonment rate by the assigned individuals, therefore I was also appointed to onboard and train new team members.",
+    "CONCLUSION": "In this project I could practice very much the use of queries to communicate with databases, which were written in <code>PL/SQL</code> or <code>T/SQL</code> (depending on which PFM application the database was related to) using <code>Microsoft Excel</code> as well to simplify the generation of copious queries."
+  },
+  "SISAL": {
+    "TITLE": "FrontEnd Developer - Web",
+    "TEXT": "AngularJS - HTML - SCSS",
+    "INTRO": "Sisal is an Italian betting company that provides betting services to other countries as well. I primarly coded using <code>AngularJS</code> and as it was the very first assignment as a frontend developer and IT consultant, my tasks were simple and limited.",
+    "MAIN_TASK": "Along with the development of a new banner and its visibility logic, I performed tasks such as fixing different types of UI bugs, resolving issues on error messages and on the user interaction with <code>checkbox</code> HTML elements. I have also partecipated on the implementation of the multilingual support through <code>angular-translate</code>."
+  },
+  "DALE": {
+    "TITLE": "FrontEnd Developer - Web & Mobile",
+    "TEXT": "Angular8 - NativeScript - AJAX",
+    "INTRO": "During the first few weeks after I was hired as consultant, I was assigned to an internal project at Dale Consulting with the purpose of developing a PFM application. It was a multi-platform application built with <code>NativeScript</code> and <code>Angular8</code>.",
+    "MAIN_TASK": "I chiefly developed the UI of some pages and the integration with backend services using <code>AJAX</code>."
+  }
+}

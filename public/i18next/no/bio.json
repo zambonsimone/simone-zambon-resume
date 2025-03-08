@@ -1,0 +1,25 @@
+{
+  "TITLE": "Personlig introduksjon",
+  "SUBTITLE": "Jeg er en multipotensiell person som har finnet en stor pasjon for koding og programvaresutvikling. Jeg fokuserer på FrontEnd med enkeler ferdigheter av backendsutviklings og min daglige aktivitet består i å skrive testbar, vedlikeholdbar og fungerende kode. Elsklingen for menneskelig og proaktiv interaksjon er nøkkelen min for en effektiv samarbeid i team",
+  "INTRO": {
+    "TITLE": "Introduksjon",
+    "DESCRIPTION": "Hei! Jeg er Simone Zambon, er italiensk og har alltid bodd nær byen “Varese”. Jeg har 30 år gammel og har jobbet som frontend-utvikler i mer enn 5 år, men har også utviklingskunnskap av BackEnd og noen konsepter av UX/UI."
+  },
+  "EDUCATION": {
+    "TITLE": "Akademisk utdanning",
+    "SCIENCE": "Jeg har alltig like matematikken, generelt naturvitenskap og å bruke datamaskinen, derfor jeg valgte å gå på den vitenskapelige videregående skolen, hvor fikk diplomet med hensiktet om å begynne på universitetsutdanning innen IT.",
+    "ARTS": "Jeg elskes imidlertid også kunsten, først og fremst tegning, og dette isteden førte meg til å begynne på kunstnerisk utdannelse ved Kunstakademiet i Milano. Imidlertid jeg innså at jeg har ikke følte passer inn i det verden, derfor jeg valgte å lære et yrke som jeg likte og, samstundes, som ga meg økonomisk selvstendighet."
+  },
+  "PROFESSIONAL_EDUCATION": {
+    "TITLE": "Yrkesutdanning",
+    "DEVELOPER": "Jeg gikk på en intensiv utviklingskurs om Java som et firma har laget for å ansette nyer ansatter, og jeg kan få tilgang til dette utviklingskurset bare ved å bestå en kvalifiseringstest med godt resultat, for jeg har ikke dokumenterte IT-ferdigheter. Etter at jeg ble ferdig med kurset i november 2019, ble jeg vurdert, og da ble jeg ansatt som Junior Developer ved firmaet Dale Consulting.",
+    "BARTENDER": "Før jeg begynte å jobbe som utvikler, fikk jeg et fagbrev som bartender og jobbet i puber, klubber og som frilanser på private arrangementer."
+  },
+  "ATTITUDE": {
+    "TITLE": "Instilling",
+    "MULTIPOTENTIALITY": "Jeg er en person som ikke har en spesifikk pasjon: jeg elsker mange aktiviteter og forskjellige ting, og hver av dem er tilfredsstillende på sin måte. Denne bevisstheten har ført meg til å gi mer tid og energi for å innse hvilke retninger jeg skal følge for å forbedre meg selv i alle faser av livet mitt.",
+    "CURIOSITY": "Mitt kuriositett fører meg til å stille meg manger spørsmål og å finne og fordype meg i mange emner, både i jobben og i privatlivet.",
+    "SOCIALITY": "Jeg elsker menneskelig interakjon: jeg er glad for å interagere med mennesker, først og fermst hvis disse avslutter positivt. Jeg elsker å reise fordi det nærer mitt kuriositett og lar meg å kunne nyer kulturer. Jeg forplikter meg til å bruke styrke av menneskelige interaksjoner for å fremme teambasert arbeid.",
+    "MORE_INFO": "For mer informasjon om mitt personlige ferdigheter, <a href=\"/skills/soft-skills\">gå på dedicaerte seksjon</a>."
+  }
+}

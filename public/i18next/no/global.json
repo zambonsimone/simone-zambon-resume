@@ -1,0 +1,60 @@
+{
+    "LANGUAGE_SELECTOR": {
+        "CURRENT_LANG": "Aktuell språk",
+        "CHOOSE_LANGUAGE": "Velg en språk"
+    },
+    "EXPAND": "Utvid",
+    "COLLAPSE": "Skjul",
+    "CLOSE_MENU": "Skjul navigasjonsmenyen",
+    "NAVBAR": {
+        "HOMEPAGE": "Velkommen",
+        "BIO": "Bio",
+        "SKILLS": "Ferdigheter",
+        "IT_SKILLS": "IT ferdigheter",
+        "SOFT_SKILLS": "Personlige ferdigheter",
+        "OTHER_SOFTWARE_SKILLS": "Andre programvare ferdigheter",
+        "EXPERIENCES": "Erfaringer",
+        "MAIN_EXPERIENCES": "Hovederfaringer",
+        "SIDE_EXPERIENCES": "Sekundære erfaringer",
+        "HOBBIES": "Hobbier",
+        "CONTACTS": "Kontakter",
+        "FILES": "Filer",
+        "SEARCH": "Søk"
+    },
+    "SEARCHBAR": {
+        "PLACEHOLDER": "Skriv inn en søketerm",
+        "SEARCH_BTN": "Søk"
+    },
+    "ACCORDION": {
+        "SHOW": "Vis",
+        "HIDE": "Skjul",
+        "CONTENT": "Innhold"
+    },
+    "INTRO_CODE": "introduksjonkoden",
+    "LEVEL_LEGEND": {
+        "TITLE": "nivåenes tegnforklaringen",
+        "LEVELS": {
+            "0": "Ingen form for kunnskap",
+            "1": "Nesten ingen kunnskap",
+            "2": "Svak kunnskap",
+            "3": "Teoretiske begreper",
+            "4": "Tilstrekkelige praktiske eller teoretiske kunnskaper",
+            "5": "Tilstrekkelige praktiske og teoretiske kunnskaper",
+            "6": "Mellomnivå teoretiske og praktiske kunnskaper",
+            "7": "Kjennskap",
+            "8": "Viktig kunnskap og kjennskap",
+            "9": "Veldig god kunnskap og selvtillit",
+            "10": "Utmerket kunnskap og selvtillit"
+        }
+    },
+    "LEVEL_INDICATOR": "Nivå",
+    "DETAILS": "detaljene",
+    "AT": "hos",
+    "FROM": "fra",
+    "TO": "til",
+    "CAPTCHA": {
+        "TITLE": "Skriv inn koden som vises",
+        "VERIFY": "Verifiser"
+    },
+    "DOWNLOAD_FILE": "Laste ned {{title}} filen"
+}

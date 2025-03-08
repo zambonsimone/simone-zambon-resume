@@ -1,32 +1,36 @@
 @import "./common.scss";
 
 $font: (
-    html: (
-        font_color: $niceBlack,
+    html: (font_color: $dark,
     ),
-    section_title: (
-        fontsize: 4rem,
-        fontsize_tablet: 3.5rem,
-        fontsize_mobile: 2.5rem,
+    route_title: (fontsize: 3rem,
+        fontsize_tablet: 2.8rem),
+    route_subtitle: (fontsize: 1.2rem,
+        fontsize_tablet: 1rem,
+        line_height: 1.75rem,
     ),
-    subsection_title: (
-        fontsize: 2.5rem,
-        fontsize_tablet: 2.3rem,
-        fontsize_mobile: 2rem,
+    section_title: (fontsize: 2rem,
+        fontsize_tablet: 1.8rem,
+        line_height_tablet: 2.4rem,
     ),
-    paragraph: (
-        fontsize: 1.6rem,
+    subsection_title: (fontsize: 1.8rem,
         fontsize_tablet: 1.5rem,
-        fontsize_mobile: 1.4rem,
-        line_height: 2.4rem,
+        line_height_tablet: 2.2rem,
     ),
-    action: (
-        fontsize: 1.2rem,
-        letter_spacing: 0.2rem, 
+    paragraph: (fontsize: 1rem,
+        fontsize_tablet: 0.9rem,
+        line_height: 1.5rem,
+    ),
+    button: (fontsize: 0.8rem,
+        letter_spacing: 0.1rem,
         fontweight: 500,
     ),
-    icon: (
-        fontsize: 2.4rem,
-        fontsize_small: 1.8rem,
-    )
-)
+    navlink: (fontsize: 0.8rem,
+        letter_spacing: 0.1rem,
+        fontsize_tablet: 0.75rem,
+        fontweight: 500,
+    ),
+    icon: (fontsize: 1.5rem,
+        fontsize_small: 1.1rem,
+    ),
+    intro_code: (fontsize: 0.8rem))

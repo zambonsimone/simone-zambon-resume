@@ -1,40 +1,16 @@
-$darkGrey: #4D4D4D;
-$orange: #F4B400;
-$darkOrange: #FF7000;
-$lightOrange: #FFD8A2;
+$accent: #d44819;
+$primary: #FFCF4D;
+$dark: #26303D;
+$light: #F1F1F1;
 
+$transparentAccent: rgb(255, 89, 29, 0.3);
+$transparentDark: rgb(38, 48, 61, 0.5);
 
-//nice colors
-$niceOrange: #FF561D;
-$niceYellow: #FFA518;
-$niceBlack: #26303D;
-$niceWhite: #F1F1F1;
-
-$lightYellow: hsl(37,100%,79%);
-
-$transparentWhite: rgb(241, 241, 241, 0.3);
-$transparentYellow: rgb(255, 165, 24, 0.3);
-$transparentOrange: rgb(255, 89, 29, 0.3);
-$transparentBlack: rgb(38, 48, 61, 0.5);
+$success: #38D400;
+$error: red;
 
 
 $breakpoints: (
     tablet: 1024px,
     mobile: 480px
 );
-
-@mixin device($device) {
-    @if map-has-key($breakpoints, $device) {
-        $breakpoint: map-get($breakpoints, $device);
-        @media screen and (max-width: $breakpoint) {
-          @content;
-        }
-      }
-}
-
-@mixin animation($property) {
-    -webkit-transition: $property .2s ease;
-    -moz-transition: $property .2s ease;
-    -o-transition: $property .2s ease;
-    transition: $property .2s ease;
-}

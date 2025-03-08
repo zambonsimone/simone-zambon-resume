@@ -1,0 +1,25 @@
+{
+  "TITLE": "Personal introduction",
+  "SUBTITLE": "A multipotentiality person who discovered a great passion for coding and software developing. Focused on Front-End with basic Back-End proficiency, my daily personal task is to develop testable, maintenable and usable code. The love for human and proactive interactions is my key for a great teamwork",
+  "INTRO": {
+    "TITLE": "Introduction",
+    "DESCRIPTION": "Hello! I am Simone Zambon, I am Italian and I have always lived near the city of Varese. I am 30 years old and I have been working as a frontend developer for more than 5 years, but I also have some knowledge of backend development and some understanding of UX/UI."
+  },
+  "EDUCATION": {
+    "TITLE": "School education",
+    "SCIENCE": "I have always loved maths, science in general and I have always loved to fiddle around with my PC, therefore I chose to attend the Scientific High School, where I obtained the diploma with the intent of starting the university in the IT field.",
+    "ARTS": "But I also really arts, most of all drawing, and this led me to pursue artistic education at the Academy of Fine Arts, instead. Unfortunately I realized that I did not belong in that world, so I chose to start a training for a job that I liked and that could make me economically independent."
+  },
+  "PROFESSIONAL_EDUCATION": {
+    "TITLE": "Professional education",
+    "DEVELOPER": "I have attended an intensive class in Java development with the prospect of a permanent hiring, which I could access to only by passing an aptitudinal test successfully because I did not have proved IT proficiencies. Once I have completed the class in November 2019, I have been evaluated and then hired as Junior Developer by Dale Consulting company.",
+    "BARTENDER": "Before I started to work as a developer, I obtained a qualification certificate for Bartender profession and then I worked in pubs, clubs and as a freelancer in private events."
+  },
+  "ATTITUDE": {
+    "TITLE": "Attitude",
+    "MULTIPOTENTIALITY": "I don't have a single passion in particular: I love many activities and different things and each of them is satisfying in its own way. That awareness led me to use time and energy to understand which direction should i take to improve myself in each phase of my life. ",
+    "CURIOSITY": "My curiosity led me to ask myself many questions and therefore led me to find out and to deepen many matters learning fast, both in the professional life and in the private life.",
+    "SOCIALITY": "I love human interactions: I am very glad to interact with other people, most of all when it ends positively. I love to travel because it satisfies and feeds my curiosity and it lets me know other cultures through the interaction. I have witnessed the power of human interactions and I am committet to apply it to the teamwork.",
+    "MORE_INFO": "For more informations about my personal skills, You can <a href=\"/skills/soft-skills\">go to the dedicated section</a>."
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "TITLE": "IT Skills",
+  "SUBTITLE": "Although my education as a developer has been based on <code>Java</code> and <code>SQL</code>, I have a multi-year experience in frontend development, mainly coding with <code>TypeScript</code> and <code>React</code>",
+  "JS_HTML_CSS": {
+    "TITLE": "Javascript ES13 - SCSS/CSS3 - HTML5",
+    "INTRO": "<code>Javascript</code>, <code>CSS</code> and <code>HTML</code> are my daily bread and it has been the case in each project I worked on as a frontend developer.",
+    "JS": "Even if there is much more to learn and to discover, I could use pretty the totality of the primary <code>Javascript</code> functionalities and I could gain a deep knowledge on how it operates and why. I have often worked with REST calls to APIs and with asyncronous programming, I manipulate events, <code>DOM</code>, many types of objects and data and I know the difference between \"value\" and \"reference\". I'm familiar with data scoping, I know what <code>Lexical Environment</code>s are and how they are linked to <code>Closure</code>s. I can understand and utilise <code>this</code> reference correctly.",
+    "HTML": "With <code>HTML</code> I created <code>DOM</code> with a clear and a semantically correct DOM tree and I utilised many attributes and features of native HTML elements.",
+    "CSS": "With <code>CSS</code> I defined complex styles and rules with animations, media queries, variables, pseudo elements and the most recent layouts. I can use <code>SCSS</code> syntax correctly, with nestings, <code>mixin</code>s and calculations and I can set up a <code>CSS loader</code> to treat <code>SCSS</code> modules as <code>Javascript</code> objects."
+  },
+  "REACT_REDUX": {
+    "TITLE": "React - Redux",
+    "DESCRIPTION": "I love <code>React</code> from the beginning and this is one of the reasons why I chose it to develop this website. I have a deep knowledge of <code>React</code> features and principles: I can create both class component and functional component, complex but with high-performance, using native and custom <code>hook</code>s to separate the logic which is not related to rendering: I can manage big data structures built with <code>Context</code> or <code>redux-store</code> and asyncronous actions; I'm familiar with the handling of effects, events and re-rendering / re-mount and I can optimise the performance by utilising <code>lazy loading</code> and <code>memoization</code>."
+  },
+  "TYPESCRIPT": {
+    "TITLE": "Typescript",
+    "DESCRIPTION": "For I coded especially using <code>Typescript</code> I can leverage many standard and custom types and I can utilise them to achieve a strict typing and <code>typeguard</code>."
+  },
+  "JEST_CYPRESS": {
+    "TITLE": "Jest - Cypress",
+    "DESCRIPTION": "I worked in large-scale applications so I wrote many unit and integration tests. I can test components, <code>hook</code>s and utilities using <code>Jest</code> along with testing libraries provided by <code>React</code>, simulating and handling user events and changes in state properly. I can set up necessary and sufficient conditions to build up a test environment using mocks and <code>spyOn</code>. With <code>Cypress</code> I can test whole flows by using <code>fixture</code>s and <code>interceptor</code>s. I can utilise effectively nearly all the current default command of <code>Cypress</code> and I can define new custom ones."
+  },
+  "MOBILE": {
+    "TITLE": "ReactNative - Android Studio",
+    "DESCRIPTION": "I had the chance to fix bugs and make improvements to mobile applications using <code>ReactNative</code> and <code>Android Studio</code>. In addition to the knowledge of the principles of <code>ReactNative</code> acquired through my experience with <code>React</code>, I can utilise native components and APIs, set up real or virtual devices with <code>Android Studio</code> and use debugging tools. I have also some understanding of <code>Swift</code> e <code>Kotlin</code> as well as of layout development using the <code>Android Studio</code> IDE."
+  },
+  "DEV_OPS": {
+    "TITLE": "GIT - GitLab - DevOps",
+    "DESCRIPTION": "I can version a repository using <code>GIT</code> through GUI or terminal. I'm familiar with the semantic meaning of the main branches, I can use all the main <code>GIT</code> commands to modify the <code>GIT</code> history, commits and branches correctly as well as label commits using tags. I can create and initialize <code>submodule</code>s and change the commit reference on the project that use the <code>submodule</code>. I'm confident with automated process for building, deploying and testing and I know how to configure <code>GitLab</code> platform."
+  },
+  "NODE": {
+    "TITLE": "NodeJS",
+    "DESCRIPTION": "I'm familiar with <code>NodeJS</code> as it has been a very important tool for every project I worked on: from the installation and management of libraries as dependencies to the definition of scripts and configuration files for linters and bundlers. I can set up a <code>Webpack</code> development server and create a backend server using <code>Express</code>, I can manage environment variables and write on <code>file system</code>."
+  },
+  "DATABASE": {
+    "TITLE": "PL/SQL - T/SQL",
+    "DESCRIPTION": "I can write queries for the most common CRUD operations on relational databases using conditions, variables, groupings and sortings. I know the fundamental principles of relational databases and how to link the records of different tables through <code>foreign keys</code> and unions."
+  },
+  "JAVA": {
+    "TITLE": "Java",
+    "DESCRIPTION": "I have never worked on a project as a backend developer but during my professional education in <code>Java</code> I studied and applied the main <code>Java EE</code> functionalities. I know <code>Maven</code>, <code>Spring</code> with <code>Spring Boot</code> to create applications with a simplified configurations. I know the <code>MVC</code> design pattern and how to separate different responsability layers of code, I utilised <code>Hibernate</code> to abstract the relation with databases through the <code>DAO</code> pattern. I learned how to manage built packages, to install them on a server such as <code>Tomcat</code> and to write tests with <code>JUnit</code>."
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "TITLE": "Mitt curriculum vitaet",
+  "SUBTITLE": "Jeg antar at lagingen av et nettsted er den beste måten for å demonstrere mitt nivå i frontend-utvikling. Nettstedet inneholder all informasjonen som er gitt i min CV, i tillegg til mer detaljer. Du kan se kildekoden <a href=\"https://github.com/zambonsimone/simone-zambon-resume\" aria-label=\"Her: lenke til GitHub\" target=\"_blank\">her</a>.",
+  "INSTRUCTIONS": {
+    "TITLE": "Bruksanvisninger",
+    "LIST_ITEMS": {
+      "NAVBAR": "ed å bruke den vertikal navigasjonbaren som ligger på venstre side, kan du gå til forskjellige nettsidene av min nettstedet",
+      "PROFILE_PICTURE": "Ved å klikke på profilbildet mitt øverst, vil du bli omdirigert til siden <a href=\"/bio\">Bio</a> med min personlige presentasjon",
+      "SEARCHBAR": "Ved å bruke søkebaren øverst kan du enkelt finne informasjon",
+      "CONTACT_FORM": "Ved å fylle ut kontaktskjemaet på siden <a href=\"/contacts\">Kontakt</a> og sende inn dataene, vil jeg motta en e-post med meldingen din. Ellers kan du bruke de andre kontaktmetodene"
+    }
+  },
+  "IMPLEMENTATION": {
+    "TITLE": "Implementering",
+    "FRONTEND": "Jeg har laget dette nettstedet med vanlige metoder og funksjonaliteter for en webapp som er utviklet med <code>React</code> og <code>Typescript</code>. Jeg har differensiert variabler, skripter og konfigurasjoner for hvert miljø i dedikerte moduler. Deployen av nettstedet gjøres på en kjent hostingplattform som kjører en dedikert build for produksjonsmiljøet, ved å bruke direkte mitt repository på <code>GitHub</code>.",
+    "BACKEND": "For backend-funksjonaliteter dette nettstedet bruker to forskjellige innstillinger avhengig av miljøet. Det distribuerte nettstedet bruker serverless-funksjoner levert av hostingplattformen, mens lokalt det kaller API-er som eksponeres av en enkel server mitt kjørt ved <code>Node</code>.",
+    "PURPOSE": "Mitt formål er først og fremst å demonstrere mine ferdigheter. En del funksjonalitetene som å sende e-poster gjennom skjema, laste ned filer og lage server er selvfølgelig unødvendige, men jeg vil demonstrere mine kunnskaper og mine utviklingsferdigheter inkludert backend."
+  },
+  "UX_UI": {
+    "TITLE": "UX/UI",
+    "DESCRIPTION": "Jeg har valgt designet og fargepaletten for dette nettstedet ved å følge prinsippene i UX/UI. Jeg har lagt vekt på tilgjengelighet ved a gjøre nettstedet lett navigerbart med tastaturet, med tekster som er klart lesbar inkludert gjennom skjermleser og tilstrekkelig fargekontrast. Jeg har lagt spesiell vekt på optimalisere utforelsene for å levere en smidig UX."
+  },
+  "CODE_ORGANIZATION": {
+    "TITLE": "Organisering av koden",
+    "DESCRIPTION": "Jeg har laget og innordnet mappene som utgjør prosjektet for dette nettstedet ved å følge de konvensjonene som vanligvis brukes i små webapp. For å fremheve erfaringen mitt som jeg har opparbeidet totalt gjennom store prosjekter, jeg har valgt å innordne koden ved å lage hvert modul med en klar betydning og en spesifikt formål samt ved å sentralisere alle data for å gjøre koden lett vedlikeholdbar."
+  },
+  "DEVELOPING_LANGUAGE": {
+    "TITLE": "Utviklingspråk",
+    "DESCRIPTION": "Jeg har valgt <code>Typescript</code> som utviklingsspråk og <code>ReactJS</code> som hovedutviklingsbibliotek for soliditet og letthet i utviklingen. I tillegg, de er utviklingsspråket og utviklingsbiblioteket som jeg har brukt og fordypet meg i."
+  },
+  "DEVELOPING_STRATEGY": {
+    "TITLE": "Utviklingsstrategi",
+    "DESCRIPTION": "Jeg har brukt mange funkjoner i <code>Typescript</code> for å oppnå en solid typekontroll av koden. Jag her fulgt prinsippene i <code>React</code> og har brukt verktøyene som levert av utviklingsbiblioteket som hook-ene og navigasjonskomponenter ved a følge bruksformal. Jeg har implemetert <code>Eslint</code> for en strikt kontroll av syntaks og har brukt <code>Webpack</code> for å reise en utviklingsserver og gi lagelig konfigurasjoner for feilsøking. I tillegg, jeg har valgt å ikke installere utviklingsbiblioteker for helpers og utilities bortsett fra de som virkelig er fordelaktige."
+  }
+}

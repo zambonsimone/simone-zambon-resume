@@ -1,0 +1,12 @@
+{
+  "TITLE": "Other software skills",
+  "SUBTITLE": "I'm also familiar with softwares which are not directly related to my developer role, but that have been proved to be useful in my professional career",
+  "GRAPHIC": {
+    "TITLE": "InkScape - GIMP",
+    "DESCRIPTION": "I have always had a strong passion for drawing and painting, made with different techniques (charcoal pencil, crayons, acrylics, watercolors), but then it extended to the field of graphic manipulation and the vector drawing. I know how to modify images using Adobe Photoshop and GIMP most of all. I can draw logos and designs for friends and small businesses with vector drawing using <code>InkScape</code>, but also perform simple tasks regarding icons and fonts in the projects I have worked on."
+  },
+  "EXCEL": {
+    "TITLE": "Microsoft Excel",
+    "DESCRIPTION": "In the last years I had the possibility to utilise <code>MS Excel</code> pretty frequently. I can create spreadsheets with tables, rules and formulas that I used to collect data for my parent's family business and as a help to generate queries to perform some <a href=\"/experiences/main-experiences\">operations on databases</a>."
+  }
+}
