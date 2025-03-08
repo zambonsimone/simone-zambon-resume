@@ -16,17 +16,14 @@ export const IT_SKILLS_LABELS: IRouteContentOrganization = {
       {
         PARAGRAPHS: [
           `As a consultant I worked in various roles and projects, that gave me the possibility
-          to deal with many technologies and sides of an application. 
-          The main job experience as a developer is front-end developing for a big private hospitals holding 
+          to use many technologies and deal with different layers of an application. 
+          The main job experience as a developer is front-end developing for a private hospitals holding 
           located in Milan, Italy.`,
 
           `Since July 2021 my job is focused on developing new features, fixing bug and writing tests for the 
           main applications of the holding which gives the customers various services related to the clinics,
           like reservation of exams and management of their own medical documents/reports.
-          As one of the most expert team member I was also involved in new members onboarding and training.
-          Noteworthy that I appreciate immensely the proactiveness of team members and leaders, that
-          gave me yet another prove of the power of a good communication that reflects on good collaboration
-          and mood in general. Because of this I usually fit very easily in a team.`
+          As one of the most expert team member I was also involved in new members onboarding and training.`
         ]
       },
       {
@@ -36,7 +33,7 @@ export const IT_SKILLS_LABELS: IRouteContentOrganization = {
         },
         PARAGRAPHS: [
           `Javascript, CSS and HTML are my daily bread and it has been that for every front-end project i worked on,
-          but even if there is a lot more for me to know and learn, I could utilize nearly all Javascript features and 
+          but even if there is a lot more for me to know and learn, I could utilize nearly all Javascript coding features and I could
           reach a deep knowledge of how it works and why.`,
 
           `Working on web applications I often modified REST calls logics and I implemented new ones. Because nearly
