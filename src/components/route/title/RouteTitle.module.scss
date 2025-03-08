@@ -1,10 +1,17 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
 @import "../../../font.scss";
+@import "../../../mixins.scss";
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_normal: map-get($distance_metrics, "normal");
-$distance_large: map-get($distance_metrics, "large");
+$title_font: map-get($font, "route_title");
+$title_fontsize: map-get($title_font, "fontsize");
+$title_fontsize_tablet: map-get($title_font, "fontsize_tablet");
+$title_line_height: map-get($title_font, "line_height");
+
+$subtitle_font: map-get($font, "route_subtitle");
+$subtitle_fontsize: map-get($subtitle_font, "fontsize");
+$subtitle_fontsize_tablet: map-get($subtitle_font, "fontsize_tablet");
+$subtitle_line_height: map-get($subtitle_font, "line_height");
 
 $paragraph_font: map-get($font, "paragraph");
 $paragraph_line_height: map-get($paragraph_font, "line_height");
@@ -12,37 +19,27 @@ $paragraph_line_height: map-get($paragraph_font, "line_height");
 .routeTitle {
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: $distance_large;
+    margin-bottom: 2rem;
 
     .title {
-        font-size: 6rem;
+        font-size: $title_fontsize;
         margin-top: 0;
-        margin-bottom: $distance_normal;
+        margin-bottom: 1.5rem;
+        hyphens: auto;
     }
+
     .subtitle {
-        font-size: 2rem;
-        line-height: $paragraph_line_height;
-        margin-top: $distance_large;
+        font-size: $subtitle_fontsize;
+        line-height: $subtitle_line_height;
     }
 
     @include device("tablet") {
         .title {
-            font-size: 5rem;
+            font-size: $title_fontsize_tablet;
         }
-        .subtitle {
-            font-size: 1.9rem;
-        }
-    }
 
-    @include device("mobile") {
-        .title {
-            font-size: 4rem;
-        }
         .subtitle {
-            font-size: 1.8rem;
+            font-size: $subtitle_fontsize_tablet;
         }
     }
 }
-
-
-
