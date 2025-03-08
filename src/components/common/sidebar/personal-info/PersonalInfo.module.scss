@@ -1,65 +1,52 @@
 @import "../../../../common.scss";
 @import "../../../../metrics.scss";
+@import "../../../../mixins.scss";
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
-$distance_normal: map-get($distance_metrics, "normal");
-$distance_xx_large: map-get($distance_metrics, "xx_large");
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
 
 .personalInfo {
     display: flex;
-    padding: $distance_normal 0;
-    height: $distance_xx_large;
+    padding: 0 3rem 0 4.3rem;
+    align-items: center;
+    width: 22.5rem;
+    color: $dark;
+    text-decoration: none;
+    min-height: $header_height;
 
-    > .info {
+    &:focus-visible {
+        outline-offset: -0.2rem;
+    }
+
+    >.info {
         display: flex;
         flex-direction: column;
-        gap: $distance_small;
+        gap: 0.6rem;
         justify-content: center;
-        margin-left: $distance_normal;
-    
+        margin-left: 1rem;
+
         :first-child {
             font-weight: 500;
-            letter-spacing: 0.1rem;
-            font-size: 1.4rem;
-        }
-        :last-child {
-            text-transform: uppercase;
-            letter-spacing: 0.2rem;
             font-size: 1rem;
         }
+
+        :last-child {
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            font-size: 0.65rem;
+        }
     }
-    
+
     .picture {
-        height: 7rem;
-        width: 7rem;
+        height: 3.1rem;
+        width: 3.1rem;
         border-radius: 100%;
         background-color: white;
+        border: 0.1rem solid $accent;
     }
 
     @include device("tablet") {
-        height: 7.4rem;
-
-        .picture {
-            width: 5rem;
-            height: 5rem;
-        }
-    }
-
-    @include device("mobile") {
-        height: 6rem;
-        .picture {
-            width: 3.6rem;
-            height: 3.6rem;
-        }
-
-        > .info {
-            > :first-child {
-                font-size: 1.2rem;
-            }
-            > :last-child {
-                font-size: 0.9rem;
-            }
-        }
+        padding: 0 0 0 1rem;
+        min-width: 15rem;
     }
 }
