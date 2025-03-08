@@ -7,8 +7,8 @@
     "target": "es2018",
     "allowJs": true,
     "jsx": "react-jsx",
-    "sourceMap": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types"],
   },
   "files": ["src/index.tsx"],
   "include": ["src", "declaration.d.ts"]
