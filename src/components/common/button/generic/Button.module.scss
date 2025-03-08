@@ -2,51 +2,50 @@
 @import "../../../../font.scss";
 @import "../../../../metrics.scss";
 
-$action_font: map-get($font, "action");
-$action_fontsize: map-get($action_font, "fontsize");
-$action_fontweight: map-get($action_font, "fontweight");
-$action_letter_spacing: map-get($action_font, "letter_spacing");
+
+$button_font: map-get($font, "button");
+$button_fontsize: map-get($button_font, "fontsize");
+$button_letter_spacing: map-get($button_font, "letter_spacing");
+$button_fontweight: map-get($button_font, "fontweight");
 
 $input_metrics: map-get($metrics, "input");
 $input_height: map-get($input_metrics, "height");
-$distance_metrics: map-get($metrics, "distance");
-$distance_normal: map-get($distance_metrics, "normal");
 
 .button {
     border: 0.1rem solid transparent;
     height: $input_height;
-    min-width: 10rem;
+    min-width: 6.2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 0.2rem;
-    background-color: $niceOrange;
+    border-radius: 0.12rem;
+    background-color: $accent;
     cursor: pointer;
-    padding: 0 $distance_normal;
+    padding: 0 1rem;
 
     &:hover {
-        border-color: $niceWhite;
+        border-color: $light;
 
-        > span {
-            color: $niceWhite;
+        >span {
+            color: $light;
         }
     }
 
     &:disabled {
         pointer-events: none;
-        background-color: $transparentOrange;
+        background-color: $transparentAccent;
 
         &:hover {
             border-color: transparent;
         }
     }
-    
-    > span {
-        font-weight: $action_fontweight;
-        font-size: $action_fontsize;
-        letter-spacing: $action_letter_spacing;
+
+    >span {
+        font-weight: $button_fontweight;
+        font-size: $button_fontsize;
+        letter-spacing: $button_letter_spacing;
         text-transform: uppercase;
         font-family: "Roboto", sans-serif;
-        color: $niceWhite;
+        color: $light;
     }
 }
