@@ -3,6 +3,6 @@ export function isValidFileType(
 ) {
     if (files == null || !files.length) return true;
     const fileExtension = files[0].name.slice(files[0].name.lastIndexOf(".")+1, files[0].name.length);
-    const validExtensionRegex = /png|jpeg|pdf|jpg|zip/;
+    const validExtensionRegex = /png|jpeg|pdf|jpg/;
     return validExtensionRegex.test(fileExtension);
 }

@@ -1,42 +1,80 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
+@import "../../../font.scss";
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
-$distance_large: map-get($distance_metrics, "large");
+$icon_font: map-get($font, "icon");
+$icon_fontsize: map-get($icon_font, "fontsize");
+
+$paddings: map-get($metrics, "paddings");
+$padding_x_small: map-get($paddings, "x_small");
 
 .form {
-    display: flex;
-
     .formFieldset {
-        min-width: 0;
         width: 100%;
         border: none;
+        padding: 0 $padding_x_small;
 
         .fieldContainer {
-            margin-bottom: $distance_large;
+            margin-bottom: 1.2rem;
             width: 100%;
+
             &:last-child {
                 margin-bottom: 0;
             }
-        
-            .fieldError {
-                display: inline-block;
-                font-size: 1.2rem;
-                color: red;
-                margin-top: $distance_small;
-            }
-        
+
             .field {
-                margin-top: $distance_small;
+                margin-top: 0.6rem;
             }
-        
+
             .fieldLabel {
-                margin-left: $distance_small;
-                font-size: 1.2rem;
+                display: flex;
+                margin-left: 0.6rem;
+                font-size: 0.8rem;
                 text-transform: uppercase;
-                letter-spacing: 0.2rem;
+                letter-spacing: 0.1rem;
+            }
+
+            .error:not(.checkboxWrapper)>.field {
+                border-bottom: 0.2rem solid red;
             }
         }
+
+        .checkboxWrapper {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+            align-items: flex-start;
+
+            .field {
+                margin-top: 0;
+            }
+
+            .fieldLabel {
+                text-transform: unset;
+                letter-spacing: unset;
+                word-break: break-word;
+                margin-top: 0.6rem;
+                font-size: 0.9rem;
+            }
+        }
+    }
+
+    .submitLoading {
+        height: 100%;
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+
+.fieldError {
+    display: inline-flex;
+    font-size: 0.9rem;
+    color: $error;
+    margin-top: 0.6rem;
+    align-items: center;
+    gap: 0.6rem;
+
+    .errorIcon {
+        font-size: $icon_fontsize;
     }
 }

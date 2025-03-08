@@ -1,0 +1,74 @@
+@import "../../../../../common.scss";
+@import "../../../../../mixins.scss";
+
+.captcha {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 0.01rem solid $transparentDark;
+    @include shadow();
+    margin-bottom: 1rem;
+    max-width: 25rem;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        gap: 1rem;
+        font-weight: bold;
+
+        .reloadIcon {
+            font-size: 1.5rem;
+            color: white;
+            background-color: $accent;
+            height: 1.5rem;
+            cursor: pointer;
+        }
+    }
+
+    .challengeContainer {
+        padding: 0.5rem 0;
+        display: flex;
+        gap: 1rem;
+
+        >input {
+            font-size: 1.7rem;
+            padding-left: 0.5rem;
+            flex-grow: 1;
+            min-width: 0;
+            border: 0.1rem solid $primary;
+            letter-spacing: 0.2rem;
+        }
+
+        >div {
+            border: 0.1rem solid $dark;
+        }
+    }
+
+    .sendSolution {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+
+        .resultIcon {
+            font-size: 1.8rem;
+            height: 1.8rem;
+
+            &.valid {
+                color: $success;
+            }
+
+            &.notValid {
+                color: $error;
+            }
+        }
+    }
+
+    &.validated {
+
+        .header,
+        .challengeContainer,
+        .sendSolution> :first-child {
+            display: none;
+        }
+    }
+}

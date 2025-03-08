@@ -1,6 +1,7 @@
+import { TFunction } from "i18next";
+import { useTranslation } from "react-i18next";
 import { IRouteContentOrganization } from "../../../../types";
 import { Accordion } from "../../../common/accordion/Accordion";
-import { MatchResolution } from "../../../common/match-resolution/MatchResolution";
 import { DETAILS_ACCORDION_HEADER_TEXT, DETAILS_WHERE_DATE, DETAILS_WHERE_PLACE } from "./labels";
 import { LevelIndicator } from "./level-indicator/LevelIndicator";
 import style from "./TextContent.module.scss";
@@ -13,81 +14,57 @@ function hasDetails(details: IRouteContentOrganization["SECTIONS"][number]["DETA
 
 interface IDetailsProps {
     details: IRouteContentOrganization["SECTIONS"][number]["DETAILS"] | undefined;
+    tFunction: TFunction
 }
 export const Details: React.FC<IDetailsProps> = ({
-    details
+    details,
+    tFunction: extTFunction
 }) => {
+    const { t, i18n } = useTranslation("global");
     return hasDetails(details) && (
         <Accordion
             className={style.details}
-            header={DETAILS_ACCORDION_HEADER_TEXT}
+            header={t(DETAILS_ACCORDION_HEADER_TEXT)}
             content={(
-                <>
-                    { details?.WHERE?.map((where, index) => (
-                        <div className={style.where} key={index}>
-                            <span className={style.wherePlace}>{DETAILS_WHERE_PLACE} <b>{where.PLACE}</b></span>
-                            <MatchResolution 
-                                desktop={(
-                                    <span className={style.whereDate}>
-                                        {where.DATES.join(" - ")}
-                                    </span>
-                                )}
-                                tablet={(
-                                    <div className={style.whereDate}>
-                                        <div><span>{DETAILS_WHERE_DATE.FROM} </span>{where.DATES[0]}</div>
-                                        <div><span>{DETAILS_WHERE_DATE.TO} </span>{where.DATES[1]}</div>
-                                    </div>
-                                )}
-                            />
-                        </div> 
-                    ))}
-                    <LevelIndicator 
-                        level={details?.LEVEL} 
+                <div role="rowgroup">
+                    {details?.WHERE?.map((where, index) => {
+                        const at = t(DETAILS_WHERE_PLACE);
+                        const place = where.PLACE;
+                        const from = t(DETAILS_WHERE_DATE.FROM);
+                        const to = t(DETAILS_WHERE_DATE.TO);
+                        const dateFrom = new Date(where.DATES[0]).toLocaleDateString(i18n.resolvedLanguage);
+                        const dateTo = new Date(where.DATES[1]).toLocaleDateString(i18n.resolvedLanguage)
+                        return (
+                            <div
+                                role="row"
+                                className={style.where}
+                                key={index}
+                                tabIndex={0}
+                                aria-label={`
+                                    ${at} ${place}, ${from} ${dateFrom} ${to} ${dateTo}
+                                `}
+                            >
+                                <span className={style.wherePlace}>{at} <b>{place}</b></span>
+                                <div className={style.whereDate}>
+                                    <div><span>{from} </span>{dateFrom}</div>
+                                    <div><span>{to} </span>{dateTo}</div>
+                                </div>
+                            </div>
+                        )
+                    })}
+                    <LevelIndicator
+                        level={details?.LEVEL}
                         levelName={details.LEVEL_NAME}
                         className={style.levelIndicator}
+
                     />
-                    { details?.TEXT && (
+                    {details?.TEXT && (
                         <span className={style.sectionDetails}>
-                            {details?.TEXT}
+                            {extTFunction(details?.TEXT)}
                         </span>
                     )}
-                </>
+                </div>
             )}
         />
     )
 }
-
-/*
-return hasDetails(details) && (
-        <div className={style.details}>
-            { details?.WHERE?.map((where, index) => (
-                <div className={style.where} key={index}>
-                    <span className={style.wherePlace}>{DETAILS_WHERE_PLACE} <b>{where.PLACE}</b></span>
-                    <MatchResolution 
-                        desktop={(
-                            <span className={style.whereDate}>
-                                {where.DATES.join(" - ")}
-                            </span>
-                        )}
-                        tablet={(
-                            <div className={style.whereDate}>
-                                <div><span>{DETAILS_WHERE_DATE.FROM} </span>{where.DATES[0]}</div>
-                                <div><span>{DETAILS_WHERE_DATE.TO} </span>{where.DATES[1]}</div>
-                            </div>
-                        )}
-                    />
-                </div> 
-            ))}
-            <LevelIndicator 
-                level={details?.LEVEL} 
-                levelName={details.LEVEL_NAME}
-                className={style.levelIndicator}
-            />
-            { details?.TEXT && (
-                <span className={style.sectionDetails}>
-                    {details?.TEXT}
-                </span>
-            )}
-        </div>
-    )
-*/

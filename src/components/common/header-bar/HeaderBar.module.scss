@@ -1,83 +1,107 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
 @import "../../../font.scss";
+@import "../../../mixins.scss";
 
-$icon_font: map-get($font, "icon");
-$icon_fontsize: map-get($icon_font, "fontsize");
-
-$distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
-$distance_normal: map-get($distance_metrics, "normal");
-$distance_large: map-get($distance_metrics, "large");
-$distance_x_large: map-get($distance_metrics, "x_large");
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
 
 .headerbar {
-    display: flex;
-    flex-direction: column;
-    gap: $distance_normal;
-    justify-content: space-between;
     width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    height: $header_full_height_desktop;
+    background-color: $light;
 
-    .searchbarContainer {
-        padding-right: $distance_x_large;
-        height: 5rem;
-        background-color: $niceYellow;
+    @include device("tablet") {
+        height: $header_full_height_tablet;
+    }
+
+    @include device("mobile") {
+        height: $header_full_height_mobile;
+    }
+
+
+    .headerbarContent {
+        padding-right: 2rem;
+        background-color: $primary;
         display: flex;
         align-items: center;
-        box-shadow: 0 0 1.5rem -1rem $niceBlack;
+        box-shadow: 0 0 1.5rem -1rem $dark;
+        max-height: $header_height;
 
-        > .headerSearchbar {
-            width: 45rem;
-            margin-left: auto;
-    
+        >.headerSearchbar {
+            width: 29rem;
+
             @include device("tablet") {
-                width: 35rem;
+                width: 40vw;
+            }
+        }
+
+        @include device ("mobile") {
+            justify-content: flex-start;
+            cursor: pointer;
+
+            > :first-child {
+                margin-right: auto;
+            }
+
+            .headerLanguageFlag {
+                margin-right: 1rem;
+                border: 0.1rem solid $light;
+                border-radius: 100%;
+                width: 1.7rem;
+                height: 1.7rem;
             }
         }
     }
 
-    .enhancedHeaderbar {
-        display: flex;
-        justify-content: flex-start;
-        padding: 0 $distance_normal;
-        background-color: $niceYellow;
-        cursor: pointer;
-
-        &:focus-visible {
-            outline-offset: -1rem;
-        }
-
-        > :first-child {
-            margin-right: auto;
-        }
-    }
-
     .icon {
-        font-size: $icon_fontsize;
-        width: $icon_fontsize;
-        height: $icon_fontsize;
-        margin: auto $distance_small;
-
-        &.closeHeaderbarDialogBtn {
-            margin: 0 0 0 auto;
-            position: relative;
-            left: $distance_normal;
-        }
+        font-size: 2rem;
+        width: 2rem;
+        height: 2rem;
+        margin: auto 1rem;
     }
 
     .headerbarDialog {
-        position: absolute;
+        position: fixed;
         min-height: 100%;
         min-width: 100%;
         border: none;
-        padding: $distance_large;
-        background-color: $niceWhite;
+        padding: 1rem;
+        background-color: $light;
+
+        .closeHeaderbarDialogBtnWrapper {
+            width: 100%;
+            height: 4.6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            padding-left: 1.2rem;
+            background-color: $light;
+            z-index: 3;
+            border-bottom: 0.1rem solid $transparentDark;
+
+            >.headerLanguageSelector {
+                display: flex;
+                padding-left: 0;
+                gap: 1rem;
+            }
+        }
 
         .headerbarDialogContent {
-            margin-top: $distance_large;
+            margin-top: 4.8rem;
 
             .dialogSearchbar {
-                gap: $distance_normal;
+                gap: 1rem;
             }
         }
     }

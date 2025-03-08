@@ -1,37 +1,41 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
 @import "../../../font.scss";
-
-$distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
-$distance_normal: map-get($distance_metrics, "normal");
-$distance_large: map-get($distance_metrics, "large");
+@import "../../../mixins.scss";
 
 $icon_font: map-get($font, "icon");
 $icon_fontsize: map-get($icon_font, "fontsize");
 
+$paddings: map-get($metrics, "paddings");
+$padding_small: map-get($paddings, "small");
+$padding_x_small: map-get($paddings, "x_small");
+
+$subsection_title_font: map-get($font, "subsection_title");
+$subsection_title_fontsize: map-get($subsection_title_font, "fontsize");
+$subsection_title_fontsize_tablet: map-get($subsection_title_font, "fontsize_tablet");
+
 .fileDownload {
     display: block;
     text-decoration: none;
-    color: $niceBlack;
-    border: 0.3rem solid transparent;
-    padding: 0 $distance_normal;
+    color: $dark;
+    border: 0.1rem solid transparent;
+    padding: 0 $padding_small;
 
     &:not(:last-child) {
-        margin-bottom: $distance_small;
+        margin-bottom: 0.6rem;
 
         .file {
-            border-bottom: 0.1rem solid $transparentBlack;
+            border-bottom: 0.1rem solid $transparentDark;
         }
     }
 
     &:hover {
-        border-color: $niceOrange;
+        border-color: $accent;
     }
 
-    > h3 {
-        font-size: 1.6rem;
-        margin: $distance_small 0;
+    >h3 {
+        font-size: $subsection_title_fontsize;
+        margin: $padding_x_small 0;
         text-transform: uppercase;
     }
 
@@ -39,11 +43,12 @@ $icon_fontsize: map-get($icon_font, "fontsize");
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding-bottom: $distance_normal;
-        gap: $distance_large;
+        padding-bottom: $padding_small;
+        gap: 2rem;
 
-        .fileInfo {    
+        .fileInfo {
             font-size: 1.4rem;
+            font-weight: 400;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -56,37 +61,43 @@ $icon_fontsize: map-get($icon_font, "fontsize");
                 letter-spacing: 0.15rem;
             }
 
-            > p {
+            >p {
                 margin: 0;
             }
         }
-    
+
         .filePreview {
-            width: 10rem;
-            height: 10rem;
-    
-            > img {
+            width: 6rem;
+            height: 6rem;
+
+            >img {
                 max-width: 100%;
                 max-height: 100%;
-                object-fit: contain;
+                display: flex;
+                justify-self: center;
             }
         }
 
-        > .downloadBtn {
+        >.downloadBtn {
             font-size: $icon_fontsize;
-            min-width: 3.5rem;
-            max-width: 3.5rem;
-            min-height: 3.5rem;
-            max-height: 3.5rem;
+            width: 2rem;
+            height: 2rem;
             border-radius: 100%;
-            background-color: $niceOrange;
-            color: $niceWhite;
-            border: 0.3rem solid $niceWhite;
+            background-color: $accent;
+            color: $light;
+            border: 0.3rem solid $light;
+        }
+    }
+
+    @include device("tablet") {
+        >h3 {
+            font-size: $subsection_title_fontsize_tablet;
         }
     }
 
     @include device("mobile") {
-        padding: 0 $distance_small;
+        padding: 0 $padding_x_small;
+
         .filePreview {
             display: none;
         }

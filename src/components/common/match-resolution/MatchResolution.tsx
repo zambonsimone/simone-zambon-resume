@@ -1,6 +1,4 @@
-import React from "react";
 import { useResolution } from "../../../hooks/useResolution";
-
 
 interface IMatchResolutionProps {
     desktop?: JSX.Element;

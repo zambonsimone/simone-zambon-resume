@@ -1,43 +1,46 @@
 export const CONTACT_ME_FORM = {
     FULLNAME: {
-        PLACEHOLDER: "Enter your full name / company name",
-        LABEL: "Full name / Company name",
+        PLACEHOLDER: "FORM_FIELD.NAME.PLACEHOLDER",
+        LABEL: "FORM_FIELD.NAME.LABEL",
     },
     EMAIL: {
-        PLACEHOLDER: "Enter your email address",
-        LABEL: "Email address",
+        PLACEHOLDER: "FORM_FIELD.EMAIL.PLACEHOLDER",
+        LABEL: "FORM_FIELD.EMAIL.LABEL",
     },
     EMAIL_COPY: {
-        PLACEHOLDER: "Enter your email address",
-        LABEL: "Send email copy to"
+        PLACEHOLDER: "FORM_FIELD.COPY.PLACEHOLDER",
+        LABEL: "FORM_FIELD.COPY.LABEL"
     },
     PHONE_PREFIX: {
-        PLACEHOLDER: "99-9999",
-        LABEL: "Country",
+        PLACEHOLDER: "FORM_FIELD.PREFIX.PLACEHOLDER",
+        LABEL: "FORM_FIELD.PREFIX.LABEL",
     },
     PHONE_NUMBER: {
-        PLACEHOLDER: "Enter your telephone number",
-        LABEL: "Telephone number",
+        PLACEHOLDER: "FORM_FIELD.PHONE.PLACEHOLDER",
+        LABEL: "FORM_FIELD.PHONE.LABEL",
     },
     ATTACHMENT: {
-        PLACEHOLDER: "Attach a file",
-        LABEL: "Attachment",
+        PLACEHOLDER: "FORM_FIELD.ATTACHMENT.PLACEHOLDER",
+        LABEL: "FORM_FIELD.ATTACHMENT.LABEL",
     },
     MESSAGE: {
-        PLACEHOLDER: "Scrivi qui il tuo messaggio",
-        LABEL: "Messaggio",
+        PLACEHOLDER: "FORM_FIELD.MESSAGE.PLACEHOLDER",
+        LABEL: "FORM_FIELD.MESSAGE.LABEL",
     },
     SUBMIT: {
-        LABEL: "Invia",
+        LABEL: "FORM_FIELD.SEND",
+    },
+    PRIVACY: {
+        LABEL: "FORM_FIELD.PRIVACY.LABEL"
     },
     ERRORS: {
-        REQUIRED_ERROR_MSG: "Dato obbligatorio",
-        FILE_TYPE_ERROR_MSG: "Il formato dell'allegato non è valido",
-        EMAIL_FORMAT_ERROR_MSG: "Inserisci un indirizzo email valido",
-        PHONE_NUMBER_TOO_LONG: "Il numero di telefono deve contenere massimo 10 cifre",
-        PHONE_NUMBER_TOO_SHORT: "Il numero di telefono deve contenere minimo 6 cifre",
-        PHONE_NUMBER_FORMAT_ERROR_MSG: "Inserisci un numero di telefono valido",
-        PHONE_PREFIX_FORMAT_ERROR: "Inserisci un prefisso valido",
-        MESSAGE_TOO_LONG: "Il messaggio è troppo lungo",
+        REQUIRED_ERROR_MSG: "FORM_ERRORS.REQUIRED",
+        FILE_TYPE_ERROR_MSG: "FORM_ERRORS.FILE_TYPE",
+        EMAIL_FORMAT_ERROR_MSG: "FORM_ERRORS.EMAIL_FORMAT",
+        PHONE_NUMBER_TOO_LONG: "FORM_ERRORS.PHONE_NUMBER_TOO_LONG",
+        PHONE_NUMBER_TOO_SHORT: "FORM_ERRORS.PHONE_NUMBER_TOO_SHORT",
+        PHONE_NUMBER_FORMAT_ERROR_MSG: "FORM_ERRORS.PHONE_NUMBER_FORMAT",
+        PHONE_PREFIX_FORMAT_ERROR: "FORM_ERRORS.PHONE_PREFIX_FORMAT",
+        MESSAGE_TOO_LONG: "FORM_ERRORS.MESSAGE_TOO_LONG",
     }
 }

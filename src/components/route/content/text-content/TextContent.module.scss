@@ -1,45 +1,49 @@
 @import "../../../../common.scss";
 @import "../../../../font.scss";
 @import "../../../../metrics.scss";
+@import "../../../../mixins.scss";
 
 $section_title_font: map-get($font, "section_title");
 $section_title_fontsize: map-get($section_title_font, "fontsize");
 $section_title_fontsize_tablet: map-get($section_title_font, "fontsize_tablet");
-$section_title_fontsize_mobile: map-get($section_title_font, "fontsize_mobile");
+
 $subsection_title_font: map-get($font, "subsection_title");
 $subsection_title_fontsize: map-get($subsection_title_font, "fontsize");
 $subsection_title_fontsize_tablet: map-get($subsection_title_font, "fontsize_tablet");
-$subsection_title_fontsize_mobile: map-get($subsection_title_font, "fontsize_mobile");
+$subsection_title_line_height_tablet: map-get($subsection_title_font, "line_height_tablet");
+
 $paragraph_font: map-get($font, "paragraph");
 $paragraph_fontsize: map-get($paragraph_font, "fontsize");
 $paragraph_fontsize_tablet: map-get($paragraph_font, "fontsize_tablet");
-$paragraph_fontsize_mobile: map-get($paragraph_font, "fontsize_mobile");
 $paragraph_line_height: map-get($paragraph_font, "line_height");
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
-$distance_normal: map-get($distance_metrics, "normal");
+$paddings: map-get($metrics, "paddings");
+$padding_small: map-get($paddings, "small");
+$padding_x_small: map-get($paddings, "x_small");
+
 
 h2.sectionTitle {
     font-size: $section_title_fontsize;
-    margin-bottom: $distance_small;
+    margin-bottom: $padding_x_small;
 }
 
-h3.sectionTitle {
+h3.subsectionTitle {
     font-size: $subsection_title_fontsize;
-    margin-bottom: $distance_small;
+    margin-bottom: $padding_x_small;
 }
 
 .sectionParagraph {
     font-size: $paragraph_fontsize;
     line-height: $paragraph_line_height;
-    margin: $distance_normal 0;
+    margin: $padding_small 0;
 }
 
 .details {
-    color: $niceBlack;
+    color: $dark;
     background-color: white;
-    border-bottom: 0.2rem solid $niceYellow;
+    border-bottom: 0.2rem solid $accent;
+    font-size: 0.9rem;
+    margin: $padding_x_small 0;
 
     .where {
         display: grid;
@@ -47,94 +51,88 @@ h3.sectionTitle {
         align-items: center;
         letter-spacing: 0.1rem;
         font-size: 0.9em;
-        
+
         &:not(:last-child) {
-            border-bottom: 0.1rem solid $transparentBlack;
+            border-bottom: 0.1rem solid $transparentDark;
         }
 
-        > * {
-            padding: $distance_small 0;
+        >* {
+            padding: $padding_x_small 0;
         }
 
         .wherePlace {
             grid-column: 1;
             letter-spacing: 0.1rem;
         }
+
         .whereDate {
             font-weight: bold;
-    
-            > div {
-                text-align: right;
+            justify-self: right;
 
-                > span {
+            @include device("desktop") {
+                display: flex;
+                gap: 1.2rem;
+            }
+
+            >div {
+                text-align: left;
+                min-width: 6.5rem;
+
+                >span {
                     font-size: 0.8em;
                     font-weight: 400;
                 }
             }
-            
+
         }
     }
-    
+
     .sectionDetails {
         display: inline-block;
         font-weight: 500;
         letter-spacing: 0.2rem;
         font-style: italic;
-        color: $transparentBlack;
-        padding: $distance_small 0;
+        color: $transparentDark;
+        padding: $padding_x_small 0;
     }
 }
 
-.sectionContainer {
-    .header {
-        margin: 4rem 0 3rem 0; 
-    }
-    .details {
-        margin: $distance_small 0;
-        font-size: 1.4rem;
-
-        @include device("mobile") {
-            font-size: 1.2rem;
-        }
-    }
+.header {
+    margin: 2rem 0 1.5rem 0;
 }
 
-.subSectionContainer {
-    .header {
-        margin: 3rem 0 2.3rem 0; 
-    }
-    .details {
-        margin: $distance_small 0;
-        font-size: 1.2rem;
-    }
+.subSectionContainer .details {
+    font-size: 0.8rem;
 }
+
 
 @include device("tablet") {
     .sectionContainer .header {
-        margin: 3rem 0 2.3rem 0;
+        margin: 1.5rem 0 1.2rem 0;
     }
+
     h2.sectionTitle {
         font-size: $section_title_fontsize_tablet;
     }
-    h3.sectionTitle {
+
+    h3.subsectionTitle {
         font-size: $subsection_title_fontsize_tablet;
+        line-height: $subsection_title_line_height_tablet;
     }
+
     .sectionParagraph {
         font-size: $paragraph_fontsize_tablet;
     }
 }
+
 @include device("mobile") {
-    .sectionContainer .header {
-        margin: 2rem 0 1.5rem 0;
-    }
-    h2.sectionTitle {
-        font-size: $section_title_fontsize_mobile;
-    }
-    h3.sectionTitle {
-        font-size: $subsection_title_fontsize_mobile;
-    }
-    .sectionParagraph {
-        font-size: $paragraph_fontsize_mobile
+    .sectionContainer {
+        .header {
+            margin: 2rem 0 1.5rem 0;
+        }
+
+        .details {
+            font-size: 0.8rem;
+        }
     }
 }
-

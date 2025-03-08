@@ -1,1 +1,1 @@
-export const LEVEL_INDICATOR_LABEL = "Livello";
+export const LEVEL_INDICATOR_LABEL = "LEVEL_INDICATOR";

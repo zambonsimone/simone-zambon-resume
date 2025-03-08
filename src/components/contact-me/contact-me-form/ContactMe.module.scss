@@ -2,44 +2,44 @@
 @import "../../../metrics.scss";
 @import "../../../mixins.scss";
 
-$distance_metrics: map-get($metrics, "distance");
-$full_padding_normal: map-get($distance_metrics, "full_normal");
-$full_padding_large: map-get($distance_metrics, "full_large");
-$distance_x_large: map-get($distance_metrics, "x_large");
-$distance_large: map-get($distance_metrics, "large");
+$paddings: map-get($metrics, "paddings");
+$padding_small: map-get($paddings, "small");
+$padding_normal: map-get($paddings, "normal");
 
 .contactMeForm {
-    padding: $full_padding_large;
+    padding: $padding_normal;
     background-color: white;
     border-radius: 0.5rem;
     @include shadow();
-    margin: $distance_x_large auto 0 auto;
+    margin: 2rem auto 0 auto;
 
     @include device("mobile") {
-        padding: $full_padding_normal;
+        padding: $padding_small;
+
         .phoneDataRow {
             flex-direction: column;
             justify-content: center;
-            margin-bottom: $distance_large;
+            margin-bottom: 1rem;
 
-            > .fieldContainer:first-child {
+            >.fieldContainer:first-child {
                 max-width: 100%;
             }
         }
     }
-    
+
     .phoneDataRow {
         display: flex;
         justify-content: space-between;
-    
+
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
             -webkit-appearance: none;
             margin: 0;
         }
-    
-        > .fieldContainer  {
+
+        >.fieldContainer {
             flex-grow: 1;
+
             &:first-child {
                 max-width: 14rem;
 
@@ -47,27 +47,45 @@ $distance_large: map-get($distance_metrics, "large");
                     width: 10rem;
                 }
             }
-
-            .plus {
-                font-size: 1.4rem;
-            }
         }
     }
 
     .messageFieldContainer {
         .charsCounter {
-            margin-left: $distance_large;
-            
+            margin-left: 2.4rem;
+
             &.error {
                 color: red;
                 font-weight: 500;
-            }   
+            }
         }
+
         textarea {
             width: 100%;
-            height: 30rem;
+            height: 15rem;
             overflow: hidden;
         }
     }
-}
 
+    .privacyLabel {
+        display: inline-block;
+    }
+
+    .submitRow {
+        display: flex;
+        gap: 2.4rem;
+
+        .confirmMessage {
+            font-size: 2rem;
+            font-weight: bold;
+
+            &.error {
+                color: $error;
+            }
+
+            &.success {
+                color: $success;
+            }
+        }
+    }
+}

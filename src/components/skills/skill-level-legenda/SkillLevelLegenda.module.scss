@@ -1,40 +1,67 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
+@import "../../../font.scss";
+@import "../../../mixins.scss";
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_small: map-get($distance_metrics, "small");
-$distance_normal: map-get($distance_metrics, "normal");
-$full_padding: map-get($distance_metrics, "full_normal");
+$button_font: map-get($font, "button");
+$button_fontsize: map-get($button_font, "fontsize");
+$button_fontweight: map-get($button_font, "fontweight");
+
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+
+$metrics_sidebar: map-get($metrics, "sidebar");
+$sidebar_width: map-get($metrics_sidebar, "width");
+$sidebar_width_tablet: map-get($metrics_sidebar, "width_tablet");
+
+$paddings: map-get($metrics, "paddings");
+$padding_small: map-get($paddings, "small");
+
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
 
 .levelLegendaContainer {
     height: fit-content;
-    background-color: $niceYellow;
-    box-shadow: 0 0 1.5rem -1rem $niceBlack;
-    margin-top: $distance_normal;
+    background-color: $accent;
+    box-shadow: 0 0 1.5rem -1rem $dark;
+    color: $light;
+    position: sticky;
+    top: $header_full_height_desktop;
+
+    @include device("tablet") {
+        top: $header_full_height_tablet;
+    }
+
+    @include device("mobile") {
+        top: $header_full_height_mobile;
+    }
 
     .levelLegendaContent {
-        background-color: $niceWhite;
+        background-color: $light;
         width: 100%;
-        border-bottom: 0.2rem solid $niceYellow;
+        border-bottom: 0.2rem solid $accent;
+        padding-left: 1rem;
+        color: $dark;
 
-        > div > ul {
-            padding: 0;
-            > li {
+        >div>dl {
+            >div {
                 list-style-type: none;
-                margin: $distance_small 0;
+                margin: 0.6rem 0;
                 display: grid;
-                grid-template-columns: 3rem 1fr;
-                gap: $distance_normal;
+                grid-template-columns: 2rem 1fr;
+                gap: 1rem;
 
-                > .level {
+                >.level {
                     display: inline-block;
-                    height: 2.4rem;
-                    width: 100%;
-                    font-size: 1.3rem;
-                    font-weight: 500;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                    font-size: $button_fontsize;
+                    font-weight: $button_fontweight;
                     text-align: center;
-                    border-radius: 0.2rem;
-                    margin-right: $distance_normal;
+                    border-radius: 100%;
                 }
             }
         }

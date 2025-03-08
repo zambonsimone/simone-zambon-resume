@@ -1,41 +1,99 @@
 @import "../../../common.scss";
 @import "../../../metrics.scss";
+@import "../../../font.scss";
+@import "../../../mixins.scss";
 
-$distance_metrics: map-get($metrics, "distance");
-$distance_normal: map-get($distance_metrics, "normal");
+$navlink_font: map-get($font, "navlink");
+$navlink_fontsize: map-get($navlink_font, "fontsize");
+$navlink_fontsize_tablet: map-get($navlink_font, "fontsize_tablet");
+$navlink_fontweight: map-get($navlink_font, "fontweight");
+$navlink_letterspacing: map-get($navlink_font, "letter_spacing");
+
+$paddings: map-get($metrics, "paddings");
+$padding_large: map-get($paddings, "large");
+$padding_normal: map-get($paddings, "normal");
+
+$header_metrics: map-get($metrics, "header");
+$header_height: map-get($header_metrics, "height");
+$header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
+$header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
+$header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
+
+$sidebar_metrics: map-get($metrics, "sidebar");
+$sidebar_width: map-get($sidebar_metrics, "width");
+$sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
 
 .sidebar {
-    padding: 0 $distance_normal;
-    box-shadow: 0 0 3rem -1rem $niceBlack;
-    background-color: $niceYellow;
-    z-index: 2;
-    min-width: 28rem;
-    min-height: 100%;
+    background-color: $light;
+    border-right: 0.1rem solid $transparentDark;
+    width: $sidebar_width;
+    height: calc(100% - $header_full_height_desktop - $padding_large);
     cursor: pointer;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    top: $header_full_height_desktop;
 
     @include device("tablet") {
-        position: absolute;
+        top: $header_full_height_tablet;
+        height: calc(100% - $header_full_height_tablet - $padding_normal);
     }
 
     &.collapsed {
-        min-width: 7.5rem;
-        max-width: 7.5rem;
+        width: $sidebar_width_tablet;
     }
 }
 
-.sidebarCollapseBtn {
-    font-size: 2.8rem;
-    width: 2.8rem;
-    height: 2.8rem;
-    margin: $distance_normal $distance_normal 0 auto;
+.sidebarCollapseBtnWrapper {
+    display: flex;
+    font-size: $navlink_fontsize_tablet;
+    ;
+    text-transform: uppercase;
+    letter-spacing: $navlink_letterspacing;
+    font-weight: $navlink_fontweight;
+    margin-top: 2rem;
+    align-items: center;
+
+    .sidebarCollapseBtn {
+        font-size: 1.5rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 1rem;
+    }
 }
+
 
 .sidebarDialog {
     margin: 0 auto 0 0;
     border: none;
+    width: 18.5rem;
+    padding: 0;
+    min-height: 100%;
+    top: 0;
+
+    &[open] {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 
     &::backdrop {
-        background-color: $niceBlack;
+        background-color: $dark;
         opacity: 0.3;
+    }
+
+    .sidebarCollapseBtnWrapper {
+        margin-top: calc(2rem + $padding_normal);
+        margin-left: 2.45rem;
+    }
+}
+
+.sidebar:not(.sidebarDialog) {
+    display: flex;
+    justify-content: flex-start;
+
+    @include device("tablet") {
+        flex-direction: column;
+        align-items: center;
     }
 }

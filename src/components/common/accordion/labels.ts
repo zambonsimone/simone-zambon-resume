@@ -1,2 +1,2 @@
-export const SHOW_CONTENT = "Show";
-export const HIDE_CONTENT = "Hide";
+export const SHOW_CONTENT = "ACCORDION.SHOW";
+export const HIDE_CONTENT = "ACCORDION.HIDE";

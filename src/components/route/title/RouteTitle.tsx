@@ -1,18 +1,19 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import style from "./RouteTitle.module.scss";
 
-interface ISectionTitleProps {
-    title: string;
+interface IRouteTitleProps {
+    title: string | JSX.Element;
     subtitle: string | JSX.Element
 }
-export const SectionTitle: React.FC<ISectionTitleProps> = ({
+export const RouteTitle: React.FC<IRouteTitleProps> = ({
     title,
     subtitle,
 }) => {
+    const {i18n} = useTranslation();
     return (
         <header className={style.routeTitle}>
-            <h1 className={style.title}>{ title }</h1>
-            <p className={style.subtitle}>{ subtitle }</p>
+            <h1 lang={i18n.resolvedLanguage} className={style.title}>{title}</h1>
+            <p className={style.subtitle}>{subtitle}</p>
         </header>
     )
 }
