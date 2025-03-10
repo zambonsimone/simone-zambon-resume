@@ -23,19 +23,7 @@ $code_fontsize: map-get($code_font, "fontsize");
             padding-left: 1rem;
             overflow-x: auto;
 
-            >*::-webkit-scrollbar {
-                height: 0.3rem;
-            }
-
-            >*::-webkit-scrollbar-thumb {
-                background-color: rgb(255, 255, 255, 0.1);
-                border-radius: 0.1rem;
-
-                &:hover {
-                    background-color: rgb(255, 255, 255, 0.3);
-                    cursor: pointer;
-                }
-            }
+            @include customScrollbar(rgb(255, 255, 255, 0.1), rgb(255, 255, 255, 0.3));
         }
     }
 }

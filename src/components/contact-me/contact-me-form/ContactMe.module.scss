@@ -13,7 +13,7 @@ $padding_normal: map-get($paddings, "normal");
     @include shadow();
     margin: 2rem auto 0 auto;
 
-    @include device("mobile") {
+    @include device("tablet") {
         padding: $padding_small;
 
         .phoneDataRow {
@@ -68,7 +68,7 @@ $padding_normal: map-get($paddings, "normal");
     }
 
     .privacyLabel {
-        display: inline-block;
+        display: inline;
     }
 
     .submitRow {

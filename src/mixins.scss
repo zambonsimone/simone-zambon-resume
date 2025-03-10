@@ -23,12 +23,8 @@
 @mixin removeOutlineOnFocusables() {
     outline: none;
 
-    &:focus {
-        outline: none
-    }
-
     &:focus-visible {
-        outline: 0.2rem solid blue;
+        outline: 0.2rem solid $accessibility;
         outline-offset: 0.2rem;
     }
 }
@@ -39,6 +35,23 @@
     }
 
     scrollbar-width: none;
+}
+
+@mixin customScrollbar($thumbColor, $hoverColor) {
+    >*::-webkit-scrollbar {
+        height: 0.3rem;
+        width: 0.3rem;
+    }
+
+    >*::-webkit-scrollbar-thumb {
+        background-color: $thumbColor;
+        border-radius: 0.1rem;
+
+        &:hover {
+            background-color: $hoverColor;
+            cursor: pointer;
+        }
+    }
 }
 
 @mixin animation($property, $time: .2s) {

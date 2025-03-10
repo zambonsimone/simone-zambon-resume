@@ -125,10 +125,10 @@ export const ContactMeForm: React.FC = () => {
                         />
                         <Field
                             name="privacy"
-                            label={<HtmlSanitizer htmlString={t(PRIVACY.LABEL)} className={style.privacyLabel}/>}
+                            label={<HtmlSanitizer htmlString={t(PRIVACY.LABEL)} className={style.privacyLabel} />}
                             type="checkbox"
                         />
-                        <Captcha onVerify={(value) => setCaptchaVerified(value)}/>
+                        <Captcha onVerify={(value) => setCaptchaVerified(value)} />
                         <div className={style.submitRow}>
                             <SubmitBtn label={t(SUBMIT.LABEL)} loading={isLoadingSendMail} disabled={!captchaVerified} />
                             {confirmMessage && (
