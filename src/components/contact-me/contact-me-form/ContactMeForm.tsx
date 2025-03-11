@@ -10,7 +10,7 @@ import { Plus } from "../../symbols/Symbols";
 import { CharsCounter } from "./CharsCounter";
 import { MESSAGE_MAX_CHARS } from "./constants";
 import style from "./ContactMe.module.scss";
-import { schema } from "./ContactMeFormModel";
+import { INITIAL_VALUES, schema } from "./ContactMeFormModel";
 import { CONTACT_ME_FORM } from "./labels";
 
 const {
@@ -59,6 +59,7 @@ export const ContactMeForm: React.FC = () => {
             className={style.contactMeForm}
             onSubmit={onSubmit}
             title={t("FORM_TITLE")}
+            defaultValues={INITIAL_VALUES}
         >
             {(Field, SubmitBtn) => {
                 return (

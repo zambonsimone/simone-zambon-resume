@@ -1,5 +1,6 @@
 import { InferType, boolean as YupBoolean, mixed as YupMixed, object as YupObject, string as YupString } from "yup";
 import { EMAIL_FORMAT_REGEX, PHONE_PREFIX_REGEX } from "../../../utils/regexes";
+import { FormModel } from "../../common/form/Form";
 import { MESSAGE_MAX_CHARS, PHONE_MAX_DIGITS, PHONE_MIN_DIGITS } from "./constants";
 import { CONTACT_ME_FORM } from "./labels";
 import { isValidFileType } from "./utils";
@@ -41,3 +42,8 @@ export const schema = YupObject({
 
 });
 export type IContactFormModel = InferType<typeof schema>;
+
+export const INITIAL_VALUES: FormModel = {
+    email: "",
+    privacy: false
+}

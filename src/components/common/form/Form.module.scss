@@ -34,8 +34,12 @@ $padding_x_small: map-get($paddings, "x_small");
                 letter-spacing: 0.1rem;
             }
 
-            .error:not(.checkboxWrapper)>.field {
-                border-bottom: 0.2rem solid red;
+            .error >.field {
+                border-bottom: 0.2rem solid $error;
+            }
+            .error.checkboxWrapper > .field {
+                border: 0.2rem solid $error;
+                border-radius: 0.5rem;
             }
         }
 

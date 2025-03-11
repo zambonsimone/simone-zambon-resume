@@ -20,17 +20,20 @@ interface IFormProps {
     onSubmit: SubmitHandler<FormModel>;
     className?: string;
     title?: string;
+    defaultValues: FormModel;
 }
 export const Form: React.FC<IFormProps> = ({
     children,
     validationSchema,
     className,
     onSubmit,
-    title
+    title,
+    defaultValues
 }) => {
     const methods = useForm<FormModel>({
         resolver: yupResolver(validationSchema),
         mode: "onSubmit",
+        defaultValues
     })
     const formRef = useRef<HTMLFormElement>();
     const { fields } = useMemo(() => validationSchema.describe(), [validationSchema]);
