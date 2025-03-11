@@ -1,15 +1,15 @@
 import { AxiosError } from "axios";
 import { getCaptchaQuestion, sendMail, verifyCaptcha } from "./endpoints";
 import { ErrorCodes } from "./errors";
+import { MESSAGES } from "./messages";
 import { ErrorResponse, FormDataDto, ICaptchaChallenge, ICaptchaUserAnswer, SuccessResponse } from "./models";
 
 export async function testCaptcha(solution: ICaptchaUserAnswer) {
     try {
-        const result = await verifyCaptcha(solution);
-        if (result.isError === true) return new ErrorResponse(result);
+        const response = await verifyCaptcha(solution);
         return new SuccessResponse<boolean>({
-            message: result.message,
-            response: result.response
+            message: response === true ? MESSAGES.CAPTCHA_VALID : MESSAGES.CAPTCHA_NOT_VALID,
+            response: response as boolean
         })
     }
     catch (err) {
@@ -24,12 +24,8 @@ export async function testCaptcha(solution: ICaptchaUserAnswer) {
 
 export async function getCaptchaChallenge() {
     try {
-        const result = await getCaptchaQuestion();
-        if (result.isError === true) return new ErrorResponse(result);
-        return new SuccessResponse<ICaptchaChallenge>({
-            message: result.message,
-            response: result.response
-        })
+        const response = await getCaptchaQuestion();
+        return new SuccessResponse<ICaptchaChallenge>({ response: response as ICaptchaChallenge })
     }
     catch (err) {
         const { code, status: statusCode, message } = err as AxiosError;
@@ -43,9 +39,8 @@ export async function getCaptchaChallenge() {
 
 export async function sendFormDataAsMail(formData: FormDataDto) {
     try {
-        const result = await sendMail(formData);
-        if (result.isError) return new ErrorResponse(result);
-        return new SuccessResponse({ message: result.message })
+        await sendMail(formData);
+        return new SuccessResponse({})
     }
     catch (err) {
         const { code, status: statusCode, message } = err as AxiosError;
