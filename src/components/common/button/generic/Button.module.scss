@@ -40,6 +40,10 @@ $input_height: map-get($input_metrics, "height");
         }
     }
 
+    .btnLoading {
+        font-size: 0.5rem;
+    } 
+
     >span {
         font-weight: $button_fontweight;
         font-size: $button_fontsize;

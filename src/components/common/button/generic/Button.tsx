@@ -1,10 +1,12 @@
 import { useEnterToClick } from "../../../../hooks/useEnterToClick/useEnterToClick";
+import { Loading } from "../../loading/Loading";
 import style from "./Button.module.scss";
 
 interface IButtonBaseProps {
     text: string | JSX.Element;
     disabled?: boolean;
     dataTestId?: string;
+    loading?: boolean;
 }
 type IButtonPropsWithOnClick = IButtonBaseProps & {
     onClick: () => void;
@@ -20,7 +22,8 @@ export const Button: React.FC<IButtonPropsWithOnClick | IButtonPropsWithSubmit> 
     onClick,
     submit,
     disabled,
-    dataTestId
+    dataTestId,
+    loading
 }) => {
     const triggerClick = useEnterToClick({ onClick });
     const id = `button-text-${Math.random().toString(16).slice(2)}`;
@@ -30,13 +33,16 @@ export const Button: React.FC<IButtonPropsWithOnClick | IButtonPropsWithSubmit> 
             onClick={onClick}
             type={submit ? "submit" : "button"}
             className={style.button}
-            disabled={disabled}
+            disabled={disabled || loading}
             aria-disabled={disabled}
             onKeyDown={triggerClick}
             aria-labelledby={id}
             data-testid={dataTestId}
         >
-            <span id={id}>{text}</span>
+            { loading 
+                ? <Loading className={style.btnLoading}/> 
+                : <span id={id}>{text}</span> 
+            }
         </button>
     )
 }

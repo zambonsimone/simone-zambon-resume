@@ -11,7 +11,7 @@ $animationDelay: 150ms;
         width: 1em;
         border-radius: 100%;
         background-color: $accent;
-        margin: 0 1rem;
+        margin: 0 1em;
 
         opacity: 0;
         animation: visibility $animationDelay*6 infinite;

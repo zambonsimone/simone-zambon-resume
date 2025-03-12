@@ -3,7 +3,6 @@ import { useCallback, useEffect, useMemo, useRef } from "react";
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form";
 import { ObjectSchema, SchemaDescription } from "yup";
 import { Button } from "../button/generic/Button";
-import { Loading } from "../loading/Loading";
 import style from "./Form.module.scss";
 import { FormField, IFormFieldProps } from "./FormField";
 
@@ -46,9 +45,10 @@ export const Form: React.FC<IFormProps> = ({
     });
     const SubmitBtn = useCallback<React.FC<ISubmitAsChildProps>>(({ label, disabled = false, loading = false }) => (
         <Button
-            text={loading ? <Loading className={style.submitLoading} /> : label}
+            text={label}
             submit
-            disabled={loading || disabled}
+            loading={loading}
+            disabled={disabled}
             dataTestId={`${title ? title + "-" : ""}submit-btn`}
         />
     ), [title]);
