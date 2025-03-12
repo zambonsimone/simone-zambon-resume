@@ -49,8 +49,9 @@ export const Form: React.FC<IFormProps> = ({
             text={loading ? <Loading className={style.submitLoading} /> : label}
             submit
             disabled={loading || disabled}
+            dataTestId={`${title ? title + "-" : ""}submit-btn`}
         />
-    ), []);
+    ), [title]);
 
     useEffect(() => {
         const errorEntries = Object.entries(methods.formState.errors);

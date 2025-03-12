@@ -4,6 +4,7 @@ import style from "./Button.module.scss";
 interface IButtonBaseProps {
     text: string | JSX.Element;
     disabled?: boolean;
+    dataTestId?: string;
 }
 type IButtonPropsWithOnClick = IButtonBaseProps & {
     onClick: () => void;
@@ -19,6 +20,7 @@ export const Button: React.FC<IButtonPropsWithOnClick | IButtonPropsWithSubmit> 
     onClick,
     submit,
     disabled,
+    dataTestId
 }) => {
     const triggerClick = useEnterToClick({ onClick });
     const id = `button-text-${Math.random().toString(16).slice(2)}`;
@@ -32,6 +34,7 @@ export const Button: React.FC<IButtonPropsWithOnClick | IButtonPropsWithSubmit> 
             aria-disabled={disabled}
             onKeyDown={triggerClick}
             aria-labelledby={id}
+            data-testid={dataTestId}
         >
             <span id={id}>{text}</span>
         </button>
