@@ -28,6 +28,8 @@ export const LanguageSelector: React.FC<ILanguageSelectorProps> = ({
         listRef.current.focus();
     }, [isOpen])
 
+    if (currentLang == null) return null;
+
     return popover ? (
         <Popover
             isOpen={isOpen}
