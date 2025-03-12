@@ -1,6 +1,6 @@
 {
     "TITLE": "Contacts",
-    "SUBTITLE": "You can use one of the contact options shown in the list below or You can fill out the form with Your request and, if necessary, Your contact details to be reached again: on submit I will receive and e-mail with Your message",
+    "SUBTITLE": "You can use one of the contact options shown in the list below or you can fill out the form with your request and, if necessary, your contact details to be reached again: on submit I will receive and e-mail with your message",
     "CONTACT_OPTIONS": {
         "TITLE": "Contact options",
         "PHONE": "Phone",
@@ -12,11 +12,11 @@
     "FORM_FIELD": {
         "NAME": {
             "LABEL": "Name / Company name",
-            "PLACEHOLDER": "Enter Your name / company name"
+            "PLACEHOLDER": "Enter your name / company name"
         },
         "EMAIL": {
             "LABEL": "E-mail address",
-            "PLACEHOLDER": "Enter Your e-mail address"
+            "PLACEHOLDER": "Enter your e-mail address"
         },
         "COPY": {
             "LABEL": "Send a copy of the email to",
@@ -28,7 +28,7 @@
         },
         "PHONE": {
             "LABEL": "Phone number",
-            "PLACEHOLDER": "Enter Your phone number"
+            "PLACEHOLDER": "Enter your phone number"
         },
         "ATTACHMENT": {
             "LABEL": "Attachment",
@@ -36,7 +36,7 @@
         },
         "MESSAGE": {
             "LABEL": "Message",
-            "PLACEHOLDER": "Enter Your message here"
+            "PLACEHOLDER": "Enter your message here"
         },
         "PRIVACY": {
             "LABEL": "I confirm that I have read and agree to the <a download=\"Privacy Policy\" href=\"/privacy-policy/privacy-policy_en.pdf\" target=\"_blank\">Privacy Policy</a>."

@@ -5,8 +5,8 @@
     "TITLE": "Bruksanvisninger",
     "LIST_ITEMS": {
       "NAVBAR": "ed å bruke den vertikal navigasjonbaren som ligger på venstre side, kan du gå til forskjellige nettsidene av min nettstedet",
+      "LANGUAGE": "Du kan se gjeldende språkflagget i hodet. Ved å klikke på det, kan du velge et annet språk",
       "PROFILE_PICTURE": "Ved å klikke på profilbildet mitt øverst, vil du bli omdirigert til siden <a href=\"/bio\">Bio</a> med min personlige presentasjon",
-      "SEARCHBAR": "Ved å bruke søkebaren øverst kan du enkelt finne informasjon",
       "CONTACT_FORM": "Ved å fylle ut kontaktskjemaet på siden <a href=\"/contacts\">Kontakt</a> og sende inn dataene, vil jeg motta en e-post med meldingen din. Ellers kan du bruke de andre kontaktmetodene"
     }
   },
