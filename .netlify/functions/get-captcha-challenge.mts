@@ -1,9 +1,9 @@
 import { getCaptchaChallenge } from "../../server/captcha/get-captcha-challenge.mjs";
 
 export default () => {
-    const response = getCaptchaChallenge();
-    return new Response(JSON.stringify(response), {
-        status: response.statusCode,
+    const result = getCaptchaChallenge();
+    return new Response(JSON.stringify(result.response), {
+        status: result.statusCode,
         headers: {
             'Content-Type': 'application/json',
         },
