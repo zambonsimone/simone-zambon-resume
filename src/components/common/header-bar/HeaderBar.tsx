@@ -34,12 +34,14 @@ export const HeaderBar: React.FC = () => {
                     <>
                         <div className={style.headerbarContent} onClick={showModal} role="presentation">
                             <PersonalInfo />
-                            <img
-                                className={style.headerLanguageFlag}
-                                src={currentLang.icon}
-                                aria-label={`${t("LANGUAGE_SELECTOR.CURRENT_LANG")}: ${currentLang.label}`}
-                                tabIndex={0}
-                            />
+                            { currentLang?.icon && (
+                                <img
+                                    className={style.headerLanguageFlag}
+                                    src={currentLang.icon}
+                                    aria-label={`${t("LANGUAGE_SELECTOR.CURRENT_LANG")}: ${currentLang.label}`}
+                                    tabIndex={0}
+                                />
+                            )}
                             <Icon className={style.icon} icon={"menu"}/>
                         </div>
                         <dialog className={style.headerbarDialog} ref={headerRef}>

@@ -5,25 +5,25 @@ export interface IAttachment {
     name: string;
     content: string | ArrayBuffer;
 }
-export type FormDataDto = { [key: string]: string | IAttachment } 
+export type FormDataDto = { [key: string]: string | IAttachment }
 
 
 abstract class Response {
     statusCode?: HttpStatusCode;
-    message: string;
 
-    constructor({ statusCode, message }: Response) {
+    constructor({ statusCode }: Response) {
         this.statusCode = statusCode;
-        this.message = message;
     }
 }
 
 export class ErrorResponse extends Response {
     code: ErrorCodes;
     isError: true;
+    message: string;
 
-    constructor({ code, statusCode, message }: Pick<ErrorResponse, "code" |  "statusCode" | "message">) {
-        super({ statusCode, message });
+    constructor({ code, statusCode, message }: Pick<ErrorResponse, "code" | "statusCode" | "message">) {
+        super({ statusCode });
+        this.message = message;
         this.code = code;
         this.isError = true;
     }
@@ -32,10 +32,12 @@ export class ErrorResponse extends Response {
 export class SuccessResponse<T = unknown> extends Response {
     response?: T;
     isError: false;
+    message?: string;
 
     constructor({ message, response }: Pick<SuccessResponse<T>, "message" | "response">) {
-        super({ statusCode: HttpStatusCode.Ok, message });
+        super({ statusCode: HttpStatusCode.Ok });
         this.response = response;
+        this.message = message;
         this.isError = false;
     }
 }

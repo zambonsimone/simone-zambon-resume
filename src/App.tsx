@@ -20,32 +20,31 @@ export const App: React.FC = () => {
             <BrowserRouter>
                 <ScrollToTop />
                 <HeaderBar />
-                    {!isMobile && <Sidebar />}
-                    <Suspense fallback={<Loading className={style.appLoading} />}>
-                        <Switch>
-                            <Redirect exact from={"/"} to={PATHS.HOMEPAGE} />
-                            {ROUTES.map((route, index) => {
-                                const Component = route.component;
-                                const Header = route?.header;
-                                return (
-                                    <Route
-                                        path={route.path}
-                                        exact={!route.subRoutes}
-                                        key={index}
-                                        render={(renderProps) => (
-                                            <div className={style.appContent} role="presentation">
-                                                <ContentHeader Header={Header} subRoutes={route.subRoutes}/>
-                                                <DocumentTitle title={t(route.displayedName)} />
-                                                <Component {...renderProps} />              
-                                            </div>
-                                        )}
-                                    />
-                                )
-                            })
-                            }
-                        </Switch>
-                    </Suspense>
-                
+                {!isMobile && <Sidebar />}
+                <Suspense fallback={<Loading className={style.appLoading} />}>
+                    <Switch>
+                        <Redirect exact from={"/"} to={PATHS.HOMEPAGE} />
+                        {ROUTES.map((route, index) => {
+                            const Component = route.component;
+                            const Header = route?.header;
+                            return (
+                                <Route
+                                    path={route.path}
+                                    exact={!route.subRoutes}
+                                    key={index}
+                                    render={(renderProps) => (
+                                        <div className={style.appContent} role="presentation">
+                                            <ContentHeader Header={Header} subRoutes={route.subRoutes}/>
+                                            <DocumentTitle title={t(route.displayedName)} />
+                                            <Component {...renderProps} />              
+                                        </div>
+                                    )}
+                                />
+                            )
+                        })
+                        }
+                    </Switch>
+                </Suspense>         
             </BrowserRouter>
         </>
     )

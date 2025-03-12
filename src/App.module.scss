@@ -140,19 +140,17 @@ html {
     }
 
     .appLoading {
-        height: 100dvh;
+        height: calc(100dvh - $header_height);
         font-size: 1.5rem;
         margin-left: $sidebar_width;
-        margin-top: $header_full_height_desktop;
+        margin-top: $header_height;
 
         @include device("tablet") {
             margin-left: $sidebar_width_tablet;
-            margin-top: $header_full_height_tablet;
         }
 
         @include device("mobile") {
             margin-left: 0;
-            margin-top: $header_full_height_mobile;
         }
     }
 
@@ -169,6 +167,10 @@ html {
         p,
         ul>li {
             font-size: $paragraph_fontsize_tablet;
+        }
+
+        ul {
+            padding-left: 1.5rem;
         }
     }
 }

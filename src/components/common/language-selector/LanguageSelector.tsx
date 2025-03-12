@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Popover } from "react-tiny-popover";
-import { useEnterToClick } from "../../../hooks/useEnterToClick";
+import { useEnterToClick } from "../../../hooks/useEnterToClick/useEnterToClick";
 import { useResolution } from "../../../hooks/useResolution";
 import { LanguageItem, LANGUAGES } from "../../../i18next/i18next.contants";
 import { LanguageList } from "./LanguageList";
@@ -21,12 +21,14 @@ export const LanguageSelector: React.FC<ILanguageSelectorProps> = ({
     const currentLang: LanguageItem = LANGUAGES.find(({ lang }) => lang === i18n.resolvedLanguage);
     const { isDesktop } = useResolution();
     const listRef = useRef<HTMLUListElement>();
-    const triggerClick = useEnterToClick({ onClick: () => setIsOpen(!isOpen)})
+    const triggerClick = useEnterToClick({ onClick: () => setIsOpen(!isOpen) })
 
     useEffect(() => {
         if (!isOpen || !listRef.current) return;
         listRef.current.focus();
     }, [isOpen])
+
+    if (currentLang == null) return null;
 
     return popover ? (
         <Popover

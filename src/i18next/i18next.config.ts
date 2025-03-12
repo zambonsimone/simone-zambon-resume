@@ -3,6 +3,13 @@ import I18NextHttpBackend from "i18next-http-backend";
 import { initReactI18next } from "react-i18next";
 import { NAMESPACES, SUPPORTED_LNGS } from "./i18next.contants";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const isCypress = !!(window as any).Cypress;
+const cypressConfig = isCypress ? {
+  backend: { loadPath: "" },
+  debug: true
+} : {};
+
 export async function initI18next() {
   await i18next
     .use(initReactI18next)
@@ -11,7 +18,6 @@ export async function initI18next() {
       ns: NAMESPACES,
       fallbackLng: "en",
       supportedLngs: SUPPORTED_LNGS,
-      debug: process.env.NODE_ENV === "development",
       backend: {
         loadPath: `${location.origin}/i18next/{{lng}}/{{ns}}.json`,
       },
@@ -20,7 +26,8 @@ export async function initI18next() {
       },
       react: {
         useSuspense: true
-      }
+      },
+      ...cypressConfig
     });
 }
 

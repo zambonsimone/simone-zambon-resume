@@ -13,7 +13,7 @@ $padding_normal: map-get($paddings, "normal");
     @include shadow();
     margin: 2rem auto 0 auto;
 
-    @include device("mobile") {
+    @include device("tablet") {
         padding: $padding_small;
 
         .phoneDataRow {
@@ -68,7 +68,7 @@ $padding_normal: map-get($paddings, "normal");
     }
 
     .privacyLabel {
-        display: inline-block;
+        display: inline;
     }
 
     .submitRow {
@@ -76,7 +76,7 @@ $padding_normal: map-get($paddings, "normal");
         gap: 2.4rem;
 
         .confirmMessage {
-            font-size: 2rem;
+            font-size: 1rem;
             font-weight: bold;
 
             &.error {

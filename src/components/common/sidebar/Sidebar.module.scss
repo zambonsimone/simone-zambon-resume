@@ -34,6 +34,8 @@ $sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
     z-index: 2;
     top: $header_full_height_desktop;
 
+    @include customScrollbar(rgba(0, 0, 0, 0.3), rgb(0, 0, 0, 0.4));
+
     @include device("tablet") {
         top: $header_full_height_tablet;
         height: calc(100% - $header_full_height_tablet - $padding_normal);
@@ -47,7 +49,6 @@ $sidebar_width_tablet: map-get($sidebar_metrics, "width_tablet");
 .sidebarCollapseBtnWrapper {
     display: flex;
     font-size: $navlink_fontsize_tablet;
-    ;
     text-transform: uppercase;
     letter-spacing: $navlink_letterspacing;
     font-weight: $navlink_fontweight;
