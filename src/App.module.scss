@@ -168,5 +168,9 @@ html {
         ul>li {
             font-size: $paragraph_fontsize_tablet;
         }
+
+        ul {
+            padding-left: 1.5rem;
+        }
     }
 }

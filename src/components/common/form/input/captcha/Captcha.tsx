@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useEnterToClick } from "../../../../../hooks/useEnterToClick/useEnterToClick";
 import { useVerifyCaptcha } from "../../../../../hooks/useVerifyRecaptcha/useVerifyCaptcha";
 import { Button } from "../../../button/generic/Button";
 import { HtmlSanitizer } from "../../../html-sanitizer/HtmlSanitizer";
 import { Icon } from "../../../icons/Icon";
-import { Loading } from "../../../loading/Loading";
 import { FieldError } from "../../FormField";
 import style from "./Captcha.module.scss";
 
@@ -22,6 +22,7 @@ export const Captcha: React.FC<ICaptchaProps> = ({ onVerify }) => {
         verifyCaptcha,
         reloadChallenge
     } = useVerifyCaptcha();
+    const triggerClick = useEnterToClick({ onClick: () => verifyCaptcha(answer)});
 
     useEffect(() => {
         if (isValid) onVerify(true);
@@ -49,14 +50,16 @@ export const Captcha: React.FC<ICaptchaProps> = ({ onVerify }) => {
                     name={"captcha"}
                     id={"captcha"}
                     aria-labelledby="captcha-title"
+                    onKeyDown={triggerClick}
                 />
                 <HtmlSanitizer data-testid={"captcha-img"} htmlString={challenge.data} />
             </div>
             <div className={style.sendSolution}>
                 <Button
-                    text={isVerifying ? <Loading className={""} /> : t("CAPTCHA.VERIFY")}
+                    text={t("CAPTCHA.VERIFY")}
                     onClick={() => verifyCaptcha(answer)}
                     dataTestId="captcha-verify-btn"
+                    loading={isVerifying}
                 />
                 {isValid === true && (
                     <>

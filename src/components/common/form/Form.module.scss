@@ -34,10 +34,10 @@ $padding_x_small: map-get($paddings, "x_small");
                 letter-spacing: 0.1rem;
             }
 
-            .error >.field {
+            .fieldWrapper.error >.field {
                 border-bottom: 0.2rem solid $error;
             }
-            .error.checkboxWrapper > .field {
+            .fieldWrapper.error.checkboxWrapper > .field {
                 border: 0.2rem solid $error;
                 border-radius: 0.5rem;
             }
