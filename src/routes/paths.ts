@@ -10,7 +10,6 @@ export const PATHS = {
     SIDE_EXPERIENCES: "/experiences/secondary-experiences",
     HOBBIES: "/hobbies",
     CONTACTS: "/contacts",
-    SEARCH: "/search",
     FILES: "/files",
 } as const;
 

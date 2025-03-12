@@ -49,6 +49,11 @@ $padding_large: map-get($paddings, "large");
         max-width: 100%;
     }
 
+    @include device("mobile") {
+        padding: 2.5rem;
+        margin: 8vh 0 0 0;
+    }
+
     >.navbar {
         display: flex;
         flex-direction: column;
