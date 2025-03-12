@@ -9,6 +9,9 @@ $header_full_height_desktop: map-get($header_metrics, "full_height_desktop");
 $header_full_height_tablet: map-get($header_metrics, "full_height_tablet");
 $header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
 
+$paddings: map-get($metrics, "paddings");
+$padding_normal: map-get($paddings, "normal");
+
 .headerbar {
     width: 100%;
     position: fixed;
@@ -27,24 +30,17 @@ $header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
 
 
     .headerbarContent {
-        padding-right: 2rem;
+        padding-right: $padding_normal;
         background-color: $primary;
         display: flex;
         align-items: center;
         box-shadow: 0 0 1.5rem -1rem $dark;
         max-height: $header_height;
 
-        >.headerSearchbar {
-            width: 29rem;
-
-            @include device("tablet") {
-                width: 40vw;
-            }
-        }
-
         @include device ("mobile") {
             justify-content: flex-start;
             cursor: pointer;
+            padding-right: 0;
 
             > :first-child {
                 margin-right: auto;
@@ -99,10 +95,6 @@ $header_full_height_mobile: map-get($header_metrics, "full_height_mobile");
 
         .headerbarDialogContent {
             margin-top: 4.8rem;
-
-            .dialogSearchbar {
-                gap: 1rem;
-            }
         }
     }
 }

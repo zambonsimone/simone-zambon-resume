@@ -81,7 +81,8 @@ export const ROUTES: IRoute[] = [
         icon: "skills",
         header: lazy(() => import("../components/skills/skill-level-legenda/SkillLevelLegenda"))
     },
-    {   path: PATHS.EXPERIENCES,
+    {
+        path: PATHS.EXPERIENCES,
         component: lazy(() => import("../routes/experiences/experiences.page")),
         displayedName: ROUTES_NAMES.EXPERIENCES,
         name: "EXPERIENCES",
@@ -101,13 +102,6 @@ export const ROUTES: IRoute[] = [
         name: "CONTACTS",
         displayedName: ROUTES_NAMES.CONTACT_ME,
         icon: "phone"
-    },
-    {
-        path: PATHS.SEARCH,
-        component: lazy(() => import("../routes/search/search.page")),
-        name: "SEARCH",
-        displayedName: ROUTES_NAMES.SEARCH,
-        hideNavLink: true,
     },
     {
         path: PATHS.FILES,

@@ -6,10 +6,9 @@ interface ICaptchaUserAnswer {
 }
 export default async (request: Request) => {
     const reqBody: ICaptchaUserAnswer = await request.json();
-    const response = await verifyCaptcha(reqBody);
-    console.log(response);
-    return new Response(JSON.stringify(response), {
-        status: response.statusCode,
+    const result = await verifyCaptcha(reqBody);
+    return new Response(JSON.stringify(result.response), {
+        status: result.statusCode,
         headers: {
             'Content-Type': 'application/json',
         }

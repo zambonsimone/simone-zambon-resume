@@ -4,6 +4,8 @@
 
 $header_metrics: map-get($metrics, "header");
 $header_height: map-get($header_metrics, "height");
+$paddings: map-get($metrics, "paddings");
+$padding_small: map-get($paddings, "small");
 
 .personalInfo {
     display: flex;
@@ -46,7 +48,11 @@ $header_height: map-get($header_metrics, "height");
     }
 
     @include device("tablet") {
-        padding: 0 0 0 1rem;
+        padding: 0 0 0 1.7rem;
         min-width: 15rem;
+    }
+
+    @include device("mobile") {
+        padding: 0 0 0 $padding_small;
     }
 }

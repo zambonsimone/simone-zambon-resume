@@ -6,7 +6,6 @@ import { Icon } from "../icons/Icon";
 import { LanguageSelector } from "../language-selector/LanguageSelector";
 import { MatchResolution } from "../match-resolution/MatchResolution";
 import { NavBar } from "../navigation/nav-bar/NavBar";
-import { Searchbar } from "../navigation/searchbar/Searchbar";
 import { PersonalInfo } from "../sidebar/personal-info/PersonalInfo";
 import style from "./HeaderBar.module.scss";
 
@@ -27,14 +26,13 @@ export const HeaderBar: React.FC = () => {
                     <div className={style.headerbarContent} role="presentation">
                         <PersonalInfo />
                         <LanguageSelector popover />
-                        <Searchbar className={style.headerSearchbar} />               
                     </div>
                 }
                 mobile={
                     <>
                         <div className={style.headerbarContent} onClick={showModal} role="presentation">
                             <PersonalInfo />
-                            { currentLang?.icon && (
+                            {currentLang?.icon && (
                                 <img
                                     className={style.headerLanguageFlag}
                                     src={currentLang.icon}
@@ -42,7 +40,7 @@ export const HeaderBar: React.FC = () => {
                                     tabIndex={0}
                                 />
                             )}
-                            <Icon className={style.icon} icon={"menu"}/>
+                            <Icon className={style.icon} icon={"menu"} />
                         </div>
                         <dialog className={style.headerbarDialog} ref={headerRef}>
                             <div className={style.closeHeaderbarDialogBtnWrapper} role="presentation">
@@ -55,7 +53,6 @@ export const HeaderBar: React.FC = () => {
                                 />
                             </div>
                             <div className={style.headerbarDialogContent}>
-                                <Searchbar onClickSearch={closeModal} className={style.dialogSearchbar} />
                                 <NavBar onLinkClick={closeModal} />
                             </div>
                         </dialog>
