@@ -1,6 +1,6 @@
 {
     "LANGUAGE_SELECTOR": {
-        "CURRENT_LANG": "Aktuell språk",
+        "CURRENT_LANG": "Gjeldende språk",
         "CHOOSE_LANGUAGE": "Velg en språk"
     },
     "EXPAND": "Utvid",
@@ -20,10 +20,6 @@
         "CONTACTS": "Kontakter",
         "FILES": "Filer",
         "SEARCH": "Søk"
-    },
-    "SEARCHBAR": {
-        "PLACEHOLDER": "Skriv inn en søketerm",
-        "SEARCH_BTN": "Søk"
     },
     "ACCORDION": {
         "SHOW": "Vis",

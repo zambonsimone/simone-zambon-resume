@@ -21,10 +21,6 @@
         "FILES": "File",
         "SEARCH": "Cerca"
     },
-    "SEARCHBAR": {
-        "PLACEHOLDER": "Inserisci un testo da ricercare",
-        "SEARCH_BTN": "Cerca"
-    },
     "ACCORDION": {
         "SHOW": "Mostra",
         "HIDE": "Nascondi",

@@ -4,10 +4,10 @@
   "INSTRUCTIONS": {
     "TITLE": "Instructions",
     "LIST_ITEMS": {
-      "NAVBAR": "Through the vertical navigation bar on the left You can navigate to the different sections and sub-sections of this website",
-      "PROFILE_PICTURE": "By cliking on my profile picture You will be redirected to the <a href=\"/bio\">Bio</a> page with my personal introduction",
-      "SEARCHBAR": "Through the search bar in the top You can easily filter the informations",
-      "CONTACT_FORM": "By filling out the contact form in the <a href=\"/contacts\">Contacts</a> page and by sending the data, I will receive an e-mail with containing Your message. Otherwise You can use the other contact options"
+      "NAVBAR": "Through the vertical navigation bar on the left you can navigate to the different sections and sub-sections of this website",
+      "LANGUAGE": "You can see the current language flag in the header above. By clicking on it, you can select a different language",
+      "PROFILE_PICTURE": "By cliking on my profile picture you will be redirected to the <a href=\"/bio\">Bio</a> page with my personal introduction",
+      "CONTACT_FORM": "By filling out the contact form in the <a href=\"/contacts\">Contacts</a> page and by sending the data, I will receive an e-mail with containing your message. Otherwise you can use the other contact options"
     }
   },
   "IMPLEMENTATION": {

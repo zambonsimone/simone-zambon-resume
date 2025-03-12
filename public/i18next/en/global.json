@@ -21,10 +21,6 @@
         "FILES": "Files",
         "SEARCH": "Search"
     },
-    "SEARCHBAR": {
-        "PLACEHOLDER": "Enter a search term",
-        "SEARCH_BTN": "Search"
-    },
     "ACCORDION": {
         "SHOW": "Show",
         "HIDE": "Hide",

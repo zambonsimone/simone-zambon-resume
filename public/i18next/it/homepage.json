@@ -5,8 +5,8 @@
     "TITLE": "Istruzioni",
     "LIST_ITEMS": {
       "NAVBAR": "Attraverso la barra di navigazione verticale sulla sinistra puoi accedere alle varie sezioni e sottosezioni del mio curriculum",
+      "LANGUAGE": "Nell'header è visibile la bandiera della lingua corrente. Al click, si apre un selettore dove potrai cambiare la lingua",
       "PROFILE_PICTURE": "Clickando sulla mia foto profilo in alto verrai redirezionato alla pagina <a href=\"/bio\">Bio</a> con la mia presentazione personale",
-      "SEARCHBAR": "Attraverso la barra di ricerca in alto potrai filtrare comodamente le informazioni",
       "CONTACT_FORM": "Compilando il modulo di contatto alla pagina <a href=\"/contacts\">Contatti</a> e inviando i dati mi arriverà una mail con il tuo messaggio. Altrimenti, puoi utilizzare gli altri tipi di contatto"
     }
   },
