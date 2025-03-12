@@ -13,7 +13,8 @@
     "server": "node server/server.mjs --mode=production",
     "server:dev": "cross-env NODE_ENV=development node server/server.mjs",
     "server:prod": "cross-env NODE_ENV=production node server/server.mjs",
-    "test": "jest"
+    "test": "jest",
+    "cy:open": "cypress open"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +38,7 @@
     "copy-webpack-plugin": "^12.0.2",
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
+    "cypress": "^14.1.0",
     "eslint": "^9.13.0",
     "eslint-plugin-react": "^7.37.1",
     "eslint-plugin-react-hooks": "^5.0.0",
