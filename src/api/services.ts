@@ -40,7 +40,7 @@ export async function getCaptchaChallenge() {
 export async function sendFormDataAsMail(formData: FormDataDto) {
     try {
         await sendMail(formData);
-        return new SuccessResponse({})
+        return new SuccessResponse<void>({ message: MESSAGES.EMAIL_SENT })
     }
     catch (err) {
         const { code, status: statusCode, message } = err as AxiosError;
