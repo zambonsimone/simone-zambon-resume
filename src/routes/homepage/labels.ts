@@ -14,7 +14,6 @@ export const HOMEPAGE_LABELS: IRouteContentOrganization & IInstructions = {
         LIST_ITEMS: [
             "INSTRUCTIONS.LIST_ITEMS.NAVBAR",
             "INSTRUCTIONS.LIST_ITEMS.PROFILE_PICTURE",
-            "INSTRUCTIONS.LIST_ITEMS.SEARCHBAR",
             "INSTRUCTIONS.LIST_ITEMS.CONTACT_FORM"
         ],
     },
