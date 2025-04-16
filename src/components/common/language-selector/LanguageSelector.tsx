@@ -28,6 +28,13 @@ export const LanguageSelector: React.FC<ILanguageSelectorProps> = ({
         listRef.current.focus();
     }, [isOpen])
 
+    useEffect(() => {
+        LANGUAGES.forEach(lng => {
+            const img = new Image();
+            img.src = lng.icon;
+        })
+    }, []);
+
     if (currentLang == null) return null;
 
     return popover ? (

@@ -11,13 +11,13 @@
     "CONCLUSION": "Dette har vært det viktigste prosjektet som har vært tildelt meg, hvor jeg har kunnet gjøre alle hovedaktivitetene en frontendutvikler vanligvis er involvert i, med betydelig selvstendighet og beslutningsmyndighet."
   },
   "SYSKOPLAN": {
-    "TITLE": "Frontendutvikle - Web",
+    "TITLE": "Frontendutvikler - Web",
     "TEXT": "SAPUI5 - XML",
     "INTRO": "Syskoplan er en gren av Reply, et multinasjonalt holdingselskap plassert i Sveits, leder i markedet for IT. Under mitt samarbeid med teamet til Syskoplan, ble vi tildelt aktiviteter med implementering og vedlikehold av en ERP-applikasjon for ‘Saipem S.p.A.’, et italiensk selskap som opererer innen energisektoren og infrastruktur. Den applikasjonen var mer fokusert på funksjonaliteten og på presisjonen av manipuleringen av data enn på aspektene UX/UI. Den var laget med SAPUI5 og bestod av mange små applikasjoner i følge SAP Fiori designprinsippene: hver applikasjon leverte forskjellig funksjonalitet for å håndtere og kontrollere forskjellige aktiviteter knyttet til oljeplattformene til selskapet, som logistikk eller håndtering av menneskelige ressurser, og den var ment for å bli brukt av brukere med spesifikke roller og autorisasjoner",
     "MAIN_TASK": "Min hovedaktivitet var feilretting og implementering av nye applikasjoner på forespørsel fra kunden. Inngrepene var først og fremst knyttet til skjemaer og innsending av data. <code>Javascript</code> var egentlig det eneste utviklingsspråket brukt, i tillegg til en del grunnleggende visning i <code>XML</code> for designet av UI."
   },
   "UNICREDIT": {
-    "TITLE": "Systemadministrator",
+    "TITLE": "Databaseadministrator",
     "TEXT": "PL/SQL - T/SQL",
     "INTRO": "Unicredit er en multinasjonalt bankgruppe og den størst i Italia, hvor det har mer enn 2000 datterselskaper. Jeg har jobbet i samarbeid med en valgt team av utvikler fra Dale Consulting.",
     "MAIN_TASK": "Vi har fått en oppgave å rette feiler og problemer i databaser til produksjonmiljøet, teste ETL-er, lede migrasjonen av alle kunder til UniCredit, gruppert etter nasjon, fra en eldre PFM-applikasjon til en nyere, og håndtere debuten av ny applikasjonen.",

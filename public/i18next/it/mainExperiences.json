@@ -17,7 +17,7 @@
     "MAIN_TASK": "La mia attività principale era risolvere bug e implementare nuove applicazioni su richietsa del cliente. Gli interventi riguardavano principalmente i form e il submit dei dati. <code>Javascript</code> era essenzialmente l'unico linguaggio di programmazione utilizzato, in aggiunta a qualche view elementare in <code>XML</code> per il design delle UI."
   },
   "UNICREDIT": {
-    "TITLE": "System Administrator",
+    "TITLE": "Database Administrator",
     "TEXT": "PL/SQL - T/SQL",
     "INTRO": "UniCredit è un gruppo bancario internazionel nonché il più grande in Italia, dove conta più di 2000 filiali. Ho lavorato in collaborazione con un team scelto di sviluppatori di Dale Consulting.",
     "MAIN_TASK": "Eravamo incaricati di risolvere incidenti e bug sui database dell'ambiente di produzione, testare ETL, guidare il processo di migrazione di tutti gli utenti UniCredit raggruppati per Paese da un vecchio applicativo PFM ad uno più recente, e gestire il processo di lancio del nuovo applicativo.",

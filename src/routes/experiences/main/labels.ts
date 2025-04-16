@@ -7,7 +7,7 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
   { 
       what: "Front End Developer", 
       where: "Gruppo San Donato, Milan (Italy)" 
-      when: { from: "2021-07-01", to: "current date" }
+      when: { from: "2021-07-01", to: "2021-02-14" }
   },
   { 
       what: "Front End Developer", 
@@ -15,7 +15,7 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
       when: { from: "2020-12-10", to: "2021-03-10" },
   },
   { 
-      what: "System Administrator", 
+      what: "Database Administrator", 
       where: "Unicredit S.p.A. (Italy)",
       when: { from: "2020-09-04", to: "2020-12-10" } 
   },
@@ -32,7 +32,7 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 TEXT: `GSD.TEXT`,
                 WHERE: [
                     {
-                        DATES: ["2021/07/01", "2025/02/01"],
+                        DATES: ["2021/07/01", "2025/02/14"],
                         PLACE: `"Gruppo San Donato", Milano (Italia)`
                     }
                 ]
