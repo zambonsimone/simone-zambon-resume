@@ -33,7 +33,10 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         DATES: ["2021/07/01", "2025/02/14"],
-                        PLACE: `"Gruppo San Donato", Milano (Italia)`
+                        PLACE: {
+                            NAME: "Gruppo San Donato",
+                            LOCATION: ["PLACES.MILANO"]
+                        },
                     }
                 ]
             },
@@ -52,7 +55,10 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         DATES: ["2020/12/10", "2021/03/10"],
-                        PLACE: `"Syskoplan Reply Gmbh" (Svizzera)`
+                        PLACE: {
+                            NAME: "Syskoplan Reply Gmbh",
+                            LOCATION: ["PLACES.SWITZERLAND"]
+                        },
                     }
                 ]
             },
@@ -68,7 +74,10 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         DATES: ["2020/09/04", "2020/12/10"],
-                        PLACE: `"Unicredit S.p.A." (Italia)`
+                        PLACE: {
+                            NAME: "Unicredit S.p.A.",
+                            LOCATION: ["PLACES.ITALIA"]
+                        },
                     }
                 ]
             },
@@ -86,7 +95,10 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         DATES: ["2019/12/02", "2020/08/01"],
-                        PLACE: `"Sisal Group S.p.A." (Italia)`
+                        PLACE: {
+                            NAME: "Sisal Group S.p.A.",
+                            LOCATION: ["PLACES.ITALIA"]
+                        },
                     }
                 ]
             },
@@ -102,7 +114,10 @@ export const MAIN_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         DATES: ["2019/11/29", "2020/01/13"],
-                        PLACE: `"Dale Consulting S.r.l." (Italia)`
+                        PLACE: {
+                            NAME: "Dale Consulting S.r.l.",
+                            LOCATION: ["PLACES.ITALIA"]
+                        },
                     }
                 ]
             },

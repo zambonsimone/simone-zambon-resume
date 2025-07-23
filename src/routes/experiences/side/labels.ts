@@ -39,19 +39,38 @@ export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
             DETAILS: {
                 WHERE: [
                     {
-                        PLACE: `"Taverna del Bucaniere", Gallarate, Varese (Italia)`,
+                        PLACE: {
+                            NAME: "Kranen Bar",
+                            LOCATION: ["PLACES.OSLO"]
+                        },
+                        DATES: ["2025/04/15", new Date().toLocaleDateString()],
+                    },
+                    {
+                        PLACE: {
+                            NAME: "Taverna del Bucaniere",
+                            LOCATION: ["PLACES.GALLARATE"]
+                        },
                         DATES: ["2015/09/01", "2025/02/28"],
                     },
                     {
-                        PLACE: `Feste ed eventi privati (Svizzera - Italia)`,
+                        PLACE: {
+                            NAME: "PLACES.PRIVATE_EVENTS",
+                            LOCATION: ["PLACES.SWITZERLAND", "PLACES.ITALY"]
+                        },
                         DATES: ["2017/01/10", "2025/02/28"],
                     },
                     {
-                        PLACE: `"Blu Martini Club", Lugano (Svizzera)`,
+                        PLACE: {
+                            NAME: "Blu Martini Club",
+                            LOCATION: ["PLACES.LUGANO"]
+                        },
                         DATES: ["2019/06/01", "2019/10/12"],
                     },
                     {
-                        PLACE: `"Village Summer Disco", Varese (Italia)`,
+                        PLACE: {
+                            NAME: "Village Summer Disco",
+                            LOCATION: ["PLACES.VARESE"]
+                        },
                         DATES: ["2016/06/01", "2016/09/24"],
                     }
                 ]
@@ -66,11 +85,17 @@ export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         DATES: ["2019/02/01", "2019/02/28"],
-                        PLACE: `"InboXChange Hostel", Medellin (Colombia)`,
+                        PLACE: {
+                            NAME: "InboXChange Hostel",
+                            LOCATION: ["PLACES.MEDELLIN"]
+                        },
                     },
                     {
                         DATES: ["2018/11/01", "2018/11/30"],
-                        PLACE: `"Bikini Hostel", Limon (Costa Rica)`,
+                        PLACE: {
+                            NAME: "Bikini Hostel",
+                            LOCATION: ["PLACES.LIMON"]
+                        },
                     }
                 ]
             },
@@ -85,7 +110,10 @@ export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
                 WHERE: [
                     {
                         DATES: ["2017/03/08", "2017/05/02"],
-                        PLACE: `"Duchini & Sgarbozza", Caronno Varesino, Varese (Italia)`,
+                        PLACE: {
+                            NAME: "Duchini & Sgarbozza",
+                            LOCATION: ["PLACES.CARONNO_VARESINO"]
+                        },
                     }
                 ]
             },
@@ -98,7 +126,10 @@ export const SIDE_EXPERIENCES_LABELS: IRouteContentOrganization = {
             DETAILS: {
                 WHERE: [
                     {
-                        PLACE: `"Fondazione Molina", Varese (Italy)`,
+                        PLACE: {
+                            NAME: "Fondazione Molina",
+                            LOCATION: ["PLACES.VARESE"]
+                        },
                         DATES: ["2011/08/22", "2012/06/07"],
                     }
                 ]

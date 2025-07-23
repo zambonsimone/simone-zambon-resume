@@ -29,7 +29,9 @@ export const Details: React.FC<IDetailsProps> = ({
                 <div role="rowgroup">
                     {details?.WHERE?.map((where, index) => {
                         const at = t(DETAILS_WHERE_PLACE);
-                        const place = where.PLACE;
+                        const name = t(where.PLACE.NAME);
+                        const location = where.PLACE.LOCATION.map(elem => t(elem)).join(" - ");
+                        const place = `"${name}", ${location}`;
                         const from = t(DETAILS_WHERE_DATE.FROM);
                         const to = t(DETAILS_WHERE_DATE.TO);
                         const dateFrom = new Date(where.DATES[0]).toLocaleDateString(i18n.resolvedLanguage);
@@ -41,7 +43,7 @@ export const Details: React.FC<IDetailsProps> = ({
                                 key={index}
                                 tabIndex={0}
                                 aria-label={`
-                                    ${at} ${place}, ${from} ${dateFrom} ${to} ${dateTo}
+                                    ${at} ${place} ${from} ${dateFrom} ${to} ${dateTo}
                                 `}
                             >
                                 <span className={style.wherePlace}>{at} <b>{place}</b></span>
