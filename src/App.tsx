@@ -8,6 +8,7 @@ import { HeaderBar } from "./components/common/header-bar/HeaderBar";
 import { Loading } from "./components/common/loading/Loading";
 import { ScrollToTop } from "./components/common/scroll-to-top/ScrollToTop";
 import { Sidebar } from "./components/common/sidebar/Sidebar";
+import { usePreloadImages } from "./hooks/usePreloadImages";
 import { useResolution } from "./hooks/useResolution";
 import { PATHS } from "./routes/paths";
 import { ROUTES } from "./routes/routes";
@@ -15,6 +16,7 @@ import { ROUTES } from "./routes/routes";
 export const App: React.FC = () => {
     const { isMobile } = useResolution();
     const { t } = useTranslation("global");
+    usePreloadImages();
     return (
         <>
             <BrowserRouter>
@@ -34,9 +36,9 @@ export const App: React.FC = () => {
                                     key={index}
                                     render={(renderProps) => (
                                         <div className={style.appContent} role="presentation">
-                                            <ContentHeader Header={Header} subRoutes={route.subRoutes}/>
+                                            <ContentHeader Header={Header} subRoutes={route.subRoutes} />
                                             <DocumentTitle title={t(route.displayedName)} />
-                                            <Component {...renderProps} />              
+                                            <Component {...renderProps} />
                                         </div>
                                     )}
                                 />
@@ -44,7 +46,7 @@ export const App: React.FC = () => {
                         })
                         }
                     </Switch>
-                </Suspense>         
+                </Suspense>
             </BrowserRouter>
         </>
     )

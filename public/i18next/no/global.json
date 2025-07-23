@@ -52,5 +52,18 @@
         "TITLE": "Skriv inn koden som vises",
         "VERIFY": "Verifiser"
     },
-    "DOWNLOAD_FILE": "Laste ned {{title}} filen"
+    "DOWNLOAD_FILE": "Laste ned {{title}} filen",
+    "PLACES": {
+        "OSLO": "Oslo, Norge",
+        "ITALY": "Italia",
+        "SWITZERLAND": "Sveits",
+        "GALLARATE": "Gallarate (VA), Italia",
+        "LUGANO": "Lugano, Sveits",
+        "VARESE": "Varese (VA), Italia",
+        "CARONNO_VARESINO": "Caronno Varesino (VA), Italia",
+        "MEDELLIN": "Medellin, Colombia",
+        "LIMON": "Limon, Costa Rica",
+        "MILANO": "Milano, Italia",
+        "PRIVATE_EVENTS": "Arrangementer og private fester"
+    }
 }

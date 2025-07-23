@@ -52,5 +52,18 @@
         "TITLE": "Type the code shown",
         "VERIFY": "Verify"
     },
-    "DOWNLOAD_FILE": "Download {{title}} file"
+    "DOWNLOAD_FILE": "Download {{title}} file",
+    "PLACES": {
+        "OSLO": "Oslo, Norway",
+        "ITALY": "Italy",
+        "SWITZERLAND": "Switzerland",
+        "GALLARATE": "Gallarate (VA), Italy",
+        "LUGANO": "Lugano, Switzerland",
+        "VARESE": "Varese (VA), Italy",
+        "CARONNO_VARESINO": "Caronno Varesino (VA), Italy",
+        "MEDELLIN": "Medellin, Colombia",
+        "LIMON": "Limon, Costa Rica",
+        "MILANO": "Milano, Italy",
+        "PRIVATE_EVENTS": "Events and private parties"
+    }
 }
