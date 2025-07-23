@@ -7,6 +7,17 @@ const INITIAL_MATCHES: Record<Resolution, boolean> = {
     TABLET: false,
     MOBILE: false
 }
+
+/**
+ * React hook that tracks the current viewport resolution using media queries.
+ *
+ * Listens to the `resize` event and updates boolean flags indicating which resolution is currently active
+ *
+ * @returns an object with three boolean flags:
+ * - `isDesktop`: `true` if the screen matches the desktop breakpoint
+ * - `isTablet`: `true` if the screen matches the tablet breakpoint
+ * - `isMobile`: `true` if the screen matches the mobile breakpoint
+ */
 export function useResolution() {
     const [matches, setMatches] = useState<Record<Resolution, boolean>>(INITIAL_MATCHES);
 
@@ -18,13 +29,13 @@ export function useResolution() {
             resolutions[name] = !!window.matchMedia(value).matches;
         })
         setMatches(resolutions);
-    },[])
+    }, [])
 
     useEffect(() => {
         setResolutionMatches();
         window.addEventListener("resize", setResolutionMatches);
         return () => window.removeEventListener("resize", setResolutionMatches);
-    },[setResolutionMatches])
+    }, [setResolutionMatches])
 
     return {
         isDesktop: matches.DESKTOP,
